@@ -1,6 +1,4 @@
 
-import os
-from dotenv import load_dotenv
 from youtube_transcript_api import (
     YouTubeTranscriptApi,
     TranscriptsDisabled,
@@ -8,7 +6,7 @@ from youtube_transcript_api import (
 )
 
 
-def fetch_trascript(video_id):
+def fetch_transcript(video_id):
     try:
         # Fetch transcript
         transcript_timestamp = YouTubeTranscriptApi.get_transcript(video_id)

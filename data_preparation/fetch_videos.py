@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+assert YOUTUBE_API_KEY, "YOUTUBE API KEY not provided"
 
 
 API_SERVICE_NAME = "youtube"
@@ -25,23 +26,57 @@ def get_authenticated_service():
         print(f"Error creating YouTube API service: {e}")
         raise
 
+youtube_service = get_authenticated_service()
+
+
+def fetch_video_metadata(video_id,category):
+    
+    try:
+        # Fetch video details using the Videos API
+        video_response = youtube_service.videos().list(
+            part="snippet",
+            id=video_id
+        ).execute()
+    except Exception as e:
+        print(f"Error fetching video details for {video_id}: {e}")
+        print(video_response)
+        return None
+        
+    # Extract video details from the response
+    video_items = video_response.get("items", [])
+    if not video_items:
+        print(f"No details found for video_id: {video_id}")
+        return None
+
+    video_data = video_items[0].get("snippet", {})
+
+    # Build the output dictionary
+    video_info = {
+        "playlist_id": None, 
+        "category": category,    
+        "video_id": video_id,
+        "title": video_data.get("title"),
+        "published_date": video_data.get("publishedAt"),
+        "video_url": f"https://www.youtube.com/watch?v={video_id}",
+        "thumbnail_img": video_data.get("thumbnails", {}).get("high", {}).get("url")
+    }
+
+    return video_info
+
+        
+
 
 def fetch_videos_from_playlist(playlist_id, category):
-    youtube_api = get_authenticated_service()
-
+   
     videos_metadata_lst = []
     seen_videos = set()
-    # previously summarized videos during testing
-    seen_videos.add('spKGN0XzErU')
-    seen_videos.add('c3pbe3qzatQ')
-    seen_videos.add('kIXcoivzGf8')
-    seen_videos.add('GNO4OtYoCYk')
-
+    
+    
     print(f"Processing playlist: {playlist_id}")
     next_page_token = None
 
     while True:  # iterate over the pages
-        response = youtube_api.playlistItems().list(
+        response = youtube_service.playlistItems().list(
             part="snippet",
             playlistId=playlist_id,
             maxResults=50,  # Max allowed by API
@@ -82,3 +117,4 @@ def fetch_videos_from_playlist(playlist_id, category):
         print("Number of videos extracted: ", n_videos)
 
     return videos_metadata_lst
+
