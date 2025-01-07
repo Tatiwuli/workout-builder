@@ -1,0 +1,139 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 12.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Barbell Back Squat is a compound exercise that effectively targets the quadriceps, allowing for progressive overload. Performing 3 sets aligns with the user's goal of defined quadriceps and fits within the intermediate-early fitness level guidelines of 6-10 sets per muscle group per week.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "All heads"
+                        ]
+                    },
+                    "alternative_exercises": "Hack Squat, Pendulum Squat",
+                    "alternative_exercises_volume": "3 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Gluteus Maximus"
+            ],
+            "set_reasoning": "The Barbell Hip Thrust is crucial for targeting the glutes, particularly the upper glutes, which aligns with the user's goal of rounded glutes. Performing 3 sets ensures adequate volume for glute development within the weekly frequency.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": {
+                        "Gluteus Maximus": [
+                            "Upper glutes"
+                        ]
+                    },
+                    "alternative_exercises": "American Hip Thrust, Banded Hip Thrust",
+                    "alternative_exercises_volume": "3 sets of 10-12 reps",
+                    "reps": "10-12",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "The Romanian Deadlift targets both the hamstrings and glutes, supporting the user's goal of developing these muscle groups. Performing 3 sets contributes to the weekly volume needed for muscle growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "All parts"
+                        ],
+                        "Glutes": [
+                            "All parts"
+                        ]
+                    },
+                    "alternative_exercises": "Stiff-Legged Deadlift, Good Mornings",
+                    "alternative_exercises_volume": "3 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 8.0,
+            "set_strategy": "None",
+            "set_repetitions": 2,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Bulgarian Split Squat provides a high quad stretch and unilateral benefits, which are essential for addressing muscle imbalances. Limiting to 2 sets helps manage fatigue while contributing to the weekly volume for quadriceps.",
+            "exercises": [
+                {
+                    "exercise_name": "Bulgarian Split Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "Vastus Medialis",
+                            "Vastus Lateralis"
+                        ]
+                    },
+                    "alternative_exercises": "Lunges, Step-Ups",
+                    "alternative_exercises_volume": "2 sets of 10-12 reps",
+                    "reps": "10-12",
+                    "weight": "Bodyweight or light dumbbells",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Glutes",
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Smith Machine Front Foot Elevated Lunge effectively targets both the glutes and quadriceps, aligning with the user's goals. Performing 3 sets ensures sufficient volume for muscle development.",
+            "exercises": [
+                {
+                    "exercise_name": "Smith Machine Front Foot Elevated Lunge",
+                    "target_muscle_part": {
+                        "Glutes": [
+                            "All parts"
+                        ],
+                        "Quadriceps": [
+                            "All heads"
+                        ]
+                    },
+                    "alternative_exercises": "Walking Lunges, Step-Ups",
+                    "alternative_exercises_volume": "3 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "Bodyweight or light dumbbells",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout session is structured to target the user's goals of rounded glutes and defined quadriceps while also addressing the hamstrings. The exercises are ordered to prioritize compound movements first, followed by isolation exercises, which is optimal for energy expenditure and muscle engagement. The volume and set strategies are designed to fit within the 60-minute time constraint, with rest periods and exercise selection based on the user's intermediate-early fitness level. This ensures that the user can achieve their weekly volume targets for each muscle group while adhering to their workout frequency and goals."
+}

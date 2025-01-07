@@ -1,0 +1,139 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 12.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Barbell Back Squat is a compound exercise that effectively targets the quadriceps, allowing for progressive overload. Performing 3 sets aligns with the user's goal of defined quadriceps and fits within the intermediate fitness level, contributing to the weekly volume target.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "All heads"
+                        ]
+                    },
+                    "alternative_exercises": "Hack Squat, Pendulum Squat",
+                    "alternative_exercises_volume": "3 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60-90 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Glutes"
+            ],
+            "set_reasoning": "The Barbell Hip Thrust is crucial for targeting the glutes, particularly the upper glutes, which aligns with the user's goal of rounded glutes. Performing 3 sets ensures sufficient volume for glute development.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": {
+                        "Glutes": [
+                            "Gluteus Maximus"
+                        ]
+                    },
+                    "alternative_exercises": "American Hip Thrust, Banded Hip Thrust",
+                    "alternative_exercises_volume": "3 sets of 10-12 reps",
+                    "reps": "10-12",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "The Romanian Deadlift targets the hamstrings and glutes, contributing to the user's goal of developing these muscle groups. Performing 3 sets provides adequate volume for muscle growth in the posterior chain.",
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "All parts"
+                        ],
+                        "Glutes": [
+                            "Gluteus Maximus"
+                        ]
+                    },
+                    "alternative_exercises": "Stiff-Legged Deadlift, Good Mornings",
+                    "alternative_exercises_volume": "3 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "60-75% of 1RM",
+                    "rest_time": "60-90 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 8.0,
+            "set_strategy": "None",
+            "set_repetitions": 2,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Bulgarian Split Squat is a unilateral exercise that provides a high stretch and engagement of the quadriceps, particularly the vastus medialis and lateralis. Performing 2 sets helps manage fatigue while contributing to the weekly volume target.",
+            "exercises": [
+                {
+                    "exercise_name": "Bulgarian Split Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "Vastus Medialis",
+                            "Vastus Lateralis"
+                        ]
+                    },
+                    "alternative_exercises": "Lunges, Step-Ups",
+                    "alternative_exercises_volume": "2 sets of 10-12 reps",
+                    "reps": "10-12",
+                    "weight": "Bodyweight or light dumbbells",
+                    "rest_time": "60 seconds"
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 8.0,
+            "set_strategy": "None",
+            "set_repetitions": 2,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "The Stiff-Legged Deadlift complements the Romanian Deadlift by focusing on the hamstrings and glutes. Performing 2 sets provides variety and additional volume for the posterior chain.",
+            "exercises": [
+                {
+                    "exercise_name": "Stiff-Legged Deadlift",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "All parts"
+                        ],
+                        "Glutes": [
+                            "Gluteus Maximus"
+                        ]
+                    },
+                    "alternative_exercises": "Romanian Deadlift, Good Mornings",
+                    "alternative_exercises_volume": "2 sets of 8-10 reps",
+                    "reps": "8-10",
+                    "weight": "Light to moderate weight",
+                    "rest_time": "60-90 seconds"
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout session is structured to target the user's specified muscle groups: glutes, quadriceps, and hamstrings. The exercises are ordered to prioritize compound movements first, followed by unilateral and isolation exercises, optimizing energy and muscle engagement. The volume and set strategies are designed to fit within the 60-minute time constraint while ensuring sufficient volume for muscle growth, aligning with the user's intermediate fitness level and goals. The use of compound exercises like the Barbell Back Squat and Romanian Deadlift allows for efficient targeting of multiple muscle groups, while exercises like the Bulgarian Split Squat and Barbell Hip Thrust provide focused engagement on specific muscle parts. The rest times and weight recommendations are tailored to maintain intensity and promote progressive overload, crucial for achieving the user's goals of rounded glutes and defined quadriceps."
+}
