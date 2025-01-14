@@ -1,0 +1,131 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "By using a superset strategy, we can efficiently target both the back and biceps within the time constraint. This approach allows for a balanced workout, ensuring both muscle groups are engaged without exceeding the 30-minute limit. The volume is appropriate for a beginner, focusing on learning proper form and technique.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10 reps with proper form, similar to the wide grip version."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Use a weight that allows you to perform 10 reps with control, focusing on the stretch and contraction.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Machine Preacher Curl",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that enables you to complete 10 reps with good form, similar to the free weight version."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "Repeating the superset ensures adequate volume for both muscle groups, promoting hypertrophy and strength gains. This structure is efficient for beginners, allowing them to focus on form while still achieving their goals.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Maintain the same weight as the first set to ensure consistency and focus on form.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Use the same weight as the first set for consistency."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Keep the same weight as the first set to maintain focus on technique.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Machine Preacher Curl",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Use the same weight as the first set for consistency."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "The final superset ensures the muscles are adequately fatigued, promoting growth and adaptation. This volume is suitable for a beginner, providing enough stimulus without overtraining.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Continue with the same weight to focus on endurance and form.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Maintain the same weight for consistency."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Use the same weight to ensure proper form and muscle engagement.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Machine Preacher Curl",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Keep the same weight for consistency."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan is structured to meet the user's goals of bigger biceps and overall back definition within a 30-minute session. By using supersets, we efficiently target both muscle groups, maximizing the time available. The exercises selected are beginner-friendly, focusing on form and technique while providing enough volume to promote hypertrophy. The repetition range and weight recommendations are designed to ensure the user can progress safely and effectively, aligning with the guidelines for beginners. The use of alternative exercises provides flexibility, ensuring the user can adapt the workout to available equipment."
+}

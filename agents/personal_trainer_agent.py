@@ -1,5 +1,5 @@
-from base_agent import BaseAgent
-from agents_prompts.personal_trainer_prompts import system_prompt, assistant_prompt, user_prompt
+from agents.base_agent import BaseAgent
+from agents.agents_prompts.personal_trainer_prompts import system_prompt, assistant_prompt, user_prompt
 
 
 class PersonalTrainerAgent(BaseAgent):

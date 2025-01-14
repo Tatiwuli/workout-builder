@@ -1,0 +1,197 @@
+{
+    "workout_title": "Back Width and Biceps Peak Builder",
+    "total_workout_duration": 60.0,
+    "num_exercises": 2,
+    "warmup": {
+        "warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles, gradually increasing the size. Perform 2 sets of 30 seconds each direction."
+            },
+            {
+                "exercise_name": "Dynamic Lat Stretch",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Reach one arm overhead and lean to the opposite side, alternating sides. Perform 2 sets of 10 reps per side."
+            },
+            {
+                "exercise_name": "Bicep Stretch",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms behind you and interlock fingers, gently lifting arms to stretch the biceps. Hold for 15 seconds, 2 sets."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 12.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "setup": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+                    "execution": [
+                        "1. Grip the bar with a wide grip, palms facing forward.",
+                        "2. Sit with your back straight and feet flat on the floor.",
+                        "3. Pull the bar down towards your upper chest, keeping your elbows pointed down and back.",
+                        "4. Squeeze your shoulder blades together at the bottom of the movement.",
+                        "5. Slowly return the bar to the starting position, maintaining control."
+                    ],
+                    "reps": "8-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Resistance bands",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_setup": "Sit at the lat pull-down machine with a neutral grip attachment.",
+                    "alternative_exercise_execution": [
+                        "1. Grip the handles with palms facing each other.",
+                        "2. Pull the handles down towards your chest, keeping elbows close to your body.",
+                        "3. Squeeze your shoulder blades together at the bottom.",
+                        "4. Slowly return to the starting position."
+                    ],
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 8-12 reps with proper form, ensuring the last few reps are challenging.",
+                    "additional_tips": "Focus on engaging your lats by imagining pulling your elbows down to your sides."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 12.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "setup": "Use a preacher bench to angle your upper arm.",
+                    "execution": [
+                        "1. Sit on the preacher bench and place your upper arms on the pad.",
+                        "2. Grip the bar with an underhand grip, shoulder-width apart.",
+                        "3. Curl the bar towards your shoulders, keeping your upper arms stationary.",
+                        "4. Squeeze your biceps at the top of the movement.",
+                        "5. Slowly lower the bar back to the starting position, maintaining tension."
+                    ],
+                    "reps": "8-12",
+                    "weight": "Use a weight that allows you to perform 8-12 reps with controlled form, reaching near failure on the last rep.",
+                    "alternative_equipments": "EZ curl bar",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_setup": "Sit on an incline bench with dumbbells in each hand.",
+                    "alternative_exercise_execution": [
+                        "1. Lean back on the incline bench with arms hanging down.",
+                        "2. Curl the dumbbells up towards your shoulders, keeping elbows close to your body.",
+                        "3. Squeeze your biceps at the top.",
+                        "4. Slowly lower the dumbbells back to the starting position."
+                    ],
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Select a weight that challenges you for 8-12 reps, ensuring a full range of motion and control.",
+                    "additional_tips": "Focus on keeping your elbows locked in place to maximize tension on the biceps."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 12.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "setup": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+                    "execution": [
+                        "1. Grip the bar with a wide grip, palms facing forward.",
+                        "2. Sit with your back straight and feet flat on the floor.",
+                        "3. Pull the bar down towards your upper chest, keeping your elbows pointed down and back.",
+                        "4. Squeeze your shoulder blades together at the bottom of the movement.",
+                        "5. Slowly return the bar to the starting position, maintaining control."
+                    ],
+                    "reps": "8-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Resistance bands",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_setup": "Sit at the lat pull-down machine with a neutral grip attachment.",
+                    "alternative_exercise_execution": [
+                        "1. Grip the handles with palms facing each other.",
+                        "2. Pull the handles down towards your chest, keeping elbows close to your body.",
+                        "3. Squeeze your shoulder blades together at the bottom.",
+                        "4. Slowly return to the starting position."
+                    ],
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 8-12 reps with proper form, ensuring the last few reps are challenging.",
+                    "additional_tips": "Focus on engaging your lats by imagining pulling your elbows down to your sides."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 12.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "setup": "Use a preacher bench to angle your upper arm.",
+                    "execution": [
+                        "1. Sit on the preacher bench and place your upper arms on the pad.",
+                        "2. Grip the bar with an underhand grip, shoulder-width apart.",
+                        "3. Curl the bar towards your shoulders, keeping your upper arms stationary.",
+                        "4. Squeeze your biceps at the top of the movement.",
+                        "5. Slowly lower the bar back to the starting position, maintaining tension."
+                    ],
+                    "reps": "8-12",
+                    "weight": "Use a weight that allows you to perform 8-12 reps with controlled form, reaching near failure on the last rep.",
+                    "alternative_equipments": "EZ curl bar",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_setup": "Sit on an incline bench with dumbbells in each hand.",
+                    "alternative_exercise_execution": [
+                        "1. Lean back on the incline bench with arms hanging down.",
+                        "2. Curl the dumbbells up towards your shoulders, keeping elbows close to your body.",
+                        "3. Squeeze your biceps at the top.",
+                        "4. Slowly lower the dumbbells back to the starting position."
+                    ],
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Select a weight that challenges you for 8-12 reps, ensuring a full range of motion and control.",
+                    "additional_tips": "Focus on keeping your elbows locked in place to maximize tension on the biceps."
+                }
+            ]
+        }
+    ]
+}

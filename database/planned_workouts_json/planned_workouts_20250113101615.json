@@ -1,0 +1,85 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Wide Grip Lat Pull Down is chosen to target the lats and mid traps, which are crucial for increasing back width. Performing 3 sets aligns with the intermediate-early guideline of 6-10 total sets per muscle group per session, considering the user's frequency of 1 session per week.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows you to complete 10-12 reps with good form, typically around 60-75% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 10-12 reps with proper form, similar to the main exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Half Kneeling One Arm Lat Pull Down is included to focus on unilateral lat development, preventing muscle imbalances. This exercise complements the previous one by providing a different angle and unilateral focus, contributing to the user's goal of increasing back width.",
+            "exercises": [
+                {
+                    "exercise_name": "Half Kneeling One Arm Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats"
+                        ]
+                    },
+                    "reps": "10-12 per arm",
+                    "weight": "Use a weight that allows you to perform 10-12 reps per arm with good form, focusing on the stretch and contraction.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with proper form, focusing on the back muscles."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Chest Supported Row is selected for its stability and effectiveness in targeting both the lats and midback. This exercise supports the user's goal of increasing back width by engaging the lats and mid traps.",
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows you to perform 10-12 reps with good form, focusing on the contraction of the back muscles.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Meadows Row",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with proper form, focusing on the back muscles."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan is structured to maximize back width by targeting the lats and mid traps through a combination of exercises that provide a variety of angles and unilateral focus. The volume and exercise selection are based on the user's intermediate-early experience level and the goal of increasing back width. The workout is designed to fit within a 60-minute session, with each set including rest time, ensuring the user can complete the workout efficiently. The exercises are ordered to start with a compound movement (Wide Grip Lat Pull Down) to engage the lats and mid traps, followed by a unilateral exercise (Half Kneeling One Arm Lat Pull Down) to address muscle imbalances, and concluding with a stable rowing movement (Chest Supported Row) to further target the back muscles. This structure aligns with the guidelines for intermediate-early trainees, focusing on a mix of compound and isolation exercises to prevent plateaus and promote muscle growth."
+}

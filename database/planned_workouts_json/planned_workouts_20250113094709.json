@@ -1,0 +1,85 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 6,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Wide Grip Lat Pull Down is a compound exercise that effectively targets the lats and mid traps. Performing 3 sets of 10 reps aligns with the beginner's need to focus on form and allows for progressive overload, contributing to the weekly volume target for back development.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form, similar to the Wide Grip Lat Pull Down."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 6,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Chest Supported Row provides stability and focuses on the lats and midback. Performing 3 sets of 10 reps helps in building foundational strength and muscle engagement, contributing to the user's back development goal.",
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form, similar to the Chest Supported Row."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 6,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Cable Row targets the lats with a focus on stretch and contraction. Performing 3 sets of 10 reps ensures adequate volume for muscle growth and aligns with the user's short workout preference.",
+            "exercises": [
+                {
+                    "exercise_name": "Cable Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Wide Grip Cable Row",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form, similar to the Cable Row."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout session is structured to meet the user's needs by focusing on back development with exercises that are suitable for beginners. The exercises are ordered to target different parts of the back, ensuring comprehensive muscle engagement. The volume and set strategies are designed to fit within the 30-minute time constraint, with each set including rest time not exceeding 6 minutes. This allows the user to complete the workout efficiently while still achieving the desired weekly volume for muscle growth. The use of compound exercises ensures that multiple muscle groups are engaged, maximizing the effectiveness of the workout within the limited time frame."
+}

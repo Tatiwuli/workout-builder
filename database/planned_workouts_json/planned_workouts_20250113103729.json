@@ -1,0 +1,84 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "The Overhead Cable Triceps Extension is chosen for its effectiveness in targeting the long head of the triceps, which is crucial for achieving the user's goal of thicker triceps. The volume is set to 3 sets to ensure adequate stimulation while considering the user's beginner status and time constraints.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Overhead Cable Extension with Rope",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Use a resistance band that provides similar tension to the cable setup."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "Skull Crushers are included to further target the long head of the triceps, providing a different angle of stretch and contraction. This complements the first exercise and helps in achieving balanced triceps development.",
+            "exercises": [
+                {
+                    "exercise_name": "Skull Crushers",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps, focusing on form and control, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Dumbbell French Press",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select dumbbells that allow for controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "Bar Press Down is included to target the medial and lateral heads of the triceps, ensuring comprehensive development. This exercise is stable and easy to overload, making it suitable for beginners.",
+            "exercises": [
+                {
+                    "exercise_name": "Bar Press Down",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Medial head",
+                            "Lateral head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Rope Press Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Use a resistance band that provides similar tension to the cable setup."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan is structured to maximize triceps growth within a 30-minute session, focusing on exercises that target different parts of the triceps. The Overhead Cable Triceps Extension and Skull Crushers are chosen for their effectiveness in stretching the long head, which is crucial for achieving the user's goal of thicker triceps. The Bar Press Down complements these by targeting the medial and lateral heads. The volume and rest periods are tailored to the user's beginner status, ensuring they can perform the exercises with proper form and recover adequately between sets. The total workout time is 24 minutes, allowing for a brief warm-up or cool-down within the 30-minute session."
+}

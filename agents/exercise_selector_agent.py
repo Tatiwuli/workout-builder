@@ -1,5 +1,5 @@
-from base_agent import BaseAgent
-from agents_prompts.exercise_selector_prompts import system_prompt, assistant_prompt, user_prompt
+from agents.base_agent import BaseAgent
+from agents.agents_prompts.exercise_selector_prompts import system_prompt, assistant_prompt, user_prompt
 
 
 class ExerciseSelectorAgent(BaseAgent):
@@ -73,9 +73,9 @@ class ExerciseSelectorAgent(BaseAgent):
 
         # Prepare LLM prompts
         prompts = {"system_prompt": self.system_prompt,
-            "assistant_prompt": self.assistant_prompt,
-            "user_prompt": self.user_prompt
-        }
+                   "assistant_prompt": self.assistant_prompt,
+                   "user_prompt": self.user_prompt
+                   }
 
         # Call the LLM
         print("Calling the LLM for exercise selection...")

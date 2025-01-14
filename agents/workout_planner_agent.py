@@ -1,5 +1,5 @@
-from base_agent import BaseAgent
-from agents_prompts.workout_planner_prompts import system_prompt, assistant_prompt, user_prompt
+from agents.base_agent import BaseAgent
+from agents.agents_prompts.workout_planner_prompts import system_prompt, assistant_prompt, user_prompt
 
 
 class WorkoutPlannerAgent(BaseAgent):
@@ -121,9 +121,9 @@ class WorkoutPlannerAgent(BaseAgent):
         # Prepare LLM prompts
         # Prepare LLM prompts
         prompts = {"system_prompt": self.system_prompt,
-            "assistant_prompt": self.assistant_prompt,
-            "user_prompt": self.user_prompt
-        }
+                   "assistant_prompt": self.assistant_prompt,
+                   "user_prompt": self.user_prompt
+                   }
 
         # Call the LLM
         print("Calling the LLM for workout planning...")
@@ -133,7 +133,7 @@ class WorkoutPlannerAgent(BaseAgent):
             assistant_input=assistant_input,
             user_input=user_input,
             workout_duration=adjusted_user_needs.get("workout_duration"),
-            
+
         )
 
         # Save the output

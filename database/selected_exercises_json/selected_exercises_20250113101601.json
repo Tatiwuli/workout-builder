@@ -1,0 +1,80 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Wide Grip Lat Pull Down",
+            "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+            "execution_notes": "Grip the bar with a wide grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
+            "alternative_equipment": "Resistance bands",
+            "tier_reasons": "Offers a big stretch on your lats, provides smooth even tension throughout the range of motion, feels great, and allows for easy overload by increasing the pin weight.",
+            "targeted_muscles": [
+                "Lats",
+                "Mid Traps"
+            ],
+            "targeted_muscle_parts": "Targets both the lats and mid traps due to the wide grip and pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Neutral Grip Lat Pull Down",
+            "selection_reason": "The Wide Grip Lat Pull Down is selected for its ability to increase the width of the back by targeting the lats and mid traps. Its wide grip emphasizes the lats, which aligns with the user's goal of increasing back width. The exercise is suitable for the user's experience level and can be easily progressed by adjusting the weight."
+        },
+        {
+            "exercise_name": "Half Kneeling One Arm Lat Pull Down",
+            "setup_notes": "Kneel on one knee and brace against a bench or your knee for stability.",
+            "execution_notes": "Pull the cable down with one arm, focusing on driving the elbow down, and return to the starting position.",
+            "alternative_equipment": "Single-arm resistance band pull-down",
+            "tier_reasons": "High stretch, high tension, good feel, and easy to overload. Allows focus on one lat at a time to prevent asymmetries.",
+            "targeted_muscles": [
+                "Lats"
+            ],
+            "targeted_muscle_parts": "Targets the lats with a focus on unilateral development.",
+            "limitations": "Less stability than a machine.",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Cable Row",
+            "selection_reason": "The Half Kneeling One Arm Lat Pull Down is chosen for its focus on unilateral lat development, which helps prevent muscle imbalances. This exercise provides a high stretch and tension on the lats, contributing to the user's goal of increasing back width. It is also adaptable to the user's experience level."
+        },
+        {
+            "exercise_name": "Chest Supported Row",
+            "setup_notes": "Use a chest-supported row machine or incline bench.",
+            "execution_notes": "Pull the weight towards your chest while keeping your chest against the pad, and return to the starting position.",
+            "alternative_equipment": "Dumbbell row on an incline bench",
+            "tier_reasons": "Stable, allows focus on back muscles, and can be done with various equipment.",
+            "targeted_muscles": [
+                "Lats",
+                "Midback"
+            ],
+            "targeted_muscle_parts": "Targets both lats and midback due to the pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "Crowned as the best exercise for back development.",
+            "alternative_exercise": "Meadows Row",
+            "selection_reason": "The Chest Supported Row is selected for its stability and effectiveness in targeting both the lats and midback. This exercise supports the user's goal of increasing back width by engaging the lats and mid traps. It is suitable for the user's experience level and can be performed with various equipment."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles, gradually increasing the size.",
+                "sets_reps": "2 sets of 30 seconds each direction",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup_notes": "Start on all fours with hands under shoulders and knees under hips.",
+                "execution_notes": "Alternate between arching your back (cow) and rounding it (cat).",
+                "sets_reps": "2 sets of 10 reps",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Dynamic Lat Stretch",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Reach one arm overhead and lean to the opposite side, alternating sides.",
+                "sets_reps": "2 sets of 10 reps per side",
+                "duration": "2 minutes"
+            }
+        ]
+    }
+}

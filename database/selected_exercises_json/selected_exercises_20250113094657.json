@@ -1,0 +1,80 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Wide Grip Lat Pull Down",
+            "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+            "execution_notes": "Grip the bar with a wide grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
+            "alternative_equipment": "Resistance bands",
+            "tier_reasons": "Offers a big stretch on your lats, provides smooth even tension throughout the range of motion, feels great, and allows for easy overload by increasing the pin weight.",
+            "targeted_muscles": [
+                "Lats",
+                "Mid Traps"
+            ],
+            "targeted_muscle_parts": "Targets both the lats and mid traps due to the wide grip and pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Neutral Grip Lat Pull Down",
+            "selection_reason": "The Wide Grip Lat Pull Down is an excellent choice for beginners as it targets multiple back muscles, including the lats and mid traps, which aligns with the user's goal of back development. It is a compound exercise that is easier to execute with proper form, making it suitable for someone with less than 3 months of experience. Additionally, it allows for progressive overload, which is beneficial for building strength and muscle."
+        },
+        {
+            "exercise_name": "Chest Supported Row",
+            "setup_notes": "Use a chest-supported row machine or incline bench.",
+            "execution_notes": "Pull the weight towards your chest while keeping your chest against the pad, and return to the starting position.",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Stable, allows focus on back muscles, and can be done with various equipment.",
+            "targeted_muscles": [
+                "Lats",
+                "Midback"
+            ],
+            "targeted_muscle_parts": "Targets both lats and midback due to the pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "Crowned as the best exercise for back development.",
+            "alternative_exercise": "Cable Row",
+            "selection_reason": "The Chest Supported Row is ideal for beginners as it provides stability, allowing the user to focus on proper form and muscle engagement without worrying about balance. It effectively targets the lats and midback, which are key areas for back development. This exercise is also versatile, as it can be performed with different equipment, making it accessible for users with limited resources."
+        },
+        {
+            "exercise_name": "Cable Row",
+            "setup_notes": "Sit at a cable row machine with feet braced against the platform.",
+            "execution_notes": "Pull the handle towards your abdomen while keeping your back straight, and return to the starting position.",
+            "alternative_equipment": "Resistance bands",
+            "tier_reasons": "Provides a deep stretch, great lat pump, and easy to progress.",
+            "targeted_muscles": [
+                "Lats"
+            ],
+            "targeted_muscle_parts": "Targets the lats with a focus on stretch and contraction.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Wide Grip Cable Row",
+            "selection_reason": "The Cable Row is a beginner-friendly exercise that focuses on the lats, providing a deep stretch and contraction. It is a compound movement that is easy to progress, making it suitable for someone new to strength training. The exercise is also time-efficient, aligning with the user's preference for short workouts."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend your arms out to the sides and make small circles, gradually increasing the size.",
+                "sets_reps": "2 sets of 30 seconds each direction",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup_notes": "Start on all fours with hands under shoulders and knees under hips.",
+                "execution_notes": "Alternate between arching your back (cow) and rounding it (cat).",
+                "sets_reps": "2 sets of 10 reps",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Torso Twists",
+                "setup_notes": "Stand with feet shoulder-width apart and hands on hips.",
+                "execution_notes": "Twist your torso to the left and right, keeping your hips stable.",
+                "sets_reps": "2 sets of 15 reps each side",
+                "duration": "2 minutes"
+            }
+        ]
+    }
+}

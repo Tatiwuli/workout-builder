@@ -1,0 +1,113 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "The Barbell Back Squat is a compound exercise that effectively targets the quadriceps, glutes, and hamstrings. Performing 3 sets of 8-10 reps aligns with the user's goal of defined quads and fits within the weekly volume for an early intermediate level, considering the user's frequency of training quadriceps once a week.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "All heads"
+                        ]
+                    },
+                    "reps": "8-10",
+                    "weight": "Choose a weight that allows for 8-10 reps with good form, typically around 70-75% of 1RM.",
+                    "rest_time": "90 seconds",
+                    "alternative_exercise": "Hack Squat",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select a weight that allows for 8-10 reps with good form, typically around 70-75% of 1RM."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "The Romanian Deadlift is a key exercise for targeting the hamstrings and glutes. Performing 3 sets of 8-10 reps helps achieve the user's goal of toned hamstrings and lifted glutes, fitting within the weekly volume for an early intermediate level, considering the user's frequency of training hamstrings twice a week.",
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "All parts"
+                        ],
+                        "Glutes": [
+                            "Gluteus Maximus"
+                        ]
+                    },
+                    "reps": "8-10",
+                    "weight": "Choose a weight that allows for 8-10 reps with good form, typically around 65-70% of 1RM.",
+                    "rest_time": "90 seconds",
+                    "alternative_exercise": "Stiff-Legged Deadlift",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select a weight that allows for 8-10 reps with good form, typically around 65-70% of 1RM."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Glutes"
+            ],
+            "set_reasoning": "The Barbell Hip Thrust is highly effective for targeting the gluteus maximus. Performing 3 sets of 10-12 reps aligns with the user's goal of lifted glutes and fits within the weekly volume for an early intermediate level, considering the user's frequency of training glutes twice a week.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": {
+                        "Glutes": [
+                            "Gluteus Maximus"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps with good form, typically around 70-75% of 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Single Leg Hip Thrusts",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Use a weight that allows for 10-12 reps with good form, typically around 70-75% of 1RM."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings"
+            ],
+            "set_reasoning": "The Glute Ham Raise is an excellent exercise for isolating the hamstrings. Performing 3 sets of 8-10 reps helps achieve the user's goal of toned hamstrings and fits within the weekly volume for an early intermediate level, considering the user's frequency of training hamstrings twice a week.",
+            "exercises": [
+                {
+                    "exercise_name": "Glute Ham Raise",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "All parts"
+                        ]
+                    },
+                    "reps": "8-10",
+                    "weight": "Bodyweight or add resistance if needed to complete 8-10 reps with good form.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Nordic Ham Curls",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Use bodyweight or add resistance if needed to complete 8-10 reps with good form."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout session is structured to target the user's goals of lifted glutes, toned hamstrings, and defined quads. The exercises are ordered to start with compound movements like the Barbell Back Squat and Romanian Deadlift, which require more energy and engage multiple muscle groups. This is followed by more isolated exercises like the Barbell Hip Thrust and Glute Ham Raise to focus on specific muscle groups. The volume and set strategies are designed to fit within the user's 60-minute time constraint while ensuring sufficient stimulus for muscle growth. The use of moderate weights and rest periods aligns with the user's early intermediate level, allowing for progressive overload and adaptation."
+}

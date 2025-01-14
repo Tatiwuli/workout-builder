@@ -79,7 +79,9 @@ review the main section of the workout session provided below and finalize the w
             they should determine the weight. For example: "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form."
             - **Alternative Equipment**: Clarify any explanation if needed
             - **Rest Time**: Ensure that the time is indicated with an unit of time
-            - **Alternative Exercise**: Include the exercise and the explanation. Clarify any explanation if needed. 
+            - **Alternative Exercise**: Include the exercise.
+            - **Alternative Exercise Setup**:   Detailed instructions for equipment setup and positioning of the alternative exercise
+            - **Alternative Exercise Execution**:  Provide a step-by-step instructions to properly execute the alternative exercise
             - **Alternative Exercise Reps**: Ensure that the reps  are clearly explained.
             - **Alternative Exercise Weight**: Ensure that the weight recommendation is SPECIFICALLY defined
             - **Additional Tips**: Provide practical advice for improving execution or safety.
@@ -124,6 +126,8 @@ Your response must be a valid JSON object in the following structure:
                     "alternative_equipments": "",
                     "rest_time": "",
                     "alternative_exercise": "",
+                    "alternative_exercise_setup": "", 
+                    "alternative_exercise_execution": "", 
                     "alternative_exercise_reps": "",
                     "alternative_exercise_weight": "",
                     "additional_tips": ""

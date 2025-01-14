@@ -1,0 +1,113 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 6,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Chest",
+                "Triceps"
+            ],
+            "set_reasoning": "This superset combines the Incline Bench Press and Overhead Cable Triceps Extension to efficiently target the upper chest and triceps within the time constraint. The superset strategy allows for a higher volume in a shorter time, aligning with the user's goal of upper chest and triceps development.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Bench Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Upper pecs"
+                        ]
+                    },
+                    "reps": "8-10",
+                    "weight": "Choose a weight that allows for 8-10 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Incline Dumbbell Press",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select dumbbells that allow you to complete 8-10 reps with proper form, usually around 60-70% of your max effort for this movement."
+                },
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Use a weight that allows for 10-12 reps with a full range of motion, focusing on the stretch at the top.",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with control, focusing on the stretch and contraction."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 6,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Chest",
+                "Triceps"
+            ],
+            "set_reasoning": "This superset of Machine Chest Press and Smith Machine JM Press targets the chest and triceps, allowing for efficient use of time and ensuring both muscle groups are adequately stimulated for growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "none"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with a deep stretch and full range of motion.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with a focus on the stretch and contraction."
+                },
+                {
+                    "exercise_name": "Smith Machine JM Press",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Medial and lateral heads"
+                        ]
+                    },
+                    "reps": "8-10",
+                    "weight": "Use a weight that allows for 8-10 reps, focusing on the triceps with minimal shoulder involvement.",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Close Grip Bench Press",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select a weight that allows for 8-10 reps, focusing on triceps engagement."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 6,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "set_reasoning": "The focus here is on overall shoulder definition. The exercise selection and volume are designed to provide adequate stimulus for shoulder development within the time constraints.",
+            "exercises": [
+                {
+                    "exercise_name": "Dumbbell Shoulder Press",
+                    "target_muscle_part": {
+                        "Shoulders": [
+                            "Deltoids"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Barbell Shoulder Press",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with proper form, focusing on shoulder engagement."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout is structured to maximize efficiency and effectiveness within a 30-minute timeframe. By using supersets for the chest and triceps exercises, we can target multiple muscle groups simultaneously, saving time while still providing sufficient volume for growth. The exercises are chosen based on their ability to target the user's specific goals: upper chest development, overall shoulder definition, and thicker triceps. The volume and intensity are appropriate for a beginner, focusing on form and progressive overload. The workout adheres to the guidelines by prioritizing compound movements and using supersets to optimize time and effort."
+}

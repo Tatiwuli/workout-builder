@@ -1,0 +1,157 @@
+{
+    "workout_title": "Biceps Peak and Back Definition Workout",
+    "total_workout_duration": 48.0,
+    "num_exercises": 4,
+    "warmup": {
+        "warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles, gradually increasing the size. Perform 2 sets of 30 seconds in each direction."
+            },
+            {
+                "exercise_name": "Dynamic Chest Opener",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Interlace fingers behind your back, lift arms, and open chest while leaning slightly forward. Perform 2 sets of 10 reps."
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup_notes": "Start on all fours with hands under shoulders and knees under hips.",
+                "execution_notes": "Alternate between arching your back (cow) and rounding it (cat). Perform 2 sets of 10 reps."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "Superset",
+            "set_duration": 12.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Long head"
+                        ]
+                    },
+                    "setup": "Set up the cable at hand height, face away, and take one or two steps forward.",
+                    "execution": [
+                        "1. Stand facing away from the cable machine with the handle in each hand.",
+                        "2. Step forward to create tension in the cable, keeping your elbows slightly behind your body.",
+                        "3. Curl the handles towards your shoulders, keeping your elbows stationary.",
+                        "4. Squeeze your biceps at the top of the movement.",
+                        "5. Slowly lower the handles back to the starting position, maintaining control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Resistance bands",
+                    "rest_time": "None",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of 1RM.",
+                    "additional_tips": "Focus on keeping your elbows stationary to maximize tension on the biceps."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal biceps"
+                        ]
+                    },
+                    "setup": "Use a preacher bench to angle your upper arm.",
+                    "execution": [
+                        "1. Sit on the preacher bench with your upper arms resting on the pad.",
+                        "2. Hold the barbell or dumbbells with an underhand grip.",
+                        "3. Curl the weight towards your shoulders, keeping your upper arms on the pad.",
+                        "4. Squeeze your biceps at the top of the movement.",
+                        "5. Slowly lower the weight back to the starting position, maintaining control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "EZ curl bar",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Hammer Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of 1RM.",
+                    "additional_tips": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 15.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "setup": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+                    "execution": [
+                        "1. Grip the bar with a wide grip, palms facing forward.",
+                        "2. Pull the bar down to your upper chest while keeping your back straight.",
+                        "3. Squeeze your shoulder blades together at the bottom of the movement.",
+                        "4. Slowly return the bar to the starting position, maintaining control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Pull-up bar",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of 1RM.",
+                    "additional_tips": "Focus on pulling with your back muscles rather than your arms to maximize back engagement."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 15.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "setup": "Use a chest-supported row machine or incline bench.",
+                    "execution": [
+                        "1. Lie face down on the bench with your chest supported.",
+                        "2. Hold the handles or dumbbells with a neutral grip.",
+                        "3. Pull the weight towards your chest, keeping your elbows close to your body.",
+                        "4. Squeeze your back muscles at the top of the movement.",
+                        "5. Slowly lower the weight back to the starting position, maintaining control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of 1RM.",
+                    "additional_tips": "Keep your chest firmly against the pad to isolate your back muscles effectively."
+                }
+            ]
+        }
+    ]
+}

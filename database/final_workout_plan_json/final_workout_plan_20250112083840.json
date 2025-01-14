@@ -1,0 +1,196 @@
+{
+    "workout_title": "Beginner's Triceps and Shoulders Strength Session",
+    "total_workout_duration": 30.0,
+    "num_exercises": 4,
+    "warmup": {
+        "warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart, arms extended to the sides.",
+                "execution_notes": "Make small circles with your arms, gradually increasing the size. Reverse the direction halfway through."
+            },
+            {
+                "exercise_name": "Triceps Stretch",
+                "setup_notes": "Stand or sit, raise one arm overhead and bend the elbow.",
+                "execution_notes": "Use the opposite hand to gently push the elbow back, stretching the triceps. Hold and switch sides."
+            },
+            {
+                "exercise_name": "Shoulder Rolls",
+                "setup_notes": "Stand with feet shoulder-width apart, arms relaxed by your sides.",
+                "execution_notes": "Roll your shoulders forward in a circular motion, then reverse the direction."
+            },
+            {
+                "exercise_name": "Dynamic Arm Swings",
+                "setup_notes": "Stand with feet shoulder-width apart, arms extended in front.",
+                "execution_notes": "Swing your arms back and forth across your chest, alternating the top arm."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "setup": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+                    "execution": [
+                        "1. Grip the bar with both hands and stand with your back to the cable machine.",
+                        "2. Extend your arms overhead, keeping your elbows close to your head.",
+                        "3. Bend your elbows to lower the bar behind your head, feeling a stretch in your triceps.",
+                        "4. Extend your elbows to return to the starting position, keeping tension on the triceps throughout."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Resistance band",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Overhead Cable Extension with Rope",
+                    "alternative_exercise_setup": "Attach a rope to the low pulley of a cable machine. Stand facing away from the machine, holding the rope with both hands overhead.",
+                    "alternative_exercise_execution": [
+                        "1. Grip the rope with both hands and stand with your back to the cable machine.",
+                        "2. Extend your arms overhead, keeping your elbows close to your head.",
+                        "3. Bend your elbows to lower the rope behind your head, feeling a stretch in your triceps.",
+                        "4. Extend your elbows to return to the starting position, keeping tension on the triceps throughout."
+                    ],
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Use a resistance band that provides similar tension to the cable setup.",
+                    "additional_tips": "Focus on keeping your elbows stationary to maximize the stretch and contraction of the triceps."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Skull Crushers",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "setup": "Use an EZ bar or straight bar. Lie on a bench with the bar overhead.",
+                    "execution": [
+                        "1. Lie on a bench with your feet flat on the floor.",
+                        "2. Hold the EZ bar with an overhand grip, arms extended above your chest.",
+                        "3. Bend your elbows to lower the bar towards your forehead, keeping your upper arms stationary.",
+                        "4. Extend your elbows to lift the bar back to the starting position."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps with good form, typically around 50-60% of 1RM.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Dumbbell French Press",
+                    "alternative_exercise_setup": "Sit on a bench with a dumbbell in each hand, arms extended overhead.",
+                    "alternative_exercise_execution": [
+                        "1. Sit on a bench with your back supported.",
+                        "2. Hold a dumbbell in each hand, arms extended overhead.",
+                        "3. Bend your elbows to lower the dumbbells behind your head.",
+                        "4. Extend your elbows to return to the starting position."
+                    ],
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select dumbbells that allow for 10-12 reps with good form, typically around 50-60% of 1RM.",
+                    "additional_tips": "Keep your elbows tucked in to prevent them from flaring out, which helps target the triceps more effectively."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Dumbbell Shoulder Press",
+                    "target_muscle_part": {
+                        "Shoulders": [
+                            "Deltoids"
+                        ]
+                    },
+                    "setup": "Sit on a bench with back support, holding a dumbbell in each hand at shoulder height.",
+                    "execution": [
+                        "1. Sit on a bench with your back supported and feet flat on the floor.",
+                        "2. Hold a dumbbell in each hand at shoulder height, palms facing forward.",
+                        "3. Press the dumbbells overhead until your arms are fully extended.",
+                        "4. Lower the dumbbells back to shoulder height with control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 50-60% of 1RM.",
+                    "alternative_equipments": "None",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Seated Dumbbell Press",
+                    "alternative_exercise_setup": "Sit on a bench with back support, holding a dumbbell in each hand at shoulder height.",
+                    "alternative_exercise_execution": [
+                        "1. Sit on a bench with your back supported and feet flat on the floor.",
+                        "2. Hold a dumbbell in each hand at shoulder height, palms facing forward.",
+                        "3. Press the dumbbells overhead until your arms are fully extended.",
+                        "4. Lower the dumbbells back to shoulder height with control."
+                    ],
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose dumbbells that allow for 10-12 reps with good form, typically around 50-60% of 1RM.",
+                    "additional_tips": "Keep your core engaged to support your back and prevent arching during the press."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Lateral Raises",
+                    "target_muscle_part": {
+                        "Shoulders": [
+                            "Lateral deltoids"
+                        ]
+                    },
+                    "setup": "Stand with feet shoulder-width apart, holding a dumbbell in each hand by your sides.",
+                    "execution": [
+                        "1. Stand with your feet shoulder-width apart, holding a dumbbell in each hand by your sides.",
+                        "2. Raise the dumbbells out to the sides until your arms are parallel to the floor.",
+                        "3. Keep a slight bend in your elbows and your palms facing down.",
+                        "4. Lower the dumbbells back to the starting position with control."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 50-60% of 1RM.",
+                    "alternative_equipments": "None",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Cable Lateral Raises",
+                    "alternative_exercise_setup": "Stand next to a cable machine with the handle set at the lowest position.",
+                    "alternative_exercise_execution": [
+                        "1. Stand next to a cable machine with the handle set at the lowest position.",
+                        "2. Hold the handle with the hand furthest from the machine.",
+                        "3. Raise your arm out to the side until it is parallel to the floor.",
+                        "4. Lower the handle back to the starting position with control."
+                    ],
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Use a cable machine with a weight that allows for 10-12 reps with good form.",
+                    "additional_tips": "Focus on lifting with your shoulders, not your traps, to effectively target the lateral deltoids."
+                }
+            ]
+        }
+    ]
+}

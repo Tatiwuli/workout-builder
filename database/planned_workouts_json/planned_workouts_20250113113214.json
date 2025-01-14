@@ -1,0 +1,131 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "The superset strategy is used to maximize time efficiency and target both the back and biceps within the user's 30-minute constraint. This approach allows for a comprehensive workout by engaging multiple muscle groups simultaneously, aligning with the user's goal of overall back definition and biceps peak development.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, similar to the wide grip version."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, focusing on maintaining tension in the stretched position.",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Face Away Cable Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, ensuring high tension in the stretched position."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "Repeating the superset ensures adequate volume for both muscle groups, supporting hypertrophy and meeting the user's weekly volume targets. This structure is efficient for the user's intermediate level and short workout duration.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, similar to the wide grip version."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, focusing on maintaining tension in the stretched position.",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Face Away Cable Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, ensuring high tension in the stretched position."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "The final superset ensures the user reaches the desired volume for muscle growth, while maintaining the intensity and focus required for their goals. This set structure is optimal for the user's experience level and time constraints.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, similar to the wide grip version."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, focusing on maintaining tension in the stretched position.",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Face Away Cable Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, ensuring high tension in the stretched position."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout is structured into three supersets, each targeting the back and biceps, which aligns with the user's goals of overall back definition and biceps peak development. The use of supersets maximizes time efficiency, allowing the user to complete the workout within the 30-minute constraint. Each set includes exercises that provide high tension and effective muscle engagement, ensuring the user meets their weekly volume targets for muscle growth. The exercise selection and order are based on the user's intermediate experience level, focusing on compound and isolation movements to optimize hypertrophy."
+}

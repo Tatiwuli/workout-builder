@@ -23,13 +23,13 @@ def experience_question():
         "I’m a seasoned lifter with over 3 years of training experience."
     ]
     existing_response = st.session_state["responses"].get(
-        "experience_level", None)
+        "experience_level_explanation", None)
     response = st.radio(
         "What's your experience level with weightlifting?",
         experience_options,
         index=experience_options.index(
             existing_response) if existing_response else 0,
-        key="experience_level"
+        key="experience_level_explanation"
     )
     return response
 

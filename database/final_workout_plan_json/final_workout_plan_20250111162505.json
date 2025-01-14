@@ -1,0 +1,181 @@
+{
+    "workout_title": "Upper Body Sculpt: Chest, Shoulders, and Triceps",
+    "total_workout_duration": 30.0,
+    "num_exercises": 5,
+    "warmup": {
+        "warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles, gradually increasing the size. Perform 2 sets of 30 seconds each direction."
+            },
+            {
+                "exercise_name": "Dynamic Chest Stretch",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Interlock fingers behind your back and gently lift arms while pushing chest forward. Perform 2 sets of 15 seconds."
+            },
+            {
+                "exercise_name": "Triceps Stretch",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Raise one arm overhead, bend the elbow, and use the opposite hand to gently push the elbow back. Perform 2 sets of 15 seconds each arm."
+            },
+            {
+                "exercise_name": "Shoulder Rolls",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Roll shoulders forward and backward in a circular motion. Perform 2 sets of 30 seconds each direction."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "Superset",
+            "set_duration": 6.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Chest",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Bench Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Upper pecs"
+                        ]
+                    },
+                    "setup": "Set the bench to a 30-45 degree incline. Lie back with feet flat on the floor and grip the barbell slightly wider than shoulder-width.",
+                    "execution": [
+                        "1. Unrack the barbell and hold it above your chest with arms fully extended.",
+                        "2. Lower the barbell slowly to your upper chest, keeping elbows at a 45-degree angle.",
+                        "3. Press the barbell back up to the starting position, fully extending your arms.",
+                        "4. Repeat for the desired number of reps."
+                    ],
+                    "reps": "8-10",
+                    "weight": "Choose a weight that allows for 8-10 reps with good form, typically around 60-70% of your 1RM.",
+                    "alternative_equipments": "Incline Smith Machine",
+                    "rest_time": "None",
+                    "alternative_exercise": "Incline Dumbbell Press",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select dumbbells that allow you to complete 8-10 reps with proper form, usually around 60-70% of your max effort for this movement.",
+                    "additional_tips": "Focus on controlling the weight throughout the movement and avoid bouncing the bar off your chest."
+                },
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "setup": "Position the cable at a low setting and attach a bar. Stand facing away from the machine with arms overhead.",
+                    "execution": [
+                        "1. Grip the bar with both hands and step forward to create tension.",
+                        "2. Keep your elbows close to your head and extend your arms fully.",
+                        "3. Slowly bend your elbows to lower the bar behind your head.",
+                        "4. Extend your arms back to the starting position.",
+                        "5. Repeat for the desired number of reps."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Use a weight that allows for 10-12 reps with a full range of motion, focusing on the stretch at the top.",
+                    "alternative_equipments": "Dumbbell",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with control, focusing on the stretch and contraction.",
+                    "additional_tips": "Maintain a stable core to prevent arching your back during the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "Superset",
+            "set_duration": 6.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Chest",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "none"
+                        ]
+                    },
+                    "setup": "Adjust the seat height so that the handles are at chest level. Sit with your back against the pad and feet flat on the floor.",
+                    "execution": [
+                        "1. Grip the handles and press them forward until your arms are fully extended.",
+                        "2. Slowly bring the handles back to the starting position, feeling a stretch in your chest.",
+                        "3. Repeat for the desired number of reps."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with a deep stretch and full range of motion.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "None",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with a focus on the stretch and contraction.",
+                    "additional_tips": "Focus on squeezing your chest muscles at the top of the movement for maximum engagement."
+                },
+                {
+                    "exercise_name": "Smith Machine JM Press",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Medial and lateral heads"
+                        ]
+                    },
+                    "setup": "Set the bar at chin level on the Smith machine. Lie back on a flat bench with feet flat on the floor.",
+                    "execution": [
+                        "1. Grip the bar with a narrow grip and unrack it.",
+                        "2. Lower the bar towards your chin, keeping elbows tucked.",
+                        "3. Press the bar back up to the starting position.",
+                        "4. Repeat for the desired number of reps."
+                    ],
+                    "reps": "8-10",
+                    "weight": "Use a weight that allows for 8-10 reps, focusing on the triceps with minimal shoulder involvement.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds after completing both exercises",
+                    "alternative_exercise": "Close Grip Bench Press",
+                    "alternative_exercise_reps": "8-10",
+                    "alternative_exercise_weight": "Select a weight that allows for 8-10 reps, focusing on triceps engagement.",
+                    "additional_tips": "Keep your elbows close to your body to maximize triceps activation."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 6.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Dumbbell Shoulder Press",
+                    "target_muscle_part": {
+                        "Shoulders": [
+                            "Deltoids"
+                        ]
+                    },
+                    "setup": "Sit on a bench with back support. Hold a dumbbell in each hand at shoulder height with palms facing forward.",
+                    "execution": [
+                        "1. Press the dumbbells overhead until your arms are fully extended.",
+                        "2. Lower the dumbbells back to shoulder height.",
+                        "3. Repeat for the desired number of reps."
+                    ],
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "alternative_equipments": "Seated Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Barbell Shoulder Press",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with proper form, focusing on shoulder engagement.",
+                    "additional_tips": "Keep your core engaged and avoid arching your back during the press."
+                }
+            ]
+        }
+    ]
+}
