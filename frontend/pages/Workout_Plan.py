@@ -1,6 +1,6 @@
 
-st.set_page_config(page_title="Workout Plan", page_icon="💪")
 import streamlit as st
+st.set_page_config(page_title="Workout Plan", page_icon="💪")
 import streamlit_nested_layout
 
 from frontend.run_generate_workout_plan import  run_generate_workout_plan
