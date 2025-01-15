@@ -1,8 +1,10 @@
 streamlit
 streamlit_cookies_manager
-googleapiclient
+google-api-python-client
 youtube_transcript_api
 token_count
 openai
 streamlit_extras
 python-dotenv
+
+
