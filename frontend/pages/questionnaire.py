@@ -225,6 +225,7 @@ if __name__ == "__main__":
 
     # Retrieve the API key
     api_key = cookies.get("api_key", None)
+    
     if st.session_state["workflow_stage"] == "muscle_selection":
         st.title("Select Your Workout Muscles")
 

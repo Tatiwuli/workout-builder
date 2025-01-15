@@ -47,14 +47,17 @@ def home():
             if user_api_key:
                 # Save the API key to session state
 
-                st.success("API Key successfully saved! You can now proceed.")
-                render_nav_link("Questionnaire")
-
                 user_api_key = user_api_key.strip()
 
                 cookies["api_key"] = user_api_key
-                print(user_api_key)
                 cookies.save()
+
+                if cookies.get("api_key"):
+                    st.success(
+                        "API Key successfully saved! You can now proceed.")
+                    render_nav_link("Questionnaire")
+                else:
+                    st.error("API Key not saved. Please try again")
 
             else:
                 st.error("API Key is required to proceed.")
