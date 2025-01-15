@@ -220,7 +220,7 @@ if __name__ == "__main__":
 
     # Initialize the cookie manager
     load_dotenv()
-    COOKIE_PASSWORD = st.secrets.get("COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD = secrets.get("COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)
     if not cookies.ready():
