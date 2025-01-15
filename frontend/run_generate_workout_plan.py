@@ -7,7 +7,6 @@ from agents.build_workout_plan import WorkoutBuilderWorkflow
 from streamlit_cookies_manager import EncryptedCookieManager
 
 
-
 def trigger_generate_workout_plan():
     """
     Update the session state to trigger workout plan generation stage
@@ -50,35 +49,37 @@ def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
     """
     Generates the workout plan with agents
     """
-    #process user responses
+    # process user responses
     processed_responses = process_user_responses(user_responses)
-    #trigger agents to start the building process
-    workflow = WorkoutBuilderWorkflow(progress_callback=handle_progress, api_key= user_api_key)
+    # trigger agents to start the building process
+    workflow = WorkoutBuilderWorkflow(
+        progress_callback=handle_progress, api_key=user_api_key)
     return workflow.run_workflow(processed_responses)
 
 
 def run_generate_workout_plan():
     load_dotenv()
     COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
-   
-    cookies = EncryptedCookieManager(prefix="workout_builder_", password= COOKIE_PASSWORD, max_age = 1800)#expires after 30 minutes
+
+    cookies = EncryptedCookieManager(
+        prefix="workout_builder_", password=COOKIE_PASSWORD)  # expires after 30 minutes
     if not cookies.ready():
         st.stop()
 
     # Retrieve the API key
     user_api_key = cookies.get("api_key", None)
     print(user_api_key)
-   
+
     try:
         with st.spinner("Generating your workout plan..."):
-            #trigger backend to generate workout plan 
-            st.session_state["workout_plan"] = generate_workout_plan(user_api_key, st.session_state["responses"], progress_callback=handle_progress)
+            # trigger backend to generate workout plan
+            st.session_state["workout_plan"] = generate_workout_plan(
+                user_api_key, st.session_state["responses"], progress_callback=handle_progress)
 
         st.session_state["trigger_generate_plan"] = False
 
         # rerun to remove the progress bars and render the workout plan
-        st.rerun() 
+        st.rerun()
     except Exception as e:
         st.error(f"Failed to generate workout plan: {e}")
         st.session_state["trigger_generate_plan"] = False
-

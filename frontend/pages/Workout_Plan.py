@@ -1,13 +1,20 @@
 
+
+from streamlit_cookies_manager import EncryptedCookieManager
 import streamlit as st
 st.set_page_config(page_title="Workout Plan", page_icon="💪")
+
 import streamlit_nested_layout
+from dotenv import load_dotenv
+import os
+
 
 from frontend.run_generate_workout_plan import  run_generate_workout_plan
-from frontend.utils import render_nav_link
-
+from frontend.utils import render_nav_link, render_logout
 
 def initialize_sessions_states():
+    
+    
     if "workout_plan" not in st.session_state:
         st.session_state["workout_plan"] = None
 
@@ -21,7 +28,7 @@ def render_workout_plan():
     # Check if the user completed the questionnaire
     if "responses" not in st.session_state:
         st.error("No responses found. Please complete the questionnaire first.")
-        render_nav_link("Questionnaire")
+        render_nav_link("questionnaire")
         st.stop()
 
     #Create workout plan
@@ -91,5 +98,13 @@ def render_workout_plan():
         st.error("Please try to generate workout plan again")
 
 if __name__ == "__main__":
+    # Initialize the cookie manager
+    load_dotenv()
+    COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
+    cookies = EncryptedCookieManager(
+        prefix="workout_builder_", password=COOKIE_PASSWORD)
+    if not cookies.ready():
+        st.stop()
+    render_logout(cookies)
     initialize_sessions_states()
     render_workout_plan()
