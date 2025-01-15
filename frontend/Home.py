@@ -1,11 +1,10 @@
+st.set_page_config(page_title="Workout Builder", page_icon="💪", layout="centered")
+
 import sys
 import streamlit as st
 from dotenv import load_dotenv
 import os
 from streamlit_cookies_manager import EncryptedCookieManager
-
-st.set_page_config(page_title="Workout Builder",
-                   page_icon="💪", layout="centered")
 
 from frontend.utils import render_nav_link
 

@@ -1,10 +1,11 @@
+
+st.set_page_config(page_title="Workout Plan", page_icon="💪")
 import streamlit as st
 import streamlit_nested_layout
 
 from frontend.run_generate_workout_plan import  run_generate_workout_plan
 from frontend.utils import render_nav_link
 
-st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
 def initialize_sessions_states():
     if "workout_plan" not in st.session_state:
