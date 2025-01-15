@@ -212,15 +212,16 @@ def render_questionnaire():
 # ---------- Main Logic ----------
 if __name__ == "__main__":
 
-    secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
-    if os.path.exists(secrets_path):
-        secrets = toml.load(secrets_path)
-    else:
-        secrets = {}
+    # secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
+    # if os.path.exists(secrets_path):
+    #     secrets = toml.load(secrets_path)
+    # else:
+    #     secrets = {}
 
     # Initialize the cookie manager
     load_dotenv()
-    COOKIE_PASSWORD = secrets.get("COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD = st.secrets["COOKIE_PASSWORD"] or os.getenv(
+        "COOKIE_PASSWORD")
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)
     if not cookies.ready():

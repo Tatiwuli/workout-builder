@@ -59,15 +59,15 @@ def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
 
 
 def run_generate_workout_plan():
-    secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
-    if os.path.exists(secrets_path):
-        secrets = toml.load(secrets_path)
-    else:
-        secrets = {}
+    # secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
+    # if os.path.exists(secrets_path):
+    #     secrets = toml.load(secrets_path)
+    # else:
+    #     secrets = {}
 
     load_dotenv()
-    COOKIE_PASSWORD =  secrets.get(
-        "COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD = st.secrets["COOKIE_PASSWORD"] or os.getenv(
+        "COOKIE_PASSWORD")
 
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)  # expires after 30 minutes
