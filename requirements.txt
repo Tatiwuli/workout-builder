@@ -6,6 +6,6 @@ token_count
 openai
 streamlit_extras
 python-dotenv
-streamlit
+streamlit_modal
 
 
