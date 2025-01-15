@@ -206,8 +206,7 @@ if __name__ == "__main__":
     load_dotenv()
     COOKIE_PASSWORD= os.getenv("COOKIE_PASSWORD")
 
-    cookies = EncryptedCookieManager(
-        prefix="workout_builder_", password=COOKIE_PASSWORD, max_age=1800)
+    cookies = EncryptedCookieManager(prefix="workout_builder_", password = COOKIE_PASSWORD, max_age = 1800)
     if not cookies.ready():
         st.stop()
 
