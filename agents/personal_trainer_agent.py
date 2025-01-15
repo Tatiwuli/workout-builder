@@ -3,13 +3,16 @@ from agents.agents_prompts.personal_trainer_prompts import system_prompt, assist
 
 
 class PersonalTrainerAgent(BaseAgent):
-    def __init__(self):
+    def __init__(self,api_key = None):
+        if not api_key:
+            raise ValueError(
+                "API key is required to initialize the PersonalTrainerAgent.")
         self.system_prompt = system_prompt
         self.assistant_prompt = assistant_prompt
         self.user_prompt = user_prompt
 
         super().__init__(
-            llm_model_name="gpt-4o",
+            api_key=api_key, llm_model_name="gpt-4o"
         )
 
     def prepare_assistant_input(self, selected_exercises, muscle_groups):

@@ -7,9 +7,12 @@ import json
 
 
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o"):
+    def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o", api_key = None):
+        if not api_key:
+            raise ValueError("API key is required to initialize the LLM.")
         self.db_handler = WorkoutBuilderDatabaseHandler(database_name)
-        self.llm = OpenAILLM(model_name=llm_model_name, pydantic_format=None)
+        
+        self.llm = OpenAILLM(model_name=llm_model_name, api_key=api_key)
 
     def combine_texts(self, texts):
         """

@@ -1,6 +1,22 @@
 {
     "exercises": [
         {
+            "exercise_name": "Preacher Curl",
+            "setup_notes": "Use a preacher bench to angle your upper arm.",
+            "execution_notes": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position.",
+            "alternative_equipment": "Incline bench",
+            "tier_reasons": "High tension in stretched position, locks elbows to prevent cheating, significant distal biceps growth.",
+            "targeted_muscles": [
+                "Biceps"
+            ],
+            "targeted_muscle_parts": "Distal biceps, due to high tension in stretched position.",
+            "limitations": "None",
+            "scientific_insights": "Study shows preacher curls cause more distal biceps growth compared to incline curls.",
+            "additional_notes": "None",
+            "alternative_exercise": "Incline Curl",
+            "selection_reason": "Preacher curls are ideal for beginners as they lock the elbows, preventing cheating and ensuring proper form. They provide high tension in the stretched position, which is crucial for muscle growth, especially for the distal biceps, aligning with the user's goal of bigger biceps."
+        },
+        {
             "exercise_name": "Face Away Cable Curl",
             "setup_notes": "Set up the cable at hand height, face away, and take one or two steps forward.",
             "execution_notes": "Curl with both arms simultaneously.",
@@ -13,30 +29,14 @@
             "limitations": "None",
             "scientific_insights": "None",
             "additional_notes": "Recommended for biceps peak development.",
-            "alternative_exercise": "Incline Curl",
-            "selection_reason": "The Face Away Cable Curl is selected for its ability to provide maximum stretch and tension on the biceps, particularly the long head, which is crucial for developing the biceps peak. This aligns with the user's goal of achieving a peak in the biceps. The exercise is suitable for an early intermediate level and fits well within a medium-duration workout."
-        },
-        {
-            "exercise_name": "Preacher Curl",
-            "setup_notes": "Use a preacher bench to angle your upper arm.",
-            "execution_notes": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position.",
-            "alternative_equipment": "EZ curl bar",
-            "tier_reasons": "High tension in stretched position, locks elbows to prevent cheating, significant distal biceps growth.",
-            "targeted_muscles": [
-                "Biceps"
-            ],
-            "targeted_muscle_parts": "Distal biceps, due to high tension in stretched position.",
-            "limitations": "None",
-            "scientific_insights": "Study shows preacher curls cause more distal biceps growth compared to incline curls.",
-            "additional_notes": "None",
-            "alternative_exercise": "Hammer Curl",
-            "selection_reason": "The Preacher Curl is chosen for its ability to lock the elbows and provide high tension in the stretched position, which is essential for distal biceps growth. This exercise supports the user's goal of achieving a peak in the biceps and is appropriate for their experience level."
+            "alternative_exercise": "Standing Dumbbell Curl",
+            "selection_reason": "This exercise provides maximum stretch and tension on the biceps, which is essential for muscle growth. It is suitable for beginners as it ensures even tension throughout the range of motion, helping to develop the biceps peak effectively."
         },
         {
             "exercise_name": "Wide Grip Lat Pull Down",
             "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
             "execution_notes": "Grip the bar with a wide grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
-            "alternative_equipment": "Pull-up bar",
+            "alternative_equipment": "Resistance bands",
             "tier_reasons": "Offers a big stretch on your lats, provides smooth even tension throughout the range of motion, feels great, and allows for easy overload by increasing the pin weight.",
             "targeted_muscles": [
                 "Lats",
@@ -47,13 +47,13 @@
             "scientific_insights": "None",
             "additional_notes": "None",
             "alternative_exercise": "Neutral Grip Lat Pull Down",
-            "selection_reason": "The Wide Grip Lat Pull Down is selected for its ability to target both the lats and mid traps, contributing to overall back definition. It provides a big stretch and smooth tension, making it suitable for an early intermediate level and aligning with the user's goal of overall back definition."
+            "selection_reason": "The wide grip lat pull-down is excellent for beginners as it provides a big stretch and smooth tension, which is crucial for muscle growth. It targets both the lats and mid traps, aligning with the user's goal of developing the back."
         },
         {
             "exercise_name": "Chest Supported Row",
             "setup_notes": "Use a chest-supported row machine or incline bench.",
             "execution_notes": "Pull the weight towards your chest while keeping your chest against the pad, and return to the starting position.",
-            "alternative_equipment": "Dumbbells",
+            "alternative_equipment": "Resistance bands",
             "tier_reasons": "Stable, allows focus on back muscles, and can be done with various equipment.",
             "targeted_muscles": [
                 "Lats",
@@ -64,7 +64,7 @@
             "scientific_insights": "None",
             "additional_notes": "Crowned as the best exercise for back development.",
             "alternative_exercise": "Cable Row",
-            "selection_reason": "The Chest Supported Row is chosen for its stability and ability to target both the lats and midback, which is essential for overall back definition. It is highly effective for back development and aligns with the user's goal of achieving overall back definition."
+            "selection_reason": "The chest-supported row is ideal for beginners as it provides stability, allowing the user to focus on the back muscles without worrying about balance. It effectively targets both the lats and midback, supporting the user's goal of back development."
         }
     ],
     "warmup": {
@@ -80,14 +80,14 @@
             {
                 "exercise_name": "Dynamic Chest Opener",
                 "setup_notes": "Stand with feet shoulder-width apart.",
-                "execution_notes": "Interlace fingers behind your back, lift arms, and open chest while leaning slightly forward.",
-                "sets_reps": "2 sets of 10 reps",
+                "execution_notes": "Swing arms forward and backward, opening up the chest.",
+                "sets_reps": "2 sets of 15 swings",
                 "duration": "2 minutes"
             },
             {
                 "exercise_name": "Cat-Cow Stretch",
                 "setup_notes": "Start on all fours with hands under shoulders and knees under hips.",
-                "execution_notes": "Alternate between arching your back (cow) and rounding it (cat).",
+                "execution_notes": "Alternate between arching and rounding your back.",
                 "sets_reps": "2 sets of 10 reps",
                 "duration": "2 minutes"
             }

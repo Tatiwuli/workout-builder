@@ -1,27 +1,23 @@
-from agents.build_workout_plan import WorkoutBuilderWorkflow
+
 import streamlit as st
+from dotenv import load_dotenv
+import os
 
+from agents.build_workout_plan import WorkoutBuilderWorkflow
+from streamlit_cookies_manager import EncryptedCookieManager
 
-
-# # Initialize session state for progress container
-# if "progress_container" not in st.session_state:
-#     st.session_state["progress_container"] = st.empty()
-
-
-# def update_progress(message, percentage):
-    
-#     with st.session_state["progress_container"].container():
-#         st.info(message)
-#         st.progress(percentage)
 
 
 def trigger_generate_workout_plan():
+    """
+    Update the session state to trigger workout plan generation stage
+    """
     st.session_state["trigger_generate_plan"] = True
 
 
 def process_user_responses(user_responses):
     """
-    Processes raw user responses to prepare them for the workflow.
+    Processes raw user responses to  pass to  agents
     """
     workout_duration = user_responses.get("workout_duration", 0)
     if workout_duration < 45:
@@ -50,23 +46,38 @@ def handle_progress(message, percentage):
     st.progress(percentage)
 
 
-def generate_workout_plan(user_responses, progress_callback=None):
+def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
     """
-    Generates the workout plan using the workflow.
+    Generates the workout plan with agents
     """
+    #process user responses
     processed_responses = process_user_responses(user_responses)
-    workflow = WorkoutBuilderWorkflow(progress_callback=handle_progress)
+    #trigger agents to start the building process
+    workflow = WorkoutBuilderWorkflow(progress_callback=handle_progress, api_key= user_api_key)
     return workflow.run_workflow(processed_responses)
 
 
 def run_generate_workout_plan():
+    load_dotenv()
+    COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
+   
+    cookies = EncryptedCookieManager(prefix="workout_builder_", password= COOKIE_PASSWORD, max_age = 1800)#expires after 30 minutes
+    if not cookies.ready():
+        st.stop()
+
+    # Retrieve the API key
+    user_api_key = cookies.get("api_key", None)
+    print(user_api_key)
+   
     try:
         with st.spinner("Generating your workout plan..."):
             #trigger backend to generate workout plan 
-            st.session_state["workout_plan"] = generate_workout_plan(
-                st.session_state["responses"], progress_callback=handle_progress)
+            st.session_state["workout_plan"] = generate_workout_plan(user_api_key, st.session_state["responses"], progress_callback=handle_progress)
+
         st.session_state["trigger_generate_plan"] = False
-        st.rerun() #rerun to remove the progress bars and render the workout plan 
+
+        # rerun to remove the progress bars and render the workout plan
+        st.rerun() 
     except Exception as e:
         st.error(f"Failed to generate workout plan: {e}")
         st.session_state["trigger_generate_plan"] = False

@@ -2,71 +2,31 @@ import streamlit as st
 import streamlit_nested_layout
 
 from frontend.run_generate_workout_plan import  run_generate_workout_plan
+from frontend.utils import render_nav_link
 
 st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
-
-if "workout_plan" not in st.session_state:
-    st.session_state["workout_plan"] = None
-
-
-def render_nav_link():
-    """
-    Render a navigation link styled as a button to return to the questionnaire.
-    """
-    app_path = 'http://localhost:8501'
-    page_file_path = 'index'
-    page = page_file_path.split('/')[0]
-
-    st.markdown(
-        f"""
-        <style>
-            .btn {{
-                display: inline-block;
-                font-weight: 400;
-                text-align: center;
-                white-space: nowrap;
-                vertical-align: middle;
-                user-select: none;
-                border: 2px solid black;
-                padding: 0.375rem 0.75rem;
-                font-size: 1rem;
-                line-height: 1.5;
-                border-radius: 0.25rem;
-                color: black;
-                background-color: transparent;
-                text-decoration: none;
-                transition: all 0.3s ease-in-out;
-            }}
-            .btn:hover {{
-                background-color: #FF4B4B;
-                border-color: #FF4B4B;
-                color: white;
-            }}
-        </style>
-        <a href="{app_path}/{page}" target="_self" class="btn">
-            Go to Questionnaire
-        </a>
-        """,
-        unsafe_allow_html=True,
-    )
+def initialize_sessions_states():
+    if "workout_plan" not in st.session_state:
+        st.session_state["workout_plan"] = None
 
 
 def render_workout_plan():
     """
     Render the workout plan page.
     """
-    st.title("Your Custom Workout Plan")
+    st.title("Workout Plan")
 
-    # Ensure session state is properly initialized
+    # Check if the user completed the questionnaire
     if "responses" not in st.session_state:
         st.error("No responses found. Please complete the questionnaire first.")
-        render_nav_link()
+        render_nav_link("Questionnaire")
         st.stop()
 
     #Create workout plan
     if st.session_state["trigger_generate_plan"]:
         run_generate_workout_plan()
+    
     # Display the workout plan
     plan = st.session_state.get("workout_plan", {})
     if plan:
@@ -85,6 +45,7 @@ def render_workout_plan():
             st.markdown(f"**Execution:** {exercise['execution_notes']}")
 
         st.divider()
+
         # Display workout sets
         st.subheader("Workout Sets")
         for set_data in plan.get("sets", []):
@@ -129,4 +90,5 @@ def render_workout_plan():
         st.error("Please try to generate workout plan again")
 
 if __name__ == "__main__":
+    initialize_sessions_states()
     render_workout_plan()

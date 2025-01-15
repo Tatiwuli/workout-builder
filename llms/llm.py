@@ -9,15 +9,15 @@ import time
 
 
 
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-assert OPENAI_API_KEY, "OPENAI_API_KEY is not set in the environment!"
+# load_dotenv()
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# assert OPENAI_API_KEY, "OPENAI_API_KEY is not set in the environment!"
 
 
 class OpenAILLM:
-    def __init__(self, model_name = "gpt-4o", temperature=0.0, pydantic_format = None):
+    def __init__(self, model_name = "gpt-4o", temperature=0.0, pydantic_format = None, api_key = None):
         self.model_name = model_name
-        self.client = OpenAI(api_key=OPENAI_API_KEY)
+        self.client = OpenAI(api_key= api_key)
         self.max_retries = 2
         self.timeout = 90
         self.token_counter = TokenCount(model_name=model_name)
