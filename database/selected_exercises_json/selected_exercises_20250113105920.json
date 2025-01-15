@@ -1,0 +1,85 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Overhead Cable Triceps Extension",
+            "setup_notes": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+            "execution_notes": "Bend and extend the elbows while keeping the arms overhead. Ensure the cable provides tension throughout the range of motion.",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Provides high tension in the stretched position, feels good, and allows for simple progression. Validated by a 2023 study showing 40% more triceps growth than press downs.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Long head, due to the overhead position providing a deep stretch.",
+            "limitations": "None",
+            "scientific_insights": "2023 study found overhead extensions caused about 40% more triceps growth than press downs.",
+            "additional_notes": "None",
+            "alternative_exercise": "Overhead Cable Extension with Rope",
+            "selection_reason": "This exercise is ideal for beginners as it provides high tension in the stretched position, which is crucial for triceps growth, especially for the long head. It aligns with the user's goal of thicker triceps and is supported by scientific research."
+        },
+        {
+            "exercise_name": "Skull Crushers",
+            "setup_notes": "Use an EZ bar or straight bar. Lie on a bench with the bar overhead.",
+            "execution_notes": "Lower the bar behind the head to increase stretch, then extend the elbows to lift the bar back up.",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "High tension in stretched position, feels good with EZ bar, and allows for simple progression.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Long head, due to the stretch when lowering the bar behind the head.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Dumbbell French Press",
+            "selection_reason": "Skull Crushers are excellent for beginners as they provide a significant stretch to the long head of the triceps, promoting growth. They are easy to progress with and align with the user's goal of thicker triceps."
+        },
+        {
+            "exercise_name": "Bar Press Down",
+            "setup_notes": "Attach a straight bar to a high pulley.",
+            "execution_notes": "Stand facing the machine, grip the bar, and press down while keeping elbows close to the body.",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Stable movement, even tension throughout, easy to overload, but lacks stretch at the top.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Medial and lateral heads, due to the pressing motion.",
+            "limitations": "Does not stretch the triceps at the top.",
+            "scientific_insights": "None",
+            "additional_notes": "Recommended for weekly use.",
+            "alternative_exercise": "Rope Press Down",
+            "selection_reason": "Bar Press Down is a stable exercise that provides even tension and is easy to overload, making it suitable for beginners. It targets the medial and lateral heads, complementing the user's goal of thicker triceps."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles, gradually increasing the size.",
+                "sets_reps": "2 sets of 30 seconds each direction",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Dynamic Triceps Stretch",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Raise one arm overhead, bend the elbow, and use the opposite hand to gently push the elbow back. Alternate arms.",
+                "sets_reps": "2 sets of 15 seconds per arm",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Shoulder Taps",
+                "setup_notes": "Start in a plank position with hands under shoulders.",
+                "execution_notes": "Tap each shoulder with the opposite hand, alternating sides.",
+                "sets_reps": "2 sets of 20 taps",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Arm Swings",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Swing arms forward and backward in a controlled manner.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": "1 minute"
+            }
+        ]
+    }
+}

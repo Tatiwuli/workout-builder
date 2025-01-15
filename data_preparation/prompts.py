@@ -106,7 +106,7 @@ user_prompts_dict = {
 
                         # Template:
 
-                        1.**Video Overview: ** Summarize the purpose of the video
+                        1.**Muscle Groups**: List all the muscle groups targetted in the workout video
                         2. ** Muscle Anatomy and Function: ** Highlight targeted muscles parts and their roles as explained in the video.
                         4. ** Form details**: Explain all the form details mentioned when workout out the muscle group. This includes explaining different types of grips and the effect of each one, different angles of a movement, and so on
                         5. ** Strategies**: Explain ** in detail ** any strategies mentioned to perform the sets/reps or to define the weights. Also explain how they're used in the workout.
@@ -118,7 +118,7 @@ user_prompts_dict = {
 
                         ```json
 
-                        {"video_overview": "",
+                        {"muscle_groups": [],
 
                         "muscle_part_anatomy_function" : [
 

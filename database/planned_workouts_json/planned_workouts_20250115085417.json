@@ -1,0 +1,89 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 6.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps",
+                "Back"
+            ],
+            "set_reasoning": "This superset combines a biceps exercise with a back exercise, allowing for efficient use of time and ensuring both muscle groups are targeted within the 30-minute constraint. The volume is appropriate for a beginner, focusing on learning proper form and achieving hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal biceps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "30 seconds after each superset",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM."
+                },
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "30 seconds after each superset",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 reps with good form, typically around 60-70% of your 1RM."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 6.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps",
+                "Back"
+            ],
+            "set_reasoning": "This superset continues to target the biceps and back, ensuring balanced development and efficient use of the 30-minute session. The exercises are chosen to provide a mix of compound and isolation movements, suitable for a beginner.",
+            "exercises": [
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM.",
+                    "rest_time": "30 seconds after each superset",
+                    "alternative_exercise": "Standing Dumbbell Curl",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 reps with good form, typically around 50-60% of your 1RM."
+                },
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Select a weight that allows you to complete 10 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "30 seconds after each superset",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 reps with good form, typically around 60-70% of your 1RM."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout is structured to fit within a 30-minute time frame, using supersets to maximize efficiency. Each superset targets both the biceps and back, aligning with the user's goal of bigger biceps and overall back development. The exercises are chosen based on their ability to provide high tension in the stretched position, which is crucial for muscle growth. The volume and intensity are appropriate for a beginner, focusing on learning proper form and achieving hypertrophy. The use of alternative exercises ensures flexibility and adaptability to available equipment."
+}

@@ -1,2 +1,4 @@
 .env
 /database/json_summaries/*.json
+#test file
+test.py

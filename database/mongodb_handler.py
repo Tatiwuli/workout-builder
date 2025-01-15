@@ -1,3 +1,6 @@
+from pymongo import MongoClient, UpdateOne
+from pymongo import MongoClient
+from bson import ObjectId
 from bson import ObjectId  # For working with MongoDB ObjectIds
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -114,3 +117,46 @@ class WorkoutBuilderDatabaseHandler:
                   field_name}' in collection '{collection_name}': {e}")
             return 0
 
+
+# def update_targeted_muscle_groups(targeted_muscle_groups_mapping):
+#     MONGO_URI = os.getenv("MONGODB_URI")
+#     assert MONGO_URI, "MongoDB URI not provided!"
+
+#     client = MongoClient(MONGO_URI)
+#     db = client["workout_builder"]
+#     collection = db["videos_summaries"]
+
+#     # Prepare bulk update operations using UpdateOne
+#     bulk_updates = []
+#     for doc_id, muscle_groups in targeted_muscle_groups_mapping.items():
+#         bulk_updates.append(
+#             UpdateOne(
+#                 {"_id": ObjectId(doc_id)},  # Filter
+#                 {"$set": {"video_targeted_muscle_groups": muscle_groups}}  # Update
+#             )
+#         )
+
+#     # Execute bulk update
+#     if bulk_updates:
+#         result = collection.bulk_write(bulk_updates)
+#         print(f"Matched {result.matched_count} documents, modified {
+#               result.modified_count} documents.")
+#     else:
+#         print("No updates to process.")
+
+
+# # Example Input
+# targeted_muscle_groups_mapping = {
+#     "6778a621d4a87792e974043d": ["Quadriceps"],
+#     "6778a640d4a87792e974043e": ["Triceps"],
+#     "6778a666d4a87792e974043f": ["Chest"],
+#     "6778a690d4a87792e9740440": ["Back"],
+#     "67790dc33ea12f4ce5fb3cb7": ["Quadriceps", "Calves", "Glutes", "Hamstrings", "Low Back"],
+#     "67790dd63ea12f4ce5fb3cb9": ["Glutes"],
+#     "67791086c4e846798caf6052": ["Quadriceps", "Glutes", "Hamstrings"],
+#     "6779136603148c5632f48fa0": ["Shoulder"],
+#     "677915f2ecbe19f5027fc9c2": ["Biceps"]
+# }
+
+# # Update the collection
+# update_targeted_muscle_groups(targeted_muscle_groups_mapping)
