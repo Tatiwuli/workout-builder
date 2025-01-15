@@ -1,4 +1,6 @@
 
+from streamlit_cookies_manager import EncryptedCookieManager
+from frontend.utils import render_nav_link, render_logout
 import os
 from dotenv import load_dotenv
 import sys
@@ -6,13 +8,9 @@ import streamlit as st
 
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..')))
-from frontend.utils import render_nav_link, render_logout
-from streamlit_cookies_manager import EncryptedCookieManager
 
 st.set_page_config(page_title="Workout Builder",
                    page_icon="💪", layout="centered")
-
-
 
 
 def home():
@@ -23,7 +21,7 @@ def home():
         prefix="workout_builder_", password=COOKIE_PASSWORD)
     if not cookies.ready():
         st.stop()
-    
+
     render_logout(cookies)
 
     st.title("🏋️‍♂️ Workout Builder")
@@ -50,7 +48,7 @@ def home():
                 # Save the API key to session state
 
                 st.success("API Key successfully saved! You can now proceed.")
-                render_nav_link("questionnaire")
+                render_nav_link("Questionnaire")
 
                 user_api_key = user_api_key.strip()
 
