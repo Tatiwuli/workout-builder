@@ -6,10 +6,12 @@ from dotenv import load_dotenv
 import os
 from streamlit_cookies_manager import EncryptedCookieManager
 
-from frontend.utils import render_nav_link
-
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..')))
+
+from frontend.utils import render_nav_link
+
+
 
 
 def home():
