@@ -2,6 +2,7 @@ import streamlit as st
 import time
 from dotenv import load_dotenv
 import os
+import toml
 from streamlit_cookies_manager import EncryptedCookieManager
 from frontend.utils import render_logout
 from frontend.run_generate_workout_plan import trigger_generate_workout_plan
@@ -210,6 +211,12 @@ def render_questionnaire():
 
 # ---------- Main Logic ----------
 if __name__ == "__main__":
+
+    secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
+    if os.path.exists(secrets_path):
+        secrets = toml.load(secrets_path)
+    else:
+        secrets = {}
 
     # Initialize the cookie manager
     load_dotenv()

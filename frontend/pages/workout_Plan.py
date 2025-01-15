@@ -5,6 +5,7 @@ import streamlit as st
 st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
 import streamlit_nested_layout
+import toml
 from dotenv import load_dotenv
 import os
 
@@ -98,6 +99,13 @@ def render_workout_plan():
         st.error("Please try to generate workout plan again")
 
 if __name__ == "__main__":
+
+    secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
+    if os.path.exists(secrets_path):
+        secrets = toml.load(secrets_path)
+    else:
+        secrets = {}
+
     # Initialize the cookie manager
     load_dotenv()
     COOKIE_PASSWORD = st.secrets.get("COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")

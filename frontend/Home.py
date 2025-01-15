@@ -1,10 +1,13 @@
 
-from streamlit_cookies_manager import EncryptedCookieManager
-from frontend.utils import render_nav_link, render_logout
+
 import os
 from dotenv import load_dotenv
 import sys
 import streamlit as st
+import toml
+
+from streamlit_cookies_manager import EncryptedCookieManager
+from frontend.utils import render_nav_link, render_logout
 
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..')))
@@ -15,8 +18,16 @@ st.set_page_config(page_title="Workout Builder",
 
 def home():
     # Initialize the cookie manager
+    secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
+
+
+    if os.path.exists(secrets_path):
+        secrets = toml.load(secrets_path)
+    else:
+        secrets = {}
+
     load_dotenv()
-    COOKIE_PASSWORD =  st.secrets.get(
+    COOKIE_PASSWORD =  secrets.get(
         "COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)
