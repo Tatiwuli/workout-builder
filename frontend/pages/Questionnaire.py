@@ -123,7 +123,7 @@ def render_questionnaire():
     """
     Display the questionnaire 
     """
-    st.title("Questionnaire")
+   
     st.subheader("Selected Muscle Groups")
 
     col1, col2 = st.columns([4, 1])

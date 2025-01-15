@@ -48,7 +48,7 @@ def home():
                 # Save the API key to session state
 
                 st.success("API Key successfully saved! You can now proceed.")
-                render_nav_link("Questionnaire")
+                render_nav_link("questionnaire")
 
                 user_api_key = user_api_key.strip()
 
