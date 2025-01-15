@@ -213,7 +213,7 @@ if __name__ == "__main__":
 
     # Initialize the cookie manager
     load_dotenv()
-    COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD = st.secrets.get("COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)
     if not cookies.ready():
@@ -225,7 +225,7 @@ if __name__ == "__main__":
 
     # Retrieve the API key
     api_key = cookies.get("api_key", None)
-    
+
     if st.session_state["workflow_stage"] == "muscle_selection":
         st.title("Select Your Workout Muscles")
 

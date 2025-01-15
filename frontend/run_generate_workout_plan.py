@@ -59,7 +59,8 @@ def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
 
 def run_generate_workout_plan():
     load_dotenv()
-    COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD =  st.secrets.get(
+        "COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
 
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)  # expires after 30 minutes

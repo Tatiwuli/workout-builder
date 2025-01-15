@@ -16,7 +16,8 @@ st.set_page_config(page_title="Workout Builder",
 def home():
     # Initialize the cookie manager
     load_dotenv()
-    COOKIE_PASSWORD = os.getenv("COOKIE_PASSWORD")
+    COOKIE_PASSWORD =  st.secrets.get(
+        "COOKIE_PASSWORD") or os.getenv("COOKIE_PASSWORD")
     cookies = EncryptedCookieManager(
         prefix="workout_builder_", password=COOKIE_PASSWORD)
     if not cookies.ready():
