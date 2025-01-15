@@ -28,7 +28,7 @@ def render_workout_plan():
     # Check if the user completed the questionnaire
     if "responses" not in st.session_state:
         st.error("No responses found. Please complete the questionnaire first.")
-        render_nav_link("questionnaire")
+        render_nav_link("Questionnaire")
         st.stop()
 
     #Create workout plan
