@@ -1,7 +1,6 @@
 from pymongo import MongoClient, UpdateOne
 from pymongo import MongoClient
-from bson import ObjectId
-from bson import ObjectId  # For working with MongoDB ObjectIds
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.results import InsertOneResult

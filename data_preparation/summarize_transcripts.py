@@ -6,7 +6,7 @@ from youtube_transcript_api import (
 )
 
 from llms.llm import OpenAILLM
-from prompts import system_prompt, user_prompts_dict
+from data_preparation.prompts import system_prompt, user_prompts_dict
 
 
 # init LLM model
