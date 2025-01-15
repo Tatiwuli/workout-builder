@@ -1,10 +1,7 @@
 
 import streamlit as st
-from dotenv import load_dotenv
-
-import os
 from streamlit_modal import Modal
-from streamlit_cookies_manager import EncryptedCookieManager
+
 
 # Function to handle logout
 
