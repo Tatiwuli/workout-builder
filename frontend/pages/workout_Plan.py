@@ -2,8 +2,8 @@
 
 import os
 
-from ..utils import render_nav_link
-from ..run_generate_workout_plan import run_generate_workout_plan
+from frontend.utils import render_nav_link
+from frontend.run_generate_workout_plan import run_generate_workout_plan
 import toml
 import streamlit_nested_layout
 from dotenv import load_dotenv

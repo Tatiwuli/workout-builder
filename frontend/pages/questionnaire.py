@@ -4,8 +4,8 @@
 import streamlit as st
 import time
 
-from ..run_generate_workout_plan import trigger_generate_workout_plan
-from ..questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
+from frontend.run_generate_workout_plan import trigger_generate_workout_plan
+from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
 
 
 PULL_OPTIONS = ["Biceps", "Back"]
