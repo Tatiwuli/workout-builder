@@ -19,17 +19,17 @@ def experience_question():
     experience_options = [
         "I'm just starting out and have less than 3 months of experience.",
         "I’ve been consistently training for 3 months to 1 year.",
-        "I’ve been training regularly for 1 to 3 years.",
-        "I’m a seasoned lifter with over 3 years of training experience."
+        "I’ve been training regularly for 1 to 2 years",
+        "I’ve been training regularly for 2 to 3 years"
     ]
     existing_response = st.session_state["responses"].get(
-        "experience_level_explanation", None)
+        "experience_level_description", None)
     response = st.radio(
         "What's your experience level with weightlifting?",
         experience_options,
         index=experience_options.index(
             existing_response) if existing_response else 0,
-        key="experience_level_explanation"
+        key="experience_level_description"
     )
     return response
 

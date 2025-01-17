@@ -75,9 +75,9 @@ Streamlit was chosen for its simplicity and ability to quickly build and iterate
   **Priority:** Low  
   Currently, when users click “Edit” in the “Selected Muscles” section, the app resets all selected muscles. Instead, allow users to delete or add specific muscles without restarting the entire process.
 
-- **Download Workout Plan as an Image**  
-  **Priority:** Low  
-  Add a “Download workout plan as image” button. Users can currently take screenshots, but this feature will make it more practical.
+- **Specify the Fitness Level question in the Questionnaire**  
+  **Priority:** High
+  Determining a user's fitness level involves several nuances. I want to redesign the "Fitness Level" question to better capture these factors.
 
 - **Setup Unit Tests**  
   **Priority:** High  

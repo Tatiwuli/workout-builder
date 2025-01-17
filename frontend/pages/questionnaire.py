@@ -1,16 +1,15 @@
 
 
-
+from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
+from frontend.utils import process_user_responses
+from frontend.run_generate_workout_plan import trigger_generate_workout_plan
 import streamlit as st
 import time
 import sys
-import os 
+import os
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-
-from frontend.run_generate_workout_plan import trigger_generate_workout_plan
-from frontend.utils import process_user_responses
-from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..")))
 
 
 PULL_OPTIONS = ["Biceps", "Back"]
@@ -171,7 +170,7 @@ def render_questionnaire():
         elif current_question == "Experience":
             st.subheader("Set Experience Level")
             response = experience_question()
-            st.session_state["responses"]["experience_level_explanation"] = response
+            st.session_state["responses"]["experience_level_description"] = response
 
         # If current question is not the last question
         if not current_question_index == len(QUESTIONS) - 1:
@@ -216,7 +215,7 @@ def render_questionnaire():
 
 def render_formatted_responses(processed_responses):
 
-        # Grouping data for structured display with emojis
+    # Grouping data for structured display with emojis
     grouped_data = {
         "General Info": {
             "💪 Muscle groups": ", ".join(processed_responses.get("muscle_groups", [])),
@@ -226,7 +225,7 @@ def render_formatted_responses(processed_responses):
         },
         "🎯 Goals": processed_responses.get("goals", {}),
         "📅 Frequency": processed_responses.get("muscle_workout_frequency", {})
-       
+
     }
 
     # Display grouped data
@@ -243,19 +242,18 @@ def render_formatted_responses(processed_responses):
             for key, value in group_values.items():
                 st.markdown(f"- **{key}:** {value}")
 
+
 # ---------- Main Logic ----------
 if __name__ == "__main__":
 
-
-    
     initialize_session_state()
 
-
     if st.session_state["workflow_stage"] == "muscle_selection":
-        
+
         st.title("Select Your Workout Muscles")
         if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
-            st.error("API Key is missing. Please go back to the Home page to provide it.")
+            st.error(
+                "API Key is missing. Please go back to the Home page to provide it.")
         else:
             render_muscle_selection()
 
@@ -271,7 +269,7 @@ if __name__ == "__main__":
         st.header("Your Responses")
         processed_responses = process_user_responses(responses)
         st.session_state["processed_responses"] = processed_responses
-        
+
         render_formatted_responses(processed_responses)
 
         if not st.session_state.get("plan_generated", False):
