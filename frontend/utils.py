@@ -5,12 +5,9 @@ import streamlit as st
 def render_nav_link(page_name):
     """
     Render a navigation link styled as a button to navigate between pages dynamically.
-
-    Args:
-        page_name (str): Name of the page (e.g., 'questionnaire', 'workout_plan').
     """
     # Dynamically construct the base URL
-    full_base_url = "https: // workout-builder.streamlit.app/"
+    full_base_url = "https://workout-builder.streamlit.app/"
    
    
 
@@ -41,7 +38,7 @@ def render_nav_link(page_name):
                 color: white;
             }}
         </style>
-        <a href="{full_base_url}?page={page_name}" target="_self" class="btn">
+        <a href="{full_base_url}/{page_name}" target="_self" class="btn">
             Go to {page_name.replace('_', ' ').capitalize()}
         </a>
         """,
