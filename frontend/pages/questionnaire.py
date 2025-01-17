@@ -3,8 +3,10 @@
 
 import streamlit as st
 import time
-sys.path.insert(0, os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..")))
+import sys
+import os 
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from frontend.run_generate_workout_plan import trigger_generate_workout_plan
 from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
