@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(
 st.set_page_config(page_title="Workout Builder",
                    page_icon="💪", layout="centered")
 
-from frontend.utils import render_nav_link
+
 
 
 def validate_api_key(api_key):
