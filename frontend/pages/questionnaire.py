@@ -237,27 +237,15 @@ if __name__ == "__main__":
     if st.session_state["workflow_stage"] == "muscle_selection":
         st.title("Select Your Workout Muscles")
 
-        if not api_key:
-            st.error("Please insert your OpenAI API key in the home page to start")
-        else:
-
-            render_muscle_selection()
+        render_muscle_selection()
 
     elif st.session_state["workflow_stage"] == "questionnaire":
         st.title("Let's get to know more about you")
-        if not api_key:
-            st.error("Please insert your OpenAI API key in the home page to start")
-        else:
-            render_questionnaire()
+        render_questionnaire()
 
     elif st.session_state["workflow_stage"] == "workout_plan":
 
-        if not api_key:
-            st.error(
-                "Please insert your OpenAI API key in the home page to generate your plan")
-
-        else:
-            responses = st.session_state["responses"]
+        responses = st.session_state["responses"]
 
         # Show user responses
         st.subheader("Your Responses")
