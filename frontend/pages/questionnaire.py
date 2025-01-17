@@ -9,6 +9,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from frontend.run_generate_workout_plan import trigger_generate_workout_plan
+from frontend.utils import process_user_responses
 from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
 
 
@@ -42,6 +43,9 @@ def initialize_session_state():
     """
     if "responses" not in st.session_state:
         st.session_state["responses"] = {}
+    if "processed_responses" not in st.session_state:
+        st.session_state["processed_responses"] = {}
+
     if "is_last_question" not in st.session_state:
         st.session_state["is_last_question"] = False
 
@@ -210,16 +214,38 @@ def render_questionnaire():
             st.button("➡️", on_click=lambda: go_next())
 
 
+def render_formatted_responses(processed_responses):
+
+        # Grouping data for structured display with emojis
+    grouped_data = {
+        "General Info": {
+            "💪 Muscle groups": ", ".join(processed_responses.get("muscle_groups", [])),
+            "⏳ Workout duration": processed_responses.get("workout_duration"),
+            "📏 Time range": processed_responses.get("time_range"),
+            "🏋️‍♀️ Experience level": processed_responses.get("experience_level"),
+        },
+        "🎯 Goals": processed_responses.get("goals", {}),
+        "📅 Frequency": processed_responses.get("muscle_workout_frequency", {})
+       
+    }
+
+    # Display grouped data
+    for group_name, group_values in grouped_data.items():
+        st.markdown(f"### {group_name}")
+        if isinstance(group_values, dict):
+            for muscle, value in group_values.items():
+                st.markdown(f"- **{muscle}:** {value}")
+        elif isinstance(group_values, str):
+            st.markdown(f"- **{group_name}:** {group_values}")
+        elif isinstance(group_values, list):
+            st.markdown(f"- **{group_name}:** {', '.join(group_values)}")
+        else:
+            for key, value in group_values.items():
+                st.markdown(f"- **{key}:** {value}")
+
 # ---------- Main Logic ----------
 if __name__ == "__main__":
 
-    # secrets_path = os.path.join(os.path.dirname(__file__), "secrets.toml")
-    # if os.path.exists(secrets_path):
-    #     secrets = toml.load(secrets_path)
-    # else:
-    #     secrets = {}
-
-    # Initialize the cookie manager
 
     
     initialize_session_state()
@@ -242,14 +268,11 @@ if __name__ == "__main__":
         responses = st.session_state["responses"]
 
         # Show user responses
-        st.subheader("Your Responses")
-        for key, value in responses.items():
-            if isinstance(value, list):
-                value = ", ".join([str(v)
-                                   for v in value if v]) or "No response"
-            col1, col2 = st.columns([1, 3])
-            col1.write(f"**{key.replace('_', ' ').capitalize()}:**")
-            col2.write(value)
+        st.header("Your Responses")
+        processed_responses = process_user_responses(responses)
+        st.session_state["processed_responses"] = processed_responses
+        
+        render_formatted_responses(processed_responses)
 
         if not st.session_state.get("plan_generated", False):
             # If the plan is not generated yet
