@@ -66,7 +66,7 @@ def run_generate_workout_plan():
     else:
         api_key = None
 
-    if user_session or not api_key:
+    if not user_session or not api_key:
         st.error("API Key is missing. Please go back to the Home page to provide it.")
     
     secrets_mongo_uri = st.secrets.get("MONGO_URI")
