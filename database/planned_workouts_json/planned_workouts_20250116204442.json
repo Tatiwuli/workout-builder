@@ -1,0 +1,111 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 6.5,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "For beginners, 3 sets of 8-12 reps per exercise are recommended to focus on form and technique while providing enough volume for muscle growth. This aligns with the user's goal of bigger biceps and their workout frequency of once per week.",
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal biceps"
+                        ]
+                    },
+                    "reps": "8-12",
+                    "weight": "Choose a weight that allows you to complete 8-12 reps with good form, typically starting with a light to moderate weight.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8-12 reps with proper form, usually lighter than preacher curls due to the increased range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 6.5,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "Face Away Cable Curls provide maximum stretch and tension, crucial for muscle growth. Performing 3 sets of 8-12 reps helps beginners develop the biceps peak effectively.",
+            "exercises": [
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "8-12",
+                    "weight": "Use a weight that allows you to maintain form for 8-12 reps, typically starting with a light to moderate weight.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Hammer Curl",
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 8-12 reps with good form, usually lighter than face away cable curls."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 6.5,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "Wide Grip Lat Pull Down is effective for beginners to develop back muscles. 3 sets of 8-12 reps provide sufficient volume for growth and strength gains.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "8-12",
+                    "weight": "Select a weight that allows you to perform 8-12 reps with proper form, typically starting with a moderate weight.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 8-12 reps with good form, usually similar to the wide grip lat pull down."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 6.5,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "Chest Supported Row is ideal for beginners to focus on back muscles. 3 sets of 8-12 reps ensure adequate volume for muscle development.",
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": "8-12",
+                    "weight": "Use a weight that allows you to complete 8-12 reps with good form, typically starting with a moderate weight.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "8-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 8-12 reps with proper form, usually similar to the chest supported row."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout is structured to meet the user's goal of bigger biceps and includes exercises for the back as well. Each set is designed with 3 sets of 8-12 reps, which is suitable for beginners focusing on hypertrophy. The exercises are ordered to target the biceps first, as it is the primary goal, followed by back exercises. The total workout time is approximately 26 minutes, including rest periods, which fits within the user's 30-minute time constraint. The exercises selected provide a balance of compound and isolation movements, ensuring comprehensive muscle engagement and development."
+}

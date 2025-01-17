@@ -1,11 +1,16 @@
+
+
+
 import streamlit as st
 import time
-from dotenv import load_dotenv
 import os
 import toml
+from dotenv import load_dotenv
 from streamlit_cookies_manager import EncryptedCookieManager
-from frontend.utils import render_logout
+
 from frontend.run_generate_workout_plan import trigger_generate_workout_plan
+from frontend.cookies_manager import CookieManager
+
 from questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
 
 
@@ -34,8 +39,6 @@ def go_next():
 
 
 def initialize_session_state():
-   
-   
     """
     Initialize session state variables.
     """
@@ -124,7 +127,7 @@ def render_questionnaire():
     """
     Display the questionnaire 
     """
-   
+
     st.subheader("Selected Muscle Groups")
 
     col1, col2 = st.columns([4, 1])
@@ -219,20 +222,15 @@ if __name__ == "__main__":
     #     secrets = {}
 
     # Initialize the cookie manager
-    load_dotenv()
-    COOKIE_PASSWORD = st.secrets["COOKIE_PASSWORD"] or os.getenv(
-        "COOKIE_PASSWORD")
-    cookies = EncryptedCookieManager(
-        prefix="workout_builder_", password=COOKIE_PASSWORD)
-    if not cookies.ready():
-        st.stop()
 
-    render_logout(cookies)
-
+    
     initialize_session_state()
 
-    # Retrieve the API key
-    api_key = cookies.get("api_key", None)
+    if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
+        st.error("API Key is missing. Please go back to the Home page to provide it.")
+
+    api_key = st.session_state["user"]["api_key"]
+
 
     if st.session_state["workflow_stage"] == "muscle_selection":
         st.title("Select Your Workout Muscles")
@@ -279,7 +277,8 @@ if __name__ == "__main__":
         else:
             # If the plan has already been generated, show "Make Another Plan" button
             if st.button("Make Another Plan"):
-                # Reset session state variables for a new plan
+                # Reset session state va
+                # riables for a new plan
                 st.session_state["workflow_stage"] = "muscle_selection"
                 st.session_state["plan_generated"] = False
 

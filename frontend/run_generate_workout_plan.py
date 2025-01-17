@@ -5,7 +5,6 @@ import os
 import toml
 
 from agents.build_workout_plan import WorkoutBuilderWorkflow
-from streamlit_cookies_manager import EncryptedCookieManager
 
 
 def trigger_generate_workout_plan():
@@ -46,7 +45,7 @@ def handle_progress(message, percentage):
     st.progress(percentage)
 
 
-def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
+def generate_workout_plan(user_api_key, secrets_mongo_uri, user_responses, progress_callback=None):
     """
     Generates the workout plan with agents
     """
@@ -54,7 +53,7 @@ def generate_workout_plan(user_api_key, user_responses, progress_callback=None):
     processed_responses = process_user_responses(user_responses)
     # trigger agents to start the building process
     workflow = WorkoutBuilderWorkflow(
-        progress_callback=handle_progress, api_key=user_api_key)
+        progress_callback=handle_progress, api_key=user_api_key,  secrets_mongo_uri= secrets_mongo_uri)
     return workflow.run_workflow(processed_responses)
 
 
@@ -65,25 +64,31 @@ def run_generate_workout_plan():
     # else:
     #     secrets = {}
 
-    load_dotenv()
-    COOKIE_PASSWORD = st.secrets["COOKIE_PASSWORD"] or os.getenv(
-        "COOKIE_PASSWORD")
+    if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
+        st.error("API Key is missing. Please go back to the Home page to provide it.")
+        
+    secrets_mongo_uri = st.secrets.get("MONGO_URI")
+    st.write(secrets_mongo_uri)
 
-    cookies = EncryptedCookieManager(
-        prefix="workout_builder_", password=COOKIE_PASSWORD)  # expires after 30 minutes
-    if not cookies.ready():
-        st.stop()
 
-    # Retrieve the API key
-    user_api_key = cookies.get("api_key", None)
-    print(user_api_key)
+    api_key = st.session_state["user"]["api_key"]
+    #print("Using Mongo URI from:", "st.secrets" if secrets_mongo_uri ==
+        #   st.secrets.get("MONGO_URI") else ".env")
+
+    # secrets_mongo_uri =  st.secrets.get('MONGO_URI', None)
+    # if secrets_mongo_uri:
+    #     print("got mongo uri from secrets.")
+
 
     try:
         with st.spinner("Generating your workout plan..."):
             # trigger backend to generate workout plan
-            st.session_state["workout_plan"] = generate_workout_plan(
-                user_api_key, st.session_state["responses"], progress_callback=handle_progress)
-
+            st.session_state["workout_plan"]  = generate_workout_plan(
+                user_api_key=api_key,
+                secrets_mongo_uri=secrets_mongo_uri,
+                user_responses=st.session_state["responses"],
+                progress_callback=handle_progress
+            )
         st.session_state["trigger_generate_plan"] = False
 
         # rerun to remove the progress bars and render the workout plan

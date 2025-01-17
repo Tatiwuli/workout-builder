@@ -1,0 +1,95 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Barbell Back Squat",
+            "setup_notes": "Position the barbell on your upper traps.",
+            "execution_notes": "Lock in your bar path, squat down deep, and stand back up.",
+            "alternative_equipment": "Smith Machine",
+            "tier_reasons": "High quad tension, feels good, excellent for progressive overload.",
+            "targeted_muscles": [
+                "Quadriceps"
+            ],
+            "targeted_muscle_parts": "All heads, with less emphasis on rectus femoris.",
+            "limitations": "Requires spinal stabilization.",
+            "scientific_insights": "Studies show solid rectus femoris growth despite anatomical concerns.",
+            "additional_notes": "Include another exercise to fully engage rectus femoris.",
+            "alternative_exercise": "Hack Squat",
+            "selection_reason": "The Barbell Back Squat is a fundamental compound exercise that effectively targets the quadriceps, aligning with the user's goal of defined quads. It also engages the glutes, supporting the user's goal of lifted glutes. Its high quad tension and potential for progressive overload make it ideal for intermediate users."
+        },
+        {
+            "exercise_name": "Stiff-Legged Deadlift",
+            "setup_notes": "Use a barbell, similar to a conventional deadlift setup.",
+            "execution_notes": "Keep hips high and knees more straight. Hinge at the hips to initiate the pull.",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "None",
+            "targeted_muscles": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "targeted_muscle_parts": "Focuses on the hamstrings due to the hip hinge movement.",
+            "limitations": "Can be awkward for beginners; start light.",
+            "scientific_insights": "None",
+            "additional_notes": "Do not push too close to failure until comfortable with the technique.",
+            "alternative_exercise": "Romanian Deadlift (RDL)",
+            "selection_reason": "The Stiff-Legged Deadlift is excellent for targeting the hamstrings and glutes, aligning with the user's goals of toned hamstrings and lifted glutes. Its focus on the posterior chain complements the user's overall lower body development goals."
+        },
+        {
+            "exercise_name": "Leg Extension",
+            "setup_notes": "Position yourself on the leg extension machine.",
+            "execution_notes": "Extend your legs fully.",
+            "alternative_equipment": "Resistance Bands",
+            "tier_reasons": "Engages all four heads, especially rectus femoris.",
+            "targeted_muscles": [
+                "Quadriceps"
+            ],
+            "targeted_muscle_parts": "All heads, with emphasis on rectus femoris.",
+            "limitations": "Limited overload potential.",
+            "scientific_insights": "Study shows more rectus femoris growth with seat back position.",
+            "additional_notes": "Include in leg days for balanced quad development.",
+            "alternative_exercise": "Slow Eccentric Leg Extension",
+            "selection_reason": "Leg Extensions are crucial for isolating the quadriceps, particularly the rectus femoris, which is often under-targeted in compound movements. This aligns with the user's goal of defined quads."
+        },
+        {
+            "exercise_name": "Seated Calf Raise",
+            "setup_notes": "Use a seated calf raise machine.",
+            "execution_notes": "Perform with a bent knee to target the soleus.",
+            "alternative_equipment": "Standing Calf Raise Machine",
+            "tier_reasons": "None",
+            "targeted_muscles": [
+                "Soleus"
+            ],
+            "targeted_muscle_parts": "Targets the soleus, though recent studies suggest it is less responsive to training.",
+            "limitations": "None",
+            "scientific_insights": "2020 study suggests soleus responds poorly to both high and low rep training.",
+            "additional_notes": "Consider replacing with standing calf raises if soleus response is a concern.",
+            "alternative_exercise": "Standing Calf Raise",
+            "selection_reason": "The Seated Calf Raise specifically targets the soleus, contributing to the user's goal of defined calves. It complements the overall lower body workout by focusing on a different part of the calf muscle."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Dynamic Leg Swings",
+                "setup_notes": "Stand next to a wall or support for balance.",
+                "execution_notes": "Swing one leg forward and backward in a controlled manner.",
+                "sets_reps": "2 sets of 10 swings per leg",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Bodyweight Squats",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Perform squats with a focus on depth and control.",
+                "sets_reps": "2 sets of 10 reps",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "High Knees",
+                "setup_notes": "Stand in place with feet hip-width apart.",
+                "execution_notes": "Alternate lifting knees to hip height at a quick pace.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": "2 minutes"
+            }
+        ]
+    }
+}

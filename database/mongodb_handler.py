@@ -10,13 +10,13 @@ import json
 from dotenv import load_dotenv
 
 load_dotenv()
-
 class WorkoutBuilderDatabaseHandler:
-    def __init__(self, database_name: str):
-        
-        MONGO_URI = os.getenv("MONGODB_URI")
-        assert MONGO_URI, "MongoDB URI not provided!"
-        self.client = MongoClient(MONGO_URI, server_api=ServerApi("1"))
+    def __init__(self, database_name, secrets_mongo_uri = None):
+        if not secrets_mongo_uri:
+            secrets_mongo_uri = os.getenv("MONGODB_URI")
+       
+        assert secrets_mongo_uri, "MongoDB URI not provided!"
+        self.client = MongoClient(secrets_mongo_uri, server_api=ServerApi("1"))
         self.test_connection()
         self.db = self.client[database_name]
         self.batch_size = 100

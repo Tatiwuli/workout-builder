@@ -1,58 +1,10 @@
 
 import streamlit as st
 from streamlit_modal import Modal
+from streamlit_cookies_manager import EncryptedCookieManager
+from dotenv import load_dotenv
+import os
 
-
-# Function to handle logout
-
-
-def logout_user(cookies):
-    """
-    Handles user logout by clearing the API key and timestamp from cookies.
-    """
-    if "api_key" in cookies:
-        del cookies["api_key"]
-    if "api_key_timestamp" in cookies:
-        del cookies["api_key_timestamp"]
-
-    for key in list(st.session_state.keys()):
-        del st.session_state[key]
-
-    st.success(
-        "You have been logged out. Please re-enter your API key to continue.")
-    st.stop()
-
-# Function to render logout mechanism
-
-
-def render_logout(cookies):
-    """
-    Renders the logout button in the sidebar and handles the logout flow.
-    """
-
-    
-    modal = Modal(title="Confirm Logout", key="logout_modal", max_width=600)
-
-    with st.sidebar:
-        st.subheader("Account")
-        if st.button("Logout"):
-            modal.open()
-
-    # If modal is open, display logout confirmation
-    if modal.is_open():
-        with modal.container():
-            st.warning(
-                "⚠️Are you sure you want to log out? This will remove your API key and other saved data.")
-
-            col1, col2 = st.columns([5, 20])
-            with col1:
-
-                if st.button("Yes, Logout"):
-                    logout_user(cookies)
-
-            with col2:
-                if st.button("Cancel"):
-                    modal.close()
 
 
 

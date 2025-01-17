@@ -16,7 +16,7 @@
    - [Download Workout Plan as an Image](#download-workout-plan-as-an-image)
    - [Setup Unit Tests](#setup-unit-tests)
    - [User Accounts](#user-accounts)
-   - [Exercise Q&A Section](#exercise-q-a-section)
+   - [Weekly workout plan](#weekly-workout-plan)
 5. [How to Run the Project](#how-to-run-the-project)
 6. [Important Notes](#important-notes)
 
@@ -86,9 +86,10 @@ Streamlit was chosen for its simplicity and ability to quickly build and iterate
   **Priority:** Low  
   Allow users to save and retrieve their workout plans within a dedicated user account area.
 
-- **Exercise Q&A Section**  
+- **Weekly workout plans**  
   **Priority:** Medium  
-  Implement a feature where users can ask the app about the effectiveness of specific exercises. The app will explain the exercise’s relevance to hypertrophy goals, backed by scientific reasoning.
+  Design workout plans for a week of workouts. 
+  When it comes to reaching hypertrophy goals, it's crucial to design a workout session considering how one will distribute the sessions and exercises throughout the week. While the Frequency question allows the agent to set appropriate reps and sets amount for the user, the workout guidance are limited for one session, and not for the entire week. 
 
 ---
 

@@ -3,7 +3,7 @@ from agents.agents_prompts.exercise_selector_prompts import system_prompt, assis
 
 
 class ExerciseSelectorAgent(BaseAgent):
-    def __init__(self,api_key = None):
+    def __init__(self,api_key = None, secrets_mongo_uri = None):
         if not api_key:
             raise ValueError(
                 "API key is required to initialize the ExerciseSelectorAgent.")
@@ -11,7 +11,7 @@ class ExerciseSelectorAgent(BaseAgent):
         self.assistant_prompt = assistant_prompt
         self.user_prompt = user_prompt
 
-        super().__init__(api_key=api_key, llm_model_name="gpt-4o")
+        super().__init__(api_key=api_key, secrets_mongo_uri=secrets_mongo_uri, llm_model_name="gpt-4o")
 
     def prepare_assistant_input(self):
         """

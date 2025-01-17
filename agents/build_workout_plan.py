@@ -4,16 +4,16 @@ from agents.personal_trainer_agent import PersonalTrainerAgent
 
 
 class WorkoutBuilderWorkflow:
-    def __init__(self, database_name="workout_builder", progress_callback=None, api_key = None):
+    def __init__(self, database_name="workout_builder", progress_callback=None, api_key = None, secrets_mongo_uri = None):
         """
         Initializes the Workflow with all agents.
         """
         if not api_key:
             raise ValueError("API key is required to initialize the workflow.")
 
-        self.exercise_selector = ExerciseSelectorAgent(api_key= api_key)
-        self.workout_planner = WorkoutPlannerAgent(api_key= api_key)
-        self.personal_trainer = PersonalTrainerAgent(api_key= api_key)
+        self.exercise_selector = ExerciseSelectorAgent(api_key= api_key, secrets_mongo_uri = secrets_mongo_uri)
+        self.workout_planner = WorkoutPlannerAgent(api_key= api_key, secrets_mongo_uri = secrets_mongo_uri)
+        self.personal_trainer = PersonalTrainerAgent(api_key= api_key, secrets_mongo_uri = secrets_mongo_uri)
         self.progress_callback = progress_callback  # Callback for real-time updates
 
     

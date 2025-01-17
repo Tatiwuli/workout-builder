@@ -7,10 +7,10 @@ import json
 
 
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o", api_key = None):
+    def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o", api_key = None, secrets_mongo_uri = None):
         if not api_key:
             raise ValueError("API key is required to initialize the LLM.")
-        self.db_handler = WorkoutBuilderDatabaseHandler(database_name)
+        self.db_handler = WorkoutBuilderDatabaseHandler(database_name, secrets_mongo_uri= secrets_mongo_uri)
         
         self.llm = OpenAILLM(model_name=llm_model_name, api_key=api_key)
 
