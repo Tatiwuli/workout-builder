@@ -1,18 +1,16 @@
 
 
 import os
-
+import streamlit as st
 import sys
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "..")))
 
+st.set_page_config(page_title="Workout Plan", page_icon="💪")
+
 from frontend.utils import render_nav_link
 from frontend.run_generate_workout_plan import run_generate_workout_plan
-import toml
-import streamlit_nested_layout
-from dotenv import load_dotenv
-import streamlit as st
-st.set_page_config(page_title="Workout Plan", page_icon="💪")
+
 
 
 def initialize_sessions_states():
