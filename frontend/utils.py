@@ -7,7 +7,7 @@ def render_nav_link(page_name):
     Render a navigation link styled as a button to navigate between pages dynamically.
     """
     # Dynamically construct the base URL
-    full_base_url = "https://workout-builder.streamlit.app/"
+    full_base_url = "https://workout-builder.streamlit.app"
    
    
 
