@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath(
 st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
 import streamlit_nested_layout 
-from frontend.utils import render_nav_link
+
 from frontend.run_generate_workout_plan import run_generate_workout_plan
 
 
@@ -29,7 +29,7 @@ def render_workout_plan():
     # Check if the user completed the questionnaire
     if "responses" not in st.session_state:
         st.error("No responses found. Please complete the questionnaire first.")
-        render_nav_link("questionnaire")
+        st.info("Navigate to Questionnaire from the Side Bar")
         st.stop()
 
     # Create workout plan
