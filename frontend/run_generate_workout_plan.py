@@ -62,7 +62,7 @@ def run_generate_workout_plan():
             st.session_state["workout_plan"]  = generate_workout_plan(
                 user_api_key=api_key,
                 secrets_mongo_uri=secrets_mongo_uri,
-                processed_user_responses=st.session_state["processed_responses"],
+                processed_responses=st.session_state["processed_responses"],
                 progress_callback=handle_progress
             )
         st.session_state["trigger_generate_plan"] = False
