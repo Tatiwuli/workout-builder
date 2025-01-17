@@ -3,15 +3,9 @@
 
 import streamlit as st
 import time
-import os
-import toml
-from dotenv import load_dotenv
-from streamlit_cookies_manager import EncryptedCookieManager
 
-from frontend.run_generate_workout_plan import trigger_generate_workout_plan
-from frontend.cookies_manager import CookieManager
-
-from questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
+from .run_generate_workout_plan import trigger_generate_workout_plan
+from .questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
 
 
 PULL_OPTIONS = ["Biceps", "Back"]

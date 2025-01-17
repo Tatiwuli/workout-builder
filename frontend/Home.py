@@ -45,19 +45,18 @@ def home():
         submit_button = st.form_submit_button("Submit")
 
         if submit_button:
-            if user_api_key:
+
+            if validate_api_key(user_api_key):
                 # Validate API key
                
                 st.session_state["user"]["api_key"] = user_api_key
-                st.success("API Key successfully validated and saved!")
-                st.write(st.session_state["user"]["api_key"])
+                st.success("🎉 API Key successfully validated and saved!")
+
                 st.info("Navigate to the Questionnaire page on the sidebar.")
 
-                
-                
               
             else:
-                st.error("API Key is required.")
+                st.error("Please enter a valid API.")
 
 if __name__ == "__main__":
     home()
