@@ -88,7 +88,8 @@ review the main section of the workout session provided below and finalize the w
 
 ### Notes:
 - Be as detailed as possible to ensure the workout plan is easy to follow and execute.
-- Use friendly, conversational, and clear language to simplify the workout for the customer.Transform any technical jargon or abbreviations into common daily language.
+- Use friendly, conversational, and clear language to simplify the workout for the customer.
+- Always write the full word of an abbreviation next to it . Transform any technical jargon into common daily language.
 
 ### Output Format:
 Your response must be a valid JSON object in the following structure:

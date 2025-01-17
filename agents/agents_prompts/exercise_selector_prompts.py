@@ -58,7 +58,7 @@ Based on the user's preferences outlined in the system message and the exercise 
         **warmup total duration**: Sum the total duration of all warmup exercises and noted it by putting the number in float format.
      **alternative_equipment**: Use your expertise to specify **one** alternative equipment to execute the **same** exercise
     **alternative_exercise**: Use your expertise to pick **one** alternative exercise from the exercises list that target the same muscle groups specified in user's needs. 
-                       Note relevant trade-offs of the alternative. Do not repeat alternative exercise for different exercises.
+                       Note relevant trade-offs of the alternative. Do not repeat alternative exercise for different exercises. Do not recommend alternative exercise that is an exercise for another set.
    
    
 - For fields that don't have any information from the source, put "none"

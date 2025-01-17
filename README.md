@@ -24,6 +24,7 @@
 
 # Project Overview
 
+#### Access the website through this link: https://workout-builder.streamlit.app/Home
 This project generates a customized workout plan tailored to user needs and hypertrophy goals. It manages the entire workflow—from selecting exercises and designing workout volume to structuring easy-to-follow workout plans—through specialized agents.
 
 ### Purpose
