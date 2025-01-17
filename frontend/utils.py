@@ -10,13 +10,9 @@ def render_nav_link(page_name):
         page_name (str): Name of the page (e.g., 'questionnaire', 'workout_plan').
     """
     # Dynamically construct the base URL
-    base_url = st.get_option("browser.serverAddress") or "localhost"
-    port = st.get_option("server.port")
-    full_base_url = f"http://{base_url}:{
-        port}" if port else f"http://{base_url}"
-
-    # Create a query parameter for navigation
-    st.query_params.page = page_name
+    full_base_url = "https: // workout-builder.streamlit.app/"
+   
+   
 
     # Render the button as a styled hyperlink
     st.markdown(
