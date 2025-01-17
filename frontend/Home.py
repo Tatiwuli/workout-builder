@@ -12,17 +12,6 @@ st.set_page_config(page_title="Workout Builder",
 
 
 
-def validate_api_key(api_key):
-    """Validate the provided OpenAI API key."""
-    import openai
-    try:
-        openai.api_key = api_key
-        openai.Model.list()  # Lightweight validation
-        return True
-    except OpenAIError:
-        return False
-
-
 def home():
     # Initialize session state for the user
     if "user" not in st.session_state:
@@ -46,8 +35,7 @@ def home():
 
         if submit_button:
 
-            if validate_api_key(user_api_key):
-                # Validate API key
+            if user_api_key:
                
                 st.session_state["user"]["api_key"] = user_api_key
                 st.success("🎉 API Key successfully validated and saved!")
@@ -55,8 +43,6 @@ def home():
                 st.info("Navigate to the Questionnaire page on the sidebar.")
 
               
-            else:
-                st.error("Please enter a valid API.")
-
+        
 if __name__ == "__main__":
     home()
