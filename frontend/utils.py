@@ -8,11 +8,7 @@ def render_nav_link(page_name):
     # Dynamically construct the base URL
     full_base_url = "https://workout-builder.streamlit.app"
 
-    # If the page is part of the "pages" directory, include it in the path
-    if page_name.lower() != "home":
-        page_path = f"pages/{page_name.lower()}"
-    else:
-        page_path = page_name.lower()
+
 
     # Render the button as a styled hyperlink
     st.markdown(
@@ -41,7 +37,7 @@ def render_nav_link(page_name):
                 color: white;
             }}
         </style>
-        <a href="{full_base_url}/{page_path}" target="_self" class="btn">
+        <a href="{full_base_url}/{page_name}" target="_self" class="btn">
             Go to {page_name.replace('_', ' ').capitalize()}
         </a>
         """,

@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath(
 st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
 import streamlit_nested_layout 
-from frontend.run_generate_workout_plan import run_generate_workout_plan
+from frontend.utils import render_nav_link
 
 
 
