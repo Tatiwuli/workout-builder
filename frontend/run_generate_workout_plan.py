@@ -66,13 +66,16 @@ def run_generate_workout_plan():
 
     if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
         st.error("API Key is missing. Please go back to the Home page to provide it.")
-        
+    
     secrets_mongo_uri = st.secrets.get("MONGO_URI")
     st.write(secrets_mongo_uri)
 
-
-    api_key = st.session_state["user"]["api_key"]
-    #print("Using Mongo URI from:", "st.secrets" if secrets_mongo_uri ==
+    user_session = st.session_state.get("user", None)
+    if user_session:
+        api_key = user_session.get("api_key", None)
+    else:
+        api_key = None
+    # print("Using Mongo URI from:", "st.secrets" if secrets_mongo_uri ==
         #   st.secrets.get("MONGO_URI") else ".env")
 
     # secrets_mongo_uri =  st.secrets.get('MONGO_URI', None)

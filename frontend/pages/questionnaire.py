@@ -227,7 +227,11 @@ if __name__ == "__main__":
     if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
         st.error("API Key is missing. Please go back to the Home page to provide it.")
 
-    api_key = st.session_state["user"]["api_key"]
+    user_session = st.session_state.get("user", None)
+    if user_session:
+        api_key = user_session.get("api_key", None)
+    else:
+        api_key = None
 
 
     if st.session_state["workflow_stage"] == "muscle_selection":
