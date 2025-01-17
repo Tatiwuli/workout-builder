@@ -1,6 +1,8 @@
 
 
 import os
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from frontend.utils import render_nav_link
 from frontend.run_generate_workout_plan import run_generate_workout_plan
