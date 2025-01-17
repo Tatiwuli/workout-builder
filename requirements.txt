@@ -8,5 +8,6 @@ streamlit_extras
 python-dotenv
 streamlit_modal
 pymongo
+streamlit-nested-layout
 
 
