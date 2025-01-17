@@ -1,14 +1,24 @@
 
 import streamlit as st
 
-def render_nav_link(page_path):
-    """
-    Render a navigation link styled as a button to return to the questionnaire.
-    """
-    app_path = 'http://localhost:8501'
-    page_file_path = page_path
-    page = page_file_path.split('/')[0]
 
+def render_nav_link(page_name):
+    """
+    Render a navigation link styled as a button to navigate between pages dynamically.
+
+    Args:
+        page_name (str): Name of the page (e.g., 'questionnaire', 'workout_plan').
+    """
+    # Dynamically construct the base URL
+    base_url = st.get_option("browser.serverAddress") or "localhost"
+    port = st.get_option("server.port")
+    full_base_url = f"http://{base_url}:{
+        port}" if port else f"http://{base_url}"
+
+    # Create a query parameter for navigation
+    st.query_params.page = page_name
+
+    # Render the button as a styled hyperlink
     st.markdown(
         f"""
         <style>
@@ -35,8 +45,8 @@ def render_nav_link(page_path):
                 color: white;
             }}
         </style>
-        <a href="{app_path}/{page}" target="_self" class="btn">
-            Go to {page_path}
+        <a href="{full_base_url}?page={page_name}" target="_self" class="btn">
+            Go to {page_name.replace('_', ' ').capitalize()}
         </a>
         """,
         unsafe_allow_html=True,
