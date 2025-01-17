@@ -224,20 +224,14 @@ if __name__ == "__main__":
     
     initialize_session_state()
 
-    if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
-        st.error("API Key is missing. Please go back to the Home page to provide it.")
-
-    user_session = st.session_state.get("user", None)
-    if user_session:
-        api_key = user_session.get("api_key", None)
-    else:
-        api_key = None
-
 
     if st.session_state["workflow_stage"] == "muscle_selection":
+        
         st.title("Select Your Workout Muscles")
-
-        render_muscle_selection()
+        if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
+            st.error("API Key is missing. Please go back to the Home page to provide it.")
+        else:
+            render_muscle_selection()
 
     elif st.session_state["workflow_stage"] == "questionnaire":
         st.title("Let's get to know more about you")
