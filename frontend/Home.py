@@ -1,6 +1,10 @@
 import streamlit as st
 from openai import OpenAIError
+import os 
+import sys
 
+sys.path.append(os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../../")))
 
 st.set_page_config(page_title="Workout Builder",
                    page_icon="💪", layout="centered")
