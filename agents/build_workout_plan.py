@@ -17,28 +17,30 @@ class WorkoutBuilderWorkflow:
         self.progress_callback = progress_callback  # Callback for real-time updates
 
     
-    def run_workflow(self, user_needs):
+    def run_workflow(self, processed_responses):
         """
         Executes the workflow of building a workout plan.
         """
+        print("\n#########User responses: #######\n", processed_responses)
+
         if self.progress_callback:
             self.progress_callback("Starting Workflow 🚀", 0)
 
         # Step 1: Exercise Selector
         if self.progress_callback:
             self.progress_callback("Selecting Exercises 🏋️", 20)
-        exercises = self.exercise_selector.run(user_needs)
+        exercises = self.exercise_selector.run(processed_responses)
 
         # Step 2: Workout Planner
         if self.progress_callback:
             self.progress_callback("Structuring Workout 📋", 50)
-        workout_plan = self.workout_planner.run(user_needs, exercises)
+        workout_plan = self.workout_planner.run(processed_responses, exercises)
 
         # Step 3: Personal Trainer
         if self.progress_callback:
             self.progress_callback("Finalizing Workout 🤖", 80)
         final_plan = self.personal_trainer.run(
-            user_needs, workout_plan, exercises)
+            processed_responses, workout_plan, exercises)
 
         if self.progress_callback:
             self.progress_callback("Workflow Complete 🎉", 100)

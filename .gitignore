@@ -3,3 +3,4 @@
 #test file
 test.py
 secrets.toml
+fetch_exercises_image.py

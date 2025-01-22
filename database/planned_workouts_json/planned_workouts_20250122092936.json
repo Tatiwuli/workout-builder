@@ -1,0 +1,110 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Wide Grip Lat Pull Down is chosen to target the lats and mid traps, which are crucial for increasing back width. With 3 sets, this exercise contributes to the user's goal of enhancing back width, aligning with the recommended volume for beginners.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows you to complete 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 10-12 reps with proper form, similar to the main exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "The Half Kneeling One Arm Lat Pull Down is included to focus on unilateral development, helping to correct any muscle imbalances. This exercise also targets the lats, contributing to the user's goal of increasing back width.",
+            "exercises": [
+                {
+                    "exercise_name": "Half Kneeling One Arm Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats"
+                        ]
+                    },
+                    "reps": "10-12 per arm",
+                    "weight": "Use a weight that allows you to perform 10-12 reps per arm with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10-12 reps with proper form, similar to the main exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "Preacher Curls are selected to enhance the peak of the biceps by focusing on the distal part. This exercise provides high tension in the stretched position, crucial for muscle growth, aligning with the user's goal for biceps peak development.",
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows you to perform 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Face Away Cable Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10-12 reps with proper form, similar to the main exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "Face Away Cable Curls are included to provide maximum stretch and tension on the biceps, particularly the long head, which contributes to the biceps peak. This aligns with the user's goal for biceps peak development.",
+            "exercises": [
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Long Head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Use a weight that allows you to perform 10-12 reps with good form, typically around 60-70% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10-12 reps with proper form, similar to the main exercise."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout session is structured to meet the user's goals of increasing back width and enhancing biceps peak. The exercises are selected based on their ability to target the specific muscle groups and parts effectively. The volume and set strategies are designed to fit within the 60-minute time constraint, with each set including rest time. The exercises are ordered to first target the back, which is a larger muscle group, followed by the biceps. This order allows for optimal energy use and focus on the user's primary goals. The workout adheres to the guidelines for beginners, emphasizing proper form and progressive overload."
+}

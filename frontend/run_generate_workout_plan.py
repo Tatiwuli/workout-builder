@@ -37,6 +37,7 @@ def generate_workout_plan(user_api_key, secrets_mongo_uri, processed_responses, 
     # trigger agents to start the building process
     workflow = WorkoutBuilderWorkflow(
         progress_callback=handle_progress, api_key=user_api_key,  secrets_mongo_uri= secrets_mongo_uri)
+    
     return workflow.run_workflow(processed_responses)
 
 
