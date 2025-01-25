@@ -1,6 +1,8 @@
 .env
 /database/json_summaries/*.json
+
 #test file
 test.py
 secrets.toml
 fetch_exercises_image.py
+/frontend/exercises_gif

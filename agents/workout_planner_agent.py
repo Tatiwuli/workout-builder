@@ -1,7 +1,6 @@
 from agents.base_agent import BaseAgent
 from agents.agents_prompts.workout_planner_prompts import system_prompt, assistant_prompt, user_prompt
 
-
 class WorkoutPlannerAgent(BaseAgent):
     def __init__(self, api_key = None,  secrets_mongo_uri= None):
         if not api_key:

@@ -20,6 +20,30 @@ def initialize_sessions_states():
         st.session_state["workout_plan"] = None
 
 
+def render_media(media_url):
+    """
+    Function to render media based on the media_url.
+    Supports GIFs and YouTube videos with specific start and end times.
+    """
+    if media_url:
+        if media_url.endswith(".gif"):
+            st.markdown(f"![Execution GIF]({media_url})")
+        elif "youtube.com" in media_url:
+            # Embed YouTube video with custom start and end times
+            st.markdown(
+                f"""
+                <iframe width="560" height="315"
+                src="{media_url}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                </iframe>
+                """,
+                unsafe_allow_html=True,
+            )
+        else:
+            st.write("No media available")
+            
 def render_workout_plan():
     """
     Render the workout plan page.
@@ -55,6 +79,8 @@ def render_workout_plan():
             st.markdown(f"**Setup:** {exercise['setup_notes']}")
             st.markdown(f"**Execution:** {exercise['execution_notes']}")
 
+            
+
         st.divider()
 
         # Display workout sets
@@ -87,6 +113,10 @@ def render_workout_plan():
                         st.markdown("**Execution:**")
                         for step in exercise["execution"]:
                             st.markdown(f"- {step}")
+                        
+                        # Display media for the main exercise
+                        render_media(exercise.get("media_url", None))
+
                         st.markdown(f"**Reps:** {exercise['reps']}")
                         st.markdown(
                             f"**Weight Recommendation:** {exercise['weight']}")
@@ -95,6 +125,7 @@ def render_workout_plan():
                             f"**Alternative Equipment:** {exercise.get('alternative_equipments', 'None')}")
                         alternative = exercise.get(
                             'alternative_exercise', 'None')
+                        
                         if alternative != "None":
                             with st.expander(f"🔄 Alternative Exercise: {alternative}"):
                                 st.markdown(
@@ -103,6 +134,10 @@ def render_workout_plan():
 
                                 for alt_step in exercise.get('alternative_exercise_execution', []):
                                     st.markdown(f"- {alt_step}")
+
+                                # Add Media for Alternative Exercise
+                                render_media(exercise.get(
+                                "alternative_exercise_media_url", None))
     else:
         st.error("Please try to generate workout plan again")
 
