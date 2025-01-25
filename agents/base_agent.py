@@ -6,6 +6,8 @@ import os
 import json
 
 
+
+
 class BaseAgent(ABC):
     def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o", api_key = None, secrets_mongo_uri = None):
         if not api_key:

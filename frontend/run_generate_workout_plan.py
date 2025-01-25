@@ -37,6 +37,7 @@ def generate_workout_plan(user_api_key, secrets_mongo_uri, processed_responses, 
     # trigger agents to start the building process
     workflow = WorkoutBuilderWorkflow(
         progress_callback=handle_progress, api_key=user_api_key,  secrets_mongo_uri= secrets_mongo_uri)
+    
     return workflow.run_workflow(processed_responses)
 
 
@@ -57,7 +58,7 @@ def run_generate_workout_plan():
 
 
     try:
-        with st.spinner("Generating your workout plan..."):
+        with st.spinner("Generating your workout plan. It will take up to 2 min..."):
             # trigger backend to generate workout plan
             st.session_state["workout_plan"]  = generate_workout_plan(
                 user_api_key=api_key,

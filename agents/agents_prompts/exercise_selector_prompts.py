@@ -59,6 +59,7 @@ Based on the user's preferences outlined in the system message and the exercise 
      **alternative_equipment**: Use your expertise to specify **one** alternative equipment to execute the **same** exercise
     **alternative_exercise**: Use your expertise to pick **one** alternative exercise from the exercises list that target the same muscle groups specified in user's needs. 
                        Note relevant trade-offs of the alternative. Do not repeat alternative exercise for different exercises. Do not recommend alternative exercise that is an exercise for another set.
+    **alternative_exercise_media**: Don't forget to copy and paste the media_url field of the alternative exercise
    
    
 - For fields that don't have any information from the source, put "none"
@@ -73,6 +74,7 @@ Your response must be a valid JSON object in the following structure:
       "exercise_name": "",
       "setup_notes": "",
       "execution_notes": "",
+      "media_url" : "",
       "alternative_equipment": "",
       "tier_reasons": "",
       "targeted_muscles": [""],
@@ -81,6 +83,7 @@ Your response must be a valid JSON object in the following structure:
       "scientific_insights": "",
       "additional_notes": "",
       "alternative_exercise": "",
+      "alternative_exercise_media_url": "",
       "selection_reason": """
                        """
     },

@@ -94,35 +94,60 @@ def render_muscle_selection():
     """
     Render the muscle selection interface.
     """
+    def toggle_select_all(section_key, muscles):
+        """
+        Toggles the state of all checkboxes in a section based on the "Select All" checkbox.
+        """
+        select_all_key = f"{section_key}_select_all"
+        if st.session_state.get(select_all_key, False):  # If "Select All" is checked
+            for muscle in muscles:
+                st.session_state[muscle] = True
+        else:  # If "Select All" is unchecked
+            for muscle in muscles:
+                st.session_state[muscle] = False
+
 
     col1, col2 = st.columns(2)
-
+    all_selected = []
     with col1:
         with st.expander("Pull Section", expanded=True):
             st.subheader("Pull Section")
+            pull_select_all = st.checkbox("Select All", key="pull_select_all",
+                                          on_change=toggle_select_all, args=("pull", PULL_OPTIONS))
             for muscle in PULL_OPTIONS:
                 st.checkbox(muscle, key=muscle)
+                
 
         with st.expander("Push Section", expanded=True):
             st.subheader("Push Section")
+            push_select_all = st.checkbox("Select All", key="push_select_all",
+                                          on_change=toggle_select_all, args=("push", PUSH_OPTIONS))
             for muscle in PUSH_OPTIONS:
                 st.checkbox(muscle, key=muscle)
+                
 
     with col2:
         with st.expander("Leg Section", expanded=True):
             st.subheader("Leg Section")
+            leg_select_all = st.checkbox("Select All", key="leg_select_all",
+                                         on_change=toggle_select_all, args=("leg", LEG_OPTIONS))
             for muscle in LEG_OPTIONS:
                 st.checkbox(muscle, key=muscle)
-
+                
+    all_selected = [muscle for muscle in LEG_OPTIONS+PULL_OPTIONS + PUSH_OPTIONS if st.session_state.get(muscle)]
+    if len(all_selected) > 4:
+        st.error("Please select up to 4 muscles")
+        
     # Display selected muscle groups
     st.subheader("Selected Muscle Groups")
-    all_selected = [muscle for muscle in PULL_OPTIONS +
-                    PUSH_OPTIONS + LEG_OPTIONS if st.session_state.get(muscle)]
     st.write(", ".join(all_selected)
              if all_selected else "No muscles selected.")
 
+    
+    
+    
     st.button("Confirm Selections", on_click=confirm_muscle_selection)
-
+    
 
 def render_questionnaire():
     """

@@ -64,16 +64,16 @@ review the main section of the workout session provided below and finalize the w
           - **Setup**: Detailed instructions for equipment setup and positioning.
            - **Execution**: Provide a step-by-step instructions to properly execute the exercise, from the starting position , during the execution, to the end of it. Complements the steps with specific cue , explanation of grip position or form angles if applicable. 
                  For example - exercise_name = pull_up:
-                 [1. Grip the Bar: Stand under the pull-up bar and grab it with an overhand grip (palms facing away from you) slightly wider than shoulder-width.
-                    2. Set Your Starting Position:  Hang from the bar with your arms fully extended, shoulders relaxed, and legs straight or slightly bent at the knees. Engage your core to stabilize your body and prevent swinging.
-                    3. Engage Your Shoulder Blades: Pull your shoulder blades down and together to start the movement.
-                    4. Pull Your Body Up: Using your back and arm muscles, pull your chest towards the bar. Imagine pulling your elbows down to your sides.
-                    5. Reach the Top Position: Continue pulling until your chin clears the bar or your chest is close to the bar. Avoid craning your neck to reach the bar.
-                    6. Lower Your Body: Slowly lower yourself back to the starting position by extending your arms. Maintain control and tension in your back muscles throughout the descent.
-                    7. Repeat: Perform the desired number of repetitions while maintaining proper form.
+                 ["1. Grip the Bar: Stand under the pull-up bar and grab it with an overhand grip (palms facing away from you) slightly wider than shoulder-width."
+                    "2. Set Your Starting Position:  Hang from the bar with your arms fully extended, shoulders relaxed, and legs straight or slightly bent at the knees. Engage your core to stabilize your body and prevent swinging.",
+                    "3. Engage Your Shoulder Blades: Pull your shoulder blades down and together to start the movement.",
+                    "4. Pull Your Body Up: Using your back and arm muscles, pull your chest towards the bar. Imagine pulling your elbows down to your sides.",
+                    "5. Reach the Top Position: Continue pulling until your chin clears the bar or your chest is close to the bar. Avoid craning your neck to reach the bar.",
+                    "6. Lower Your Body: Slowly lower yourself back to the starting position by extending your arms. Maintain control and tension in your back muscles throughout the descent.",
+                    "7. Repeat: Perform the desired number of repetitions while maintaining proper form."
                     ]
 
-
+            - **Media URL** : Copy and paste the url in media_url field as it is.
             - **Reps**: Ensure that the number of reps are indicated clearly 
             - **Weight**: Ensure that the explanation for the weight setup is clear and actionable , so any user without technical expertise understand how 
             they should determine the weight. For example: "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form."
@@ -82,6 +82,7 @@ review the main section of the workout session provided below and finalize the w
             - **Alternative Exercise**: Include the exercise.
             - **Alternative Exercise Setup**:   Detailed instructions for equipment setup and positioning of the alternative exercise
             - **Alternative Exercise Execution**:  Provide a step-by-step instructions to properly execute the alternative exercise
+            - **Alternative Exercise Media URL** : Copy and paste the url in media_url field as it is.
             - **Alternative Exercise Reps**: Ensure that the reps  are clearly explained.
             - **Alternative Exercise Weight**: Ensure that the weight recommendation is SPECIFICALLY defined
             - **Additional Tips**: Provide practical advice for improving execution or safety.
@@ -121,14 +122,16 @@ Your response must be a valid JSON object in the following structure:
                     "exercise_name": "",
                     "target_muscle_part": [{}],
                     "setup": "",
-                    "execution": "",
-                     "reps": "",
+                    "execution": ["","",],
+                    "media_url" : "",
+                    "reps": "",
                     "weight": "",
                     "alternative_equipments": "",
                     "rest_time": "",
                     "alternative_exercise": "",
                     "alternative_exercise_setup": "", 
                     "alternative_exercise_execution": "", 
+                    "alternative_exercise_media_url": "",
                     "alternative_exercise_reps": "",
                     "alternative_exercise_weight": "",
                     "additional_tips": ""

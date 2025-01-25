@@ -1,0 +1,89 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 10,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "Combining a back exercise with a biceps exercise in a superset maximizes time efficiency and allows for effective targeting of both muscle groups. This approach aligns with the user's goal of overall back definition and biceps peak development, while adhering to the 45-minute time constraint.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Select a weight that allows for 10-12 reps with good form, typically around 60-75% of 1RM.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with good form, similar to the main exercise."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal Biceps"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Use a weight that allows for 10-12 reps with controlled form, focusing on the stretch at the bottom.",
+                    "rest_time": "60 seconds after completing both exercises in the superset",
+                    "alternative_exercise": "Face Away Cable Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with a focus on maintaining tension throughout the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10,
+            "set_strategy": "Superset",
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "set_reasoning": "This superset continues to target the back and biceps, ensuring balanced development and efficient use of time. The exercises are chosen to complement each other and provide a comprehensive workout for the targeted muscle groups.",
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Choose a weight that allows for 10-12 reps with good form, focusing on squeezing the back muscles.",
+                    "rest_time": "None",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Select a weight that allows for 10-12 reps with a focus on maintaining tension throughout the movement."
+                },
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Long Head"
+                        ]
+                    },
+                    "reps": "10-12",
+                    "weight": "Use a weight that allows for 10-12 reps with controlled form, focusing on the stretch and tension.",
+                    "rest_time": "60 seconds after completing both exercises in the superset",
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": "10-12",
+                    "alternative_exercise_weight": "Choose a weight that allows for 10-12 reps with a focus on maintaining tension throughout the movement."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "The workout is structured into two supersets, each targeting both the back and biceps. This approach maximizes time efficiency and ensures that both muscle groups are effectively trained within the 45-minute time constraint. The exercises are selected based on their ability to target the user's specific goals: overall back definition and biceps peak development. The use of supersets allows for minimal rest between exercises, keeping the workout intensity high and ensuring that the user can complete the session within the allotted time. The volume and exercise selection are aligned with the user's early intermediate level, providing a balance of compound and isolation exercises to promote muscle growth and prevent plateaus."
+}

@@ -49,6 +49,7 @@ class ExerciseSelectorAgent(BaseAgent):
         relevant_exercises = [
             doc.get("exercises_summary", {}) for doc in documents if "exercises_summary" in doc
         ]
+        
         main_knowledge_summaries = [
             doc.get("main_knowledge_summary", {}) for doc in documents
         ]
