@@ -1,15 +1,17 @@
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from frontend.questionnaire_utils import goal_question, frequency_question, duration_question, experience_question
 from frontend.utils import process_user_responses
 from frontend.run_generate_workout_plan import trigger_generate_workout_plan
 import streamlit as st
 import time
-import sys
-import os
 
-sys.path.insert(0, os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..")))
+
+
 
 
 PULL_OPTIONS = ["Biceps", "Back"]
