@@ -1,21 +1,21 @@
 ## Table of Contents
 
-1. **[Project Overview]**(#project-overview)
+1. [Project Overview](#project-overview)
    - [Purpose](#purpose)
-2. **[Pages]**(#pages)
+2. [Pages](#pages)
    - [Home](#home)
    - [Questionnaire](#questionnaire)
    - [Workout Plan](#workout-plan)
-3. **[Tech Stack]**(#tech-stack)
+3. [Tech Stack](#tech-stack)
    - [Backend](#backend)
    - [Frontend](#frontend)
    - [APIs](#apis)
-4. **[Next Steps]**(#next-steps)
+4. [Next Steps](#next-steps)
    - Select All Option ✅
    - Add GIFs ✅
    - On-the-Spot Editing
-5. **[How to Run the Project]**(#how-to-run-the-project)
-6. **[Important Notes]**(#important-notes)
+5. [How to Run the Project](#how-to-run-the-project)
+6. [Important Notes](#important-notes)
 
 ---
 
