@@ -11,12 +11,10 @@
    - [Frontend](#frontend)
    - [APIs](#apis)
 4. [Next Steps](#next-steps)
-   - [Select All Option](#select-all-option)
-   - [On-the-Spot Editing](#on-the-spot-editing)
-   - [Download Workout Plan as an Image](#download-workout-plan-as-an-image)
-   - [Setup Unit Tests](#setup-unit-tests)
-   - [User Accounts](#user-accounts)
-   - [Weekly workout plan](#weekly-workout-plan)
+   - [Select All Option](#select-all-option) ✅
+   - [Add GIFs](#add-gifs) ✅
+   - [On-the-Spot Editing](#on-the-spot-editing) 
+   
 5. [How to Run the Project](#how-to-run-the-project)
 6. [Important Notes](#important-notes)
 
@@ -42,8 +40,14 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 ## Pages
 
 - **Home:** Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
+- 
 - **Questionnaire:** Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
-- **Workout Plan:** Displays the final workout plan, including exercise details and execution guidelines.
+
+- **Workout Plan:** Displays the final workout plan.
+   The final plan includes:
+     - Warm-up Section: Includes execution notes for movements, number of sets and reps, and duration.
+     - Main Workout Section: Exercises are structured into sets. Based on the user's needs, the LLM may organize exercises into supersets or drop sets. Each exercise includes: Step-by-step execution instructions with a GIF; Guidelines for weights, sets, and reps; An alternative exercise for users without access to the required equipment, with its  execution instructions and GIF.
+     - 
 
 *Check out the “Next Steps” section to learn about planned feature updates!*
 
@@ -75,23 +79,9 @@ Streamlit was chosen for its simplicity and ability to quickly build and iterate
   **Priority:** Low  
   Currently, when users click “Edit” in the “Selected Muscles” section, the app resets all selected muscles. Instead, allow users to delete or add specific muscles without restarting the entire process.
 
-- **Specify the Fitness Level question in the Questionnaire**  
-  **Priority:** High
-  Determining a user's fitness level involves several nuances. I want to redesign the "Fitness Level" question to better capture these factors.
-
-- **Setup Unit Tests**  
-  **Priority:** High  
-  Establish a formal testing process for the web app.
-
-- **User Accounts**  
-  **Priority:** Low  
-  Allow users to save and retrieve their workout plans within a dedicated user account area.
-
-- **Weekly workout plans**  
-  **Priority:** Medium  
-  Design workout plans for a week of workouts. 
-  When it comes to reaching hypertrophy goals, it's crucial to design a workout session considering how one will distribute the sessions and exercises throughout the week. While the Frequency question allows the agent to set appropriate reps and sets amount for the user, the workout guidance are limited for one session, and not for the entire week. 
-
+- **Add Gifs**
+  **Priority**: High
+  Add gifs to demonstrate how to execute the movements. 
 ---
 
 # How to Run the Project
