@@ -1,22 +1,21 @@
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
+1. **[Project Overview]**(#project-overview)
    - [Purpose](#purpose)
-2. [Pages](#pages)
+2. **[Pages]**(#pages)
    - [Home](#home)
    - [Questionnaire](#questionnaire)
    - [Workout Plan](#workout-plan)
-3. [Tech Stack](#tech-stack)
+3. **[Tech Stack]**(#tech-stack)
    - [Backend](#backend)
    - [Frontend](#frontend)
    - [APIs](#apis)
-4. [Next Steps](#next-steps)
-   - [Select All Option](#select-all-option) ✅
-   - [Add GIFs](#add-gifs) ✅
-   - [On-the-Spot Editing](#on-the-spot-editing) 
-   
-5. [How to Run the Project](#how-to-run-the-project)
-6. [Important Notes](#important-notes)
+4. **[Next Steps]**(#next-steps)
+   - Select All Option ✅
+   - Add GIFs ✅
+   - On-the-Spot Editing
+5. **[How to Run the Project]**(#how-to-run-the-project)
+6. **[Important Notes]**(#important-notes)
 
 ---
 
@@ -39,16 +38,21 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ## Pages
 
-- **Home:** Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
-- 
-- **Questionnaire:** Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
+### Home
+   Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
+   ![GIF demonstrating Home Page](workout-builder/workoutBuilder_demo_home.gif)
 
-- **Workout Plan:** Displays the final workout plan.
+### Questionnaire:
+   Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
+  ![GIF demonstrating Questionnaire Page](workout-builder/workoutBuilder_demo_questionnaire.gif)
+
+### Workout Plan:
+   Displays the final workout plan.
    The final plan includes:
      - Warm-up Section: Includes execution notes for movements, number of sets and reps, and duration.
      - Main Workout Section: Exercises are structured into sets. Based on the user's needs, the LLM may organize exercises into supersets or drop sets. Each exercise includes: Step-by-step execution instructions with a GIF; Guidelines for weights, sets, and reps; An alternative exercise for users without access to the required equipment, with its  execution instructions and GIF.
-     - 
-
+     ![GIF demonstrating the Workout Plan Page](workout-builder/workoutBuilder_demo_workoutPlan.gif)
+     
 *Check out the “Next Steps” section to learn about planned feature updates!*
 
 ---
