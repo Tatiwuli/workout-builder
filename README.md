@@ -51,7 +51,8 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
    The final plan includes:
       - Warm-up Section: Includes execution notes for movements, number of sets and reps, and duration.
       - Main Workout Section: Exercises are structured into sets. Based on the user's needs, the LLM may organize exercises into supersets or drop sets. Each exercise includes: Step-by-step execution instructions with a GIF; Guidelines for weights, sets, and reps; An alternative exercise for users without access to the required equipment, with its  execution instructions and GIF.
-     ![GIF demonstrating the Workout Plan Page](https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_workoutPlan.gif)
+     <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_workoutPlan.gif" width="500">
+
      
 *Check out the “Next Steps” section to learn about planned feature updates!*
 
