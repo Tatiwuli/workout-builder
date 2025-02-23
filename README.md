@@ -45,7 +45,7 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ### Questionnaire:
    Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
-    <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
+   <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
 
 
 ### Workout Plan:
