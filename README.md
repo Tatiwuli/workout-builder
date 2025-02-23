@@ -40,11 +40,13 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ### Home
    Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
-   ![GIF demonstrating Home Page](https://github.com/Tatiwuli/workout-builder/blob/main/workout-builder\workoutBuilder_demo_questionnaire.gif)
+   <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_home.gif" width="500">
+
 
 ### Questionnaire:
    Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
-  ![GIF demonstrating Questionnaire Page](https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif)
+ <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
+
 
 ### Workout Plan:
    Displays the final workout plan.
