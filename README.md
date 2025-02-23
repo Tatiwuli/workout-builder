@@ -1,4 +1,4 @@
-## Table of Contents
+# 📌Table of Contents
 
 1. [Project Overview](#project-overview)
    - [Purpose](#purpose)
@@ -19,7 +19,7 @@
 
 ---
 
-# Project Overview
+# 🗺️Project Overview
 
 #### Access the website through this link: https://workout-builder.streamlit.app/Home
 This project generates a customized workout plan tailored to user needs and hypertrophy goals. It manages the entire workflow—from selecting exercises and designing workout volume to structuring easy-to-follow workout plans—through specialized agents.
@@ -36,7 +36,7 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ---
 
-## Pages
+## 📃Pages
 
 ### Home
    Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
@@ -45,7 +45,7 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ### Questionnaire:
    Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
- <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
+    <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
 
 
 ### Workout Plan:
@@ -60,7 +60,7 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ---
 
-## Tech Stack
+## 🧰Tech Stack
 
 ### Backend
 - Python
@@ -76,7 +76,7 @@ Streamlit was chosen for its simplicity and ability to quickly build and iterate
 
 ---
 
-## Next Steps
+## 🚲Next Steps
 
 - **Select All Option**  
   **Priority:** High  
