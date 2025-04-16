@@ -1,0 +1,388 @@
+{
+    "workout_title": "30-Minute Lower Body Blast",
+    "total_workout_duration": 47.5,
+    "num_exercises": 7,
+    "warmup": {
+        "warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at sides.",
+                "execution_notes": "Jump, spreading legs and raising arms overhead. Return to starting position.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "High Knees",
+                "setup_notes": "Stand with feet hip-width apart.",
+                "execution_notes": "Bring knees up towards chest, alternating legs.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Butt Kicks",
+                "setup_notes": "Stand with feet hip-width apart.",
+                "execution_notes": "Kick heels up towards glutes, alternating legs.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Leg Swings",
+                "setup_notes": "Stand holding onto a chair or wall for balance.",
+                "execution_notes": "Swing one leg forward and back, then side to side. Repeat with other leg.",
+                "sets_reps": "2 sets of 15 reps per leg",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Dynamic Stretching (Torso Twists)",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Twist torso from side to side, keeping legs stationary.",
+                "sets_reps": "2 sets of 15 reps per side",
+                "duration": 30.0
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": [
+                        {
+                            "Quadriceps": [
+                                "All heads, with less emphasis on rectus femoris"
+                            ]
+                        }
+                    ],
+                    "setup": "Position the barbell on your upper traps. Make sure it's balanced and comfortable.",
+                    "execution": [
+                        "1. Starting Position: Stand with feet slightly wider than shoulder-width apart, toes pointing slightly outward. Place the barbell across your upper back, resting on your traps. Grip the bar with an overhand grip, slightly wider than shoulder-width.",
+                        "2. The Descent: Keeping your chest up, back straight, and core engaged, begin to lower your body by bending your knees and hips. Push your hips back as if sitting in a chair.",
+                        "3. Bottom Position: Squat down until your thighs are parallel to the ground or slightly below, maintaining a straight back and engaged core. Ensure your knees track over your toes.",
+                        "4. The Ascent: Drive through your heels to stand back up, extending your hips and knees. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/barbell-full-squat.gif",
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Goblet Squat",
+                    "alternative_exercise_setup": "Hold a dumbbell or kettlebell vertically against your chest.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with feet shoulder-width apart, holding the weight close to your chest.",
+                        "2. The Descent: Keeping your chest up, back straight, and core engaged, begin to lower your body by bending your knees and hips. Push your hips back as if sitting in a chair.",
+                        "3. Bottom Position: Squat down until your thighs are parallel to the ground or slightly below, maintaining a straight back and engaged core. Ensure your knees track over your toes.",
+                        "4. The Ascent: Drive through your heels to stand back up, extending your hips and knees. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/08/kettlebell-goblet-squat-muscles.gif",
+                    "alternative_exercise_reps": 10,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 10 reps with good form. Begin with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Keep your weight on your heels throughout the movement. Avoid rounding your back.  If you experience knee pain, reduce the weight or try the alternative exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Hack Squat",
+                    "target_muscle_part": [
+                        {
+                            "Quadriceps": [
+                                "All heads, with emphasis on vastus medialis and lateralis"
+                            ]
+                        }
+                    ],
+                    "setup": "Position yourself on the hack squat machine, adjusting the footplate to a comfortable position. Ensure your back is flat against the backrest.",
+                    "execution": [
+                        "1. Starting Position: Stand with your feet shoulder-width apart on the footplate, back flat against the backrest.",
+                        "2. The Descent: Keeping your chest up and core engaged, begin to lower your body by bending your knees. Maintain a controlled movement.",
+                        "3. Bottom Position: Squat down until your thighs are parallel to the ground or slightly below, maintaining a straight back and engaged core.",
+                        "4. The Ascent: Drive through your heels to stand back up, extending your knees. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/v-squat.gif",
+                    "reps": 10,
+                    "weight": "Select a weight that allows you to complete 10 reps with good form. Start with a lighter weight and gradually increase as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bulgarian Split Squat",
+                    "alternative_exercise_setup": "Place one foot behind you on a bench or elevated surface. Maintain a stable stance.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with one foot on an elevated surface behind you, the other foot in front, maintaining a stable stance.",
+                        "2. The Descent: Keeping your chest up and core engaged, begin to lower your body by bending your front knee. Maintain a controlled movement.",
+                        "3. Bottom Position: Squat down until your front thigh is parallel to the ground or slightly below, maintaining a straight back and engaged core.",
+                        "4. The Ascent: Drive through your front heel to stand back up, extending your knee. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions on one leg before switching to the other."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/bulgarian-split-spuat.gif",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 12 reps per leg with good form. Start with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Use yoga blocks to achieve full depth if necessary. Focus on controlled movements to avoid injury."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": [
+                        {
+                            "Hamstrings": [
+                                "All heads"
+                            ]
+                        },
+                        {
+                            "Glutes": [
+                                "All heads"
+                            ]
+                        }
+                    ],
+                    "setup": "Start with the bar on the ground. Pick it up like a regular deadlift for the first rep.",
+                    "execution": [
+                        "1. Starting Position: Stand with feet hip-width apart, holding the barbell in front of your thighs with an overhand grip, slightly wider than shoulder-width.",
+                        "2. The Descent: Keeping your back straight and core engaged, push your hips back and bend your knees slightly. Lower the barbell along your shins, maintaining a slight bend in your knees.",
+                        "3. Bottom Position: Lower the barbell until you feel a stretch in your hamstrings. Maintain a straight back and engaged core.",
+                        "4. The Ascent: Drive through your heels to stand back up, extending your hips and knees. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2021/11/dumbbell-romanian-deadlift.gif",
+                    "reps": 10,
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Stiff-Legged Deadlift",
+                    "alternative_exercise_setup": "Start with the bar on the ground. Maintain a flat back and slightly bent knees.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with feet hip-width apart, holding the barbell in front of your thighs with an overhand grip, slightly wider than shoulder-width.",
+                        "2. The Descent: Keeping your back straight and core engaged, push your hips back and maintain a slight bend in your knees. Lower the barbell along your shins.",
+                        "3. Bottom Position: Lower the barbell until you feel a stretch in your hamstrings. Maintain a straight back and engaged core.",
+                        "4. The Ascent: Drive through your heels to stand back up, extending your hips and knees. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "alternative_exercise_media_url": "https://burnfit.io/wp-content/uploads/2023/11/DB_STIFF_DL.gif",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 12 reps with good form. Begin with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Maintain a neutral spine throughout the movement. Avoid rounding your back. Focus on controlled movements to avoid injury."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 5.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Hamstrings"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Glute Ham Raise",
+                    "target_muscle_part": [
+                        {
+                            "Hamstrings": [
+                                "All heads"
+                            ]
+                        }
+                    ],
+                    "setup": "Use a GHR machine or set up on a lat pull-down machine with a counterbalance. Secure your ankles under the pads.",
+                    "execution": [
+                        "1. Starting Position: Secure your ankles under the pads of the GHR machine or lat pull-down machine. Lean forward, keeping your back straight and core engaged.",
+                        "2. The Descent: Slowly lower your upper body towards the ground by bending your knees and hips. Maintain control throughout the movement.",
+                        "3. Bottom Position: Lower your upper body until you feel a stretch in your hamstrings. Maintain a straight back and engaged core.",
+                        "4. The Ascent: Drive through your heels to raise your upper body back to the starting position. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/8zWDuWKdBZU?start=214&end=220",
+                    "reps": 12,
+                    "weight": "Use a weight that allows you to complete 12 reps with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Resistance Bands",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Reverse Nordic",
+                    "alternative_exercise_setup": "Position yourself facing a bench or sturdy surface. Place your shins on the bench and hold onto the edge for support.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Position yourself facing a bench or sturdy surface. Place your shins on the bench and hold onto the edge for support.",
+                        "2. The Descent: Slowly lower your upper body towards the ground by bending your knees and hips. Maintain control throughout the movement.",
+                        "3. Bottom Position: Lower your upper body until you feel a stretch in your hamstrings. Maintain a straight back and engaged core.",
+                        "4. The Ascent: Drive through your heels to raise your upper body back to the starting position. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/08/reverse-nordic-curl.gif",
+                    "alternative_exercise_reps": 15,
+                    "alternative_exercise_weight": "This exercise is bodyweight, so focus on maintaining good form and increasing reps as you get stronger.",
+                    "additional_tips": "Focus on controlling the negative (lowering) portion of the movement. Avoid using momentum."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_strategy": "None",
+            "set_duration": 5.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Glutes"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": [
+                        {
+                            "Glutes": [
+                                "Gluteus Maximus"
+                            ]
+                        }
+                    ],
+                    "setup": "Sit on the ground with your upper back against a bench and a barbell over your hips. Your feet should be flat on the floor, hip-width apart.",
+                    "execution": [
+                        "1. Starting Position: Sit on the ground with your upper back against a bench and a barbell across your hips. Your feet should be flat on the floor, hip-width apart.",
+                        "2. The Descent: Lower your hips towards the ground, keeping your back flat against the bench.",
+                        "3. Bottom Position: Lower your hips until your body forms a straight line from your shoulders to your knees.",
+                        "4. The Ascent: Drive through your heels to lift your hips off the ground, squeezing your glutes at the top of the movement. Maintain a neutral pelvic position.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "None",
+                    "reps": 10,
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Resistance Bands",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Single Leg Hip Thrusts",
+                    "alternative_exercise_setup": "Sit on the ground with your upper back against a bench. Place one foot flat on the floor.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Sit on the ground with your upper back against a bench. Place one foot flat on the floor.",
+                        "2. The Descent: Lower your hips towards the ground, keeping your back flat against the bench.",
+                        "3. Bottom Position: Lower your hips until your body forms a straight line from your shoulders to your knees.",
+                        "4. The Ascent: Drive through your heel to lift your hips off the ground, squeezing your glutes at the top of the movement. Maintain a neutral pelvic position.",
+                        "5. Repeat: Perform the desired number of repetitions on one leg before switching to the other."
+                    ],
+                    "alternative_exercise_media_url": "None",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 12 reps per leg with good form. Begin with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Maintain a neutral pelvic position throughout the movement. Focus on squeezing your glutes at the top of the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Glutes",
+                "Quadriceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Smith Machine Front Foot Elevated Lunge",
+                    "target_muscle_part": [
+                        {
+                            "Glutes": [
+                                "All heads"
+                            ]
+                        },
+                        {
+                            "Quadriceps": [
+                                "All heads"
+                            ]
+                        }
+                    ],
+                    "setup": "Position the front foot on an elevated platform. The back foot should be placed comfortably far back, standing on the toe for balance.",
+                    "execution": [
+                        "1. Starting Position: Stand with one foot on an elevated platform in front of you, the other foot behind you, standing on your toes for balance. Hold the Smith machine bar at chest height.",
+                        "2. The Descent: Keeping your chest up and core engaged, begin to lower your body by bending your front knee. Maintain a controlled movement.",
+                        "3. Bottom Position: Lower your body until your front thigh is parallel to the ground or slightly below, maintaining a straight back and engaged core.",
+                        "4. The Ascent: Drive through your front heel to stand back up, extending your knee. Keep your core engaged throughout the movement.",
+                        "5. Repeat: Perform the desired number of repetitions on one leg before switching to the other."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/_gakDkB24WI?start=185&end=192",
+                    "reps": 10,
+                    "weight": "Choose a weight that allows you to complete 10 reps per leg with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Walking Lunges",
+                    "alternative_exercise_setup": "Stand with feet hip-width apart, holding dumbbells (optional).",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with feet hip-width apart, holding dumbbells (optional).",
+                        "2. The Descent: Take a large step forward with one leg, bending both knees to lower your body until your front thigh is parallel to the ground or slightly below. Maintain a straight back and engaged core.",
+                        "3. Bottom Position: Ensure your front knee is aligned with your ankle, and your back knee is almost touching the ground.",
+                        "4. The Ascent: Push off with your front foot to return to the starting position. Alternate legs with each repetition.",
+                        "5. Repeat: Perform the desired number of repetitions per leg."
+                    ],
+                    "alternative_exercise_media_url": "None",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 12 reps per leg with good form. Begin with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Ensure to rest between switching legs to avoid systemic fatigue. Focus on controlled movements to avoid injury."
+                }
+            ]
+        },
+        {
+            "set_number": 7,
+            "set_strategy": "None",
+            "set_duration": 5.0,
+            "set_repetitions": 3,
+            "target_muscle_group": [
+                "Calves"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Calf Raise",
+                    "target_muscle_part": [
+                        {
+                            "Calves": [
+                                "Soleus"
+                            ]
+                        }
+                    ],
+                    "setup": "Use a seated calf raise machine. Adjust the seat so your knees are slightly bent.",
+                    "execution": [
+                        "1. Starting Position: Sit on the seated calf raise machine with your knees slightly bent. Place your feet flat on the footplate.",
+                        "2. The Descent: Slowly lower your heels towards the ground, stretching your calf muscles.",
+                        "3. Bottom Position: Lower your heels until you feel a stretch in your calf muscles.",
+                        "4. The Ascent: Raise your heels back up, squeezing your calf muscles at the top of the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/seated-calf-raise.gif",
+                    "reps": 15,
+                    "weight": "Choose a weight that allows you to complete 15 reps with good form. Start light and gradually increase weight as you get stronger.",
+                    "alternative_equipments": "Resistance Bands",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Standing Calf Raise",
+                    "alternative_exercise_setup": "Stand on a slightly elevated surface with your heels hanging off the edge.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand on a slightly elevated surface with your heels hanging off the edge.",
+                        "2. The Descent: Slowly lower your heels towards the ground, stretching your calf muscles.",
+                        "3. Bottom Position: Lower your heels until you feel a stretch in your calf muscles.",
+                        "4. The Ascent: Raise your heels back up, squeezing your calf muscles at the top of the movement.",
+                        "5. Repeat: Perform the desired number of repetitions while maintaining proper form."
+                    ],
+                    "alternative_exercise_media_url": "none",
+                    "alternative_exercise_reps": 20,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 20 reps with good form. Begin with a lighter weight and progressively increase as you gain strength.",
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid using momentum."
+                }
+            ]
+        }
+    ]
+}

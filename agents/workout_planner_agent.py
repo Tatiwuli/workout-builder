@@ -119,7 +119,7 @@ class WorkoutPlannerAgent(BaseAgent):
         user_input = exercise_selector_output.get("exercises")
 
         # Prepare LLM prompts
-        # Prepare LLM prompts
+       
         prompts = {"system_prompt": self.system_prompt,
                    "assistant_prompt": self.assistant_prompt,
                    "user_prompt": self.user_prompt

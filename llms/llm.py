@@ -1,4 +1,5 @@
 
+import numpy as np
 import google.generativeai as genai
 from token_count import TokenCount
 from openai import OpenAI
@@ -6,6 +7,7 @@ from dotenv import load_dotenv
 
 import json
 import time
+import re
 
 
 # load_dotenv()
@@ -122,12 +124,26 @@ class GeminiLLM:
 
         try:
             response = self.model.generate_content(
-                full_prompt,
-                generation_config={"response_mime_type": "application/json"}
+                full_prompt
             )
-            return json.loads(response.text)
-        except json.JSONDecodeError:
-            raise RuntimeError(
-                "Response was not valid JSON. Add clearer formatting instruction to your prompt.")
         except Exception as e:
             raise RuntimeError(f"Gemini API call failed: {e}")
+
+
+        response_text = response.text.strip()
+    
+        # Clean ```json ... ``` or ``` ... ``` wrapper
+        match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", response_text, re.DOTALL)
+        if match:
+            print("matched")
+            formatted_response_text = match.group(1)  
+
+        try:
+            json_formatted_response_text = json.loads(formatted_response_text)
+            return json_formatted_response_text
+    
+        except json.JSONDecodeError:
+    
+           raise RuntimeError(
+                "Response was not valid JSON. Add clearer formatting instruction to your prompt.")
+       

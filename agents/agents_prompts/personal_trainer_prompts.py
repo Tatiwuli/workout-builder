@@ -92,56 +92,62 @@ review the main section of the workout session provided below and finalize the w
 - Use friendly, conversational, and clear language to simplify the workout for the customer.
 - Always write the full word of an abbreviation next to it . Transform any technical jargon into common daily language.
 
-### Output Format:
-Your response must be a valid JSON object in the following structure:
-```json
-{
-   "workout_title": "",
-    "total_workout_duration": float,
-    "num_exercises": int,
-    "warmup": {
-                       
-        "warmup_duration": float,
-        "warmup_exercises" : [                        
-            {
-                "exercise_name": "",
-                "setup_notes": "",
-                "execution_notes": ""
-            },...
-    ]
-                       },
-    "sets": [
-        {
-            "set_number": int,
-            "set_strategy": "",
-            "set_duration" float,
-            "set_repetitions": int,
-            "target_muscle_group": [],
-            "exercises": [
-                {
-                    "exercise_name": "",
-                    "target_muscle_part": [{}],
-                    "setup": "",
-                    "execution": ["","",],
-                    "media_url" : "",
-                    "reps": "",
-                    "weight": "",
-                    "alternative_equipments": "",
-                    "rest_time": "",
-                    "alternative_exercise": "",
-                    "alternative_exercise_setup": "", 
-                    "alternative_exercise_execution": "", 
-                    "alternative_exercise_media_url": "",
-                    "alternative_exercise_reps": "",
-                    "alternative_exercise_weight": "",
-                    "additional_tips": ""
-                }
-            ]
-        },
-        ...
-    ]
-}
+ 
+## IMPORTANT:
+Your response **must** be a valid **JSON object** and must **match this format exactly**.
 
+Do NOT include:
+- Markdown formatting (e.g., no ```json)
+- Explanations or commentary
+- Text before or after the JSON
+
+Return only the raw JSON object starting with `{` and ending with `}`.
+                       
+## Output Format                    
+{
+  "workout_title": "string",
+  "total_workout_duration": float,
+  "num_exercises": int,
+  "warmup": {
+    "warmup_duration": float,
+    "warmup_exercises": [
+      {
+        "exercise_name": "string",
+        "setup_notes": "string",
+        "execution_notes": "string"
+      }
+    ]
+  },
+  "sets": [
+    {
+      "set_number": int,
+      "set_strategy": "string",
+      "set_duration": float,
+      "set_repetitions": int,
+      "target_muscle_group": ["string"],
+      "exercises": [
+        {
+          "exercise_name": "string",
+          "target_muscle_part": [{"muscle_group": ["muscle_part"]}],
+          "setup": "string",
+          "execution": ["string", "..."],
+          "media_url": "string",
+          "reps": "string",
+          "weight": "string",
+          "alternative_equipments": "string",
+          "rest_time": "string",
+          "alternative_exercise": "string",
+          "alternative_exercise_setup": "string",
+          "alternative_exercise_execution": "string",
+          "alternative_exercise_media_url": "string",
+          "alternative_exercise_reps": "string",
+          "alternative_exercise_weight": "string",
+          "additional_tips": "string"
+        }
+      ]
+    }
+  ]
+}
 ### Main Section of the Workout:
 $user_input
 """)

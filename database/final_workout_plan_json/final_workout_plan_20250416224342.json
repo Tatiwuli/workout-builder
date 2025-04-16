@@ -1,0 +1,184 @@
+{
+    "workout_title": "Beginner Back & Biceps Blast",
+    "total_workout_duration": 29.0,
+    "num_exercises": 4,
+    "warmup": {
+        "warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Slowly rotate your shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Torso twists",
+                "setup_notes": "Stand with feet shoulder-width apart, hands on hips.",
+                "execution_notes": "Slowly twist your torso from side to side, focusing on controlled movements. Repeat for 30 seconds."
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup_notes": "Start on your hands and knees.",
+                "execution_notes": "Inhale, drop your belly towards the floor, and lift your chest and tailbone (cow pose). Exhale, round your spine towards the ceiling, tuck your chin to your chest (cat pose). Repeat for 30 seconds."
+            },
+            {
+                "exercise_name": "Bicep stretches",
+                "setup_notes": "Extend one arm overhead.",
+                "execution_notes": "Gently pull your arm closer to your body using your other hand. Hold for 15 seconds, then repeat on the other side. Repeat 2 times."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "Superset",
+            "set_duration": 7.5,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "setup": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs. Grip the bar with a wide overhand grip, slightly wider than shoulder-width.",
+                    "execution": [
+                        "1. Starting Position: Sit upright, back straight, and core engaged. Grip the bar with a wide overhand grip.",
+                        "2. Pull Down: Pull the bar down to your upper chest, keeping your back straight and elbows close to your body. Squeeze your back muscles at the bottom.",
+                        "3. Controlled Return: Slowly return the bar to the starting position, maintaining control throughout the movement."
+                    ],
+                    "media_url": "https://ccuuubmtdurkmbeufybi.supabase.co/storage/v1/object/public/animations/0579.gif",
+                    "reps": "12",
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "alternative_equipments": "Resistance band",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_setup": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs. Grip the bar with a neutral grip (palms facing each other).",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Sit upright, back straight, and core engaged. Grip the bar with a neutral grip.",
+                        "2. Pull Down: Pull the bar down to your upper chest, keeping your back straight and elbows close to your body. Squeeze your back muscles at the bottom.",
+                        "3. Controlled Return: Slowly return the bar to the starting position, maintaining control throughout the movement."
+                    ],
+                    "alternative_exercise_media_url": "https://fitnessvolt.com/wp-content/uploads/2023/09/close-grip-lat-pulldown.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "additional_tips": "Focus on squeezing your back muscles at the bottom of the movement. Avoid swinging or using momentum."
+                },
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Biceps"
+                        ]
+                    },
+                    "setup": "Adjust the preacher bench so your upper arms are comfortably supported against the pad. Hold the barbell with an overhand grip, slightly narrower than shoulder-width.",
+                    "execution": [
+                        "1. Starting Position: Rest your upper arms against the pad, elbows locked. Hold the barbell with an overhand grip.",
+                        "2. Curl Up: Curl the weight upwards, focusing on squeezing your biceps at the top. Keep your elbows locked against the pad.",
+                        "3. Controlled Lowering: Slowly lower the weight back to the starting position, maintaining tension in your biceps."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2021/10/dumbbell-preacher-curl.gif",
+                    "reps": "12",
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "alternative_equipments": "EZ-bar",
+                    "rest_time": null,
+                    "alternative_exercise": "Standing Dumbbell Curl",
+                    "alternative_exercise_setup": "Stand with feet shoulder-width apart, holding a dumbbell in each hand.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand tall with feet shoulder-width apart, holding a dumbbell in each hand. Palms facing forward.",
+                        "2. Curl Up: Curl the dumbbells upwards, focusing on squeezing your biceps at the top.",
+                        "3. Controlled Lowering: Slowly lower the dumbbells back to the starting position, maintaining tension in your biceps."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/dumbbell-bicep-curl.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid swinging or using momentum."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "Superset",
+            "set_duration": 7.5,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Back",
+                "Biceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "setup": "Adjust the chest supported row machine so your chest is comfortably supported against the pad. Grip the handle with an overhand grip.",
+                    "execution": [
+                        "1. Starting Position: Lean forward, chest against the pad, back straight, and core engaged. Grip the handle with an overhand grip.",
+                        "2. Pull Towards Chest: Pull the handle towards your chest, keeping your elbows close to your body. Squeeze your back muscles at the bottom.",
+                        "3. Controlled Return: Slowly return the handle to the starting position, maintaining control throughout the movement."
+                    ],
+                    "media_url": "https://media.tenor.com/ft6FHrqty-8AAAAM/remada-pronada-maquina.gif",
+                    "reps": "12",
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_setup": "Attach a rope or V-bar handle to a low cable pulley. Stand facing the machine with feet shoulder-width apart.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with feet shoulder-width apart, slight bend in knees, and core engaged. Grip the handle.",
+                        "2. Pull Towards Stomach: Pull the handle towards your stomach, keeping your back straight and elbows close to your body. Squeeze your back muscles at the bottom.",
+                        "3. Controlled Return: Slowly return the handle to the starting position, maintaining control throughout the movement."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/09/cable-row.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "additional_tips": "Focus on squeezing your back muscles at the bottom of the movement. Avoid swinging or using momentum."
+                },
+                {
+                    "exercise_name": "Hammer Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Biceps",
+                            "Brachialis"
+                        ]
+                    },
+                    "setup": "Hold a dumbbell in each hand with a neutral grip (palms facing each other). Stand with feet shoulder-width apart.",
+                    "execution": [
+                        "1. Starting Position: Stand tall with feet shoulder-width apart, holding a dumbbell in each hand with a neutral grip.",
+                        "2. Curl Up: Curl the dumbbells upwards, focusing on squeezing your biceps and brachialis at the top.",
+                        "3. Controlled Lowering: Slowly lower the dumbbells back to the starting position, maintaining tension in your biceps and brachialis."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/02/alternating-hammer-curls.gif",
+                    "reps": "12",
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "alternative_equipments": "Resistance band",
+                    "rest_time": null,
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_setup": "Sit on an incline bench set to approximately 30-45 degrees. Hold a dumbbell in each hand with an overhand grip.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Sit on the incline bench, back straight, and core engaged. Hold a dumbbell in each hand with an overhand grip.",
+                        "2. Curl Up: Curl the dumbbells upwards, focusing on squeezing your biceps at the top.",
+                        "3. Controlled Lowering: Slowly lower the dumbbells back to the starting position, maintaining tension in your biceps."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/incline-dumbbell-curl.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form. Start light and increase as you get stronger.",
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid swinging or using momentum."
+                }
+            ]
+        }
+    ]
+}

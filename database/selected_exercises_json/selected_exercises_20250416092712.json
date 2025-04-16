@@ -1,0 +1,172 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Barbell Back Squat",
+            "setup_notes": "Position the barbell on your upper traps.",
+            "execution_notes": "Lock in your bar path, squat down deep, and stand back up.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/barbell-full-squat.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "High quad tension, feels good, excellent for progressive overload.",
+            "targeted_muscles": [
+                "Quadriceps"
+            ],
+            "targeted_muscle_parts": "All heads, with less emphasis on rectus femoris.",
+            "limitations": "Requires spinal stabilization.",
+            "scientific_insights": "Studies show solid rectus femoris growth despite anatomical concerns.",
+            "additional_notes": "Include another exercise to fully engage rectus femoris.",
+            "alternative_exercise": "Goblet Squat",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/08/kettlebell-goblet-squat-muscles.gif",
+            "selection_reason": "This exercise is selected as it's an S-Tier exercise for quadriceps, targeting all heads with less emphasis on rectus femoris.  It's a compound movement, highly effective for building muscle and strength, aligning with the beginner's goal of defined quads. The user's short time constraint is addressed by its efficiency in targeting multiple muscle parts simultaneously.  The 'beginners' wiki recommends prioritizing compound movements like squats for early skill development and maximizing efficiency."
+        },
+        {
+            "exercise_name": "Hack Squat",
+            "setup_notes": "Position yourself on the hack squat machine.",
+            "execution_notes": "Squat down and up with a controlled motion.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/v-squat.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "High quad tension, less setup, more direct quad tension.",
+            "targeted_muscles": [
+                "Quadriceps"
+            ],
+            "targeted_muscle_parts": "All heads, with emphasis on vastus medialis and lateralis.",
+            "limitations": "None",
+            "scientific_insights": "Free weights and machines build muscle equally if sets are pushed hard.",
+            "additional_notes": "Use yoga blocks if full depth is not achievable.",
+            "alternative_exercise": "Bulgarian Split Squat",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/bulgarian-split-spuat.gif",
+            "selection_reason": "This S-Tier exercise provides high quadriceps tension, particularly in the vastus medialis and lateralis, which contributes to the goal of defined quads.  The 'less setup' aspect aligns with the short workout duration preference.  It's a good alternative to the barbell back squat, offering a different angle of quadriceps engagement."
+        },
+        {
+            "exercise_name": "Romanian Deadlift (RDL)",
+            "setup_notes": "Start with the bar on the ground. Pick it up like a regular deadlift for the first rep.",
+            "execution_notes": "Keep the chest up, push hips back, and keep knees back. Lower slowly and maintain tension on the hamstrings. Do not let the weight rest on the ground.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2021/11/dumbbell-romanian-deadlift.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "targeted_muscle_parts": "Targets the hamstrings and glutes due to the hip hinge movement.",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "Ensure to maintain proper form to avoid lower back strain.",
+            "alternative_exercise": "Stiff-Legged Deadlift",
+            "alternative_exercise_media_url": "https://burnfit.io/wp-content/uploads/2023/11/DB_STIFF_DL.gif",
+            "selection_reason": "This exercise directly targets the hamstrings, contributing to the goal of toned hamstrings. The hip hinge movement is effective for hamstring development, and the controlled movement aligns with the beginner's experience level.  It's chosen as an alternative to stiff-legged deadlifts, offering a slightly different angle of hamstring engagement."
+        },
+        {
+            "exercise_name": "Glute Ham Raise",
+            "setup_notes": "Use a GHR machine or set up on a lat pull-down machine with a counterbalance.",
+            "execution_notes": "Stay in the active range, avoiding the top quarter of the movement.",
+            "media_url": "https://www.youtube.com/embed/8zWDuWKdBZU?start=214&end=220",
+            "alternative_equipment": "Resistance Bands",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Hamstrings"
+            ],
+            "targeted_muscle_parts": "Focuses on the hamstrings by staying in the active range.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "Focus on controlling the negative portion of the movement.",
+            "alternative_exercise": "Reverse Nordic",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/08/reverse-nordic-curl.gif",
+            "selection_reason": "This exercise is chosen for its isolated focus on the hamstrings, complementing the compound movements already selected.  Staying within the active range ensures maximum hamstring engagement, contributing to the goal of toned hamstrings. The alternative exercise, Reverse Nordic, is a bodyweight option, offering a trade-off in terms of progressive overload."
+        },
+        {
+            "exercise_name": "Barbell Hip Thrust",
+            "setup_notes": "Sit on the ground with your upper back against a bench and a barbell over your hips.",
+            "execution_notes": "Drive through your heels to lift your hips until they are fully extended, keeping a neutral pelvis.",
+            "media_url": "None",
+            "alternative_equipment": "Resistance Bands",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Gluteus Maximus"
+            ],
+            "targeted_muscle_parts": "Targets the upper glutes due to the position of the hips in full extension.",
+            "limitations": "none",
+            "scientific_insights": "A 2016 study by Contreras et al. found the barbell hip thrust resulted in the greatest upper glute activity.",
+            "additional_notes": "A neutral pelvic position is recommended for optimal glute activation.",
+            "alternative_exercise": "Single Leg Hip Thrusts",
+            "alternative_exercise_media_url": "None",
+            "selection_reason": "This exercise directly targets the gluteus maximus, contributing to the goal of lifted glutes. The hip thrust is a highly effective exercise for glute development, and its inclusion aligns with the user's goal.  The research supports its effectiveness for upper glute activation."
+        },
+        {
+            "exercise_name": "Smith Machine Front Foot Elevated Lunge",
+            "setup_notes": "Position the front foot on an elevated platform. The back foot should be placed comfortably far back, standing on the toe for balance.",
+            "execution_notes": "Put almost all weight on the front foot. Slowly control the descent, going slower than you think. Pause at the bottom, then come up. Do not switch legs immediately; rest before switching.",
+            "media_url": "https://www.youtube.com/embed/_gakDkB24WI?start=185&end=192",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Glutes",
+                "Quads"
+            ],
+            "targeted_muscle_parts": "Primarily targets the glutes due to the emphasis on the front foot. Quads are also engaged.",
+            "limitations": "May cause quad engagement if not executed with proper form.",
+            "scientific_insights": "none",
+            "additional_notes": "Ensure to rest between switching legs to avoid systemic fatigue.",
+            "alternative_exercise": "Walking Lunges",
+            "alternative_exercise_media_url": "None",
+            "selection_reason": "This exercise is selected for its effectiveness in targeting both glutes and quads, aligning with the user's goals. The emphasis on the front foot helps prioritize glute activation, while the quadriceps are also engaged. The unilateral nature of the exercise adds a stabilization component, further enhancing glute development."
+        },
+        {
+            "exercise_name": "Seated Calf Raise",
+            "setup_notes": "Use a seated calf raise machine.",
+            "execution_notes": "Perform with a bent knee to target the soleus.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/seated-calf-raise.gif",
+            "alternative_equipment": "Resistance Bands",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Soleus"
+            ],
+            "targeted_muscle_parts": "Targets the soleus, though recent studies suggest it is less responsive to training.",
+            "limitations": "None",
+            "scientific_insights": "2020 study suggests soleus responds poorly to both high and low rep training.",
+            "additional_notes": "Consider replacing with standing calf raises if soleus response is a concern.",
+            "alternative_exercise": "Standing Calf Raise",
+            "alternative_exercise_media_url": "none",
+            "selection_reason": "This exercise targets the soleus muscle, contributing to the goal of defined calves.  While research suggests the soleus may be less responsive to training, its inclusion provides a balanced approach to calf development. The alternative exercise, standing calf raises, is suggested as a potential replacement if the soleus doesn't respond well to training."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at sides.",
+                "execution_notes": "Jump, spreading legs and raising arms overhead. Return to starting position.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "High Knees",
+                "setup_notes": "Stand with feet hip-width apart.",
+                "execution_notes": "Bring knees up towards chest, alternating legs.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Butt Kicks",
+                "setup_notes": "Stand with feet hip-width apart.",
+                "execution_notes": "Kick heels up towards glutes, alternating legs.",
+                "sets_reps": "2 sets of 30 seconds",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Leg Swings",
+                "setup_notes": "Stand holding onto a chair or wall for balance.",
+                "execution_notes": "Swing one leg forward and back, then side to side. Repeat with other leg.",
+                "sets_reps": "2 sets of 15 reps per leg",
+                "duration": 60.0
+            },
+            {
+                "exercise_name": "Dynamic Stretching (Torso Twists)",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Twist torso from side to side, keeping legs stationary.",
+                "sets_reps": "2 sets of 15 reps per side",
+                "duration": 30.0
+            }
+        ]
+    }
+}

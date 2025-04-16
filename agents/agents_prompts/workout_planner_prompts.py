@@ -68,34 +68,40 @@ to make the total sum of "set_duration" under the workout duration, while making
 5. Explain in detail how the workout session structure, including the exercises' order and volume and strategies, you designed follow the guidelines' principles and fully meet user's needs.
 
 
-### Output Format:
-Your response must be a valid JSON object in the following structure:
-```json
+## IMPORTANT:
+Your response **must** be a valid **JSON object** and must **match this format exactly**.
+
+Do NOT include:
+- Markdown formatting (e.g., no ```json)
+- Explanations or commentary
+- Text before or after the JSON
+
+Return only the raw JSON object starting with `{` and ending with `}`.
+## Output format:
 {
-  
-    "sets": [
+  "sets": [
+    {
+      "set_number": int,
+      "set_time": float,
+      "set_strategy": "string",
+      "set_repetitions": int,
+      "target_muscle_group": ["string"],
+      "set_reasoning": "string",
+      "exercises": [
         {
-            "set_number": int,
-            "set_time": float,
-            "set_strategy": "",
-            "set_repetitions": int,
-            "target_muscle_group": [],
-            "set_reasoning": "",
-            "exercises": [
-                {
-                    "exercise_name": "",
-                    "target_muscle_part": [{}],
-                     "reps": "",
-                    "weight": "",
-                    "rest_time": "",
-                     "alternative_exercise": "",
-                    "alternative_exercise_reps": "",
-                    "alternative_exercise_weight": "",
-            ]
-        },
-        ...
-    ],
-    "workout_explanation": ""
+          "exercise_name": "string",
+          "target_muscle_part": [{"muscle_group": ["muscle_part"]}],
+          "reps": "string",
+          "weight": "string",
+          "rest_time": "string",
+          "alternative_exercise": "string",
+          "alternative_exercise_reps": "string",
+          "alternative_exercise_weight": "string"
+        }
+      ]
+    }
+  ],
+  "workout_explanation": "string"
 }
 
 ### Provided Exercises:

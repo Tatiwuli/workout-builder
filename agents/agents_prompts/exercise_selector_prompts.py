@@ -64,41 +64,50 @@ Based on the user's preferences outlined in the system message and the exercise 
    
 - For fields that don't have any information from the source, put "none"
 
-## Output Format:
-Your response must be a valid JSON object in the following structure:
-```json
-{
 
+## IMPORTANT:
+Your response **must** be a valid **JSON object** and must **match this format exactly**.
+
+Do NOT include:
+- Markdown formatting (e.g., no ```json)
+- Explanations or commentary
+- Text before or after the JSON
+
+Return only the raw JSON object starting with `{` and ending with `}`.
+
+                       
+## Output format:
+{
   "exercises": [
     {
-      "exercise_name": "",
-      "setup_notes": "",
-      "execution_notes": "",
-      "media_url" : "",
-      "alternative_equipment": "",
-      "tier_reasons": "",
-      "targeted_muscles": [""],
-      "targeted_muscle_parts": "",
-      "limitations": "",
-      "scientific_insights": "",
-      "additional_notes": "",
-      "alternative_exercise": "",
-      "alternative_exercise_media_url": "",
-      "selection_reason": """
-                       """
-    },
-    ...
+      "exercise_name": "string",
+      "setup_notes": "string",
+      "execution_notes": "string",
+      "media_url": "string",
+      "alternative_equipment": "string",
+      "tier_reasons": "string",
+      "targeted_muscles": ["string"],
+      "targeted_muscle_parts": "string",
+      "limitations": "string",
+      "scientific_insights": "string",
+      "additional_notes": "string",
+      "alternative_exercise": "string",
+      "alternative_exercise_media_url": "string",
+      "selection_reason": "string"
+    }
   ],
-  
-   "warmup": {
-      "total_warmup_duration": float, 
-      "warmup_exercises": [ {
-    "exercise_name": "",
-    "setup_notes": "",
-    "execution_notes": "",
-    "sets_reps": "",
-    "duration": ""
-  }, ...]
+  "warmup": {
+    "total_warmup_duration": float,
+    "warmup_exercises": [
+      {
+        "exercise_name": "string",
+        "setup_notes": "string",
+        "execution_notes": "string",
+        "sets_reps": "string",
+        "duration": "string"
+      }
+    ]
+  }
 }
 
 #Exercises list:

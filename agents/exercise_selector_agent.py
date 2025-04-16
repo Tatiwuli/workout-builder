@@ -93,5 +93,6 @@ class ExerciseSelectorAgent(BaseAgent):
         json_filepath = self.save_output_to_json(
             selected_exercises, "selected_exercises")
         print(f"Saved to JSON: {json_filepath}")
-
+        print("response: ", selected_exercises)
         return selected_exercises
+
