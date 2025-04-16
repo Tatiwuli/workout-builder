@@ -3,6 +3,7 @@ from llms.llm import OpenAILLM, GeminiLLM
 from database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
+import streamlit as st
 from dotenv import load_dotenv
 import json
 
@@ -12,12 +13,14 @@ class BaseAgent(ABC):
 
         load_dotenv()
 
-        self.api_key = os.getenv("GEMINI_API_KEY")
+        self.api_key = os.getenv(
+            "GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
         if not self.api_key:
             raise ValueError(
                 "GEMINI_API_KEY not found in environment or passed explicitly.")
 
-        self.mongo_uri = os.getenv("MONGODB_URI")
+        self.mongo_uri = os.getenv(
+            "MONGODB_URI") or st.secrets.get("MONGODB_URI")
         if not self.mongo_uri:
             raise ValueError(
                 "MONGODB_URI not found in environment or passed explicitly.")
