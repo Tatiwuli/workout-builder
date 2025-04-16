@@ -1,0 +1,90 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Biceps",
+                "Back"
+            ],
+            "set_reasoning": "This superset combines biceps and back exercises to maximize time efficiency while targeting antagonist muscle groups.  The volume is appropriate for an early beginner, aligning with the recommendation of 3-6 sets total for the muscle group with 6-12 reps per set for compound lifts. The superset approach reduces rest time, fitting within the 30-minute time constraint.",
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Distal biceps"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually as you get stronger.",
+                    "rest_time": 0,
+                    "alternative_exercise": "Machine Preacher Curl",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with good form. Gradually increase the weight as you gain strength."
+                },
+                {
+                    "exercise_name": "Chest Supported Row",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Midback"
+                        ]
+                    },
+                    "reps": 7,
+                    "weight": "Select a weight that allows you to complete 7 reps with good form. Gradually increase the weight as you get stronger.",
+                    "rest_time": null,
+                    "alternative_exercise": "Cable Row",
+                    "alternative_exercise_reps": 7,
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 7 repetitions with good form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 7.5,
+            "set_strategy": "Superset",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Biceps",
+                "Back"
+            ],
+            "set_reasoning": "This superset continues the antagonist pairing, further optimizing time and promoting efficient muscle growth. The volume remains within the beginner guidelines, ensuring progressive overload without overtraining.",
+            "exercises": [
+                {
+                    "exercise_name": "Hammer Curl",
+                    "target_muscle_part": {
+                        "Biceps": [
+                            "Biceps",
+                            "Brachialis"
+                        ]
+                    },
+                    "reps": 7,
+                    "weight": "Choose a weight that allows you to complete 7 reps with good form. Increase weight gradually as you get stronger.",
+                    "rest_time": 0,
+                    "alternative_exercise": "Incline Curl",
+                    "alternative_exercise_reps": 7,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 7 repetitions with good form. Gradually increase the weight as you gain strength."
+                },
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": {
+                        "Back": [
+                            "Lats",
+                            "Mid Traps"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Select a weight that allows you to complete 8 reps with good form. Gradually increase the weight as you get stronger.",
+                    "rest_time": null,
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to perform 8 repetitions with good form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan prioritizes compound movements and supersets to maximize time efficiency and muscle growth within the 30-minute time constraint.  The exercises are ordered to alternate between biceps and back, targeting antagonist muscle groups in a superset fashion. This strategy minimizes rest time, allowing for higher volume within the short time frame. The volume is tailored to an early beginner's fitness level, adhering to the guidelines of 3-6 sets total per muscle group, with 6-12 reps per set for compound lifts.  The use of supersets aligns with the wiki's recommendation for short workouts, ensuring that the workout remains challenging yet manageable for a beginner.  Alternative exercises are provided for each exercise to allow for flexibility and equipment availability.  The total workout time, including rest, is estimated to be 15 minutes, well within the 30-minute limit."
+}

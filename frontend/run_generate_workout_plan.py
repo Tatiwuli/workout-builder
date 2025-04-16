@@ -29,40 +29,36 @@ def handle_progress(message, percentage):
     st.progress(percentage)
 
 
-def generate_workout_plan(user_api_key, secrets_mongo_uri, processed_responses, progress_callback=None):
+def generate_workout_plan( processed_responses, progress_callback=None):
     """
     Generates the workout plan with agents
     """
     
     # trigger agents to start the building process
     workflow = WorkoutBuilderWorkflow(
-        progress_callback=handle_progress, api_key=user_api_key,  secrets_mongo_uri= secrets_mongo_uri)
+        progress_callback=handle_progress)
     
     return workflow.run_workflow(processed_responses)
 
 
 def run_generate_workout_plan():
    
-    user_session = st.session_state.get("user", None)
+    #FOR OPENAI
+    # user_session = st.session_state.get("user", None)
 
-    if user_session:
-        api_key = user_session.get("api_key", None)
-    else:
-        api_key = None
+    # if user_session:
+    #     api_key = user_session.get("api_key", None)
+    # else:
+    #     api_key = None
 
-    if not user_session or not api_key:
-        st.error("API Key is missing. Please go back to the Home page to provide it.")
+    # if not user_session or not api_key:
+    #     st.error("API Key is missing. Please go back to the Home page to provide it.")
     
-    secrets_mongo_uri = st.secrets.get("MONGO_URI")
-   
-
 
     try:
         with st.spinner("Generating your workout plan. It will take up to 2 min..."):
             # trigger backend to generate workout plan
             st.session_state["workout_plan"]  = generate_workout_plan(
-                user_api_key=api_key,
-                secrets_mongo_uri=secrets_mongo_uri,
                 processed_responses=st.session_state["processed_responses"],
                 progress_callback=handle_progress
             )

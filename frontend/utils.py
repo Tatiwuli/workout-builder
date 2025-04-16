@@ -56,7 +56,8 @@ def render_nav_link(page_name):
     # Dynamically construct the base URL
     full_base_url = "https://workout-builder.streamlit.app"
 
-
+    
+        
 
     # Render the button as a styled hyperlink
     st.markdown(

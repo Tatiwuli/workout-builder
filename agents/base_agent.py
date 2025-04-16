@@ -1,20 +1,30 @@
 from abc import ABC, abstractmethod
-from llms.llm import OpenAILLM
+from llms.llm import OpenAILLM, GeminiLLM
 from database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
+from dotenv import load_dotenv
 import json
 
 
-
-
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="gpt-4o", api_key = None, secrets_mongo_uri = None):
-        if not api_key:
-            raise ValueError("API key is required to initialize the LLM.")
-        self.db_handler = WorkoutBuilderDatabaseHandler(database_name, secrets_mongo_uri= secrets_mongo_uri)
-        
-        self.llm = OpenAILLM(model_name=llm_model_name, api_key=api_key)
+    def __init__(self, database_name="workout_builder", llm_model_name="models/gemini-1.5-flash"):
+
+        load_dotenv()
+
+        self.api_key = os.getenv("GEMINI_API_KEY")
+        if not self.api_key:
+            raise ValueError(
+                "GEMINI_API_KEY not found in environment or passed explicitly.")
+
+        self.mongo_uri = os.getenv("MONGODB_URI")
+        if not self.mongo_uri:
+            raise ValueError(
+                "MONGODB_URI not found in environment or passed explicitly.")
+
+        self.db_handler = WorkoutBuilderDatabaseHandler(
+            database_name, secrets_mongo_uri=self.mongo_uri)
+        self.llm = GeminiLLM(model_name=llm_model_name, api_key=self.api_key)
 
     def combine_texts(self, texts):
         """
@@ -79,12 +89,10 @@ class BaseAgent(ABC):
             )
         except KeyError as e:
             raise ValueError(f"Missing placeholder for substitution: {e}")
-    
+
     @abstractmethod
     def prepare_assistant_input(self, *args, **kwargs):
         """
         Fetches assistant input. Must be implemented by subclasses.
         """
         pass
-
-

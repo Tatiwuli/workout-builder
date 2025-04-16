@@ -1,3 +1,4 @@
+from frontend.utils import render_nav_link
 import streamlit as st
 from openai import OpenAIError
 import os 
@@ -6,43 +7,32 @@ import sys
 sys.path.append(os.path.abspath(
     os.path.join(os.path.dirname(__file__), "../../")))
 
-st.set_page_config(page_title="Workout Builder",
+st.set_page_config(page_title="Home",
                    page_icon="💪", layout="centered")
 
 
-
-
+#Main 
 def home():
-    # Initialize session state for the user
-    if "user" not in st.session_state:
-        st.session_state["user"] = {"api_key": None}
+    st.title("🏋️‍♂️ Personalized Workout Builder")
 
-    # Display UI
-    st.title("🏋️‍♂️ Workout Builder")
-    st.subheader(
-        "Create personalized, science-backed workout plans tailored to your goals!")
+    st.markdown(
+        """
+        ### Create **personalized**, **science-backed** workout plans tailored to your goals.
+        
+        This app uses advanced AI trained on insights from:
+        - 🎓 *Jeff Nippard’s* research-driven programs
+        - 🧠 *Dr. Mike Israetel* & Renaissance Periodization’s hypertrophy principles
 
-    st.info("""
-        **This is still an MVP. Please provide your OpenAI API key to test the app.**
-        If you don't have one, create one [here](https://platform.openai.com/account/api-keys).
-    """)
+        Whether you're just starting out or optimizing your next phase, we’ve got you covered.
+        """
+    )
 
-    with st.form(key="api_key_form"):
-        st.write("Enter your OpenAI API key:")
-        user_api_key = st.text_input(
-            "API Key", type="password", value=st.session_state["user"]["api_key"] or "")
-        submit_button = st.form_submit_button("Submit")
+    st.markdown("## Ready to build your plan?")
+    if st.button("📝 Start Questionnaire"):
+        st.switch_page("pages/questionnaire.py")
 
-        if submit_button:
+    #render_nav_link("pages\questionnaire.py")
 
-            if user_api_key:
-               
-                st.session_state["user"]["api_key"] = user_api_key
-                st.success("🎉 API Key successfully validated and saved!")
-
-                st.info("Navigate to the Questionnaire page on the sidebar.")
-
-              
         
 if __name__ == "__main__":
     home()

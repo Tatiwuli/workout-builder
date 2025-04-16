@@ -10,6 +10,9 @@ from frontend.run_generate_workout_plan import trigger_generate_workout_plan
 import streamlit as st
 import time
 
+#Config
+st.set_page_config(page_title="Questionnaire",
+                   page_icon="📝", layout="centered")
 
 
 
@@ -22,7 +25,6 @@ QUESTIONS = ["Goal", "Frequency", "Duration", "Experience"]
 # ---------- Handlers ----------
 
 # Question Navigation buttons
-
 
 def go_back():
     if st.session_state["question_index"] > 0:
@@ -37,6 +39,7 @@ def go_next():
     if st.session_state["question_index"] < len(QUESTIONS) - 1:
         st.session_state["question_index"] += 1
 
+#Initialize
 
 def initialize_session_state():
     """
@@ -67,7 +70,7 @@ def initialize_session_state():
     if "plan_generated" not in st.session_state:
         st.session_state["plan_generated"] = False
 
-
+#Confirmation Button
 def confirm_muscle_selection():
     """
     Confirm selected muscles and transition to the questionnaire.
@@ -278,11 +281,11 @@ if __name__ == "__main__":
     if st.session_state["workflow_stage"] == "muscle_selection":
 
         st.title("Select Your Workout Muscles")
-        if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
-            st.error(
-                "API Key is missing. Please go back to the Home page to provide it.")
-        else:
-            render_muscle_selection()
+        # if "user" not in st.session_state or not st.session_state["user"].get("api_key"):
+        #     st.error(
+        #         "API Key is missing. Please go back to the Home page to provide it.") FOR OPENAI
+        # else:
+        render_muscle_selection()
 
     elif st.session_state["workflow_stage"] == "questionnaire":
         st.title("Let's get to know more about you")

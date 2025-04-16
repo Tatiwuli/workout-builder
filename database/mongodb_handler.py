@@ -118,10 +118,10 @@ class WorkoutBuilderDatabaseHandler:
 
 
 # def update_targeted_muscle_groups(targeted_muscle_groups_mapping):
-#     MONGO_URI = os.getenv("MONGODB_URI")
-#     assert MONGO_URI, "MongoDB URI not provided!"
+#     MONGODB_URI = os.getenv("MONGODB_URI")
+#     assert MONGODB_URI, "MongoDB URI not provided!"
 
-#     client = MongoClient(MONGO_URI)
+#     client = MongoClient(MONGODB_URI)
 #     db = client["workout_builder"]
 #     collection = db["videos_summaries"]
 

@@ -1,0 +1,126 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Wide Grip Lat Pull Down",
+            "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+            "execution_notes": "Grip the bar with a wide grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
+            "media_url": "https://ccuuubmtdurkmbeufybi.supabase.co/storage/v1/object/public/animations/0579.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Offers a big stretch on your lats, provides smooth even tension throughout the range of motion, feels great, and allows for easy overload by increasing the pin weight.",
+            "targeted_muscles": [
+                "Lats",
+                "Mid Traps"
+            ],
+            "targeted_muscle_parts": "Targets both the lats and mid traps due to the wide grip and pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Neutral Grip Lat Pull Down",
+            "alternative_exercise_media_url": "https://fitnessvolt.com/wp-content/uploads/2023/09/close-grip-lat-pulldown.gif",
+            "selection_reason": "This exercise is selected as it's an S-Tier exercise for back, targeting both lats and mid traps, which are major back muscles.  The wide grip variation allows for a good stretch and even tension throughout the movement, making it suitable for early beginners. It's also machine-based, ensuring proper form and safety for beginners."
+        },
+        {
+            "exercise_name": "Chest Supported Row",
+            "setup_notes": "Use a chest-supported row machine or incline bench.",
+            "execution_notes": "Pull the weight towards your chest while keeping your chest against the pad, and return to the starting position.",
+            "media_url": "https://media.tenor.com/ft6FHrqty-8AAAAM/remada-pronada-maquina.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Stable, allows focus on back muscles, and can be done with various equipment.",
+            "targeted_muscles": [
+                "Lats",
+                "Midback"
+            ],
+            "targeted_muscle_parts": "Targets both lats and midback due to the pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "Crowned as the best exercise for back development.",
+            "alternative_exercise": "Cable Row",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/09/cable-row.gif",
+            "selection_reason": "Another S-Tier exercise, the chest supported row provides stability and allows the user to focus on their back muscles without needing to stabilize their body as much as free weight exercises. This is crucial for early beginners to maintain proper form and avoid injury."
+        },
+        {
+            "exercise_name": "Preacher Curl",
+            "setup_notes": "Use a preacher bench to angle your upper arm.",
+            "execution_notes": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2021/10/dumbbell-preacher-curl.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "High tension in stretched position, locks elbows to prevent cheating, significant distal biceps growth.",
+            "targeted_muscles": [
+                "Biceps"
+            ],
+            "targeted_muscle_parts": "Distal biceps, due to high tension in stretched position.",
+            "limitations": "None",
+            "scientific_insights": "Study shows preacher curls cause more distal biceps growth compared to incline curls.",
+            "additional_notes": "None",
+            "alternative_exercise": "Machine Preacher Curl",
+            "alternative_exercise_media_url": "https://i.pinimg.com/originals/b6/ea/17/b6ea17377640b9bb77068888388b5d0a.gif",
+            "selection_reason": "This S-Tier exercise is chosen for its effectiveness in building biceps, particularly the distal biceps. The preacher curl's design ensures proper form and maximizes tension on the biceps, minimizing the risk of injury for beginners. The high tension in the stretched position is crucial for muscle growth."
+        },
+        {
+            "exercise_name": "Hammer Curl",
+            "setup_notes": "None",
+            "execution_notes": "Use a neutral grip with thumbs up.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/02/alternating-hammer-curls.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Targets brachialis, enhances bicep peak appearance.",
+            "targeted_muscles": [
+                "Brachialis",
+                "Biceps"
+            ],
+            "targeted_muscle_parts": "Brachialis, due to neutral grip.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Incline Curl",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/incline-dumbbell-curl.gif",
+            "selection_reason": "The hammer curl is included as an A-Tier exercise to target the brachialis, a muscle that sits underneath the biceps and contributes to overall arm size and definition. The neutral grip helps to isolate the brachialis and prevent overworking the biceps, which is important for balanced development."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm circles",
+                "setup_notes": "None",
+                "execution_notes": "Perform forward and backward arm circles for 30 seconds each.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "None",
+                "execution_notes": "Perform forward and backward shoulder rotations for 30 seconds each.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Torso twists",
+                "setup_notes": "None",
+                "execution_notes": "Perform torso twists to the left and right for 30 seconds each.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Cat-cow stretch",
+                "setup_notes": "Start on your hands and knees.",
+                "execution_notes": "Alternate between arching and rounding your back.",
+                "sets_reps": "1 set",
+                "duration": "2 minutes"
+            },
+            {
+                "exercise_name": "Wrist stretches",
+                "setup_notes": "None",
+                "execution_notes": "Perform wrist extensions and flexions for 30 seconds each.",
+                "sets_reps": "1 set",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Light cardio",
+                "setup_notes": "None",
+                "execution_notes": "Perform light cardio, such as jogging in place or jumping jacks, for 1 minute.",
+                "sets_reps": "1 set",
+                "duration": "1 minute"
+            }
+        ]
+    }
+}

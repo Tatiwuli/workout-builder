@@ -6,12 +6,12 @@ import sys
 sys.path.insert(0, os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "..")))
 
-st.set_page_config(page_title="Workout Plan", page_icon="💪")
-
 import streamlit_nested_layout 
 
 from frontend.run_generate_workout_plan import run_generate_workout_plan
 
+
+st.set_page_config(page_title="Workout Plan", page_icon="💪")
 
 
 def initialize_sessions_states():

@@ -1,4 +1,5 @@
 
+import google.generativeai as genai
 from token_count import TokenCount
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -7,16 +8,15 @@ import json
 import time
 
 
-
 # load_dotenv()
 # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # assert OPENAI_API_KEY, "OPENAI_API_KEY is not set in the environment!"
 
 
 class OpenAILLM:
-    def __init__(self, model_name = "gpt-4o", temperature=0.0, pydantic_format = None, api_key = None):
+    def __init__(self, model_name="models/gemini-1.5-flash", temperature=0.0, pydantic_format=None, api_key=None):
         self.model_name = model_name
-        self.client = OpenAI(api_key= api_key)
+        self.client = OpenAI(api_key=api_key)
         self.max_retries = 2
         self.timeout = 90
         self.token_counter = TokenCount(model_name=model_name)
@@ -25,9 +25,9 @@ class OpenAILLM:
 
     def count_total_tokens_cost(self, prompt_tokens, completion_tokens):
         model_pricing = {
-            'gpt-4o': {'input': 2.50, 'output': 10.00},
-            'gpt-4o-mini': {'input': 0.15, 'output': 0.60},
-            'gpt-3.5-turbo': {'input': 0.002, 'output': 0.002},
+            'models/gemini-1.5-flash': {'input': 2.50, 'output': 10.00},
+            'models/gemini-1.5-flash-mini': {'input': 0.15, 'output': 0.60},
+            'models/gemini-1.5-flash': {'input': 0.002, 'output': 0.002},
         }
 
         if self.model_name in model_pricing:
@@ -98,3 +98,36 @@ class OpenAILLM:
 
         raise RuntimeError(
             "Failed to complete API call after maximum retries.")
+
+
+class GeminiLLM:
+    def __init__(self, model_name="models/gemini-1.5-flash", temperature=0.0, api_key=None):
+        if not api_key:
+            raise ValueError("Google API key is required.")
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(
+            model_name=model_name,
+            generation_config={"temperature": temperature},
+            safety_settings=[
+                {"category": "HARM_CATEGORY_DANGEROUS", "threshold": 4}],
+        )
+
+    def call_api(self, system_prompt, user_prompt, assistant_prompt=None):
+        full_prompt = ""
+        if system_prompt:
+            full_prompt += f"<system>\n{system_prompt.strip()}\n</system>\n\n"
+        if assistant_prompt:
+            full_prompt += f"<assistant>\n{assistant_prompt.strip()}\n</assistant>\n\n"
+        full_prompt += f"<user>\n{user_prompt.strip()}\n</user>"
+
+        try:
+            response = self.model.generate_content(
+                full_prompt,
+                generation_config={"response_mime_type": "application/json"}
+            )
+            return json.loads(response.text)
+        except json.JSONDecodeError:
+            raise RuntimeError(
+                "Response was not valid JSON. Add clearer formatting instruction to your prompt.")
+        except Exception as e:
+            raise RuntimeError(f"Gemini API call failed: {e}")
