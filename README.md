@@ -1,4 +1,4 @@
-## Table of Contents
+# 📌Table of Contents
 
 1. [Project Overview](#project-overview)
    - [Purpose](#purpose)
@@ -19,7 +19,7 @@
 
 ---
 
-# Project Overview
+# 🗺️Project Overview
 
 #### Access the website through this link: https://workout-builder.streamlit.app/Home
 This project generates a customized workout plan tailored to user needs and hypertrophy goals. It manages the entire workflow—from selecting exercises and designing workout volume to structuring easy-to-follow workout plans—through specialized agents.
@@ -36,22 +36,25 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ---
 
-## Pages
+## 📃Pages
 
 ### Home
    Introduces the web app and prompts the user to provide their OpenAI API key for the agents.
-   ![GIF demonstrating Home Page](https://github.com/Tatiwuli/workout-builder/blob/main/workout-builder\workoutBuilder_demo_questionnaire.gif)
+   <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_home.gif" width="500">
+
 
 ### Questionnaire:
    Gathers information about the user’s workout preferences and needs. This data is passed to the agents to ensure they create an efficient workout plan tailored to the user’s goals.
-  ![GIF demonstrating Questionnaire Page](https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif)
+   <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
+
 
 ### Workout Plan:
    Displays the final workout plan.
    The final plan includes:
       - Warm-up Section: Includes execution notes for movements, number of sets and reps, and duration.
       - Main Workout Section: Exercises are structured into sets. Based on the user's needs, the LLM may organize exercises into supersets or drop sets. Each exercise includes: Step-by-step execution instructions with a GIF; Guidelines for weights, sets, and reps; An alternative exercise for users without access to the required equipment, with its  execution instructions and GIF.
-     ![GIF demonstrating the Workout Plan Page](https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_workoutPlan.gif)
+     <img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_workoutPlan.gif" width="500">
+
      
 
      
@@ -59,7 +62,7 @@ Today, fitness is a daily habit that fuels my energy and confidence. As a studen
 
 ---
 
-## Tech Stack
+## 🧰Tech Stack
 
 ### Backend
 - Python
@@ -75,7 +78,7 @@ Streamlit was chosen for its simplicity and ability to quickly build and iterate
 
 ---
 
-## Next Steps
+## 🚲Next Steps
 
 - **Select All Option**  
   **Priority:** High  
