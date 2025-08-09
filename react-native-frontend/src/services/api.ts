@@ -1,6 +1,9 @@
-import { ProcessedResponses, WorkoutPlan } from "../types"
+import { ProcessedResponses, WorkoutPlan, ApiUserResponses } from "../types"
+import { Platform } from "react-native"
 
-const API_BASE_URL = "http://localhost:8000"
+// Use different URLs for different environments
+const API_BASE_URL =
+  Platform.OS === "web" ? "http://localhost:8000" : "http://10.0.2.2:8000" // Android emulator uses 10.0.2.2 for localhost
 
 export interface ApiResponse<T> {
   success: boolean
@@ -12,6 +15,8 @@ export interface ApiResponse<T> {
 export interface ProgressResponse {
   progress: number
   message: string
+  status?: string
+  final_plan?: any
 }
 
 class ApiService {
@@ -19,6 +24,11 @@ class ApiService {
 
   constructor(baseUrl: string = API_BASE_URL) {
     this.baseUrl = baseUrl
+  }
+
+  // Method to update base URL for different environments
+  setBaseUrl(url: string) {
+    this.baseUrl = url
   }
 
   private async request<T>(
@@ -53,7 +63,7 @@ class ApiService {
    * Generate workout plan based on user responses
    */
   async generateWorkoutPlan(
-    responses: ProcessedResponses
+    responses: ApiUserResponses
   ): Promise<ApiResponse<WorkoutPlan>> {
     return this.request<WorkoutPlan>("/generate_workout_plan", {
       method: "POST",
@@ -99,4 +109,32 @@ class ApiService {
   /**
    * Get generation progress for a session
    */
-  async getGenerat
+  async getGenerationProgress(
+    sessionId: string
+  ): Promise<ApiResponse<ProgressResponse>> {
+    return this.request<ProgressResponse>(`/generation_progress/${sessionId}`)
+  }
+
+  /**
+   * Get the final workout plan for a completed session
+   */
+  async getFinalPlan(sessionId: string): Promise<ApiResponse<WorkoutPlan>> {
+    return this.request<WorkoutPlan>(`/get_final_plan/${sessionId}`)
+  }
+
+  /**
+   * Test API connection and find the correct base URL
+   */
+  async testConnection(): Promise<boolean> {
+    try {
+      const response = await this.request<any>("/health")
+      return response.success
+    } catch (error) {
+      return false
+    }
+  }
+}
+
+export const apiService = new ApiService()
+
+export default ApiService

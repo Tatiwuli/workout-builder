@@ -9,20 +9,20 @@ import {
 
 const { width } = Dimensions.get("window")
 
-interface MuscleSelectionCardProps {
+interface MuscleSelectionCardProps { // Represent a muscle group card
   title: string
   muscles: string[]
-  selectedMuscles: string[]
-  onMuscleToggle: (muscle: string) => void
-  onSelectAll: () => void
-  onDeselectAll: () => void
+  selectedMuscles: string[] // Selection state
+  onMuscleSelect: (muscle: string) => void //Callback when a muscle is selected
+  onSelectAll: () => void //Callback when all muscles ( of same group)are selected
+  onDeselectAll: () => void //Callback when onSelectAll is deselected
 }
 
 const MuscleSelectionCard: React.FC<MuscleSelectionCardProps> = ({
   title,
   muscles,
   selectedMuscles,
-  onMuscleToggle,
+  onMuscleSelect,
   onSelectAll,
   onDeselectAll,
 }) => {
@@ -67,7 +67,7 @@ const MuscleSelectionCard: React.FC<MuscleSelectionCardProps> = ({
                 styles.muscleButton,
                 isSelected && styles.muscleButtonSelected,
               ]}
-              onPress={() => onMuscleToggle(muscle)}
+              onPress={() => onMuscleSelect(muscle)}
               activeOpacity={0.7}
             >
               <Text

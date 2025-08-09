@@ -1,0 +1,194 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "This set focuses on a compound movement to establish a base level of fatigue in the quadriceps before moving to more isolation-focused exercises.  The volume aligns with the advanced user's capacity for higher volume, while the moderate rep range promotes both strength and hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": [
+                        {
+                            "Quadriceps": [
+                                "Vastus Medialis",
+                                "Vastus Intermedius",
+                                "Vastus Lateralis",
+                                "Rectus Femoris"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "80-85% of 1RM",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Hack Squat",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows for 8 repetitions with good form.  Increase weight incrementally in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "This set uses a different squat variation to target the quadriceps from a different angle, further maximizing muscle fiber recruitment and promoting hypertrophy. The slightly higher rep range increases time under tension.",
+            "exercises": [
+                {
+                    "exercise_name": "Hack Squat",
+                    "target_muscle_part": [
+                        {
+                            "Quadriceps": [
+                                "Vastus Medialis",
+                                "Vastus Intermedius",
+                                "Vastus Lateralis",
+                                "Rectus Femoris"
+                            ]
+                        }
+                    ],
+                    "reps": "10",
+                    "weight": "Select a weight that allows for 10 repetitions with good form. Increase weight incrementally in subsequent sets if possible.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Barbell Front Squat",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight that allows for 10 repetitions with good form. Increase weight incrementally in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "This set targets the hamstrings and glutes with a compound movement. The higher rep range promotes hypertrophy, and the focus on controlled movement maximizes muscle activation.",
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": [
+                        {
+                            "Hamstrings": [
+                                "Biceps Femoris",
+                                "Semitendinosus",
+                                "Semimembranosus"
+                            ]
+                        },
+                        {
+                            "Glutes": [
+                                "Gluteus Maximus",
+                                "Gluteus Medius",
+                                "Gluteus Minimus"
+                            ]
+                        }
+                    ],
+                    "reps": "12",
+                    "weight": "Select a weight that allows for 12 repetitions with good form. Increase weight incrementally in subsequent sets if possible.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Stiff-Legged Deadlift",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Select a weight that allows for 12 repetitions with good form. Increase weight incrementally in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Hamstrings"
+            ],
+            "set_reasoning": "This set focuses on hamstring isolation to further enhance hypertrophy. The higher rep range and focus on controlled movement maximize muscle activation.",
+            "exercises": [
+                {
+                    "exercise_name": "Glute Ham Raise",
+                    "target_muscle_part": [
+                        {
+                            "Hamstrings": [
+                                "Biceps Femoris",
+                                "Semitendinosus",
+                                "Semimembranosus"
+                            ]
+                        }
+                    ],
+                    "reps": "15",
+                    "weight": "Bodyweight or resistance band tension adjusted to allow for 15 repetitions with good form.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Reverse Nordic",
+                    "alternative_exercise_reps": "15",
+                    "alternative_exercise_weight": "Bodyweight. Adjust the difficulty by changing the angle of your body or using resistance bands."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Glutes"
+            ],
+            "set_reasoning": "This set targets the glutes with a compound movement. The higher rep range promotes hypertrophy, and the focus on controlled movement maximizes muscle activation.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": [
+                        {
+                            "Glutes": [
+                                "Gluteus Maximus",
+                                "Gluteus Medius",
+                                "Gluteus Minimus"
+                            ]
+                        }
+                    ],
+                    "reps": "12",
+                    "weight": "Select a weight that allows for 12 repetitions with good form. Increase weight incrementally in subsequent sets if possible.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Single Leg Hip Thrusts",
+                    "alternative_exercise_reps": "12 per leg",
+                    "alternative_exercise_weight": "Select a weight that allows for 12 repetitions per leg with good form. Increase weight incrementally in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_time": 7,
+            "set_strategy": "None",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Calves"
+            ],
+            "set_reasoning": "This set targets the calves with a higher rep range to promote hypertrophy. The seated variation allows for isolation of the soleus muscle.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Calf Raise",
+                    "target_muscle_part": [
+                        {
+                            "Calves": [
+                                "Gastrocnemius",
+                                "Soleus"
+                            ]
+                        }
+                    ],
+                    "reps": "15",
+                    "weight": "Select a weight that allows for 15 repetitions with good form. Increase weight incrementally in subsequent sets if possible.",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Standing Calf Raise",
+                    "alternative_exercise_reps": "15",
+                    "alternative_exercise_weight": "Select a weight that allows for 15 repetitions with good form. Increase weight incrementally in subsequent sets if possible."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout prioritizes compound movements for the larger muscle groups (quadriceps, hamstrings, glutes) to maximize time efficiency and overall muscle stimulation.  Isolation exercises are included to target specific muscle parts and ensure comprehensive development. The exercise order is designed to allow for progressive fatigue, starting with the largest muscle groups and moving to smaller ones.  The volume and rep ranges are tailored to an advanced user, allowing for higher intensity and volume while remaining within the 45-minute time constraint.  The workout structure aligns with the principles outlined in the provided wikis, emphasizing both compound and isolation exercises, progressive overload, and appropriate rest periods for an advanced user."
+}
