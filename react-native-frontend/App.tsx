@@ -7,12 +7,14 @@ import { Platform } from "react-native"
 
 import HomeScreen from "./src/screens/HomeScreen"
 import QuestionnaireScreen from "./src/screens/QuestionnaireScreen"
+import WorkoutGenerationScreen from "./src/screens/WorkoutGenerationScreen"
 import WorkoutPlanScreen from "./src/screens/WorkoutPlanScreen"
 
 export type RootStackParamList = {
   Home: undefined
   Questionnaire: undefined
-  WorkoutPlan: undefined
+  WorkoutGeneration: { sessionId: string }
+  WorkoutPlan: { workoutPlan: any }
 }
 
 const Stack = createStackNavigator<RootStackParamList>()

@@ -1,0 +1,307 @@
+{
+    "workout_title": "Chest & Triceps Blast",
+    "total_workout_duration": 44.5,
+    "num_exercises": 6,
+    "warmup": {
+        "warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Rotate shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Chest stretches",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Clasp hands behind your back and gently straighten your arms, feeling a stretch in your chest. Hold for 30 seconds."
+            },
+            {
+                "exercise_name": "Triceps stretches",
+                "setup_notes": "Raise one arm overhead and bend at the elbow, letting your hand fall behind your head.",
+                "execution_notes": "Gently push your elbow with your other hand, feeling a stretch in your triceps. Hold for 30 seconds per arm."
+            },
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at your sides.",
+                "execution_notes": "Jump, spreading your legs and raising your arms overhead. Return to starting position. Repeat for 1 minute."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the machine seat so that your back is comfortably supported.  Position yourself so that when you grasp the handles, your arms are slightly wider than shoulder-width apart. Ensure your elbows are slightly bent at the starting position.",
+                    "execution": [
+                        "1. Starting Position: Sit comfortably with your back against the backrest, feet flat on the floor. Grasp the handles with a slightly wider than shoulder-width grip.",
+                        "2. The Press: Extend your arms fully, pushing the handles away from your chest. Keep your core engaged and maintain a controlled movement.",
+                        "3. The Stretch: Slowly return the handles to your chest, feeling a deep stretch in your pectoral muscles.  Pause briefly at the bottom of the movement.",
+                        "4. Repeat: Continue the pressing motion for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "media_url": "",
+                    "reps": "8",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a bench with your feet flat on the floor. Grip the barbell slightly wider than shoulder-width, with an overhand grip. Lower the bar to your chest.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie supine on the bench with your feet flat on the floor. Grip the barbell with an overhand grip, slightly wider than shoulder-width apart. Lower the bar to your chest.",
+                        "2. The Press: Keeping your core engaged, press the bar upwards until your arms are fully extended.  Maintain a controlled movement throughout.",
+                        "3. The Lowering: Slowly lower the bar back to your chest, maintaining control and feeling the stretch in your chest muscles. Pause briefly at the bottom.",
+                        "4. Repeat: Continue the pressing motion for the desired number of repetitions, focusing on maintaining proper form and a controlled pace."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Focus on a controlled movement and avoid bouncing the weight.  Maintain a stable position throughout the exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the bench to an incline of approximately 30-45 degrees. Lie on the bench with your feet flat on the floor. Hold a dumbbell in each hand, maintaining a neutral grip.",
+                    "execution": [
+                        "1. Starting Position: Lie on the incline bench with your feet flat on the floor. Hold a dumbbell in each hand, palms facing each other. Lower the dumbbells to your chest.",
+                        "2. The Press: Keeping your core engaged, press the dumbbells upwards until your arms are fully extended.  Maintain a controlled movement throughout.",
+                        "3. The Lowering: Slowly lower the dumbbells back to your chest, maintaining control and feeling the stretch in your chest muscles. Pause briefly at the bottom.",
+                        "4. Repeat: Continue the pressing motion for the desired number of repetitions, focusing on maintaining proper form and a controlled pace."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "8",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_setup": "Adjust the cable machine to a comfortable height. Sit on the seat, maintaining good posture. Grasp the handles with a neutral grip.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Sit comfortably with your back straight. Grasp the handles and extend your arms in front of you.",
+                        "2. The Fly: Keeping your elbows slightly bent, slowly bring the handles together in front of your chest, squeezing your pectoral muscles at the peak contraction.",
+                        "3. The Stretch: Slowly return the handles to the starting position, feeling a deep stretch in your chest muscles.",
+                        "4. Repeat: Continue the fly motion for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "alternative_exercise_media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Focus on a controlled movement and avoid using momentum.  Maintain a stable position throughout the exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Sit on the seat of the cable fly machine, ensuring your back is straight and supported. Adjust the cable height to a comfortable level. Grasp the handles with a neutral grip.",
+                    "execution": [
+                        "1. Starting Position: Sit upright with your back straight and feet flat on the floor. Extend your arms forward, holding the handles.",
+                        "2. The Fly: Keeping a slight bend in your elbows, slowly bring the handles together in front of your chest, squeezing your pectoral muscles at the peak contraction.",
+                        "3. The Stretch: Slowly return the handles to the starting position, feeling a deep stretch in your chest muscles.",
+                        "4. Repeat: Continue the fly motion for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Dumbbell Fly",
+                    "alternative_exercise_setup": "Lie on a flat bench with your feet flat on the floor. Hold a dumbbell in each hand, palms facing each other.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie supine on a bench with your feet flat on the floor. Hold a dumbbell in each hand, palms facing each other. Extend your arms to the sides.",
+                        "2. The Fly: Keeping a slight bend in your elbows, slowly bring the dumbbells together above your chest, squeezing your pectoral muscles at the peak contraction.",
+                        "3. The Stretch: Slowly return the dumbbells to the starting position, feeling a deep stretch in your chest muscles.",
+                        "4. Repeat: Continue the fly motion for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "alternative_exercise_media_url": "https://newlife.com.cy/wp-content/uploads/2019/11/03081301-Dumbbell-Fly_Chest-FIX_360.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Focus on a controlled movement and avoid using momentum.  Maintain a stable position throughout the exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 7.0,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the cable machine to a low setting. Attach a straight bar to the cable. Stand facing away from the machine with your arms fully extended overhead.",
+                    "execution": [
+                        "1. Starting Position: Stand facing away from the cable machine with your arms fully extended overhead, holding the straight bar. Your elbows should be slightly bent.",
+                        "2. The Extension: Keeping your upper arms stationary, slowly lower the bar behind your head by bending your elbows. Focus on feeling the stretch in your triceps.",
+                        "3. The Contraction: Extend your arms back to the starting position, squeezing your triceps at the top of the movement.",
+                        "4. Repeat: Continue the extension and contraction for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+                    "reps": "8",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Dumbbell",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_setup": "Lie on a flat bench with your feet flat on the floor. Hold a barbell with an overhand grip, slightly narrower than shoulder-width.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie on a bench with your feet flat on the floor. Hold a barbell with an overhand grip, slightly narrower than shoulder-width. Extend your arms upwards.",
+                        "2. The Lowering: Keeping your upper arms stationary, slowly lower the bar towards your forehead by bending your elbows.  Focus on feeling the stretch in your triceps.",
+                        "3. The Extension: Extend your arms back to the starting position, squeezing your triceps at the top of the movement.",
+                        "4. Repeat: Continue the lowering and extension for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "alternative_exercise_media_url": "",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Maintain a controlled movement and avoid using momentum.  Focus on squeezing your triceps at the top of the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_strategy": "None",
+            "set_duration": 7.0,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "setup": "Lie on a bench with your feet flat on the floor. Grip the barbell with a close, overhand grip (slightly narrower than shoulder-width). Lower the bar to your chest.",
+                    "execution": [
+                        "1. Starting Position: Lie supine on the bench with your feet flat on the floor. Grip the barbell with a close, overhand grip, slightly narrower than shoulder-width apart. Lower the bar to your chest.",
+                        "2. The Press: Keeping your core engaged, press the bar upwards until your arms are fully extended.  Maintain a controlled movement throughout.",
+                        "3. The Lowering: Slowly lower the bar back to your chest, maintaining control and feeling the stretch in your triceps. Pause briefly at the bottom.",
+                        "4. Repeat: Continue the pressing motion for the desired number of repetitions, focusing on maintaining proper form and a controlled pace."
+                    ],
+                    "media_url": "https://framerusercontent.com/images/4vEMWneIoDWCqXvq17gyv8iAKc.gif",
+                    "reps": "10",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_setup": "Attach a straight bar to the low pulley of a cable machine. Stand facing the machine with your feet shoulder-width apart.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand facing the cable machine with your feet shoulder-width apart. Grasp the straight bar with an overhand grip, slightly wider than shoulder-width.",
+                        "2. The Press Down: Keeping your upper arms close to your sides, extend your arms downwards, squeezing your triceps at the bottom of the movement.",
+                        "3. The Return: Slowly return the bar to the starting position, maintaining control and feeling the stretch in your triceps.",
+                        "4. Repeat: Continue the press down motion for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/straight-bar-tricep-pushdown.gif",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Maintain a controlled movement and avoid using momentum.  Keep your elbows close to your sides throughout the exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_strategy": "None",
+            "set_duration": 7.0,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Extension with Rope",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the cable machine to a low setting. Attach a rope attachment to the cable. Stand facing away from the machine with your arms fully extended overhead.",
+                    "execution": [
+                        "1. Starting Position: Stand facing away from the cable machine with your arms fully extended overhead, holding the rope attachment. Your elbows should be slightly bent.",
+                        "2. The Extension: Keeping your upper arms stationary, slowly lower the rope behind your head by bending your elbows. Focus on feeling the stretch in your triceps.",
+                        "3. The Contraction: Extend your arms back to the starting position, squeezing your triceps at the top of the movement.",
+                        "4. Repeat: Continue the extension and contraction for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+                    "reps": "12",
+                    "weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "alternative_equipments": "Bar",
+                    "rest_time": "0 seconds",
+                    "alternative_exercise": "One Arm Dumbbell Tricep Extensions",
+                    "alternative_exercise_setup": "Stand with your feet shoulder-width apart, holding a dumbbell in one hand. Lean forward slightly, supporting yourself with your other hand on a bench or your thigh.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand with your feet shoulder-width apart, holding a dumbbell in one hand. Lean forward slightly, supporting yourself with your other hand on a bench or your thigh. Extend your arm downwards.",
+                        "2. The Extension: Keeping your upper arm stationary, slowly extend your forearm upwards, squeezing your triceps at the top of the movement.",
+                        "3. The Return: Slowly lower the dumbbell back to the starting position, maintaining control and feeling the stretch in your triceps.",
+                        "4. Repeat: Continue the extension and lowering for the desired number of repetitions, maintaining a controlled pace and focusing on the mind-muscle connection.  Repeat on the other arm."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/tricep-overhead-extensions.gif",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Select a weight where the last 2-3 reps feel challenging but still allow you to maintain proper form.",
+                    "additional_tips": "Maintain a controlled movement and avoid using momentum.  Focus on squeezing your triceps at the top of the movement."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "This set focuses on a compound movement to establish a base level of fatigue and prime the quads for subsequent exercises.  The volume aligns with the advanced user's capacity for higher intensity and volume, as per the wiki guidelines for intermediate-late level.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "Vastus Medialis",
+                            "Vastus Intermedius",
+                            "Vastus Lateralis",
+                            "Rectus Femoris"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "80-85% of 1RM",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Hack Squat",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows for 8 repetitions with good form.  Increase weight progressively each week."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "This set uses a different squat variation to target the quads from a different angle, maximizing overall quadriceps activation. The volume is consistent with the advanced user's capacity for higher intensity and volume.",
+            "exercises": [
+                {
+                    "exercise_name": "Hack Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "Vastus Medialis",
+                            "Vastus Intermedius",
+                            "Vastus Lateralis",
+                            "Rectus Femoris"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Select a weight that allows for 8 repetitions with good form. Increase weight progressively each week.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Barbell Front Squat",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows for 8 repetitions with good form. Increase weight progressively each week."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Quadriceps"
+            ],
+            "set_reasoning": "This set incorporates a unilateral exercise to challenge balance and further stimulate muscle growth.  The lower repetitions reflect the increased fatigue from the previous sets, while still maintaining sufficient volume for hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Bulgarian Split Squat",
+                    "target_muscle_part": {
+                        "Quadriceps": [
+                            "Vastus Medialis",
+                            "Vastus Intermedius",
+                            "Vastus Lateralis",
+                            "Rectus Femoris"
+                        ]
+                    },
+                    "reps": 10,
+                    "weight": "Select a weight that allows for 10 repetitions with good form. Increase weight progressively each week.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Lunge",
+                    "alternative_exercise_reps": 10,
+                    "alternative_exercise_weight": "Select a weight that allows for 10 repetitions with good form. Increase weight progressively each week."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 12,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Hamstrings",
+                "Glutes"
+            ],
+            "set_reasoning": "This set targets the hamstrings and glutes with a compound movement. The volume is chosen to complement the quadriceps work and maintain balance in the posterior chain development.",
+            "exercises": [
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "Biceps Femoris",
+                            "Semitendinosus",
+                            "Semimembranosus"
+                        ],
+                        "Glutes": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ]
+                    },
+                    "reps": 10,
+                    "weight": "70-75% of 1RM",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Stiff-Legged Deadlift",
+                    "alternative_exercise_reps": 10,
+                    "alternative_exercise_weight": "Select a weight that allows for 10 repetitions with good form. Increase weight progressively each week."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Hamstrings"
+            ],
+            "set_reasoning": "This set further isolates the hamstrings, providing a different stimulus compared to the RDL. The higher repetitions are chosen to increase time under tension and promote hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Glute Ham Raise",
+                    "target_muscle_part": {
+                        "Hamstrings": [
+                            "Biceps Femoris",
+                            "Semitendinosus",
+                            "Semimembranosus"
+                        ]
+                    },
+                    "reps": 12,
+                    "weight": "Bodyweight or added weight as needed to maintain good form and achieve 12 repetitions.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Reverse Nordic",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Bodyweight or added weight as needed to maintain good form and achieve 12 repetitions."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_time": 8,
+            "set_strategy": "None",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Glutes"
+            ],
+            "set_reasoning": "This set directly targets the glutes, ensuring comprehensive development of the posterior chain. The higher repetitions are chosen to increase time under tension and promote hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Barbell Hip Thrust",
+                    "target_muscle_part": {
+                        "Glutes": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ]
+                    },
+                    "reps": 15,
+                    "weight": "Select a weight that allows for 15 repetitions with good form. Increase weight progressively each week.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Single Leg Hip Thrusts",
+                    "alternative_exercise_reps": 15,
+                    "alternative_exercise_weight": "Select a weight that allows for 15 repetitions with good form. Increase weight progressively each week."
+                }
+            ]
+        },
+        {
+            "set_number": 7,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Calves"
+            ],
+            "set_reasoning": "This set targets the calves, completing the user's requested muscle groups. The higher repetitions are chosen to target both the gastrocnemius and soleus, though the potential limitations of soleus response to training are acknowledged.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Calf Raise",
+                    "target_muscle_part": {
+                        "Calves": [
+                            "Gastrocnemius",
+                            "Soleus"
+                        ]
+                    },
+                    "reps": 15,
+                    "weight": "Select a weight that allows for 15 repetitions with good form. Increase weight progressively each week.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Standing Calf Raise",
+                    "alternative_exercise_reps": 15,
+                    "alternative_exercise_weight": "Select a weight that allows for 15 repetitions with good form. Increase weight progressively each week."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan is designed for an advanced user with a 60-minute time constraint, focusing on the glutes, hamstrings, quadriceps, and calves.  The workout prioritizes compound movements to maximize time efficiency and overall muscle activation.  The exercise order is structured to allow for progressive fatigue, starting with the larger muscle groups (quadriceps) and moving to smaller, more isolated muscle groups (hamstrings, calves).  The volume of each set is chosen to align with the advanced user's capacity for higher intensity and volume, while still respecting the time constraint.  The use of alternative exercises provides flexibility and allows for adjustments based on individual preferences and equipment availability.  The workout incorporates a variety of rep ranges to target different muscle fibers and promote overall hypertrophy.  The total workout time, including rest periods, is approximately 55 minutes, well within the 60-minute time constraint."
+}

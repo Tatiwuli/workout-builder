@@ -10,6 +10,7 @@ import {
 } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StackNavigationProp } from "@react-navigation/stack"
+import { RouteProp } from "@react-navigation/native"
 import { RootStackParamList } from "../../App"
 import { WorkoutPlan, Exercise } from "../types"
 import ExerciseCard from "../components/ExerciseCard"
@@ -19,8 +20,11 @@ type WorkoutPlanScreenNavigationProp = StackNavigationProp<
   "WorkoutPlan"
 >
 
+type WorkoutPlanScreenRouteProp = RouteProp<RootStackParamList, "WorkoutPlan">
+
 interface Props {
   navigation: WorkoutPlanScreenNavigationProp
+  route: WorkoutPlanScreenRouteProp
 }
 
 // Mock workout plan data - replace with actual API call
@@ -91,11 +95,17 @@ const mockWorkoutPlan: WorkoutPlan = {
   ],
 }
 
-const WorkoutPlanScreen: React.FC<Props> = ({ navigation }) => {
+const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
   const [expandedExercises, setExpandedExercises] = useState<Set<string>>(
     new Set()
   )
-  const [workoutPlan] = useState<WorkoutPlan>(mockWorkoutPlan)
+
+  // Get workout plan from navigation params or use mock data as fallback
+  const workoutPlan: WorkoutPlan = route.params?.workoutPlan || mockWorkoutPlan
+
+  // Debug log to see what we received
+  console.log("WorkoutPlanScreen received data:", route.params)
+  console.log("Using workout plan:", workoutPlan)
 
   const toggleExercise = (exerciseName: string) => {
     const newExpanded = new Set(expandedExercises)
