@@ -20,11 +20,12 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 
 app = FastAPI(title="Workout Builder API", version="1.0.0")
-
+raw_origins = os.getenv("CORS_ORIGINS", "")
+ALLOWED_ORIGINS = [o.strip() for o in raw_origins.split(",") if o.strip()]
 # Enable CORS for React Native
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify your frontend domain
+    allow_origins=ALLOWED_ORIGINS,  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -367,6 +368,8 @@ async def get_saved_workout_plans():
             "error": f"Failed to retrieve saved plans: {str(e)}"
         }
 
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
+    import os
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", "8000")))
