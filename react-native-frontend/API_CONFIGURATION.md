@@ -8,11 +8,11 @@ The API service now supports configuration via environment variables for better 
 
 ```bash
 
-EXPO_PUBLIC_API_URL=https://your-render-backend.onrender.com
+EXPO_PUBLIC_API_URL=https://workout-builder-g4n6.onrender.com/
 
-# Legacy/alternative options
-REACT_APP_API_URL=http://localhost:8000
-API_URL=http://localhost:8000
+# # Legacy/alternative options
+# REACT_APP_API_URL=http://localhost:8000
+# API_URL=http://localhost:8000
 
 # Retry Configuration
 API_RETRY_COUNT=2        # Number of retry attempts
@@ -37,7 +37,7 @@ API_TIMEOUT=30000
 - Value should be your Render backend base URL, e.g. `https://your-api.onrender.com`
 
 ```bash
-EXPO_PUBLIC_API_URL=https://your-api.onrender.com
+EXPO_PUBLIC_API_URL https://workout-builder-g4n6.onrender.com/
 API_RETRY_COUNT=1
 API_RETRY_DELAY=3000
 API_TIMEOUT=60000

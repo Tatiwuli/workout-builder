@@ -22,6 +22,8 @@ const getDefaultConfig = (): ApiConfig => {
       : {}
 
   const baseUrl = env["EXPO_PUBLIC_API_URL"]
+  
+  console.log("EXPO_PUBLIC_API_URL at build:", baseUrl)
   if (!baseUrl) {
     throw new Error("EXPO_PUBLIC_API_URL is required for API base URL")
   }
