@@ -5,6 +5,7 @@ import {
   WorkoutGenerationResponse,
 } from "../types"
 import { Platform } from "react-native"
+import { API_BASE } from "../env" // ✅ single source of truth
 
 // Configuration interface for API settings
 interface ApiConfig {
@@ -16,23 +17,19 @@ interface ApiConfig {
 
 // Default configuration with fallbacks
 const getDefaultConfig = (): ApiConfig => {
-  const env =
-    typeof process !== "undefined" && process.env
-      ? (process.env as unknown as Record<string, string | undefined>)
-      : {}
-
-  const baseUrl = env["EXPO_PUBLIC_API_URL"]
-  
-  console.log("EXPO_PUBLIC_API_URL at build:", baseUrl)
-  if (!baseUrl) {
-    throw new Error("EXPO_PUBLIC_API_URL is required for API base URL")
-  }
-
   return {
-    baseUrl,
-    retryCount: Number(env["API_RETRY_COUNT"]) || 2,
-    retryDelay: Number(env["API_RETRY_DELAY"]) || 2000,
-    timeout: Number(env["API_TIMEOUT"]) || 30000,
+    baseUrl: API_BASE,
+    retryCount:
+      Number(
+        (process.env as Record<string, string | undefined>).API_RETRY_COUNT
+      ) || 2,
+    retryDelay:
+      Number(
+        (process.env as Record<string, string | undefined>).API_RETRY_DELAY
+      ) || 2000,
+    timeout:
+      Number((process.env as Record<string, string | undefined>).API_TIMEOUT) ||
+      30000,
   }
 }
 
@@ -104,8 +101,15 @@ class ApiService {
   ): Promise<T> {
     const retriesLeft = retries ?? this.config.retryCount
 
+    // ✅ Safe URL join
+    const base = this.config.baseUrl.replace(/\/+$/, "")
+    const path = endpoint.startsWith("/") ? endpoint : `/${endpoint}`
+    const url = `${base}${path}`
+
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), this.config.timeout)
+
     try {
-      const url = `${this.config.baseUrl}${endpoint}`
       console.log(`API Request: ${url} (${retriesLeft + 1} attempts remaining)`)
 
       const response = await fetch(url, {
@@ -113,36 +117,36 @@ class ApiService {
           "Content-Type": "application/json",
           ...options.headers,
         },
+        signal: controller.signal,
         ...options,
       })
 
-      // If server responds with error status, throw an error to be handled by catch
+      clearTimeout(timeoutId)
+
       if (!response.ok) {
-        const errorText = await response.text()
+        const errorText = await response.text().catch(() => "")
         throw new ApiError(
           `HTTP ${response.status}: ${errorText || response.statusText}`,
           response.status
         )
       }
 
-      // Success case - return data directly
       const data = await response.json()
       console.log(`API Request succeeded: ${url}`)
       return data
     } catch (error) {
-      // Decide which errors are worth retrying
+      clearTimeout(timeoutId)
+
       const shouldRetry =
         (error instanceof ApiError && error.status >= 500) || // 5xx server errors
         !(error instanceof ApiError) // Network/client-side errors
 
-      // If we can retry and have attempts left
       if (shouldRetry && retriesLeft > 0) {
         console.warn(`Request failed, retrying... ${retriesLeft} attempts left`)
         await this.delay(this.config.retryDelay)
         return this.request(endpoint, options, retriesLeft - 1)
       }
 
-      // If we can't retry or are out of attempts, throw the error
       const errorMessage =
         error instanceof Error ? error.message : "Unknown error"
       console.error(`All retry attempts failed: ${errorMessage}`)
@@ -154,11 +158,6 @@ class ApiService {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
-  /**
-   * Generate workout plan based on user responses
-   * Returns either a complete WorkoutPlan or a session_id for polling
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async generateWorkoutPlan(
     responses: ApiUserResponses
   ): Promise<WorkoutGenerationResponse> {
@@ -167,48 +166,27 @@ class ApiService {
       body: JSON.stringify(responses),
     })
 
-    // Backend returns { success: true, session_id: ... } format
-    // Transform to match our expected interface
     console.log("generateWorkoutPlan raw response:", response)
     console.log("response.success:", response.success)
     console.log("response.session_id:", response.session_id)
 
     if (response.success && response.session_id) {
-      console.log("Returning extracted session_id:", response.session_id)
       return { session_id: response.session_id }
     } else if (response.session_id) {
-      console.log(
-        "Returning session_id (no success field):",
-        response.session_id
-      )
       return { session_id: response.session_id }
     } else {
-      console.log("Returning full response as fallback")
-      // Fallback - return response directly if no wrapper
       return response
     }
   }
 
-  /**
-   * Get available muscle groups
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async getMuscleGroups(): Promise<string[]> {
     return this.request<string[]>("/muscle_groups")
   }
 
-  /**
-   * Get questionnaire options
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async getQuestionnaireOptions(): Promise<Record<string, string[]>> {
     return this.request<Record<string, string[]>>("/questionnaire_options")
   }
 
-  /**
-   * Save workout plan
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async saveWorkoutPlan(workoutPlan: WorkoutPlan): Promise<{ id: string }> {
     return this.request<{ id: string }>("/save_workout_plan", {
       method: "POST",
@@ -216,18 +194,10 @@ class ApiService {
     })
   }
 
-  /**
-   * Get saved workout plans
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async getSavedWorkoutPlans(): Promise<WorkoutPlan[]> {
     return this.request<WorkoutPlan[]>("/saved_workout_plans")
   }
 
-  /**
-   * Get generation progress for a session
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async getGenerationProgress(sessionId: string): Promise<ProgressResponse> {
     const response = await this.request<any>(
       `/generation_progress/${sessionId}`
@@ -240,44 +210,28 @@ class ApiService {
     console.log("response.success:", response.success)
     console.log("response.data:", response.data)
 
-    // Backend returns { success: true, data: {...} } format
-    // Extract the data field for the new async/await pattern
     if (response.success && response.data) {
-      console.log("Returning response.data:", response.data)
       return response.data
     } else if (response.data) {
-      console.log("Returning response.data (no success field):", response.data)
       return response.data
     } else {
-      console.log("Returning full response as fallback:", response)
-      // Fallback - return response directly if no wrapper
       return response
     }
   }
 
-  /**
-   * Get the final workout plan for a completed session
-   * Throws error on failure - wrap in try/catch when calling
-   */
   async getFinalPlan(sessionId: string): Promise<WorkoutPlan> {
     const response = await this.request<any>(`/get_final_plan/${sessionId}`)
-    // Backend returns { success: true, data: {...} }
     if (response?.success && response?.data) {
       return response.data as WorkoutPlan
     }
-    // Fallback to direct plan if already unwrapped
     return response as WorkoutPlan
   }
 
-  /**
-   * Test API connection
-   * Returns boolean instead of throwing to keep simple interface
-   */
   async testConnection(): Promise<boolean> {
     try {
       await this.request<any>("/health")
       return true
-    } catch (error) {
+    } catch {
       return false
     }
   }

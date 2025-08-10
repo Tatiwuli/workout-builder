@@ -4,7 +4,9 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { Platform } from "react-native"
-import { apiService } from "./src/services/api"
+import { API_BASE } from "./src/env"
+
+
 
 import HomeScreen from "./src/screens/HomeScreen"
 import QuestionnaireScreen from "./src/screens/QuestionnaireScreen"
@@ -21,17 +23,15 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>()
 
 export default function App() {
+
+ 
+
   useEffect(() => {
     // Simple health check on startup
-    const API = (process.env as any)?.EXPO_PUBLIC_API_URL as string
-    if (API) {
-      console.log("API base:", API)
-      fetch(`${API}/health`, { cache: "no-store" })
-        .then((r) => console.log("API health:", r.ok ? "OK" : "DOWN"))
-        .catch(() => console.log("API health: DOWN"))
-    } else {
-      console.log("API base: MISSING EXPO_PUBLIC_API_URL")
-    }
+    console.log("API base:", API_BASE)
+    fetch(`${API_BASE}/health`, { cache: "no-store" })
+      .then((r) => console.log("API health:", r.ok ? "OK" : "DOWN"))
+      .catch(() => console.log("API health: DOWN"))
 
     if (Platform.OS === "web") {
       // Inject CSS for web platform
