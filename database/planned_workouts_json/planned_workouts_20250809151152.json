@@ -1,0 +1,139 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the chest, targeting all pectoral regions.  The volume is appropriate for a beginner, allowing for proper form and progressive overload.  The machine press is chosen for its stability and ease of use.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Upper Pectorals",
+                            "Mid Pectorals",
+                            "Lower Pectorals"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually in subsequent workouts.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form.  Ensure the bar touches your chest and you maintain a stable position throughout the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set targets the upper chest, providing a balanced chest workout. The incline dumbbell press allows for a greater range of motion and muscle activation compared to the flat press.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Upper Pectorals"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually in subsequent workouts.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_reps": 10,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form. Focus on a controlled movement and a full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "set_reasoning": "This set incorporates a shoulder exercise to balance the workout.  Overhead presses are a compound movement that works multiple shoulder muscles.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Press",
+                    "target_muscle_part": {
+                        "Shoulders": [
+                            "Front Deltoids",
+                            "Lateral Deltoids"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually in subsequent workouts.",
+                    "rest_time": null,
+                    "alternative_exercise": null,
+                    "alternative_exercise_reps": null,
+                    "alternative_exercise_weight": null
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set focuses on the long head of the triceps, crucial for overall triceps development. The overhead position ensures a deep stretch, maximizing muscle activation and growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long Head"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually in subsequent workouts.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form.  Ensure a controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set targets the medial and lateral heads of the triceps, complementing the previous exercise. The close grip variation emphasizes triceps activation while allowing for progressive overload.",
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Medial Head",
+                            "Lateral Head"
+                        ]
+                    },
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually in subsequent workouts.",
+                    "rest_time": null,
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_reps": 10,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form.  Maintain a controlled movement and full range of motion."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan is designed for a beginner with a 45-minute time constraint, focusing on chest, shoulders, and triceps.  It prioritizes compound movements to maximize efficiency and muscle activation within the time limit.  The exercises are ordered to allow for optimal energy expenditure and muscle group targeting.  The volume is kept relatively low (3-6 sets total per muscle group) to allow for proper form and recovery, aligning with beginner guidelines.  Progressive overload is emphasized to ensure continuous progress.  Alternative exercises are provided to allow for flexibility and equipment availability."
+}

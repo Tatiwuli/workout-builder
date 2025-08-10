@@ -13,6 +13,8 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({
   isExpanded = false,
   onToggle,
 }) => {
+  console.log("ExerciseCard received data:", JSON.stringify(exercise, null, 2))
+
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -20,7 +22,17 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({
         onPress={onToggle}
         activeOpacity={0.7}
       >
-        <Text style={styles.exerciseName}>{exercise.exercise_name}</Text>
+        <View style={styles.titleContainer}>
+          <Text style={styles.exerciseName}>{exercise.exercise_name}</Text>
+          {exercise.media_url && (
+            <Image
+              source={{ uri: exercise.media_url }}
+              style={styles.thumbnail}
+              resizeMode="contain"
+            />
+          )}
+        </View>
+
         <Text style={styles.expandIcon}>{isExpanded ? "▼" : "▶"}</Text>
       </TouchableOpacity>
 
@@ -28,24 +40,13 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({
         <View style={styles.details}>
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Setup:</Text>
-            <Text style={styles.sectionText}>{exercise.setup_notes}</Text>
+            <Text style={styles.sectionText}>{exercise.setup}</Text>
           </View>
 
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Execution:</Text>
-            <Text style={styles.sectionText}>{exercise.execution_notes}</Text>
+            <Text style={styles.sectionText}>{exercise.execution}</Text>
           </View>
-
-          {exercise.media_url && (
-            <View style={styles.mediaContainer}>
-              <Text style={styles.sectionTitle}>Demo:</Text>
-              <Image
-                source={{ uri: exercise.media_url }}
-                style={styles.media}
-                resizeMode="contain"
-              />
-            </View>
-          )}
         </View>
       )}
     </View>
@@ -61,21 +62,32 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
     padding: 16,
     backgroundColor: "#ffffff",
+  },
+  titleContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    flex: 1,
   },
   exerciseName: {
     fontSize: 16,
     fontWeight: "bold",
     color: "#333333",
-    flex: 1,
+    flexShrink: 1,
+  },
+  thumbnail: {
+    width: 100,
+    height: 100,
+    borderRadius: 8,
+    marginLeft: 8,
   },
   expandIcon: {
     fontSize: 16,
     color: "#007AFF",
     fontWeight: "bold",
+    marginLeft: 8,
   },
   details: {
     padding: 16,
@@ -93,15 +105,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#666666",
     lineHeight: 20,
-  },
-  mediaContainer: {
-    marginTop: 8,
-  },
-  media: {
-    width: "100%",
-    height: 200,
-    borderRadius: 8,
-    marginTop: 8,
   },
 })
 

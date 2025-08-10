@@ -30,8 +30,8 @@ export interface ApiUserResponses {
 
 export interface Exercise {
   exercise_name: string
-  setup_notes: string
-  execution_notes: string
+  setup: string
+  execution: string
   media_url?: string
 }
 
@@ -52,6 +52,11 @@ export interface WorkoutPlan {
   num_exercises: number
   warmup: WarmupSection
   sets: WorkoutSet[]
+}
+
+// Response from generateWorkoutPlan API - could be immediate plan or session for polling
+export interface WorkoutGenerationResponse extends Partial<WorkoutPlan> {
+  session_id?: string
 }
 
 export interface QuestionnaireState {

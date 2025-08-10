@@ -1,0 +1,264 @@
+{
+    "workout_title": "Beginner Chest, Shoulder, and Triceps Blast",
+    "total_workout_duration": 44.5,
+    "num_exercises": 6,
+    "warmup": {
+        "warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Rotate shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Chest stretches",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Clasp hands behind your back and gently straighten your arms, feeling a stretch across your chest. Hold for 30 seconds."
+            },
+            {
+                "exercise_name": "Triceps stretches",
+                "setup_notes": "Raise one arm overhead and bend at the elbow, letting your hand fall behind your head.",
+                "execution_notes": "Gently push your elbow with your other hand, feeling a stretch in your triceps. Hold for 30 seconds per arm."
+            },
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at your sides.",
+                "execution_notes": "Jump, spreading your legs and raising your arms overhead. Return to starting position. Perform for 1 minute."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the machine seat so that your back is comfortably supported.  Position yourself so that your shoulders are aligned with the handles. Grip the handles firmly.",
+                    "execution": [
+                        "1. Starting Position: Sit comfortably on the machine with your back straight and feet flat on the floor. Grip the handles firmly, ensuring your elbows are slightly bent.",
+                        "2. Lower the Handles: Slowly lower the handles towards your chest, keeping your elbows slightly flared out.  Inhale as you lower the weight.",
+                        "3. Press the Handles: Extend your arms to push the handles away from your chest, exhaling as you do so.  Focus on squeezing your chest muscles at the top of the movement.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "media_url": "",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually in subsequent workouts.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a flat bench with your feet flat on the floor. Grip the barbell slightly wider than shoulder-width, with an overhand grip.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie on the bench with your back flat against the surface. Grip the barbell with an overhand grip, slightly wider than shoulder-width. Lower the bar to your chest.",
+                        "2. Lower the Bar: Slowly lower the barbell to your chest, keeping your elbows slightly flared out. Inhale as you lower the weight.",
+                        "3. Press the Bar: Extend your arms to press the barbell upwards, exhaling as you do so. Focus on squeezing your chest muscles at the top of the movement.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form. Ensure the bar touches your chest for a full range of motion. Increase weight gradually in subsequent workouts.",
+                    "additional_tips": "Maintain a stable position throughout the exercise. Focus on squeezing your chest muscles at the top of the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the bench to an incline position (around 30-45 degrees). Lie on the bench with your feet flat on the floor. Hold a dumbbell in each hand.",
+                    "execution": [
+                        "1. Starting Position: Lie on the incline bench with your back flat against the surface. Hold a dumbbell in each hand, ensuring your elbows are slightly bent.",
+                        "2. Lower the Dumbbells: Slowly lower the dumbbells towards your chest, keeping your elbows slightly flared out. Inhale as you lower the weight.",
+                        "3. Press the Dumbbells: Extend your arms to press the dumbbells upwards, exhaling as you do so. Focus on squeezing your chest muscles at the top of the movement.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually in subsequent workouts.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_setup": "Adjust the cable machine to a comfortable height. Sit on the seat with your back straight and feet flat on the floor. Grip the handles.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Sit on the seat with your back straight and feet flat on the floor. Grip the handles, keeping your elbows slightly bent.",
+                        "2. Bring Handles Together: Slowly bring the handles together in front of your chest, squeezing your chest muscles. Exhale as you bring the handles together.",
+                        "3. Return to Starting Position: Slowly return the handles to the starting position, feeling a stretch in your chest. Inhale as you return to the starting position.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "alternative_exercise_media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form. Focus on a controlled movement and a deep stretch in the pecs. Increase weight gradually in subsequent workouts.",
+                    "additional_tips": "Focus on a controlled movement and a deep stretch in the pecs."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 10.0,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Sit on the seat of the cable machine, ensuring your back is straight and your feet are flat on the floor.  Adjust the cable height to a comfortable level. Grip the handles.",
+                    "execution": [
+                        "1. Starting Position: Sit with your back straight and feet flat on the floor.  Hold the handles with a slight bend in your elbows.",
+                        "2. Extend Arms: Extend your arms outwards, keeping a slight bend in your elbows.  Focus on feeling the stretch in your chest.",
+                        "3. Bring Handles Together: Slowly bring the handles together in front of your chest, squeezing your chest muscles. Exhale as you bring the handles together.",
+                        "4. Return to Starting Position: Slowly return the handles to the starting position, feeling a stretch in your chest. Inhale as you return to the starting position.",
+                        "5. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form. Focus on a controlled movement and a deep stretch in the pecs. Increase weight gradually in subsequent workouts.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Dumbbell Fly",
+                    "alternative_exercise_setup": "Lie on a flat bench with your feet flat on the floor. Hold a dumbbell in each hand.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie on the bench with your back flat against the surface. Hold a dumbbell in each hand, ensuring your elbows are slightly bent.",
+                        "2. Extend Arms: Extend your arms outwards, keeping a slight bend in your elbows. Focus on feeling the stretch in your chest.",
+                        "3. Bring Dumbbells Together: Slowly bring the dumbbells together in front of your chest, squeezing your chest muscles. Exhale as you bring the dumbbells together.",
+                        "4. Return to Starting Position: Slowly return the dumbbells to the starting position, feeling a stretch in your chest. Inhale as you return to the starting position.",
+                        "5. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "alternative_exercise_media_url": "https://newlife.com.cy/wp-content/uploads/2019/11/03081301-Dumbbell-Fly_Chest-FIX_360.gif",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form. Focus on a controlled movement and a deep stretch in the pecs. Increase weight gradually in subsequent workouts.",
+                    "additional_tips": "Focus on a controlled movement and a deep stretch in the pecs."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "setup": "Lie on a flat bench with your feet flat on the floor. Grip the barbell with a close, narrow grip (slightly narrower than shoulder-width).",
+                    "execution": [
+                        "1. Starting Position: Lie on the bench with your back flat against the surface. Grip the barbell with a close, narrow grip (slightly narrower than shoulder-width). Lower the bar to your chest.",
+                        "2. Lower the Bar: Slowly lower the barbell to your chest, keeping your elbows close to your body. Inhale as you lower the weight.",
+                        "3. Press the Bar: Extend your arms to press the barbell upwards, exhaling as you do so. Focus on squeezing your triceps at the top of the movement.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "media_url": "https://framerusercontent.com/images/4vEMWneIoDWCqXvq17gyv8iAKc.gif",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually in subsequent workouts.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_setup": "Attach a straight bar to the cable machine's lower pulley. Stand facing the machine with your feet shoulder-width apart.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Stand facing the cable machine with your feet shoulder-width apart. Grip the straight bar with an overhand grip.",
+                        "2. Extend Arms: Extend your arms downwards, keeping your elbows close to your body. Exhale as you extend your arms.",
+                        "3. Return to Starting Position: Slowly return your forearms to the starting position, feeling a stretch in your triceps. Inhale as you return to the starting position.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/straight-bar-tricep-pushdown.gif",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually in subsequent workouts.",
+                    "additional_tips": "Keep your elbows close to your body throughout the exercise."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "setup": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+                    "execution": [
+                        "1. Starting Position: Stand facing away from the cable machine with your arms fully extended overhead, holding the bar attachment.  Keep your elbows close to your head.",
+                        "2. Lower the Bar: Slowly lower the bar behind your head by bending your elbows. Inhale as you lower the weight.",
+                        "3. Extend Arms: Extend your arms back to the starting position, focusing on squeezing your triceps. Exhale as you extend your arms.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form. Increase weight gradually in subsequent workouts.",
+                    "alternative_equipments": "Dumbbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_setup": "Lie on a flat bench with your feet flat on the floor. Hold a barbell with an overhand grip, slightly narrower than shoulder-width.",
+                    "alternative_exercise_execution": [
+                        "1. Starting Position: Lie on the bench with your feet flat on the floor. Hold a barbell with an overhand grip, slightly narrower than shoulder-width. Extend your arms upwards.",
+                        "2. Lower the Bar: Slowly lower the barbell towards your forehead by bending your elbows. Inhale as you lower the weight.",
+                        "3. Extend Arms: Extend your arms back to the starting position, focusing on squeezing your triceps. Exhale as you extend your arms.",
+                        "4. Controlled Movement: Maintain a controlled pace throughout the entire range of motion. Avoid jerking or bouncing the weight."
+                    ],
+                    "alternative_exercise_media_url": "",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form. Ensure a full range of motion, focusing on the stretch and contraction of the triceps. Increase weight gradually in subsequent workouts.",
+                    "additional_tips": "Keep your elbows close to your head throughout the exercise."
+                }
+            ]
+        }
+    ]
+}

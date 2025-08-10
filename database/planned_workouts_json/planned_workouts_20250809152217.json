@@ -1,0 +1,174 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the chest, targeting all pectoral regions.  The volume is appropriate for an intermediate user aiming for hypertrophy, aligning with the 'intermediate_early' guidelines in the wiki. The machine press allows for easy progressive overload.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form, but leaves you feeling challenged.  Increase weight progressively each session.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form, ensuring the bar touches your chest. Increase weight progressively each session."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set targets the upper chest using an incline press, complementing the flat chest press in Set 1. The volume remains consistent with intermediate training guidelines for hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals",
+                                "Upper Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight progressively each session.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight progressively each session."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set uses an isolation exercise to further target the chest muscles, focusing on the stretch and contraction. The higher rep range aligns with intermediate training guidelines for hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": 12,
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form, focusing on the stretch and contraction. Increase weight progressively each session.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Dumbbell Fly",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form, focusing on the stretch and contraction. Increase weight progressively each session."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "set_reasoning": "This set targets the shoulders with a compound movement, providing overall shoulder development. The volume is appropriate for an intermediate user, aligning with the 'intermediate_early' guidelines in the wiki.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Shoulders"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight progressively each session.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": null,
+                    "alternative_exercise_reps": null,
+                    "alternative_exercise_weight": null
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the triceps, targeting the medial and lateral heads. The volume is appropriate for an intermediate user aiming for hypertrophy, aligning with the 'intermediate_early' guidelines in the wiki.",
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight progressively each session.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight progressively each session."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set targets the long head of the triceps using an isolation exercise, complementing the compound triceps exercise in Set 5. The higher rep range aligns with intermediate training guidelines for hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "reps": 12,
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form, focusing on the stretch and contraction. Increase weight progressively each session.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": 12,
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form, focusing on the stretch and contraction. Increase weight progressively each session."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan prioritizes compound movements for efficiency, followed by isolation exercises for targeted muscle development. The volume and rep ranges are tailored to an intermediate user's capacity for hypertrophy, adhering to the guidelines from the provided wikis.  The exercise order is designed to optimize energy expenditure, starting with larger muscle groups and progressing to smaller ones. The total workout time, including rest periods, remains within the 45-minute constraint.  The use of both compound and isolation exercises, along with the progressive overload strategy, ensures comprehensive muscle development and prevents plateaus."
+}

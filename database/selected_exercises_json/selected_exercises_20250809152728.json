@@ -1,0 +1,141 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Overhead Cable Triceps Extension",
+            "setup_notes": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+            "execution_notes": "Bend and extend the elbows while keeping the arms overhead. Ensure the cable provides tension throughout the range of motion.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+            "alternative_equipment": "Dumbbell",
+            "tier_reasons": "Provides high tension in the stretched position, feels good, and allows for simple progression. Validated by a 2023 study showing 40% more triceps growth than press downs.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Long head, due to the overhead position providing a deep stretch.",
+            "limitations": "None",
+            "scientific_insights": "2023 study found overhead extensions caused about 40% more triceps growth than press downs.",
+            "additional_notes": "None",
+            "alternative_exercise": "Skull Crushers",
+            "alternative_exercise_media_url": "",
+            "selection_reason": "This exercise is selected as it's an S-Tier exercise for triceps, focusing on the long head which is crucial for overall triceps development.  The overhead position ensures a deep stretch, maximizing muscle growth potential as supported by research. It also aligns with the criteria of 'High Tension in Stretched Position', 'Feels Good', and 'Simple Progression'."
+        },
+        {
+            "exercise_name": "Close Grip Bench Press",
+            "setup_notes": "Use a barbell, grip slightly narrower than shoulder-width.",
+            "execution_notes": "Lower the bar to the chest, press back up.",
+            "media_url": "https://framerusercontent.com/images/4vEMWneIoDWCqXvq17gyv8iAKc.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Great for overload, consistent tension, but long head not fully engaged.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Medial and lateral heads, due to pressing motion.",
+            "limitations": "Long head not fully engaged.",
+            "scientific_insights": "None",
+            "additional_notes": "Worth doing for triceps growth.",
+            "alternative_exercise": "Bar Press Down",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/straight-bar-tricep-pushdown.gif",
+            "selection_reason": "This A-Tier exercise complements the Overhead Cable Extension by targeting the medial and lateral heads of the triceps.  Its ability to handle heavy weight allows for progressive overload, crucial for muscle growth. The selection considers the trade-off of not fully engaging the long head, which is addressed by the Overhead Cable Extension."
+        },
+        {
+            "exercise_name": "Machine Chest Press",
+            "setup_notes": "none",
+            "execution_notes": "Ensure a deep stretch on the pecs with high tension throughout the range of motion. Maintain a stable position to enhance mind-muscle connection.",
+            "media_url": "",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Provides a deep stretch with high tension, smooth resistance profile, easy to overload, safer to push to failure.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "Find a machine that feels good at your gym for optimal results.",
+            "alternative_exercise": "Bench Press",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+            "selection_reason": "Selected as an S-Tier chest exercise, it provides a deep stretch and high tension, crucial for chest growth. The smooth resistance profile and ease of progressive overload make it ideal for various experience levels.  The alternative, Bench Press, is considered, but the machine press offers better stability and control, reducing the risk of injury."
+        },
+        {
+            "exercise_name": "Incline Dumbbell Press",
+            "setup_notes": "none",
+            "execution_notes": "Perform similar to flat dumbbell press but with an incline.",
+            "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+            "alternative_equipment": "Barbell",
+            "tier_reasons": "Same benefits as flat dumbbell press with added upper pec emphasis.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "Upper pecs",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "none",
+            "alternative_exercise": "Seated Cable Pec Fly",
+            "alternative_exercise_media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+            "selection_reason": "This A-Tier exercise targets the upper pectorals, providing a balanced chest workout. The use of dumbbells allows for a greater range of motion and a deeper stretch compared to the barbell incline press. The alternative, Seated Cable Pec Fly, is considered, but the Incline Dumbbell Press offers a more compound movement, engaging more muscle fibers."
+        },
+        {
+            "exercise_name": "Seated Cable Pec Fly",
+            "setup_notes": "Sit down to increase stability and ensure all tension is applied directly to the pecs.",
+            "execution_notes": "Perform fly movement with cables, ensuring a big stretch on the pecs with high tension.",
+            "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Provides a big stretch with high tension, stable, smooth tension throughout the range of motion.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "This is currently the favorite chest isolation movement.",
+            "alternative_exercise": "Dumbbell Fly",
+            "alternative_exercise_media_url": "https://newlife.com.cy/wp-content/uploads/2019/11/03081301-Dumbbell-Fly_Chest-FIX_360.gif",
+            "selection_reason": "This S-Tier exercise is chosen as an isolation movement to fully target the pectoral muscles after the compound movements. The seated position ensures stability and maximizes the stretch and tension on the pecs, promoting muscle growth. The alternative, Dumbbell Fly, is considered, but the cable fly offers a smoother and more consistent resistance throughout the range of motion."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Rotate shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Chest stretches",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Clasp hands behind back and gently straighten arms, hold for 30 seconds. Then, clasp hands in front of chest and gently pull, hold for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Triceps stretches",
+                "setup_notes": "Stand tall with feet shoulder-width apart.",
+                "execution_notes": "Raise one arm overhead and bend at the elbow, placing hand behind the head. Use the other hand to gently pull the elbow closer to the head, hold for 30 seconds. Repeat on the other side.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at sides.",
+                "execution_notes": "Jump, spreading legs and raising arms overhead. Return to starting position.",
+                "sets_reps": "1 set",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Light Cardio",
+                "setup_notes": "none",
+                "execution_notes": "Perform light cardio such as jogging in place or jumping jacks for 1 minute to increase heart rate and blood flow.",
+                "sets_reps": "1 set",
+                "duration": "1 minute"
+            }
+        ]
+    }
+}

@@ -74,6 +74,11 @@ export default function App() {
             options={{ title: "📝 Questionnaire" }}
           />
           <Stack.Screen
+            name="WorkoutGeneration"
+            component={WorkoutGenerationScreen}
+            options={{ title: "🤖 Generating Workout" }}
+          />
+          <Stack.Screen
             name="WorkoutPlan"
             component={WorkoutPlanScreen}
             options={{ title: "💪 Workout Plan" }}

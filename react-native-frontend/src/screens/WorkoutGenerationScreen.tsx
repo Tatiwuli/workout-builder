@@ -10,7 +10,7 @@ import {
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RouteProp } from "@react-navigation/native"
 import { RootStackParamList } from "../../App"
-import { useWorkoutPolling } from "../hooks/useWorkoutPolling"
+import { useWorkoutPolling } from "../hooks"
 
 type WorkoutGenerationScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -29,7 +29,7 @@ interface Props {
 
 const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
   const { sessionId } = route.params
-  const { isLoading, error, workoutPlan } = useWorkoutPolling(sessionId)
+  const { isLoading, error, workoutPlan, retry } = useWorkoutPolling(sessionId)
 
   // Auto-navigate to WorkoutPlan when generation completes
   useEffect(() => {
@@ -39,7 +39,7 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
     }
   }, [workoutPlan, navigation])
 
-  // Fun loading messages - rotate through them
+  // Rotating through these messages
   const loadingMessages = [
     "🤖 Our AI is crafting your perfect workout... This usually takes 1-2 minutes! ⏳",
     "💪 Analyzing your goals and building something amazing...",
@@ -50,7 +50,7 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
 
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0)
 
-  // Rotate loading messages every 8 seconds
+  // Rotate loading messages every 10 seconds
   useEffect(() => {
     if (!isLoading) return
 
@@ -62,8 +62,8 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
   }, [isLoading, loadingMessages.length])
 
   const handleRetry = () => {
-    // Navigate back to questionnaire to retry
-    navigation.navigate("Questionnaire")
+    // Use the hook's retry function to re-poll from same screen
+    retry()
   }
 
   const handleGoHome = () => {
@@ -77,9 +77,10 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
           <Text style={styles.errorIcon}>⚠️</Text>
           <Text style={styles.errorTitle}>Generation Failed</Text>
           <Text style={styles.errorMessage}>
-            We couldn't generate your plan due to a server issue. Please try again in a few moments.
+            We couldn't generate your plan due to a server issue. Please try
+            again - your form data is saved.
           </Text>
-          
+          {/* Retry Button */}
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={styles.retryButton}
@@ -88,7 +89,7 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
             >
               <Text style={styles.retryButtonText}>Try Again</Text>
             </TouchableOpacity>
-            
+            {/* Home Button */}
             <TouchableOpacity
               style={styles.homeButton}
               onPress={handleGoHome}
@@ -101,7 +102,7 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
       </View>
     )
   }
-
+  //if  no error, return loading screen
   return (
     <View style={styles.container}>
       <View style={styles.loadingContainer}>
@@ -132,14 +133,14 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
                 style={[
                   styles.progressDot,
                   {
-                    opacity: (currentMessageIndex % 3) >= index ? 1 : 0.3,
+                    opacity: currentMessageIndex % 3 >= index ? 1 : 0.3,
                   },
                 ]}
               />
             ))}
           </View>
           <Text style={styles.progressText}>
-            Hang tight, we're building something awesome!
+            Hang tight, we're building the plan to build your body 😎
           </Text>
         </View>
 

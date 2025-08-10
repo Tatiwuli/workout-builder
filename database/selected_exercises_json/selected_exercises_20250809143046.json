@@ -1,0 +1,134 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Overhead Cable Triceps Extension",
+            "setup_notes": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+            "execution_notes": "Bend and extend the elbows while keeping the arms overhead. Ensure the cable provides tension throughout the range of motion.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Provides high tension in the stretched position, feels good, and allows for simple progression. Validated by a 2023 study showing 40% more triceps growth than press downs.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Long head, due to the overhead position providing a deep stretch.",
+            "limitations": "None",
+            "scientific_insights": "2023 study found overhead extensions caused about 40% more triceps growth than press downs.",
+            "additional_notes": "None",
+            "alternative_exercise": "Skull Crushers",
+            "alternative_exercise_media_url": "",
+            "selection_reason": "This exercise is selected as an S-Tier exercise for triceps, specifically targeting the long head due to the overhead position.  The study cited supports its effectiveness for triceps growth, aligning with the user's goal of developing chest, shoulders, and triceps. The overhead position provides a deep stretch, crucial for muscle growth as indicated in the triceps training keys."
+        },
+        {
+            "exercise_name": "Close Grip Bench Press",
+            "setup_notes": "Use a barbell, grip slightly narrower than shoulder-width.",
+            "execution_notes": "Lower the bar to the chest, press back up.",
+            "media_url": "https://framerusercontent.com/images/4vEMWneIoDWCqXvq17gyv8iAKc.gif",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Great for overload, consistent tension, but long head not fully engaged.",
+            "targeted_muscles": [
+                "Triceps"
+            ],
+            "targeted_muscle_parts": "Medial and lateral heads, due to pressing motion.",
+            "limitations": "Long head not fully engaged.",
+            "scientific_insights": "None",
+            "additional_notes": "Worth doing for triceps growth.",
+            "alternative_exercise": "Bar Press Down",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/straight-bar-tricep-pushdown.gif",
+            "selection_reason": "This A-Tier exercise is included to target the medial and lateral heads of the triceps, complementing the Overhead Cable Triceps Extension which focuses on the long head.  The ability to easily overload this exercise is beneficial for muscle growth, and it's a practical choice given its common availability in most gyms."
+        },
+        {
+            "exercise_name": "Bench Press",
+            "setup_notes": "none",
+            "execution_notes": "Bring the bar all the way down to your chest for high tension on the pecs.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+            "alternative_equipment": "Smith Machine",
+            "tier_reasons": "High tension, easy to overload, potential shoulder discomfort for some.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "Barbell limits deep stretch compared to dumbbells.",
+            "scientific_insights": "none",
+            "additional_notes": "none",
+            "alternative_exercise": "Incline Bench Press",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+            "selection_reason": "This is an A-Tier compound exercise that effectively targets the chest, a key muscle group in the user's preferences.  Its high tension and ease of progressive overload make it ideal for building muscle mass. The alternative exercise, Incline Bench Press, is suggested to provide variation and target the upper pecs."
+        },
+        {
+            "exercise_name": "Seated Cable Pec Fly",
+            "setup_notes": "Sit down to increase stability and ensure all tension is applied directly to the pecs.",
+            "execution_notes": "Perform fly movement with cables, ensuring a big stretch on the pecs with high tension.",
+            "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+            "alternative_equipment": "Resistance bands",
+            "tier_reasons": "Provides a big stretch with high tension, stable, smooth tension throughout the range of motion.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "This is currently the favorite chest isolation movement.",
+            "alternative_exercise": "Dumbbell Fly",
+            "alternative_exercise_media_url": "https://newlife.com.cy/wp-content/uploads/2019/11/03081301-Dumbbell-Fly_Chest-FIX_360.gif",
+            "selection_reason": "This S-Tier exercise is chosen as an isolation exercise for the chest, providing a significant stretch and high tension.  It complements the compound bench press by focusing on the full contraction of the pectoral muscles, enhancing overall chest development. The smooth tension profile makes it a good choice for building muscle mass."
+        },
+        {
+            "exercise_name": "Overhead Press",
+            "setup_notes": "none",
+            "execution_notes": "Press the weight overhead, keeping your core engaged and elbows slightly bent.",
+            "media_url": "none",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "none",
+            "targeted_muscles": [
+                "Shoulders"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "none",
+            "alternative_exercise": "none",
+            "alternative_exercise_media_url": "none",
+            "selection_reason": "This exercise is added to target the shoulders, another key muscle group specified by the user.  The overhead press is a fundamental compound movement that effectively works the deltoids, promoting overall shoulder development."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand tall with arms relaxed at your sides.",
+                "execution_notes": "Rotate your shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Chest stretches",
+                "setup_notes": "Clasp hands behind your back.",
+                "execution_notes": "Slowly straighten your arms and lift them until you feel a stretch in your chest. Hold for 15 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "30 seconds"
+            },
+            {
+                "exercise_name": "Triceps stretches",
+                "setup_notes": "Raise one arm overhead and bend your elbow, letting your hand fall behind your head.",
+                "execution_notes": "Gently pull your elbow toward your head with your other hand. Hold for 15 seconds. Repeat on the other side.",
+                "sets_reps": "2 sets",
+                "duration": "30 seconds"
+            },
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at your sides.",
+                "execution_notes": "Jump, spreading your legs and raising your arms overhead. Return to starting position. Perform for 1 minute.",
+                "sets_reps": "1 set",
+                "duration": "1 minute"
+            }
+        ]
+    }
+}

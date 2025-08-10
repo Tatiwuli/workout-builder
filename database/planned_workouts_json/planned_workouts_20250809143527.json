@@ -1,0 +1,118 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the back, targeting the lats and mid traps.  The volume is chosen to be manageable within the time constraint, while still providing sufficient stimulus for muscle growth, especially for an unknown experience level.  The rest time is sufficient for recovery between reps.",
+            "exercises": [
+                {
+                    "exercise_name": "Wide Grip Lat Pull Down",
+                    "target_muscle_part": [
+                        {
+                            "Back": [
+                                "Lats",
+                                "Mid Traps"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form, but challenges you.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Neutral Grip Lat Pull Down",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows for 8 controlled repetitions with good form.  The weight should be challenging but allow for proper execution."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Back"
+            ],
+            "set_reasoning": "This set provides a variation to the first set, focusing more on the lats. The volume is kept similar to the first set to maintain balance and avoid overtraining.",
+            "exercises": [
+                {
+                    "exercise_name": "Neutral Grip Lat Pull Down",
+                    "target_muscle_part": [
+                        {
+                            "Back": [
+                                "Lats"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form, but challenges you.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Chest Supported Row",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows for 8 controlled repetitions with good form.  The weight should be challenging but allow for proper execution."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "This set targets the biceps using a preacher curl, focusing on the distal biceps. The volume is chosen to be manageable within the time constraint, while still providing sufficient stimulus for muscle growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Preacher Curl",
+                    "target_muscle_part": [
+                        {
+                            "Biceps": [
+                                "Distal Biceps"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form, but challenges you.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Machine Preacher Curl",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows for 8 controlled repetitions with good form.  The weight should be challenging but allow for proper execution."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 10.0,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Biceps"
+            ],
+            "set_reasoning": "This set complements the previous set by providing a different angle and emphasizing the long head of the biceps. The volume is kept similar to maintain balance.",
+            "exercises": [
+                {
+                    "exercise_name": "Face Away Cable Curl",
+                    "target_muscle_part": [
+                        {
+                            "Biceps": [
+                                "Long Head"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form, but challenges you.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Standing Dumbbell Curl",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows for 8 controlled repetitions with good form.  The weight should be challenging but allow for proper execution."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan prioritizes compound movements for both back and biceps, followed by isolation exercises to target specific muscle parts. The volume is moderate, suitable for an unknown experience level and a 45-minute time constraint.  The exercises are ordered to allow for efficient transitions and minimize rest time.  The sets are designed to provide sufficient stimulus for muscle growth while remaining within the time limit.  Alternative exercises are provided for flexibility and equipment availability.  The rest time between sets is sufficient for recovery, allowing for optimal performance throughout the workout."
+}

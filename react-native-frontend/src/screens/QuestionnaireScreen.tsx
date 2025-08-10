@@ -9,6 +9,7 @@ import {
   UserResponse,
   ProcessedResponses,
   ApiUserResponses,
+  WorkoutGenerationResponse,
 } from "../types"
 import MuscleSelection from "../components/MuscleSelection"
 import Questionnaire from "../components/Questionnaire"
@@ -104,31 +105,41 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
       console.log("API request data:", apiData)
 
       // Make API call to start generation
-      const response = await apiService.generateWorkoutPlan(apiData)
+      const response: WorkoutGenerationResponse =
+        await apiService.generateWorkoutPlan(apiData)
       console.log("Backend triggered:", response)
 
-      const backendPayload: any = response.data
-
-      if (
-        response.success &&
-        backendPayload?.success &&
-        backendPayload?.session_id
-      ) {
+      // Check if we got a session_id for polling, or the complete plan
+      if (response?.session_id) {
         console.log(
           "Workout generation started successfully! Session:",
-          backendPayload.session_id
+          response.session_id
         )
+        console.log("Attempting to navigate to WorkoutGeneration screen...")
 
         // Navigate to WorkoutGeneration screen with sessionId
         navigation.navigate("WorkoutGeneration", {
-          sessionId: backendPayload.session_id,
+          sessionId: response.session_id,
         })
+
+        console.log("Navigation call completed")
+
+        // Reset loading state after navigation attempt
+        setIsGeneratingPlan(false)
+      } else if (response?.workout_title) {
+        console.log("Got complete workout plan immediately!")
+        console.log("Attempting to navigate to WorkoutPlan screen...")
+
+        // Got complete plan immediately, navigate directly to results
+        navigation.navigate("WorkoutPlan", { workoutPlan: response as any })
+
+        console.log("Navigation call completed")
+
+        // Reset loading state after navigation attempt
+        setIsGeneratingPlan(false)
       } else {
-        throw new Error(
-          backendPayload?.error ||
-            response.error ||
-            "Failed to start workout generation"
-        )
+        console.log("Invalid response received:", response)
+        throw new Error("Invalid response from server")
       }
     } catch (error) {
       console.error("Failed to trigger workout generation:", error)

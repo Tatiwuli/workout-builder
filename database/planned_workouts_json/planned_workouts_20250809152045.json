@@ -1,0 +1,149 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set focuses on the long head of the triceps, a crucial area for overall triceps development.  The volume is appropriate for a beginner, aligning with the recommended 3-6 sets total for a muscle group in a short workout. The overhead extension is a highly effective exercise for this purpose.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps",
+                                "Long Head"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form.  Increase weight gradually as you get stronger.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set targets the medial and lateral heads of the triceps, complementing the previous exercise. The volume remains within the beginner's range, contributing to the overall weekly volume for triceps.",
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps",
+                                "Medial Head",
+                                "Lateral Head"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set focuses on overall chest development using a machine press, which is beginner-friendly and allows for a good stretch and progressive overload. The volume is suitable for a beginner's short workout.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set targets the upper chest, ensuring balanced chest development. The volume is appropriate for a beginner's short workout.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals",
+                                "Upper Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_reps": 8,
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 7.5,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "set_reasoning": "This set focuses on overall shoulder development using a compound movement. The volume is suitable for a beginner's short workout.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Shoulders"
+                            ]
+                        }
+                    ],
+                    "reps": 8,
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "rest_time": null,
+                    "alternative_exercise": null,
+                    "alternative_exercise_reps": null,
+                    "alternative_exercise_weight": null
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan prioritizes compound movements to maximize time efficiency and muscle engagement within the 30-minute time constraint.  The volume is tailored to a beginner's level, focusing on proper form and progressive overload.  Each set includes 8 repetitions, allowing for sufficient muscle stimulation without excessive fatigue. Rest periods of 60 seconds are incorporated between sets to allow for adequate recovery. The exercise order is designed to target different muscle groups systematically, ensuring balanced development. The selection of exercises aligns with the beginner guidelines from the provided wikis, emphasizing compound movements and exercises that allow for easy progressive overload.  Alternative exercises are provided for each exercise to offer flexibility and cater to individual preferences and gym equipment availability."
+}
