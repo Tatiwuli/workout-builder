@@ -10,6 +10,10 @@ streamlit_modal
 pymongo
 streamlit-nested-layout
 google-generativeai==0.3.2
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
 
 
 
