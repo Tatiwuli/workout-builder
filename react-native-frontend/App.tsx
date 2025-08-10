@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { Platform } from "react-native"
+import { apiService } from "./src/services/api"
 
 import HomeScreen from "./src/screens/HomeScreen"
 import QuestionnaireScreen from "./src/screens/QuestionnaireScreen"
@@ -21,6 +22,12 @@ const Stack = createStackNavigator<RootStackParamList>()
 
 export default function App() {
   useEffect(() => {
+    // Simple health check on startup
+    apiService
+      .testConnection()
+      .then((ok) => console.log("API health:", ok ? "OK" : "DOWN"))
+      .catch(() => console.log("API health: DOWN"))
+
     if (Platform.OS === "web") {
       // Inject CSS for web platform
       const style = document.createElement("style")

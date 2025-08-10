@@ -7,10 +7,12 @@ The API service now supports configuration via environment variables for better 
 ### Supported Environment Variables
 
 ```bash
-# API Base URL
-API_URL=http://localhost:8000
-# or
+
+EXPO_PUBLIC_API_URL=https://your-render-backend.onrender.com
+
+# Legacy/alternative options
 REACT_APP_API_URL=http://localhost:8000
+API_URL=http://localhost:8000
 
 # Retry Configuration
 API_RETRY_COUNT=2        # Number of retry attempts
@@ -23,25 +25,19 @@ API_TIMEOUT=30000        # Request timeout (milliseconds)
 #### Development (default)
 
 ```bash
-API_URL=http://localhost:8000
+EXPO_PUBLIC_API_URL=http://localhost:8000
 API_RETRY_COUNT=2
 API_RETRY_DELAY=2000
 API_TIMEOUT=30000
 ```
 
-#### Staging
+#### Production (Vercel + Render)
+
+- Set `EXPO_PUBLIC_API_URL` in your Vercel Project → Settings → Environment Variables
+- Value should be your Render backend base URL, e.g. `https://your-api.onrender.com`
 
 ```bash
-API_URL=https://staging-api.example.com
-API_RETRY_COUNT=3
-API_RETRY_DELAY=1500
-API_TIMEOUT=45000
-```
-
-#### Production
-
-```bash
-API_URL=https://api.example.com
+EXPO_PUBLIC_API_URL=https://your-api.onrender.com
 API_RETRY_COUNT=1
 API_RETRY_DELAY=3000
 API_TIMEOUT=60000
@@ -90,8 +86,16 @@ try {
   // Use workoutPlan directly
 } catch (error) {
   // Handle error
-  console.error("API call failed:", error.message)
+  console.error("API call failed:", (error as Error).message)
 }
+```
+
+## Health Check
+
+You can verify connectivity using the built-in health check:
+
+```typescript
+const ok = await apiService.testConnection() // calls `${baseUrl}/health`
 ```
 
 ## Benefits

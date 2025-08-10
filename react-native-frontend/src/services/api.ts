@@ -18,13 +18,20 @@ interface ApiConfig {
 const getDefaultConfig = (): ApiConfig => {
   // Try to use environment variables first, fall back to sensible defaults
   const baseUrl = (() => {
-    // Check for environment variables (requires react-native-dotenv setup)
+    // Check for environment variables (requires correct bundler support)
     if (typeof process !== "undefined" && process.env) {
-      if (process.env.REACT_APP_API_URL) {
-        return process.env.REACT_APP_API_URL
+      const env = process.env as unknown as Record<string, string | undefined>
+      const expoPublic = env["EXPO_PUBLIC_API_URL"]
+      if (expoPublic) {
+        return expoPublic
       }
-      if (process.env.API_URL) {
-        return process.env.API_URL
+      const reactApp = env["REACT_APP_API_URL"]
+      if (reactApp) {
+        return reactApp
+      }
+      const apiUrl = env["API_URL"]
+      if (apiUrl) {
+        return apiUrl
       }
     }
 
@@ -34,11 +41,16 @@ const getDefaultConfig = (): ApiConfig => {
       : "http://10.0.2.2:8000" // Android emulator
   })()
 
+  const env =
+    typeof process !== "undefined" && process.env
+      ? (process.env as unknown as Record<string, string | undefined>)
+      : {}
+
   return {
     baseUrl,
-    retryCount: Number(process.env.API_RETRY_COUNT) || 2,
-    retryDelay: Number(process.env.API_RETRY_DELAY) || 2000,
-    timeout: Number(process.env.API_TIMEOUT) || 30000,
+    retryCount: Number(env["API_RETRY_COUNT"]) || 2,
+    retryDelay: Number(env["API_RETRY_DELAY"]) || 2000,
+    timeout: Number(env["API_TIMEOUT"]) || 30000,
   }
 }
 
