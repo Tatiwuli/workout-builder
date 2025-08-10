@@ -23,10 +23,15 @@ const Stack = createStackNavigator<RootStackParamList>()
 export default function App() {
   useEffect(() => {
     // Simple health check on startup
-    apiService
-      .testConnection()
-      .then((ok) => console.log("API health:", ok ? "OK" : "DOWN"))
-      .catch(() => console.log("API health: DOWN"))
+    const API = (process.env as any)?.EXPO_PUBLIC_API_URL as string
+    if (API) {
+      console.log("API base:", API)
+      fetch(`${API}/health`, { cache: "no-store" })
+        .then((r) => console.log("API health:", r.ok ? "OK" : "DOWN"))
+        .catch(() => console.log("API health: DOWN"))
+    } else {
+      console.log("API base: MISSING EXPO_PUBLIC_API_URL")
+    }
 
     if (Platform.OS === "web") {
       // Inject CSS for web platform

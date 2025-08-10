@@ -16,35 +16,15 @@ interface ApiConfig {
 
 // Default configuration with fallbacks
 const getDefaultConfig = (): ApiConfig => {
-  // Try to use environment variables first, fall back to sensible defaults
-  const baseUrl = (() => {
-    // Check for environment variables (requires correct bundler support)
-    if (typeof process !== "undefined" && process.env) {
-      const env = process.env as unknown as Record<string, string | undefined>
-      const expoPublic = env["EXPO_PUBLIC_API_URL"]
-      if (expoPublic) {
-        return expoPublic
-      }
-      const reactApp = env["REACT_APP_API_URL"]
-      if (reactApp) {
-        return reactApp
-      }
-      const apiUrl = env["API_URL"]
-      if (apiUrl) {
-        return apiUrl
-      }
-    }
-
-    // Fallback to platform-specific defaults for development
-    return Platform.OS === "web"
-      ? "http://localhost:8000"
-      : "http://10.0.2.2:8000" // Android emulator
-  })()
-
   const env =
     typeof process !== "undefined" && process.env
       ? (process.env as unknown as Record<string, string | undefined>)
       : {}
+
+  const baseUrl = env["EXPO_PUBLIC_API_URL"]
+  if (!baseUrl) {
+    throw new Error("EXPO_PUBLIC_API_URL is required for API base URL")
+  }
 
   return {
     baseUrl,
