@@ -113,8 +113,8 @@ Return only the raw JSON object starting with `{` and ending with `}`.
     "warmup_exercises": [
       {
         "exercise_name": "string",
-        "setup_notes": "string",
-        "execution_notes": "string"
+        "setup": "string",
+        "execution": "string"
       }
     ]
   },

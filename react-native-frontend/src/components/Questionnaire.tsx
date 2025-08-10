@@ -61,14 +61,22 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({
       />
 
       {/* Show Generate Workout Plan button on the last question */}
-      {questionIndex === QUESTIONS.length - 1 && !isGeneratingPlan && (
+      {questionIndex === QUESTIONS.length - 1 && (
         <View style={styles.generateButtonContainer}>
           <TouchableOpacity
-            style={styles.generateButton}
-            onPress={onGenerateWorkoutPlan}
-            activeOpacity={0.8}
+            style={[
+              styles.generateButton,
+              isGeneratingPlan && styles.generateButtonDisabled,
+            ]}
+            onPress={isGeneratingPlan ? undefined : onGenerateWorkoutPlan}
+            activeOpacity={isGeneratingPlan ? 1 : 0.8}
+            disabled={isGeneratingPlan}
           >
-            <Text style={styles.generateButtonText}>Generate Workout Plan</Text>
+            <Text style={styles.generateButtonText}>
+              {isGeneratingPlan
+                ? "Starting Generation..."
+                : "Generate Workout Plan"}
+            </Text>
           </TouchableOpacity>
         </View>
       )}
@@ -119,6 +127,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 8,
+  },
+  generateButtonDisabled: {
+    backgroundColor: "#ccc",
+    elevation: 2,
+    shadowOpacity: 0.1,
   },
   generateButtonText: {
     color: "#ffffff",

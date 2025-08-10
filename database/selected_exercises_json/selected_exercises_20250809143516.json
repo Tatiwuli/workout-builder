@@ -1,0 +1,117 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Wide Grip Lat Pull Down",
+            "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+            "execution_notes": "Grip the bar with a wide grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
+            "media_url": "https://ccuuubmtdurkmbeufybi.supabase.co/storage/v1/object/public/animations/0579.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Offers a big stretch on your lats, provides smooth even tension throughout the range of motion, feels great, and allows for easy overload by increasing the pin weight.",
+            "targeted_muscles": [
+                "Lats",
+                "Mid Traps"
+            ],
+            "targeted_muscle_parts": "Targets both the lats and mid traps due to the wide grip and pulling motion.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Neutral Grip Lat Pull Down",
+            "alternative_exercise_media_url": "https://fitnessvolt.com/wp-content/uploads/2023/09/close-grip-lat-pulldown.gif",
+            "selection_reason": "This exercise is selected because it's an S-tier exercise for back development, targeting both lats and mid traps.  The wide grip allows for a significant stretch and even tension throughout the movement, making it ideal for building back mass. It's also easily scalable by adjusting the weight."
+        },
+        {
+            "exercise_name": "Neutral Grip Lat Pull Down",
+            "setup_notes": "Sit down at a lat pull-down machine and adjust the knee pad to fit snugly against your thighs.",
+            "execution_notes": "Grip the bar with a neutral grip, pull the bar down to your upper chest while keeping your back straight, and then slowly return to the starting position.",
+            "media_url": "https://fitnessvolt.com/wp-content/uploads/2023/09/close-grip-lat-pulldown.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Similar benefits to wide grip pull-downs but with more lat emphasis.",
+            "targeted_muscles": [
+                "Lats"
+            ],
+            "targeted_muscle_parts": "Emphasizes the lats more due to the neutral grip.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "None",
+            "alternative_exercise": "Chest Supported Row",
+            "alternative_exercise_media_url": "https://media.tenor.com/ft6FHrqty-8AAAAM/remada-pronada-maquina.gif",
+            "selection_reason": "This exercise provides a variation to the Wide Grip Lat Pulldown, focusing more on the lats. The neutral grip allows for a slightly different muscle activation pattern, ensuring comprehensive lat development.  It's also an S-tier exercise, indicating high effectiveness."
+        },
+        {
+            "exercise_name": "Preacher Curl",
+            "setup_notes": "Use a preacher bench to angle your upper arm.",
+            "execution_notes": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2021/10/dumbbell-preacher-curl.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "High tension in stretched position, locks elbows to prevent cheating, significant distal biceps growth.",
+            "targeted_muscles": [
+                "Biceps"
+            ],
+            "targeted_muscle_parts": "Distal biceps, due to high tension in stretched position.",
+            "limitations": "None",
+            "scientific_insights": "Study shows preacher curls cause more distal biceps growth compared to incline curls.",
+            "additional_notes": "None",
+            "alternative_exercise": "Machine Preacher Curl",
+            "alternative_exercise_media_url": "https://i.pinimg.com/originals/b6/ea/17/b6ea17377640b9bb77068888388b5d0a.gif",
+            "selection_reason": "This S-tier exercise is chosen for its effectiveness in targeting the distal biceps. The preacher curl's design ensures a full range of motion and maintains high tension in the stretched position, crucial for muscle growth.  Research supports its superior effectiveness compared to other curl variations."
+        },
+        {
+            "exercise_name": "Face Away Cable Curl",
+            "setup_notes": "Set up the cable at hand height, face away, and take one or two steps forward.",
+            "execution_notes": "Curl with both arms simultaneously.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/10/bayesian-curl.gif",
+            "alternative_equipment": "Resistance band",
+            "tier_reasons": "Maximum stretch and tension on biceps, even tension throughout range.",
+            "targeted_muscles": [
+                "Biceps"
+            ],
+            "targeted_muscle_parts": "Long head, due to high stretch and tension.",
+            "limitations": "None",
+            "scientific_insights": "None",
+            "additional_notes": "Recommended for biceps peak development.",
+            "alternative_exercise": "Standing Dumbbell Curl",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/dumbbell-bicep-curl.gif",
+            "selection_reason": "This S-tier exercise complements the Preacher Curl by providing a different angle and emphasizing the long head of the biceps. The cable provides consistent tension throughout the movement, maximizing muscle activation and promoting peak development."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "60 seconds"
+            },
+            {
+                "exercise_name": "Shoulder rotations",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Rotate shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds.",
+                "sets_reps": "2 sets",
+                "duration": "60 seconds"
+            },
+            {
+                "exercise_name": "Torso twists",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Twist your torso from side to side, keeping your core engaged. 30 seconds.",
+                "sets_reps": "1 set",
+                "duration": "30 seconds"
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup_notes": "Start on your hands and knees.",
+                "execution_notes": "Inhale, drop your belly towards the floor, and lift your chest and tailbone. Exhale, round your spine towards the ceiling, tucking your chin to your chest. Repeat for 1 minute.",
+                "sets_reps": "1 set",
+                "duration": "60 seconds"
+            },
+            {
+                "exercise_name": "Bicep stretches",
+                "setup_notes": "Extend one arm overhead.",
+                "execution_notes": "Gently pull your elbow towards your body using your other hand. Hold for 15 seconds. Repeat on the other side. 30 seconds total.",
+                "sets_reps": "2 sets",
+                "duration": "30 seconds"
+            }
+        ]
+    }
+}

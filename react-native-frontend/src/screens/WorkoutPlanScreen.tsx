@@ -5,7 +5,6 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Alert,
   Platform,
 } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
@@ -29,7 +28,7 @@ interface Props {
 
 // Mock workout plan data - replace with actual API call
 const mockWorkoutPlan: WorkoutPlan = {
-  workout_title: "Upper Body Strength & Hypertrophy",
+  workout_title: "(MOCK WORKOUT PLAN)Upper Body Strength & Hypertrophy",
   total_workout_duration: "60 minutes",
   num_exercises: 8,
   warmup: {
@@ -37,17 +36,15 @@ const mockWorkoutPlan: WorkoutPlan = {
     warmup_exercises: [
       {
         exercise_name: "Arm Circles",
-        setup_notes:
-          "Stand with feet shoulder-width apart, arms extended to sides",
-        execution_notes:
+        setup: "Stand with feet shoulder-width apart, arms extended to sides",
+        execution:
           "Make small circular motions with arms, gradually increasing size. 10 forward, 10 backward.",
       },
       {
         exercise_name: "Light Push-ups",
-        setup_notes:
+        setup:
           "Start in plank position with hands slightly wider than shoulders",
-        execution_notes:
-          "Perform 5-10 light push-ups to warm up chest and triceps.",
+        execution: "Perform 5-10 light push-ups to warm up chest and triceps.",
       },
     ],
   },
@@ -58,16 +55,16 @@ const mockWorkoutPlan: WorkoutPlan = {
       exercises: [
         {
           exercise_name: "Barbell Bench Press",
-          setup_notes:
+          setup:
             "Lie on bench with feet flat on ground, grip slightly wider than shoulder width",
-          execution_notes:
+          execution:
             "Lower bar to chest, press up explosively. 3 sets of 8-10 reps.",
         },
         {
           exercise_name: "Incline Dumbbell Press",
-          setup_notes:
+          setup:
             "Set bench to 30-45 degree incline, hold dumbbells at shoulder level",
-          execution_notes:
+          execution:
             "Press dumbbells up and together, control descent. 3 sets of 10-12 reps.",
         },
       ],
@@ -78,21 +75,33 @@ const mockWorkoutPlan: WorkoutPlan = {
       exercises: [
         {
           exercise_name: "Pull-ups",
-          setup_notes:
-            "Grip pull-up bar with hands slightly wider than shoulders",
-          execution_notes:
+          setup: "Grip pull-up bar with hands slightly wider than shoulders",
+          execution:
             "Pull body up until chin clears bar, control descent. 3 sets of 6-8 reps.",
         },
         {
           exercise_name: "Bent-over Rows",
-          setup_notes:
+          setup:
             "Stand with feet shoulder-width, bend at hips, hold barbell with overhand grip",
-          execution_notes:
+          execution:
             "Pull bar to lower chest, squeeze shoulder blades. 3 sets of 10-12 reps.",
         },
       ],
     },
   ],
+}
+
+const formatDuration = (duration: string) => {
+  // const [hours, minutes] = duration.split(" ").map(Number)
+  // if (hours > 0) {
+  //   return `${hours}h ${minutes}m`
+  // }
+  // If it's already a string like "60 minutes" just return it or strip words
+  const numeric = parseFloat(duration)
+  if (!isNaN(numeric)) {
+    return `${Math.round(numeric)} min`
+  }
+  return duration
 }
 
 const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
@@ -122,7 +131,7 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
       <View style={styles.sectionHeader}>
         <Text style={styles.sectionTitle}>🔥 Warm-Up</Text>
         <Text style={styles.sectionDuration}>
-          {workoutPlan.warmup.warmup_duration}
+          {formatDuration(workoutPlan.warmup.warmup_duration)}
         </Text>
       </View>
 
@@ -174,19 +183,30 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.content}>
+          {/* Back to Home Button */}
+          <TouchableOpacity
+            style={styles.backHomeButton}
+            onPress={() => navigation.navigate("Home")}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.backHomeText}>🏠 Back to Home</Text>
+          </TouchableOpacity>
+
           <View style={styles.header}>
             <Text style={styles.title}>{workoutPlan.workout_title}</Text>
             <View style={styles.statsContainer}>
               <View style={styles.stat}>
                 <Text style={styles.statLabel}>Duration</Text>
                 <Text style={styles.statValue}>
-                  {workoutPlan.total_workout_duration}
+                  {formatDuration(workoutPlan.total_workout_duration)}
                 </Text>
               </View>
               <View style={styles.stat}>
                 <Text style={styles.statLabel}>Exercises</Text>
                 <Text style={styles.statValue}>
-                  {workoutPlan.num_exercises}
+                  {typeof workoutPlan.num_exercises === "string"
+                    ? workoutPlan.num_exercises
+                    : workoutPlan.num_exercises}
                 </Text>
               </View>
             </View>
@@ -200,15 +220,7 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
 
           {renderWorkoutSets()}
 
-          <View style={styles.footer}>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => Alert.alert("Success", "Workout plan saved!")}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.buttonText}>Save Workout Plan</Text>
-            </TouchableOpacity>
-          </View>
+          <View style={styles.divider} />
         </View>
       </ScrollView>
     </View>
@@ -229,6 +241,29 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 20,
+  },
+  backHomeButton: {
+    alignSelf: "flex-start",
+    backgroundColor: "#f8f9fa",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: "#dee2e6",
+    marginBottom: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  backHomeText: {
+    color: "#666666",
+    fontSize: 14,
+    fontWeight: "600",
   },
   header: {
     marginBottom: 20,

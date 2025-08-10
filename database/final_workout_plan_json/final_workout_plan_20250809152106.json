@@ -1,0 +1,251 @@
+{
+    "workout_title": "Beginner Upper Body Blast",
+    "total_workout_duration": 37.5,
+    "num_exercises": 5,
+    "warmup": {
+        "warmup_duration": 7.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Extend arms to the sides and make small circles forward for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Shoulder Rolls",
+                "setup_notes": "Stand with feet shoulder-width apart.",
+                "execution_notes": "Roll shoulders forward in a circular motion for 30 seconds, then backward for 30 seconds."
+            },
+            {
+                "exercise_name": "Chest Stretch",
+                "setup_notes": "Clasp hands behind your back.",
+                "execution_notes": "Slowly straighten your arms and lift them until you feel a stretch in your chest. Hold for 15 seconds."
+            },
+            {
+                "exercise_name": "Triceps Stretch",
+                "setup_notes": "Raise one arm overhead.",
+                "execution_notes": "Bend your elbow and gently pull your elbow toward your head with your other hand. Hold for 15 seconds. Repeat on the other side."
+            },
+            {
+                "exercise_name": "Jumping Jacks",
+                "setup_notes": "Stand with feet together, arms at your sides.",
+                "execution_notes": "Jump, spreading your legs and raising your arms overhead. Return to starting position. Perform for 1 minute."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps",
+                                "Long Head"
+                            ]
+                        }
+                    ],
+                    "setup": "Position the cable at a low setting and use a bar attachment. Stand facing away from the cable machine with arms overhead.",
+                    "execution": [
+                        "1. Grip the bar with an overhand grip (palms facing down).",
+                        "2. Extend your arms fully overhead, keeping your elbows slightly bent.",
+                        "3. Keeping your upper arms stationary, slowly lower the weight behind your head by bending your elbows.",
+                        "4. Pause briefly at the bottom, ensuring you feel a stretch in your triceps.",
+                        "5. Extend your elbows to return to the starting position, squeezing your triceps at the top."
+                    ],
+                    "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/11/overhead-cable-tricep-extension.gif",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "alternative_equipments": "Resistance band",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_setup": "Lie on a bench with your feet flat on the floor. Hold a barbell with an overhand grip, slightly narrower than shoulder-width.",
+                    "alternative_exercise_execution": [
+                        "1. Extend your arms straight up, holding the barbell.",
+                        "2. Slowly lower the barbell towards your forehead by bending your elbows.",
+                        "3. Pause briefly at the bottom, ensuring you feel a stretch in your triceps.",
+                        "4. Extend your elbows to return to the starting position, squeezing your triceps at the top."
+                    ],
+                    "alternative_exercise_media_url": "",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength.",
+                    "additional_tips": "Focus on controlled movements and avoid swinging the weight. Maintain a slight bend in your elbows throughout the exercise to protect your joints."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps",
+                                "Medial Head",
+                                "Lateral Head"
+                            ]
+                        }
+                    ],
+                    "setup": "Lie on a bench with your feet flat on the floor. Grip a barbell slightly narrower than shoulder-width.",
+                    "execution": [
+                        "1. Lower the bar to your chest, keeping your elbows tucked in.",
+                        "2. Press the bar back up to the starting position, fully extending your arms."
+                    ],
+                    "media_url": "https://framerusercontent.com/images/4vEMWneIoDWCqXvq17gyv8iAKc.gif",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_setup": "Attach a straight bar to a cable machine. Stand facing the machine, gripping the bar with an overhand grip.",
+                    "alternative_exercise_execution": [
+                        "1. Extend your arms fully, keeping your elbows close to your sides.",
+                        "2. Slowly lower the bar by bending your elbows.",
+                        "3. Extend your elbows to return to the starting position, squeezing your triceps at the top."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2023/03/straight-bar-tricep-pushdown.gif",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength.",
+                    "additional_tips": "Keep your elbows close to your body throughout the exercise to maximize triceps activation."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the machine seat so that your shoulders are aligned with the handles.  Ensure a comfortable grip.",
+                    "execution": [
+                        "1. Sit comfortably on the machine and grasp the handles.",
+                        "2. Push the handles away from your chest, fully extending your arms.",
+                        "3. Slowly return to the starting position, feeling a stretch in your chest."
+                    ],
+                    "media_url": "",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a bench with your feet flat on the floor. Grip a barbell with an overhand grip, slightly wider than shoulder-width.",
+                    "alternative_exercise_execution": [
+                        "1. Lower the bar to your chest, keeping your elbows slightly bent.",
+                        "2. Press the bar back up to the starting position, fully extending your arms."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength.",
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid bouncing the weight."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals",
+                                "Upper Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the bench to an incline position (around 30-45 degrees). Lie on the bench with your feet flat on the floor. Hold a dumbbell in each hand.",
+                    "execution": [
+                        "1. Lower the dumbbells to your chest, keeping your elbows slightly bent.",
+                        "2. Press the dumbbells back up to the starting position, fully extending your arms."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_setup": "Sit on a machine with handles positioned at chest height. Adjust the weight.",
+                    "alternative_exercise_execution": [
+                        "1. Extend your arms out to the sides, keeping a slight bend in your elbows.",
+                        "2. Bring your arms together in front of you, squeezing your chest muscles.",
+                        "3. Slowly return to the starting position."
+                    ],
+                    "alternative_exercise_media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Select a weight that allows you to perform 8 repetitions with proper form. Gradually increase the weight as you gain strength.",
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid swinging the dumbbells."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_strategy": "None",
+            "set_duration": 7.5,
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Shoulders"
+                            ]
+                        }
+                    ],
+                    "setup": "Stand with your feet shoulder-width apart. Hold a barbell with an overhand grip, slightly wider than shoulder-width.",
+                    "execution": [
+                        "1. Press the weight overhead, keeping your core engaged and elbows slightly bent.",
+                        "2. Slowly lower the weight back to the starting position."
+                    ],
+                    "media_url": "none",
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 reps with good form. Increase weight gradually as you get stronger.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": null,
+                    "alternative_exercise": null,
+                    "alternative_exercise_setup": null,
+                    "alternative_exercise_execution": null,
+                    "alternative_exercise_media_url": null,
+                    "alternative_exercise_reps": null,
+                    "alternative_exercise_weight": null,
+                    "additional_tips": "Maintain a controlled movement throughout the exercise. Avoid swinging the weight."
+                }
+            ]
+        }
+    ]
+}

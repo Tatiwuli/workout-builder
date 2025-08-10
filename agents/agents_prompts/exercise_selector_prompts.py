@@ -81,8 +81,8 @@ Return only the raw JSON object starting with `{` and ending with `}`.
   "exercises": [
     {
       "exercise_name": "string",
-      "setup_notes": "string",
-      "execution_notes": "string",
+      "setup": "string",
+      "execution": "string",
       "media_url": "string",
       "alternative_equipment": "string",
       "tier_reasons": "string",
@@ -101,8 +101,8 @@ Return only the raw JSON object starting with `{` and ending with `}`.
     "warmup_exercises": [
       {
         "exercise_name": "string",
-        "setup_notes": "string",
-        "execution_notes": "string",
+        "setup": "string",
+        "execution": "string",
         "sets_reps": "string",
         "duration": "string"
       }

@@ -1,0 +1,110 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set focuses on the long head of the triceps using an overhead movement, which is crucial for overall triceps development and aligns with the 'High Tension in Stretched Position' criteria. The volume is chosen to be moderate, suitable for an intermediate user with a medium time constraint.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form but challenges you.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form, focusing on a controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set targets the long head of the triceps from a different angle, complementing the previous exercise and ensuring comprehensive triceps engagement. The volume is kept moderate to avoid overtraining within the time constraint.",
+            "exercises": [
+                {
+                    "exercise_name": "Skull Crushers",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 reps with good form, focusing on a controlled movement and full range of motion.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 reps with good form, maintaining a controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set targets the medial and lateral heads of the triceps, providing a balanced approach to triceps training. The slightly higher rep range helps to increase muscle endurance and growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Bar Press Down",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Medial head",
+                            "Lateral head"
+                        ]
+                    },
+                    "reps": "12",
+                    "weight": "Choose a weight that allows you to complete 12 reps with good form, focusing on controlled movement and full range of motion.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Close Grip Bench Press",
+                    "alternative_exercise_reps": "12",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12 reps with good form, maintaining a controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 5,
+            "set_strategy": "None",
+            "set_repetitions": 15,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set further emphasizes the long head of the triceps, offering a different angle of attack compared to the overhead extensions and skull crushers. The higher rep range promotes muscle activation and growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Cable Triceps Kickbacks",
+                    "target_muscle_part": {
+                        "Triceps": [
+                            "Long head"
+                        ]
+                    },
+                    "reps": "15",
+                    "weight": "Choose a weight that allows you to complete 15 reps with good form, focusing on a controlled movement and full range of motion.",
+                    "rest_time": "0 seconds",
+                    "alternative_exercise": "none",
+                    "alternative_exercise_reps": "none",
+                    "alternative_exercise_weight": "none"
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout plan prioritizes compound movements for the triceps, focusing on different heads of the muscle to ensure comprehensive development. The exercises are ordered to maximize efficiency and minimize rest time. The volume is tailored to an intermediate user with a 45-minute time constraint, adhering to the guidelines from the provided wikis. The moderate volume and rep ranges are chosen to promote hypertrophy while preventing overtraining.  The inclusion of both overhead and pressing movements ensures a balanced approach, targeting all three heads of the triceps. Alternative exercises are provided for flexibility and to cater to individual preferences and equipment availability."
+}

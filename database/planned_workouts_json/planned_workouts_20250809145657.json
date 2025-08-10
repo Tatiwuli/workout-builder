@@ -1,0 +1,145 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the chest, building a base for subsequent exercises.  The volume is appropriate for an unknown experience level, starting with a manageable number of repetitions to ensure proper form and prevent injury.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 repetitions with good form.  Increase weight in subsequent sets if possible.",
+                    "rest_time": "60",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 repetitions with good form.  Increase weight in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This set continues to work the chest with a different exercise to target different muscle fibers. The volume is kept similar to the previous set to manage fatigue and maintain good form.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 repetitions with good form.  Increase weight in subsequent sets if possible.",
+                    "rest_time": "60",
+                    "alternative_exercise": "Seated Cable Pec Fly",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 repetitions with good form.  Increase weight in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Shoulders"
+            ],
+            "set_reasoning": "This set targets the shoulders, a smaller muscle group compared to the chest.  Fewer repetitions are used to focus on quality and avoid overtraining.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Shoulders"
+                            ]
+                        }
+                    ],
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 repetitions with good form.",
+                    "rest_time": null,
+                    "alternative_exercise": null,
+                    "alternative_exercise_reps": null,
+                    "alternative_exercise_weight": null
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 15,
+            "set_strategy": "None",
+            "set_repetitions": 8,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set focuses on a compound movement for the triceps, building a base for subsequent exercises. The volume is appropriate for an unknown experience level, starting with a manageable number of repetitions to ensure proper form and prevent injury.",
+            "exercises": [
+                {
+                    "exercise_name": "Close Grip Bench Press",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "reps": "8",
+                    "weight": "Choose a weight that allows you to complete 8 repetitions with good form. Increase weight in subsequent sets if possible.",
+                    "rest_time": "60",
+                    "alternative_exercise": "Bar Press Down",
+                    "alternative_exercise_reps": "8",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 8 repetitions with good form. Increase weight in subsequent sets if possible."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 10,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Triceps"
+            ],
+            "set_reasoning": "This set continues to work the triceps with a different exercise to target different muscle fibers. The volume is kept similar to the previous set to manage fatigue and maintain good form.",
+            "exercises": [
+                {
+                    "exercise_name": "Overhead Cable Triceps Extension",
+                    "target_muscle_part": [
+                        {
+                            "muscle_group": [
+                                "Triceps"
+                            ]
+                        }
+                    ],
+                    "reps": "10",
+                    "weight": "Choose a weight that allows you to complete 10 repetitions with good form.",
+                    "rest_time": null,
+                    "alternative_exercise": "Skull Crushers",
+                    "alternative_exercise_reps": "10",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 repetitions with good form."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout prioritizes compound movements for the chest and triceps, followed by isolation exercises for the shoulders and triceps. The exercise order is designed to maximize efficiency and minimize fatigue. The volume is moderate, suitable for a user of unknown experience level, focusing on proper form and progressive overload. The total workout time is estimated to be under 45 minutes, respecting the user's time constraint. The workout structure aligns with the principles outlined in the provided wikis, emphasizing compound movements, appropriate volume, and rest periods for optimal muscle growth."
+}
