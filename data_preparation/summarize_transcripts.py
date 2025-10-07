@@ -5,12 +5,18 @@ from youtube_transcript_api import (
     NoTranscriptFound,
 )
 
-from llms.llm import OpenAILLM
+from llms.llm import GeminiLLM
+from dotenv import load_dotenv
+import os
 from data_preparation.prompts import system_prompt, user_prompts_dict
 
 
 # init LLM model
-llm = OpenAILLM(model_name="models/gemini-1.5-flash")
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    raise ValueError("GEMINI_API_KEY not found in environment.")
+llm = GeminiLLM(model_name="models/gemini-2.5-flash", api_key=api_key)
 
 
 def summarize_transcript(transcript_text, category):
@@ -31,7 +37,7 @@ def summarize_transcript(transcript_text, category):
 
     # Create summaries
     exercises_summary = llm.call_api(
-        system_prompt=system_prompt, user_prompt=user_prompt_exercises),
+        system_prompt=system_prompt, user_prompt=user_prompt_exercises)
 
     print("Exercises summary successfully created!")
 

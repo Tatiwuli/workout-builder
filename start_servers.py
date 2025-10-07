@@ -15,7 +15,7 @@ def run_fastapi():
     print("🚀 Starting FastAPI server on http://localhost:8000")
     subprocess.run([
         sys.executable, "-m", "uvicorn",
-        "api_server:app",
+        "app:app",
         "--host", "127.0.0.1",
         "--port", "8000",
         "--reload"
@@ -38,7 +38,7 @@ def main():
 
     print("🏋️‍♂️ Starting Workout Builder servers...")
 
-    if not os.path.exists("api_server.py"):
+    if not os.path.exists("app.py"):
         print("❌ Error: Please run this script from the workout-builder directory")
         sys.exit(1)
 

@@ -5,7 +5,7 @@ import {
   WorkoutGenerationResponse,
 } from "../types"
 import { Platform } from "react-native"
-import { API_BASE } from "../env" // ✅ single source of truth
+import { API_BASE } from "../env" 
 
 // Configuration interface for API settings
 interface ApiConfig {

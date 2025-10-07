@@ -17,7 +17,5 @@ pydantic==2.8.2
 python-multipart==0.0.9
 pymongo
 
-# OpenAI & utils
-openai
-token_count
+# Utils
 python-dotenv

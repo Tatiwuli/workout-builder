@@ -10,7 +10,7 @@ class WorkoutPlannerAgent(BaseAgent):
         self.user_prompt = user_prompt
 
         super().__init__(
-            llm_model_name="models/gemini-1.5-flash")
+            llm_model_name="models/gemini-2.5-flash")
 
     def prepare_assistant_input(self, muscle_groups):
         """
@@ -119,7 +119,7 @@ class WorkoutPlannerAgent(BaseAgent):
         user_input = exercise_selector_output.get("exercises")
 
         # Prepare LLM prompts
-       
+
         prompts = {"system_prompt": self.system_prompt,
                    "assistant_prompt": self.assistant_prompt,
                    "user_prompt": self.user_prompt

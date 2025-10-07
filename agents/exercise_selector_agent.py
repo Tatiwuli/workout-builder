@@ -9,7 +9,7 @@ class ExerciseSelectorAgent(BaseAgent):
         self.assistant_prompt = assistant_prompt
         self.user_prompt = user_prompt
 
-        super().__init__(llm_model_name="models/gemini-1.5-flash")
+        super().__init__(llm_model_name="models/gemini-2.5-flash")
 
     def prepare_assistant_input(self):
         """
@@ -95,4 +95,3 @@ class ExerciseSelectorAgent(BaseAgent):
         print(f"Saved to JSON: {json_filepath}")
         print("response: ", selected_exercises)
         return selected_exercises
-

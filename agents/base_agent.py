@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from llms.llm import OpenAILLM, GeminiLLM
+from llms.llm import GeminiLLM
 from database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
@@ -9,7 +9,7 @@ import json
 
 
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="models/gemini-1.5-flash"):
+    def __init__(self, database_name="workout_builder", llm_model_name="models/gemini-2.5-flash"):
 
         load_dotenv()
 
