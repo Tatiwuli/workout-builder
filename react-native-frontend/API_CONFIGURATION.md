@@ -15,9 +15,9 @@ EXPO_PUBLIC_API_URL=https://workout-builder-g4n6.onrender.com/
 # API_URL=http://localhost:8000
 
 # Retry Configuration
-API_RETRY_COUNT=2        # Number of retry attempts
-API_RETRY_DELAY=2000     # Delay between retries (milliseconds)
-API_TIMEOUT=30000        # Request timeout (milliseconds)
+API_RETRY_COUNT= 5     # Number of retry attempts
+API_RETRY_DELAY=5000    # Delay between retries (milliseconds)
+API_TIMEOUT=60000       # Request timeout (milliseconds)
 ```
 
 ### Environment Examples
@@ -26,9 +26,9 @@ API_TIMEOUT=30000        # Request timeout (milliseconds)
 
 ```bash
 EXPO_PUBLIC_API_URL=http://localhost:8000
-API_RETRY_COUNT=2
-API_RETRY_DELAY=2000
-API_TIMEOUT=30000
+API_RETRY_COUNT= 5    
+API_RETRY_DELAY=5000    
+API_TIMEOUT=60000   
 ```
 
 #### Production (Vercel + Render)

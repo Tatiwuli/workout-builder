@@ -22,14 +22,14 @@ const getDefaultConfig = (): ApiConfig => {
     retryCount:
       Number(
         (process.env as Record<string, string | undefined>).API_RETRY_COUNT
-      ) || 2,
+      ) || 5,
     retryDelay:
       Number(
         (process.env as Record<string, string | undefined>).API_RETRY_DELAY
-      ) || 2000,
+      ) || 5000,
     timeout:
       Number((process.env as Record<string, string | undefined>).API_TIMEOUT) ||
-      30000,
+      60000,
   }
 }
 
@@ -110,7 +110,7 @@ class ApiService {
     const timeoutId = setTimeout(() => controller.abort(), this.config.timeout)
 
     try {
-      console.log(`API Request: ${url} (${retriesLeft + 1} attempts remaining)`)
+      console.log(`API Request: ${url} (${retriesLeft + 1} attempts remaining). Still reconnecting to the server that runs on a Render free tier`)
 
       const response = await fetch(url, {
         headers: {
@@ -142,7 +142,7 @@ class ApiService {
         !(error instanceof ApiError) // Network/client-side errors
 
       if (shouldRetry && retriesLeft > 0) {
-        console.warn(`Request failed, retrying... ${retriesLeft} attempts left`)
+        console.warn(`Request failed, retrying... ${retriesLeft} attempts left.Still reconnecting to the server that runs on a Render free tier `)
         await this.delay(this.config.retryDelay)
         return this.request(endpoint, options, retriesLeft - 1)
       }

@@ -78,6 +78,16 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({
                 : "Generate Workout Plan"}
             </Text>
           </TouchableOpacity>
+
+          {/* Loading message when generating */}
+          {isGeneratingPlan && (
+            <View style={styles.loadingMessageContainer}>
+              <Text style={styles.loadingMessage}>
+                Hold tight! We're connecting to our workout database with science-based hypertrophy concepts to create
+                the perfect plan for you 💪
+              </Text>
+            </View>
+          )}
         </View>
       )}
     </View>
@@ -137,6 +147,18 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  loadingMessageContainer: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+    alignItems: "center",
+  },
+  loadingMessage: {
+    color: "#E91E63",
+    fontSize: 16,
+    textAlign: "center",
+    lineHeight: 22,
+    fontWeight: "500",
   },
 })
 

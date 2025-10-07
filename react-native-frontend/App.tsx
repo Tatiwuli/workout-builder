@@ -5,8 +5,7 @@ import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider } from "react-native-safe-area-context"
 import { Platform } from "react-native"
 import { API_BASE } from "./src/env"
-
-
+import { apiService } from "./src/services/api"
 
 import HomeScreen from "./src/screens/HomeScreen"
 import QuestionnaireScreen from "./src/screens/QuestionnaireScreen"
@@ -23,15 +22,28 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>()
 
 export default function App() {
-
- 
-
   useEffect(() => {
-    // Simple health check on startup
-    console.log("API base:", API_BASE)
-    fetch(`${API_BASE}/health`, { cache: "no-store" })
-      .then((r) => console.log("API health:", r.ok ? "OK" : "DOWN"))
-      .catch(() => console.log("API health: DOWN"))
+    // Enhanced API ping on startup to warm up connection
+    const pingApi = async () => {
+      console.log("🏋️‍♂️ Workout Builder starting up...")
+      console.log("API base:", API_BASE)
+
+      try {
+        // Use the API service with retry logic for the startup ping
+        const isConnected = await apiService.testConnection()
+        console.log(
+          "✅ API health check successful:",
+          isConnected ? "Connected" : "Failed"
+        )
+      } catch (error) {
+        console.warn("⚠️ API health check failed:", error)
+        // Don't throw error here as it's just a warm-up ping
+        // The app should still work even if the initial ping fails
+      }
+    }
+
+    // Execute the ping immediately when app starts
+    pingApi()
 
     if (Platform.OS === "web") {
       // Inject CSS for web platform
