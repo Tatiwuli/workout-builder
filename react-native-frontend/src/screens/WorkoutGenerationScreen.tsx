@@ -6,6 +6,7 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Alert,
+  Animated,
 } from "react-native"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RouteProp } from "@react-navigation/native"
@@ -29,7 +30,9 @@ interface Props {
 
 const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
   const { sessionId } = route.params
-  const { isLoading, error, workoutPlan, retry } = useWorkoutPolling(sessionId)
+  const { isLoading, error, workoutPlan, progressData, retry } =
+    useWorkoutPolling(sessionId)
+  const [progressAnimValue] = React.useState(new Animated.Value(0))
 
   // Auto-navigate to WorkoutPlan when generation completes
   useEffect(() => {
@@ -38,6 +41,17 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
       navigation.replace("WorkoutPlan", { workoutPlan })
     }
   }, [workoutPlan, navigation])
+
+  // Animate progress bar when progress updates
+  useEffect(() => {
+    if (typeof progressData?.progress === "number") {
+      Animated.timing(progressAnimValue, {
+        toValue: Math.max(0, Math.min(1, progressData.progress / 100)),
+        duration: 400,
+        useNativeDriver: false,
+      }).start()
+    }
+  }, [progressData?.progress, progressAnimValue])
 
   // Rotating through these messages
   const loadingMessages = [
@@ -119,28 +133,37 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
         {/* Title */}
         <Text style={styles.loadingTitle}>AI Workout Generation</Text>
 
-        {/* Fun rotating message */}
+        {/* Backend message (fallback to rotating message) */}
         <Text style={styles.loadingMessage}>
-          {loadingMessages[currentMessageIndex]}
+          {progressData?.message || loadingMessages[currentMessageIndex]}
         </Text>
 
-        {/* Progress indicator */}
+        {/* Progress bar with percentage */}
         <View style={styles.progressSection}>
-          <View style={styles.progressDots}>
-            {[0, 1, 2].map((index) => (
-              <View
-                key={index}
+          <View style={styles.progressBarContainer}>
+            <View style={styles.progressBarBackground}>
+              <Animated.View
                 style={[
-                  styles.progressDot,
+                  styles.progressBarFill,
                   {
-                    opacity: currentMessageIndex % 3 >= index ? 1 : 0.3,
+                    width: progressAnimValue.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: ["0%", "100%"],
+                    }),
                   },
                 ]}
               />
-            ))}
+            </View>
+            <Text style={styles.progressPercentage}>
+              {typeof progressData?.progress === "number"
+                ? `${progressData.progress}%`
+                : "0%"}
+            </Text>
           </View>
           <Text style={styles.progressText}>
-            Hang tight, we're building the plan to build your body 😎
+            {progressData?.status === "running"
+              ? "AI is working hard to create your perfect workout plan! 🚀"
+              : "Hang tight, we're building the plan to build your body 😎"}
           </Text>
         </View>
 
@@ -207,16 +230,28 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 30,
   },
-  progressDots: {
-    flexDirection: "row",
+  progressBarContainer: {
+    width: "100%",
+    alignItems: "center",
     marginBottom: 12,
   },
-  progressDot: {
-    width: 8,
+  progressBarBackground: {
+    width: "100%",
     height: 8,
+    backgroundColor: "#e9ecef",
     borderRadius: 4,
+    overflow: "hidden",
+    marginBottom: 8,
+  },
+  progressBarFill: {
+    height: "100%",
     backgroundColor: "#007AFF",
-    marginHorizontal: 4,
+    borderRadius: 4,
+  },
+  progressPercentage: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#007AFF",
   },
   progressText: {
     fontSize: 14,

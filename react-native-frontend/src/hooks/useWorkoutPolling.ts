@@ -2,10 +2,18 @@ import { useState, useEffect } from "react"
 import { apiService } from "../services/api"
 import { WorkoutPlan } from "../types"
 
+interface ProgressData {
+  progress: number
+  message: string
+  status: string
+  final_plan: WorkoutPlan | null
+}
+
 interface UseWorkoutPollingResult {
   isLoading: boolean
   error: string | null
   workoutPlan: WorkoutPlan | null
+  progressData: ProgressData | null
   retry: () => void
 }
 
@@ -26,6 +34,7 @@ export const useWorkoutPolling = (
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [workoutPlan, setWorkoutPlan] = useState<WorkoutPlan | null>(null)
+  const [progressData, setProgressData] = useState<ProgressData | null>(null)
   const [retryTrigger, setRetryTrigger] = useState(0)
 
   // Retry function that resets state and triggers re-polling
@@ -33,6 +42,7 @@ export const useWorkoutPolling = (
     setError(null)
     setIsLoading(true)
     setWorkoutPlan(null)
+    setProgressData(null)
     setRetryTrigger((prev) => prev + 1) // Trigger useEffect re-run
   }
 
@@ -73,6 +83,21 @@ export const useWorkoutPolling = (
         console.log("Normalized status:", payload?.status)
         console.log("Normalized progress:", payload?.progress)
         console.log("Has final_plan:", !!payload?.final_plan)
+
+        // Expose progress data for UI
+        if (
+          payload &&
+          (typeof payload.progress !== "undefined" ||
+            payload.message ||
+            payload.status)
+        ) {
+          setProgressData({
+            progress: Number(payload.progress) || 0,
+            message: String(payload.message || "Processing..."),
+            status: String(payload.status || "running"),
+            final_plan: (payload.final_plan as WorkoutPlan) || null,
+          })
+        }
 
         // If completed and we already have final_plan in payload
         if (payload?.status === "completed" && payload?.final_plan) {
@@ -176,6 +201,7 @@ export const useWorkoutPolling = (
     isLoading,
     error,
     workoutPlan,
+    progressData,
     retry,
   }
 }
