@@ -69,76 +69,56 @@ class OpenAILLM:
         if not api_key:
             raise ValueError("OPENAI_API_KEY is required.")
         self.client = OpenAI(api_key=api_key)
-        # Hardcode model to gpt-5-mini regardless of input/environment
+        # Hardcode primary model to gpt-5-mini
         self.model_name = "gpt-5-mini"
-        self.temperature = temperature
-        # Heuristic: use Responses API for any gpt-5* models
-        self._use_responses_api = str(
-            self.model_name).lower().startswith("gpt-5")
 
     def call_api(self, system_prompt: str, user_prompt: str, assistant_prompt: str | None = None):
-        # Prepare a combined prompt for Responses API fallback
-        full_prompt = ""
-        if system_prompt:
-            full_prompt += f"<system>\n{system_prompt.strip()}\n</system>\n\n"
-        if assistant_prompt:
-            full_prompt += f"<assistant>\n{assistant_prompt.strip()}\n</assistant>\n\n"
-        full_prompt += f"<user>\n{user_prompt.strip()}\n</user>"
+        """
+        Call OpenAI Responses API with gpt-5-mini (fallback to gpt-5 on invalid model error).
+        Combines system_prompt and assistant_prompt into instructions parameter; user_prompt goes to input.
+        """
+        def _call_responses_api(model_id: str) -> str:
+            # Combine system and assistant prompts for instructions
+            combined_instructions = system_prompt.strip()
+            if assistant_prompt:
+                combined_instructions += f"\n\n{assistant_prompt.strip()}"
 
-        def _call_with_model(model_id: str) -> str:
-            use_responses = str(model_id).lower().startswith(
-                "gpt-5") and hasattr(self.client, "responses")
-            if use_responses:
-                resp = self.client.responses.create(
-                    model=model_id,
-                    input=full_prompt,
-                    temperature=self.temperature,
-                )
-                if hasattr(resp, "output_text") and resp.output_text:
-                    return str(resp.output_text)
-                try:
-                    output = getattr(resp, "output", None)
-                    if output and isinstance(output, list) and output:
-                        content = getattr(output[0], "content", None)
-                        if content and isinstance(content, list) and content:
-                            text = getattr(content[0], "text", None)
-                            if text:
-                                return str(text)
-                except Exception:
-                    pass
-                return str(resp)
-            else:
-                messages = []
-                if system_prompt:
-                    messages.append(
-                        {"role": "system", "content": system_prompt.strip()})
-                if assistant_prompt:
-                    messages.append(
-                        {"role": "assistant", "content": assistant_prompt.strip()})
-                messages.append(
-                    {"role": "user", "content": user_prompt.strip()})
-                resp = self.client.chat.completions.create(
-                    model=model_id,
-                    temperature=self.temperature,
-                    messages=messages,
-                )
-                return (resp.choices[0].message.content or "").strip()
+            resp = self.client.responses.create(
+                model=model_id,
+                instructions=combined_instructions,
+                input=user_prompt
+            )
+            # Extract response text
+            if hasattr(resp, "output_text") and resp.output_text:
+                return str(resp.output_text)
+            try:
+                output = getattr(resp, "output", None)
+                if output and isinstance(output, list) and output:
+                    content = getattr(output[0], "content", None)
+                    if content and isinstance(content, list) and content:
+                        text = getattr(content[0], "text", None)
+                        if text:
+                            return str(text)
+            except Exception:
+                pass
+            return str(resp)
 
         try:
-            response_text = _call_with_model(self.model_name)
+            response_text = _call_responses_api(self.model_name)
         except Exception as e:
             msg = str(e).lower()
             if "invalid model" in msg or "invalid model id" in msg:
-                # Hardcode fallback model; no env dependency
+                # Fallback to gpt-5
                 fallback_model = "gpt-5"
                 try:
-                    response_text = _call_with_model(fallback_model)
+                    response_text = _call_responses_api(fallback_model)
                 except Exception as e2:
                     raise RuntimeError(
                         f"OpenAI API call failed (fallback {fallback_model}): {e2}")
             else:
                 raise RuntimeError(f"OpenAI API call failed: {e}")
 
+        # Parse JSON from code fence or raw text
         match = re.search(
             r"```(?:json)?\s*(\{.*\})\s*```", response_text, re.DOTALL)
         formatted_response_text = match.group(1) if match else response_text
