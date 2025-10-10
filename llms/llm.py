@@ -69,7 +69,8 @@ class OpenAILLM:
         if not api_key:
             raise ValueError("OPENAI_API_KEY is required.")
         self.client = OpenAI(api_key=api_key)
-        self.model_name = model_name or os.getenv("OPENAI_MODEL", "gpt-5-mini")
+        # Hardcode model to gpt-5-mini regardless of input/environment
+        self.model_name = "gpt-5-mini"
         self.temperature = temperature
         # Heuristic: use Responses API for any gpt-5* models
         self._use_responses_api = str(
@@ -127,7 +128,14 @@ class OpenAILLM:
             response_text = _call_with_model(self.model_name)
         except Exception as e:
             msg = str(e).lower()
-           
+            if "invalid model" in msg or "invalid model id" in msg:
+                # Hardcode fallback model; no env dependency
+                fallback_model = "gpt-5"
+                try:
+                    response_text = _call_with_model(fallback_model)
+                except Exception as e2:
+                    raise RuntimeError(
+                        f"OpenAI API call failed (fallback {fallback_model}): {e2}")
             else:
                 raise RuntimeError(f"OpenAI API call failed: {e}")
 
