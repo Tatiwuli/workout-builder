@@ -9,7 +9,7 @@ import json
 
 
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="gpt-5"):
+    def __init__(self, database_name="workout_builder", llm_model_name="gpt-5-mini-2025-08-07"):
 
         load_dotenv()
 

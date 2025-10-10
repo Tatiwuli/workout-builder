@@ -60,7 +60,7 @@ class GeminiLLM:
 
 
 class OpenAILLM:
-    def __init__(self, model_name: str = "gpt-5", temperature: float = 0.0, api_key: str | None = None):
+    def __init__(self, model_name: str | None = None, temperature: float = 0.0, api_key: str | None = None):
         if OpenAI is None:
             raise RuntimeError(
                 "openai package not installed. Please add 'openai' to requirements.txt")
@@ -69,10 +69,11 @@ class OpenAILLM:
         if not api_key:
             raise ValueError("OPENAI_API_KEY is required.")
         self.client = OpenAI(api_key=api_key)
-        self.model_name = model_name
+        self.model_name = model_name or os.getenv("OPENAI_MODEL", "gpt-5-mini")
         self.temperature = temperature
-        # Heuristic: newer models like gpt-5/gpt-5-mini often require the Responses API
-        self._use_responses_api = str(model_name).lower().startswith("gpt-5")
+        # Heuristic: use Responses API for any gpt-5* models
+        self._use_responses_api = str(
+            self.model_name).lower().startswith("gpt-5")
 
     def call_api(self, system_prompt: str, user_prompt: str, assistant_prompt: str | None = None):
         # Prepare a combined prompt for Responses API fallback
@@ -83,36 +84,29 @@ class OpenAILLM:
             full_prompt += f"<assistant>\n{assistant_prompt.strip()}\n</assistant>\n\n"
         full_prompt += f"<user>\n{user_prompt.strip()}\n</user>"
 
-        try:
-            if self._use_responses_api and hasattr(self.client, "responses"):
-                # Use Responses API for gpt-5/gpt-5-mini
+        def _call_with_model(model_id: str) -> str:
+            use_responses = str(model_id).lower().startswith(
+                "gpt-5") and hasattr(self.client, "responses")
+            if use_responses:
                 resp = self.client.responses.create(
-                    model=self.model_name,
+                    model=model_id,
                     input=full_prompt,
                     temperature=self.temperature,
                 )
-                # Robust extraction: prefer output_text, else walk structure
-                response_text = None
                 if hasattr(resp, "output_text") and resp.output_text:
-                    response_text = str(resp.output_text)
-                else:
-                    try:
-                        # Attempt to navigate common structure
-                        # resp.output[0].content[0].text
-                        output = getattr(resp, "output", None)
-                        if output and isinstance(output, list) and output:
-                            content = getattr(output[0], "content", None)
-                            if content and isinstance(content, list) and content:
-                                text = getattr(content[0], "text", None)
-                                if text:
-                                    response_text = str(text)
-                    except Exception:
-                        pass
-                if not response_text:
-                    # Fallback to string
-                    response_text = str(resp)
+                    return str(resp.output_text)
+                try:
+                    output = getattr(resp, "output", None)
+                    if output and isinstance(output, list) and output:
+                        content = getattr(output[0], "content", None)
+                        if content and isinstance(content, list) and content:
+                            text = getattr(content[0], "text", None)
+                            if text:
+                                return str(text)
+                except Exception:
+                    pass
+                return str(resp)
             else:
-                # Default to Chat Completions API
                 messages = []
                 if system_prompt:
                     messages.append(
@@ -122,15 +116,20 @@ class OpenAILLM:
                         {"role": "assistant", "content": assistant_prompt.strip()})
                 messages.append(
                     {"role": "user", "content": user_prompt.strip()})
-
                 resp = self.client.chat.completions.create(
-                    model=self.model_name,
+                    model=model_id,
                     temperature=self.temperature,
                     messages=messages,
                 )
-                response_text = (resp.choices[0].message.content or "").strip()
+                return (resp.choices[0].message.content or "").strip()
+
+        try:
+            response_text = _call_with_model(self.model_name)
         except Exception as e:
-            raise RuntimeError(f"OpenAI API call failed: {e}")
+            msg = str(e).lower()
+           
+            else:
+                raise RuntimeError(f"OpenAI API call failed: {e}")
 
         match = re.search(
             r"```(?:json)?\s*(\{.*\})\s*```", response_text, re.DOTALL)

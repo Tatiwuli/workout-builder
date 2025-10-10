@@ -16,7 +16,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("OPENAI_API_KEY not found in environment.")
-llm = OpenAILLM(model_name="gpt-5", api_key=api_key)
+llm = OpenAILLM(model_name="gpt-5-mini-2025-08-07", api_key=api_key)
 
 
 def summarize_transcript(transcript_text, category):
