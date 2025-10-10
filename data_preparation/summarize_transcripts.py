@@ -5,18 +5,18 @@ from youtube_transcript_api import (
     NoTranscriptFound,
 )
 
-from llms.llm import GeminiLLM
+from llms.llm import OpenAILLM
 from dotenv import load_dotenv
 import os
 from data_preparation.prompts import system_prompt, user_prompts_dict
 
 
-# init LLM model
+# init LLM model (OpenAI)
 load_dotenv()
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found in environment.")
-llm = GeminiLLM(model_name="models/gemini-2.5-flash", api_key=api_key)
+    raise ValueError("OPENAI_API_KEY not found in environment.")
+llm = OpenAILLM(model_name="gpt-5-mini", api_key=api_key)
 
 
 def summarize_transcript(transcript_text, category):

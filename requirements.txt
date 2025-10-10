@@ -9,6 +9,7 @@ streamlit-nested-layout
 google-api-python-client
 youtube_transcript_api
 google-generativeai==0.3.2
+openai>=1.0.0
 
 # Backend
 fastapi==0.111.0

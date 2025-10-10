@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from llms.llm import GeminiLLM
+from llms.llm import OpenAILLM
 from database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
@@ -9,15 +9,16 @@ import json
 
 
 class BaseAgent(ABC):
-    def __init__(self, database_name="workout_builder", llm_model_name="models/gemini-2.5-flash"):
+    def __init__(self, database_name="workout_builder", llm_model_name="gpt-5-mini"):
 
         load_dotenv()
 
+        # Prefer OpenAI for primary LLM now
         self.api_key = os.getenv(
-            "GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
+            "OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
         if not self.api_key:
             raise ValueError(
-                "GEMINI_API_KEY not found in environment or passed explicitly.")
+                "OPENAI_API_KEY not found in environment or passed explicitly.")
 
         self.mongo_uri = os.getenv(
             "MONGODB_URI") or st.secrets.get("MONGODB_URI")
@@ -27,7 +28,7 @@ class BaseAgent(ABC):
 
         self.db_handler = WorkoutBuilderDatabaseHandler(
             database_name, secrets_mongo_uri=self.mongo_uri)
-        self.llm = GeminiLLM(model_name=llm_model_name, api_key=self.api_key)
+        self.llm = OpenAILLM(model_name=llm_model_name, api_key=self.api_key)
 
     def combine_texts(self, texts):
         """
