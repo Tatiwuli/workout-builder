@@ -57,7 +57,7 @@ class MuscleGroup(BaseModel):
     category: str  # "push", "pull", "legs"
 
 
-# Global storage for progress tracking (in production, use Redis/DB)
+# Track progress globally
 generation_progress = {}
 
 # API Endpoints
@@ -135,8 +135,8 @@ async def generate_workout_plan(user_data: UserResponses):
         def run_generation():
             try:
                 print(f"Starting generation for session {session_id}")
-
-                # Convert user responses to the format expected by the workflow
+                
+              
                 raw_responses = {
                     "muscle_groups": user_data.muscle_groups,
                     "goal": user_data.goal,
@@ -149,7 +149,7 @@ async def generate_workout_plan(user_data: UserResponses):
 
                 print(f"Raw responses: {raw_responses}")
 
-                
+            
                 processed_responses = process_user_responses(raw_responses)
                 print(f"Processed responses: {processed_responses}")
 
@@ -163,7 +163,7 @@ async def generate_workout_plan(user_data: UserResponses):
                         "final_plan": generation_progress[session_id].get("final_plan")
                     }
 
-                # Check for required environment variables and use mock if missing
+             
                 import os
                 use_mock = False
                 if not os.getenv("OPENAI_API_KEY") or not os.getenv("GEMINI_API_KEY") or not os.getenv("MONGODB_URI"):
