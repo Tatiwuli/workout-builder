@@ -4,10 +4,9 @@ for React Native frontend integration
 """
 
 from datetime import datetime
+import threading
 import asyncio
 import json
-from frontend.utils import process_user_responses
-from agents.build_workout_plan import WorkoutBuilderWorkflow
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -15,6 +14,8 @@ from typing import Dict, List, Optional, Any
 import sys
 import os
 
+from frontend.utils import process_user_responses
+from agents.build_workout_plan import WorkoutBuilderWorkflow
 # Add project root to path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
@@ -25,8 +26,8 @@ ALLOWED_ORIGINS = [o.strip() for o in raw_origins.split(",") if o.strip()]
 # Enable CORS for React Native
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,  
-    allow_credentials= False,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -64,12 +65,18 @@ generation_progress = {}
 
 @app.get("/")
 async def root():
-    return {"message": "Workout Builder API is running", "version": "1.0.0"}
+    return {
+        "success": True,
+        "data": {"message": "Workout Builder API is running", "version": "1.0.0"}
+    }
 
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy", "timestamp": datetime.now().isoformat()}
+    return {
+        "success": True,
+        "data": {"status": "healthy", "timestamp": datetime.now().isoformat()}
+    }
 
 
 @app.get("/muscle_groups")
@@ -124,12 +131,11 @@ async def generate_workout_plan(user_data: UserResponses):
         }
 
         # Start the generation in a background task
-        import threading
 
         def run_generation():
             try:
                 print(f"Starting generation for session {session_id}")
-                
+
                 # Convert user responses to the format expected by the workflow
                 raw_responses = {
                     "muscle_groups": user_data.muscle_groups,
@@ -143,11 +149,11 @@ async def generate_workout_plan(user_data: UserResponses):
 
                 print(f"Raw responses: {raw_responses}")
 
-                # Process responses using existing utility
+                
                 processed_responses = process_user_responses(raw_responses)
                 print(f"Processed responses: {processed_responses}")
 
-                # Progress callback function
+             
                 def progress_callback(message: str, percentage: int):
                     print(f"Progress update: {percentage}% - {message}")
                     generation_progress[session_id] = {
@@ -160,29 +166,30 @@ async def generate_workout_plan(user_data: UserResponses):
                 # Check for required environment variables and use mock if missing
                 import os
                 use_mock = False
-                if not os.getenv("GEMINI_API_KEY") or not os.getenv("MONGODB_URI"):
+                if not os.getenv("OPENAI_API_KEY") or not os.getenv("GEMINI_API_KEY") or not os.getenv("MONGODB_URI"):
                     print("Missing environment variables, using mock workflow...")
                     use_mock = True
-                
+
                 if use_mock:
                     # Mock workflow for development
                     import time
-                    
-                    progress_callback("Starting mock workout generation...", 10)
+
+                    progress_callback(
+                        "Starting mock workout generation...", 10)
                     time.sleep(1)
-                    
+
                     progress_callback("Selecting exercises...", 30)
                     time.sleep(1)
-                    
+
                     progress_callback("Structuring workout...", 60)
                     time.sleep(1)
-                    
+
                     progress_callback("Finalizing plan...", 90)
                     time.sleep(1)
-                    
+
                     # Create a mock workout plan
                     final_plan = {
-                        "workout_title": "Your Personalized Workout Plan",
+                        "workout_title": "Your Personalized Workout Plan (Mock)",
                         "workout_description": f"A {processed_responses.get('frequency', '3-4 times per week')} workout plan focused on {', '.join(processed_responses.get('muscle_groups', ['general fitness']))}.",
                         "workout_duration": processed_responses.get('workout_duration', 45),
                         "experience_level": processed_responses.get('experience_level_description', 'intermediate'),
@@ -248,8 +255,8 @@ async def generate_workout_plan(user_data: UserResponses):
 
         return {
             "success": True,
-            "session_id": session_id,
-            "message": "Generation started. Use /generation_progress/{session_id} to track progress."
+            "data": {"message": "Generation started. Use /generation_progress/{session_id} to track progress."},
+            "session_id": session_id
         }
 
     except Exception as e:
@@ -264,7 +271,7 @@ async def get_generation_progress(session_id: str):
     """Get progress of workout plan generation"""
     print(f"Progress request for session: {session_id}")
     print(f"Available sessions: {list(generation_progress.keys())}")
-    
+
     if session_id in generation_progress:
         progress_data = generation_progress[session_id]
         print(f"Progress data: {progress_data}")
@@ -304,68 +311,6 @@ async def get_final_plan(session_id: str):
         return {
             "success": False,
             "error": "Session not found"
-        }
-
-
-@app.post("/save_workout_plan")
-async def save_workout_plan(workout_plan: Dict[str, Any]):
-    """Save a generated workout plan"""
-    try:
-        # In a real implementation, save to database
-        # For now, save to JSON file like the current system
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        filename = f"database/final_workout_plan_json/final_workout_plan_{timestamp}.json"
-
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-        with open(filename, 'w') as f:
-            json.dump(workout_plan, f, indent=2)
-
-        return {
-            "success": True,
-            "data": {"id": timestamp, "filename": filename}
-        }
-
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to save workout plan: {str(e)}"
-        }
-
-
-@app.get("/saved_workout_plans")
-async def get_saved_workout_plans():
-    """Get list of saved workout plans"""
-    try:
-        plans_dir = "database/final_workout_plan_json/"
-        if not os.path.exists(plans_dir):
-            return {"success": True, "data": []}
-
-        plans = []
-        for filename in os.listdir(plans_dir):
-            if filename.endswith('.json'):
-                filepath = os.path.join(plans_dir, filename)
-                try:
-                    with open(filepath, 'r') as f:
-                        plan = json.load(f)
-                        plans.append({
-                            "id": filename.replace('.json', ''),
-                            "filename": filename,
-                            "title": plan.get("workout_title", "Untitled Workout"),
-                            "created_at": filename.split('_')[-1].replace('.json', '')
-                        })
-                except Exception:
-                    continue
-
-        # Sort by creation date (newest first)
-        plans.sort(key=lambda x: x['created_at'], reverse=True)
-
-        return {"success": True, "data": plans}
-
-    except Exception as e:
-        return {
-            "success": False,
-            "error": f"Failed to retrieve saved plans: {str(e)}"
         }
 
 

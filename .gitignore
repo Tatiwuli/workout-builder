@@ -1,5 +1,7 @@
 .env
 /database/json_summaries/*.json
+INTEGRATION_GUIDE.md
+CODEBASE_DOCUMENTATION.md
 
 #test file
 test.py

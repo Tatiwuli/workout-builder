@@ -5,7 +5,7 @@ import {
   WorkoutGenerationResponse,
 } from "../types"
 import { Platform } from "react-native"
-import { API_BASE } from "../env" 
+import { API_BASE } from "../env"
 
 // Configuration interface for API settings
 interface ApiConfig {
@@ -78,20 +78,13 @@ class ApiService {
     })
   }
 
-  // Method to update configuration
   updateConfig(newConfig: Partial<ApiConfig>) {
     this.config = { ...this.config, ...newConfig }
     console.log("ApiService config updated:", this.config)
   }
 
-  // Method to get current configuration
   getConfig(): ApiConfig {
     return { ...this.config }
-  }
-
-  // Legacy method for backward compatibility
-  setBaseUrl(url: string) {
-    this.updateConfig({ baseUrl: url })
   }
 
   private async request<T>(
@@ -101,16 +94,20 @@ class ApiService {
   ): Promise<T> {
     const retriesLeft = retries ?? this.config.retryCount
 
-    // ✅ Safe URL join
     const base = this.config.baseUrl.replace(/\/+$/, "")
     const path = endpoint.startsWith("/") ? endpoint : `/${endpoint}`
     const url = `${base}${path}`
 
+    // config to cancel http request when timeout
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), this.config.timeout)
 
     try {
-      console.log(`API Request: ${url} (${retriesLeft + 1} attempts remaining). Still reconnecting to the server that runs on a Render free tier`)
+      console.log(
+        `API Request: ${url} (${
+          retriesLeft + 1
+        } attempts remaining). Still reconnecting to the server`
+      )
 
       const response = await fetch(url, {
         headers: {
@@ -142,7 +139,9 @@ class ApiService {
         !(error instanceof ApiError) // Network/client-side errors
 
       if (shouldRetry && retriesLeft > 0) {
-        console.warn(`Request failed, retrying... ${retriesLeft} attempts left.Still reconnecting to the server that runs on a Render free tier `)
+        console.warn(
+          `Request failed, retrying... ${retriesLeft} attempts left.Still reconnecting to the server `
+        )
         await this.delay(this.config.retryDelay)
         return this.request(endpoint, options, retriesLeft - 1)
       }
@@ -167,35 +166,30 @@ class ApiService {
     })
 
     console.log("generateWorkoutPlan raw response:", response)
-    console.log("response.success:", response.success)
-    console.log("response.session_id:", response.session_id)
 
-    if (response.success && response.session_id) {
-      return { session_id: response.session_id }
-    } else if (response.session_id) {
+    if (response.success) {
       return { session_id: response.session_id }
     } else {
-      return response
+      throw new Error(response.error || "Failed to start workout generation")
     }
   }
 
   async getMuscleGroups(): Promise<string[]> {
-    return this.request<string[]>("/muscle_groups")
+    const response = await this.request<any>("/muscle_groups")
+    if (response.success) {
+      return response.data
+    } else {
+      throw new Error(response.error || "Failed to fetch muscle groups")
+    }
   }
 
   async getQuestionnaireOptions(): Promise<Record<string, string[]>> {
-    return this.request<Record<string, string[]>>("/questionnaire_options")
-  }
-
-  async saveWorkoutPlan(workoutPlan: WorkoutPlan): Promise<{ id: string }> {
-    return this.request<{ id: string }>("/save_workout_plan", {
-      method: "POST",
-      body: JSON.stringify(workoutPlan),
-    })
-  }
-
-  async getSavedWorkoutPlans(): Promise<WorkoutPlan[]> {
-    return this.request<WorkoutPlan[]>("/saved_workout_plans")
+    const response = await this.request<any>("/questionnaire_options")
+    if (response.success) {
+      return response.data
+    } else {
+      throw new Error(response.error || "Failed to fetch questionnaire options")
+    }
   }
 
   async getGenerationProgress(sessionId: string): Promise<ProgressResponse> {
@@ -207,30 +201,27 @@ class ApiService {
       "getGenerationProgress raw response:",
       JSON.stringify(response, null, 2)
     )
-    console.log("response.success:", response.success)
-    console.log("response.data:", response.data)
 
-    if (response.success && response.data) {
-      return response.data
-    } else if (response.data) {
+    if (response.success) {
       return response.data
     } else {
-      return response
+      throw new Error(response.error || "Failed to get generation progress")
     }
   }
 
   async getFinalPlan(sessionId: string): Promise<WorkoutPlan> {
     const response = await this.request<any>(`/get_final_plan/${sessionId}`)
-    if (response?.success && response?.data) {
+    if (response.success) {
       return response.data as WorkoutPlan
+    } else {
+      throw new Error(response.error || "Failed to get final plan")
     }
-    return response as WorkoutPlan
   }
 
   async testConnection(): Promise<boolean> {
     try {
-      await this.request<any>("/health")
-      return true
+      const response = await this.request<any>("/health")
+      return response.success
     } catch {
       return false
     }

@@ -43,6 +43,7 @@ const MuscleSelectionCard: React.FC<MuscleSelectionCardProps> = ({
               styles.selectAllButton,
               allSelected && styles.selectAllButtonActive,
             ]}
+            //
             onPress={allSelected ? onDeselectAll : onSelectAll}
           >
             <Text
