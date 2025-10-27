@@ -94,6 +94,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
 
   const handleQuestionAnswer = (answer: string) => {
     const currentQuestion = QUESTIONS[questionIndex]
+    
     const newResponses = { ...responses, [currentQuestion]: answer }
 
     if (questionIndex < QUESTIONS.length - 1) {

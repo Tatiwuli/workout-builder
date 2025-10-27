@@ -3,7 +3,6 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider } from "react-native-safe-area-context"
-import { Platform } from "react-native"
 import { API_BASE } from "./src/env"
 import { apiService } from "./src/services/api"
 
@@ -22,12 +21,11 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>()
 
 export default function App() {
+  console.log("hi")
   useEffect(() => {
-    // Enhanced API ping on startup to warm up connection
     const pingApi = async () => {
       console.log("🏋️‍♂️ Workout Builder starting up...")
-      console.log("API base:", API_BASE)
-
+     
       try {
         // Use the API service with retry logic for the startup ping
         const isConnected = await apiService.testConnection()
@@ -45,29 +43,7 @@ export default function App() {
     // Execute the ping immediately when app starts
     pingApi()
 
-    if (Platform.OS === "web") {
-      // Inject CSS for web platform
-      const style = document.createElement("style")
-      style.textContent = `
-        html, body {
-          height: 100%;
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
-          overscroll-behavior: auto;
-          margin: 0;
-          padding: 0;
-        }
-        #root {
-          height: 100vh;
-          overflow: hidden;
-        }
-        [data-class*="ScrollView"] {
-          overflow: auto !important;
-          -webkit-overflow-scrolling: touch !important;
-        }
-      `
-      document.head.appendChild(style)
-    }
+   
   }, [])
 
   return (

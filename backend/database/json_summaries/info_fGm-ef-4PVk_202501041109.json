@@ -1,0 +1,392 @@
+{
+    "playlist_id": "PLp4G6oBUcv8w8ujRtP5BtvJe8PXBwiTdl",
+    "category": "tier_list",
+    "video_id": "fGm-ef-4PVk",
+    "title": "The Best And Worst Chest Exercises (Ranked By Science)",
+    "published_date": "2024-07-15T12:18:52Z",
+    "video_url": "https://www.youtube.com/watch?v=fGm-ef-4PVk",
+    "thumbnail_img": "https://i.ytimg.com/vi/fGm-ef-4PVk/default.jpg",
+    "exercises_summaary": {
+        "exercise_rankings": {
+            "S-Tier": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Ensure a deep stretch on the pecs with high tension throughout the range of motion. Maintain a stable position to enhance mind-muscle connection.",
+                    "tier_reasons": "Provides a deep stretch with high tension, smooth resistance profile, easy to overload, safer to push to failure.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Find a machine that feels good at your gym for optimal results."
+                },
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "setup_notes": "Sit down to increase stability and ensure all tension is applied directly to the pecs.",
+                    "execution_notes": "Perform fly movement with cables, ensuring a big stretch on the pecs with high tension.",
+                    "tier_reasons": "Provides a big stretch with high tension, stable, smooth tension throughout the range of motion.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "This is currently the favorite chest isolation movement."
+                }
+            ],
+            "A-Tier": [
+                {
+                    "exercise_name": "Bench Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Bring the bar all the way down to your chest for high tension on the pecs.",
+                    "tier_reasons": "High tension, easy to overload, potential shoulder discomfort for some.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Barbell limits deep stretch compared to dumbbells.",
+                    "alternative_options": "Smith Machine Press offers similar benefits with more confidence to push to failure.",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Incline Bench Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform similar to flat bench but with an incline to emphasize upper pecs.",
+                    "tier_reasons": "Same benefits as flat bench with added upper pec emphasis.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "Upper pecs",
+                    "limitations": "none",
+                    "alternative_options": "Incline Smith Machine Press for similar benefits.",
+                    "scientific_insights": "Recent study found similar lower and mid pec growth as flat bench with better upper pec growth.",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Flat Dumbbell Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Allow dumbbells to move freely past the rib cage for a deeper stretch.",
+                    "tier_reasons": "Deeper stretch than barbell, great chest pump, potential overloading issues for advanced lifters.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "May max out dumbbell rack, awkward handling at high weights.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform similar to flat dumbbell press but with an incline.",
+                    "tier_reasons": "Same benefits as flat dumbbell press with added upper pec emphasis.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "Upper pecs",
+                    "limitations": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Dips",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform dips with a focus on a deep pec stretch. Use a weight belt for added resistance as strength increases.",
+                    "tier_reasons": "Massive stretch, high tension, multiple overload options, slight discomfort for some.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Some may experience shoulder discomfort.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Deficit Push-Ups",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform push-ups with hands elevated to allow a deeper stretch. Pause at the bottom for added challenge.",
+                    "tier_reasons": "Fixes stretch limitation of standard push-ups, challenging to overload.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Tricky to overload.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Cable Crossovers",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform standing fly movement with cables, ensuring a big stretch on the pecs.",
+                    "tier_reasons": "Big stretch, smooth tension, less stable due to standing position.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Less stable due to standing position.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Pec Deck Machine",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform fly movement on the machine, ensuring a big stretch on the pecs.",
+                    "tier_reasons": "Stable, big stretch, less freedom of movement compared to cables.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Locked movement path may not suit everyone.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Dumbbell Fly",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform fly movement with dumbbells, focusing on the stretch. Consider lengthened partials.",
+                    "tier_reasons": "Recent evidence supports stretch importance, less smooth than cables.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Zero tension at the top of the range.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Cable Press Around",
+                    "setup_notes": "none",
+                    "execution_notes": "Press the cable across your midline to fully contract the pecs.",
+                    "tier_reasons": "Fully contracts pecs, some find it awkward initially.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Awkward for some initially.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                }
+            ],
+            "B-Tier": [
+                {
+                    "exercise_name": "Decline Bench Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform similar to flat bench but with a decline to emphasize mid and lower pecs.",
+                    "tier_reasons": "Targets mid and lower pecs, less range of motion, less common need for lower pec emphasis.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "Mid and lower pecs",
+                    "limitations": "Less range of motion.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Decline Dumbbell Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform similar to flat dumbbell press but with a decline.",
+                    "tier_reasons": "Awkward setup, less common need for lower pec emphasis.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "Lower pecs",
+                    "limitations": "Awkward setup.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Banded Push-Ups",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform push-ups with a band for added tension, focusing on the top half of the movement.",
+                    "tier_reasons": "Adds tension to top half, still lacks stretch tension.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Tension not maximized at stretch.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                }
+            ],
+            "C-Tier": [
+                {
+                    "exercise_name": "Bodyweight Push-Ups",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform push-ups with body weight, ensuring full range of motion.",
+                    "tier_reasons": "Good for beginners, limited overload potential, floor limits stretch.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Limited overload potential, floor limits stretch.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Floor Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform press with limited range of motion due to floor contact.",
+                    "tier_reasons": "Good for triceps and lockout strength, limited chest stretch.",
+                    "targeted_muscles": [
+                        "Pectorals",
+                        "Triceps"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Limited range of motion.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                }
+            ],
+            "D-Tier": [
+                {
+                    "exercise_name": "Dumbbell Pullover",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform pullover movement with dumbbells, focusing on the stretch.",
+                    "tier_reasons": "Theoretical pec activation, poor mind-muscle connection for pecs.",
+                    "targeted_muscles": [
+                        "Pectorals",
+                        "Lats",
+                        "Triceps"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Poor mind-muscle connection for pecs.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Better as a lat exercise."
+                },
+                {
+                    "exercise_name": "Plyometric Push-Ups",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform explosive push-ups, focusing on power.",
+                    "tier_reasons": "Not great for tension on negative or stretch, better for explosive power.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Limited tension on negative or stretch.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                }
+            ],
+            "F-Tier": [
+                {
+                    "exercise_name": "Hex Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform press with dumbbells held together, focusing on triceps.",
+                    "tier_reasons": "No big stretch, triceps take over, poor pec activation.",
+                    "targeted_muscles": [
+                        "Triceps"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "No big stretch, poor pec activation.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Plate Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform press with plates held together, focusing on triceps.",
+                    "tier_reasons": "Even less overload potential than hex press, awkward.",
+                    "targeted_muscles": [
+                        "Triceps"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Awkward, poor pec activation.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Guillotine Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform bench press with bar lowered to neck, elbows flared.",
+                    "tier_reasons": "Potentially dangerous, risk of dropping bar on neck.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Potentially dangerous.",
+                    "alternative_options": "Dumbbell variation is safer.",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "One Arm Dumbbell Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform dumbbell press with one arm at a time.",
+                    "tier_reasons": "No advantage over regular dumbbell press, balance issues.",
+                    "targeted_muscles": [
+                        "Pectorals"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Balance issues.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Crossbody Standing Dumbbell Fly",
+                    "setup_notes": "none",
+                    "execution_notes": "Perform fly movement with dumbbells across the body.",
+                    "tier_reasons": "Zero tension when pecs are stretched, front delts take over.",
+                    "targeted_muscles": [
+                        "Pectorals",
+                        "Front Delts"
+                    ],
+                    "targeted_muscle_parts": "none",
+                    "limitations": "Zero tension when pecs are stretched.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                }
+            ]
+        }
+    },
+    "main_knowledge_summary": {
+        "muscle_group": [
+            "Pectorals (chest)",
+            "Triceps",
+            "Front Deltoids"
+        ],
+        "criterias": [
+            "Big Stretch with High Tension",
+            "The exercise must provide a deep stretch with significant tension on the muscle.",
+            "Feels Good",
+            "The exercise should not cause pain and should have a smooth resistance profile, providing a good pump and mind-muscle connection.",
+            "Simple Progression",
+            "The exercise should allow for easy progressive overload by adding weight or reps."
+        ],
+        "muscle_part_anatomy_function": [
+            "Pectorals",
+            "Responsible for movements of the shoulder joint, such as flexion, adduction, and internal rotation.",
+            "Triceps",
+            "Assist in elbow extension during pressing movements.",
+            "Front Deltoids",
+            "Involved in shoulder flexion and stabilization during pressing exercises."
+        ],
+        "form_details": "For exercises like the bench press, ensure the barbell is brought down to the chest for maximum tension. Incline variations emphasize the upper pecs, while decline variations target the mid and lower pecs. Dumbbell presses allow for a deeper stretch as they can move past the rib cage. Machine presses provide stability and a consistent range of motion, enhancing the mind-muscle connection. Dips should be performed with a focus on a deep stretch, and push-ups can be modified with bands or deficits for increased tension.",
+        "warmup": "Not specifically mentioned in the video.",
+        "research_insights": "A recent study found that the incline bench press caused similar lower and mid pec growth as the flat bench, with better upper pec growth. The importance of a deep stretch over contraction for muscle growth is highlighted, suggesting exercises that maximize stretch may be more beneficial.",
+        "optimization_notes": "To progress, focus on exercises that allow for easy overload, such as machine presses and dumbbell variations. For advanced lifters, consider using a weight belt for dips or increasing the range of motion in push-ups. Ensure exercises feel good and do not cause pain, adjusting form or exercise selection as needed. Consider incorporating a variety of angles and equipment to target different parts of the chest effectively."
+    }
+}

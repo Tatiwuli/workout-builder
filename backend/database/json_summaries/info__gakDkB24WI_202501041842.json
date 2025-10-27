@@ -1,0 +1,110 @@
+{
+    "playlist_id": null,
+    "category": "workout_session",
+    "video_id": "_gakDkB24WI",
+    "title": "Grow Your Glutes With These Science-based Exercises (no Hip Thrusts Required)",
+    "published_date": "2023-08-21T15:57:48Z",
+    "video_url": "https://www.youtube.com/watch?v=_gakDkB24WI",
+    "thumbnail_img": "https://i.ytimg.com/vi/_gakDkB24WI/hqdefault.jpg",
+    "exercises_summary": [
+        {
+            "warmup": {
+                "setup_notes": "none",
+                "execution_notes": "none",
+                "sets_reps": "none"
+            },
+            "exercises": [
+                {
+                    "exercise_name": "Smith Machine Front Foot Elevated Lunge",
+                    "setup_notes": "Position the front foot on an elevated platform. The back foot should be placed comfortably far back, standing on the toe for balance.",
+                    "execution_notes": "Put almost all weight on the front foot. Slowly control the descent, going slower than you think. Pause at the bottom, then come up. Do not switch legs immediately; rest before switching.",
+                    "exercise_warmup": "none",
+                    "targeted_muscles": [
+                        "Glutes",
+                        "Quads"
+                    ],
+                    "targeted_muscle_parts": "Primarily targets the glutes due to the emphasis on the front foot. Quads are also engaged.",
+                    "limitations": "May cause quad engagement if not executed with proper form.",
+                    "reps_sets": "Perform 15-17 reps per leg, ensuring slow and controlled movements.",
+                    "weights": "none",
+                    "progression": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Ensure to rest between switching legs to avoid systemic fatigue."
+                },
+                {
+                    "exercise_name": "Sumo Deficit Deadlift",
+                    "setup_notes": "Adopt a wider than shoulder-width stance with toes pointing outwards. Use a platform to create a deficit.",
+                    "execution_notes": "Keep the back flat and feel the glute stretch. Use a slow descent with a gentle pause at the bottom. Use Versa grips or straps if grip is an issue. Maintain straight arms.",
+                    "exercise_warmup": "none",
+                    "targeted_muscles": [
+                        "Glutes",
+                        "Hamstrings"
+                    ],
+                    "targeted_muscle_parts": "Emphasizes the glutes and hamstrings due to the wide stance and deficit.",
+                    "limitations": "Grip may be a limiting factor; use straps if necessary.",
+                    "reps_sets": "Perform multiple sets with a focus on slow, controlled reps.",
+                    "weights": "none",
+                    "progression": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Focus on maintaining tension in the glutes and hamstrings throughout the movement."
+                },
+                {
+                    "exercise_name": "Romanian Deadlift (RDL)",
+                    "setup_notes": "Start with the bar on the ground. Pick it up like a regular deadlift for the first rep.",
+                    "execution_notes": "Keep the chest up, push hips back, and keep knees back. Lower slowly and maintain tension on the hamstrings. Do not let the weight rest on the ground.",
+                    "exercise_warmup": "none",
+                    "targeted_muscles": [
+                        "Hamstrings",
+                        "Glutes"
+                    ],
+                    "targeted_muscle_parts": "Targets the hamstrings and glutes due to the hip hinge movement.",
+                    "limitations": "none",
+                    "reps_sets": "Perform multiple sets with slow, controlled reps, focusing on maintaining tension.",
+                    "weights": "Adjust weight if necessary to maintain form.",
+                    "progression": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Ensure to maintain proper form to avoid lower back strain."
+                },
+                {
+                    "exercise_name": "Squats (Fun RP Style)",
+                    "setup_notes": "Stand on a plate with toes slightly pointed out. Barbell on the back.",
+                    "execution_notes": "Keep chest up and knees forward. Pause at the bottom until instructed to come up. Perform as many reps as possible.",
+                    "exercise_warmup": "none",
+                    "targeted_muscles": [
+                        "Quads",
+                        "Glutes"
+                    ],
+                    "targeted_muscle_parts": "Primarily targets the quads with significant glute engagement.",
+                    "limitations": "none",
+                    "reps_sets": "Perform until failure, with assistance if necessary.",
+                    "weights": "none",
+                    "progression": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "Focus on maintaining form and depth throughout the set."
+                }
+            ]
+        }
+    ],
+    "main_knowledge_summary": {
+        "video_overview": "The video features a workout session focusing on glutes, hamstrings, and quads, led by Dr. Mike with IFBB bikini pro, Islada. The session includes exercises like Smith machine lunges, sumo deficit deadlifts, Romanian deadlifts, and squats, emphasizing proper form and hypertrophy techniques.",
+        "muscle_part_anatomy_function": [
+            {
+                "glutes": "Responsible for hip extension, abduction, and external rotation."
+            },
+            {
+                "hamstrings": "Involved in knee flexion and hip extension."
+            },
+            {
+                "quads": "Primary function is knee extension."
+            }
+        ],
+        "form_details": "For the Smith machine front foot elevated lunge, place most weight on the front foot, with the back foot for balance. Descend slowly, pause at the bottom, and rise. In sumo deficit deadlifts, use a wider than shoulder-width stance with toes pointed out, keeping the back flat and arms straight. For Romanian deadlifts, maintain a flat back, push hips back, and keep knees slightly bent. Squats require chest up, knees forward, and a pause at the bottom.",
+        "strategies": "Perform one leg at a time for lunges, resting 15-30 seconds between legs to manage systemic fatigue. Use Versa grips or straps for deadlifts if grip is an issue. Emphasize slow, controlled movements to maximize hypertrophy. For squats, perform as many reps as possible, then continue with bodyweight squats until failure.",
+        "research_insights": "The video emphasizes the importance of slow, controlled movements for hypertrophy, aligning with research that suggests time under tension is crucial for muscle growth. No specific studies are cited, but the approach is consistent with general hypertrophy principles.",
+        "optimization_notes": "To progress, focus on increasing the weight gradually while maintaining form. Incorporate pauses and slow descents to enhance muscle activation. Ensure adequate rest between sets to manage fatigue and allow for maximum effort in each set."
+    }
+}

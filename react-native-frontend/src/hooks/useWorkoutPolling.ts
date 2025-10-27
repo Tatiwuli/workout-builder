@@ -28,9 +28,7 @@ interface UseWorkoutPollingResult {
  * - workoutPlan: the generated WorkoutPlan object or null if not ready
  * - retry: function to reset state and restart polling (useful for transient errors)
  */
-export const useWorkoutPolling = (
-  sessionId: string
-): UseWorkoutPollingResult => {
+export const useWorkoutPolling = (sessionId: string):     UseWorkoutPollingResult => {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [workoutPlan, setWorkoutPlan] = useState<WorkoutPlan | null>(null)
@@ -67,11 +65,7 @@ export const useWorkoutPolling = (
         // Check if component was unmounted
         if (isCancelled) return
 
-        // Debug: Log the actual response structure
-        console.log(
-          "Raw polling response:",
-          JSON.stringify(progressData, null, 2)
-        )
+       
         // Normalize payload in case backend returns { success, data }
         const payload: any =
           progressData &&

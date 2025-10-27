@@ -2,6 +2,7 @@
 /database/json_summaries/*.json
 INTEGRATION_GUIDE.md
 CODEBASE_DOCUMENTATION.md
+llm_gemini.py
 
 #test file
 test.py

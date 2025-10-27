@@ -117,9 +117,12 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
   console.log("Using workout plan:", workoutPlan)
 
   const toggleExercise = (exerciseName: string) => {
+    // Add the exercise to set of expanded exercises
     const newExpanded = new Set(expandedExercises)
     if (newExpanded.has(exerciseName)) {
+      // untoggle
       newExpanded.delete(exerciseName)
+      //toggle
     } else {
       newExpanded.add(exerciseName)
     }

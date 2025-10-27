@@ -174,23 +174,6 @@ class ApiService {
     }
   }
 
-  async getMuscleGroups(): Promise<string[]> {
-    const response = await this.request<any>("/muscle_groups")
-    if (response.success) {
-      return response.data
-    } else {
-      throw new Error(response.error || "Failed to fetch muscle groups")
-    }
-  }
-
-  async getQuestionnaireOptions(): Promise<Record<string, string[]>> {
-    const response = await this.request<any>("/questionnaire_options")
-    if (response.success) {
-      return response.data
-    } else {
-      throw new Error(response.error || "Failed to fetch questionnaire options")
-    }
-  }
 
   async getGenerationProgress(sessionId: string): Promise<ProgressResponse> {
     const response = await this.request<any>(
@@ -218,6 +201,7 @@ class ApiService {
     }
   }
 
+  // check connection
   async testConnection(): Promise<boolean> {
     try {
       const response = await this.request<any>("/health")
