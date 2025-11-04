@@ -1,8 +1,4 @@
-// Export all types
 export * from "./types"
-
-// Export API service
-export { apiService, default as ApiService } from "./services/api"
 
 // Export components
 export { default as HomeScreen } from "./screens/HomeScreen"

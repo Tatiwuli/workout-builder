@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { apiService } from "../services/api"
+import { getGenerationProgress, getFinalPlan } from "../api/endpoints/workouts"
 import { WorkoutPlan } from "../types"
 
 interface ProgressData {
@@ -28,7 +28,9 @@ interface UseWorkoutPollingResult {
  * - workoutPlan: the generated WorkoutPlan object or null if not ready
  * - retry: function to reset state and restart polling (useful for transient errors)
  */
-export const useWorkoutPolling = (sessionId: string):     UseWorkoutPollingResult => {
+export const useWorkoutPolling = (
+  sessionId: string
+): UseWorkoutPollingResult => {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [workoutPlan, setWorkoutPlan] = useState<WorkoutPlan | null>(null)
@@ -59,20 +61,19 @@ export const useWorkoutPolling = (sessionId: string):     UseWorkoutPollingResul
       try {
         console.log(`Polling for session: ${sessionId}`)
 
-        const progressData = await apiService.getGenerationProgress(sessionId)
+        const progressData = await getGenerationProgress(sessionId)
         console.log("progressData received:", progressData)
 
         // Check if component was unmounted
         if (isCancelled) return
 
-       
         // Normalize payload in case backend returns { success, data }
         const payload: any =
           progressData &&
           (typeof (progressData as any).status !== "undefined" ||
             typeof (progressData as any).progress !== "undefined")
             ? progressData
-            : (progressData as any)?.data ?? progressData
+            : ((progressData as any)?.data ?? progressData)
 
         console.log("Normalized status:", payload?.status)
         console.log("Normalized progress:", payload?.progress)
@@ -108,7 +109,7 @@ export const useWorkoutPolling = (sessionId: string):     UseWorkoutPollingResul
             "Status completed but final_plan missing. Fetching via getFinalPlan..."
           )
           try {
-            const finalPlan = await apiService.getFinalPlan(sessionId)
+            const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
               setWorkoutPlan(finalPlan)
               setIsLoading(false)
@@ -139,7 +140,7 @@ export const useWorkoutPolling = (sessionId: string):     UseWorkoutPollingResul
             "Progress is 100 but status not marked completed. Attempting to fetch final plan..."
           )
           try {
-            const finalPlan = await apiService.getFinalPlan(sessionId)
+            const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
               setWorkoutPlan(finalPlan)
               setIsLoading(false)
