@@ -3,6 +3,8 @@
 # dependencies
 node_modules/
 
+react-native-frontend/API_CONFIGURATION.md
+
 count_lines.py
 # Expo
 .expo/

@@ -26,9 +26,9 @@ API_TIMEOUT=60000       # Request timeout (milliseconds)
 
 ```bash
 EXPO_PUBLIC_API_URL=http://localhost:8000
-API_RETRY_COUNT= 5    
-API_RETRY_DELAY=5000    
-API_TIMEOUT=60000   
+API_RETRY_COUNT= 5
+API_RETRY_DELAY=5000
+API_TIMEOUT=60000
 ```
 
 #### Production (Vercel + Render)
@@ -48,10 +48,10 @@ API_TIMEOUT=60000
 You can also configure the API service programmatically:
 
 ```typescript
-import { apiService } from "./src/services/api"
+import { apiClient } from "./src/services/api"
 
 // Update configuration at runtime
-apiService.updateConfig({
+apiClient.updateConfig({
   baseUrl: "https://custom-api.com",
   retryCount: 3,
   retryDelay: 1000,
@@ -59,7 +59,7 @@ apiService.updateConfig({
 })
 
 // Get current configuration
-const config = apiService.getConfig()
+const config = apiClient.getConfig()
 console.log("Current API config:", config)
 ```
 
@@ -70,7 +70,7 @@ The API now follows the standard async/await pattern with exceptions:
 ### Before (Result Pattern)
 
 ```typescript
-const result = await apiService.generateWorkoutPlan(data)
+const result = await apiClient.generateWorkoutPlan(data)
 if (result.success) {
   // Use result.data
 } else {
@@ -82,7 +82,7 @@ if (result.success) {
 
 ```typescript
 try {
-  const workoutPlan = await apiService.generateWorkoutPlan(data)
+  const workoutPlan = await apiClient.generateWorkoutPlan(data)
   // Use workoutPlan directly
 } catch (error) {
   // Handle error
@@ -95,7 +95,7 @@ try {
 You can verify connectivity using the built-in health check:
 
 ```typescript
-const ok = await apiService.testConnection() // calls `${baseUrl}/health`
+const ok = await apiClient.testConnection() // calls `${baseUrl}/health`
 ```
 
 ## Benefits

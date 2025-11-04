@@ -3,7 +3,7 @@
 INTEGRATION_GUIDE.md
 CODEBASE_DOCUMENTATION.md
 llm_gemini.py
-
+react-native-frontend/API_CONFIGURATION.md
 #test file
 test.py
 secrets.toml

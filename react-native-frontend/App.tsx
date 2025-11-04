@@ -3,8 +3,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { StatusBar } from "expo-status-bar"
 import { SafeAreaProvider } from "react-native-safe-area-context"
-import { API_BASE } from "./src/env"
-import { apiService } from "./src/services/api"
+import { testConnection } from "./src/api/endpoints/health"
 
 import HomeScreen from "./src/screens/HomeScreen"
 import QuestionnaireScreen from "./src/screens/QuestionnaireScreen"
@@ -25,10 +24,9 @@ export default function App() {
   useEffect(() => {
     const pingApi = async () => {
       console.log("🏋️‍♂️ Workout Builder starting up...")
-     
+
       try {
-        // Use the API service with retry logic for the startup ping
-        const isConnected = await apiService.testConnection()
+        const isConnected = await testConnection()
         console.log(
           "✅ API health check successful:",
           isConnected ? "Connected" : "Failed"
@@ -42,8 +40,6 @@ export default function App() {
 
     // Execute the ping immediately when app starts
     pingApi()
-
-   
   }, [])
 
   return (
