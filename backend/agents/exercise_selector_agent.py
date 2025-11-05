@@ -1,5 +1,5 @@
-from backend.agents.base_agent import BaseAgent
-from backend.agents.agents_prompts.exercise_selector_prompts import system_prompt, assistant_prompt, user_prompt
+from .base_agent import BaseAgent
+from .agents_prompts.exercise_selector_prompts import system_prompt, assistant_prompt, user_prompt
 
 
 class ExerciseSelectorAgent(BaseAgent):

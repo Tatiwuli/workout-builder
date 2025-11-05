@@ -7,20 +7,20 @@ from datetime import datetime
 from google import genai
 from google.genai import types
 
-from backend.database.mongodb_handler import WorkoutBuilderDatabaseHandler
-from backend.app.services.user_response_processor import process_user_responses
+from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from ..app.services.user_response_processor import process_user_responses
 
-from backend.agents.agents_prompts.exercise_selector_prompts import (
+from ..agents.agents_prompts.exercise_selector_prompts import (
     system_prompt as ex_sys,
     assistant_prompt as ex_ast,
     user_prompt as ex_usr,
 )
-from backend.agents.agents_prompts.workout_planner_prompts import (
+from ..agents.agents_prompts.workout_planner_prompts import (
     system_prompt as wp_sys,
     assistant_prompt as wp_ast,
     user_prompt as wp_usr,
 )
-from backend.agents.agents_prompts.personal_trainer_prompts import (
+from ..agents.agents_prompts.personal_trainer_prompts import (
     system_prompt as pt_sys,
     assistant_prompt as pt_ast,
     user_prompt as pt_usr,

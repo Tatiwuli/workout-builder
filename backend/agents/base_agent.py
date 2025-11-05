@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from backend.llms.llm import OpenAILLM
-from backend.database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from ..llms.llm import OpenAILLM
+from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
 import streamlit as st
