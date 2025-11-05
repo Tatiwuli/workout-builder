@@ -1,7 +1,7 @@
-from data_preparation.save_video_data import save_video_data, save_to_json
-from data_preparation.summarize_transcripts import summarize_transcript
-from data_preparation.fetch_videos import fetch_videos_from_playlist, fetch_video_metadata
-from data_preparation.fetch_trascripts import fetch_transcript
+from backend.data_preparation.save_video_data import save_video_data, save_to_json
+from backend.data_preparation.summarize_transcripts import summarize_transcript
+from backend.data_preparation.fetch_videos import fetch_videos_from_playlist, fetch_video_metadata
+from backend.data_preparation.fetch_trascripts import fetch_transcript
 
 
 import sys

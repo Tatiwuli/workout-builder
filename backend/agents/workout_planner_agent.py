@@ -1,5 +1,5 @@
-from agents.base_agent import BaseAgent
-from agents.agents_prompts.workout_planner_prompts import system_prompt, assistant_prompt, user_prompt
+from backend.agents.base_agent import BaseAgent
+from backend.agents.agents_prompts.workout_planner_prompts import system_prompt, assistant_prompt, user_prompt
 
 
 class WorkoutPlannerAgent(BaseAgent):

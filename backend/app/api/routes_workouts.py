@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 from typing import Any, Dict
 
-from ..schemas.workouts import UserResponses
-from ..services.workout_generation import start_generation, get_progress
+from backend.app.schemas.workouts import UserResponses
+from backend.app.services.workout_generation import start_generation, get_progress
 
 router = APIRouter()
 

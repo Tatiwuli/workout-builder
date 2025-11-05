@@ -5,10 +5,10 @@ from youtube_transcript_api import (
     NoTranscriptFound,
 )
 
-from llms.llm import OpenAILLM
+from backend.llms.llm import OpenAILLM
 from dotenv import load_dotenv
 import os
-from data_preparation.prompts import system_prompt, user_prompts_dict
+from backend.data_preparation.prompts import system_prompt, user_prompts_dict
 
 
 # init LLM model (OpenAI)

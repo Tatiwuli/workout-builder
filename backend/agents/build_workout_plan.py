@@ -1,6 +1,6 @@
-from agents.exercise_selector_agent import ExerciseSelectorAgent
-from agents.workout_planner_agent import WorkoutPlannerAgent
-from agents.personal_trainer_agent import PersonalTrainerAgent
+from backend.agents.exercise_selector_agent import ExerciseSelectorAgent
+from backend.agents.workout_planner_agent import WorkoutPlannerAgent
+from backend.agents.personal_trainer_agent import PersonalTrainerAgent
 
 
 class WorkoutBuilderWorkflow:
