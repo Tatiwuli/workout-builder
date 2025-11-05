@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { apiService } from "../services/api"
+import { getGenerationProgress, getFinalPlan } from "../api/endpoints/workouts"
 import { WorkoutPlan } from "../types"
 
 interface ProgressData {
@@ -61,24 +61,19 @@ export const useWorkoutPolling = (
       try {
         console.log(`Polling for session: ${sessionId}`)
 
-        const progressData = await apiService.getGenerationProgress(sessionId)
+        const progressData = await getGenerationProgress(sessionId)
         console.log("progressData received:", progressData)
 
         // Check if component was unmounted
         if (isCancelled) return
 
-        // Debug: Log the actual response structure
-        console.log(
-          "Raw polling response:",
-          JSON.stringify(progressData, null, 2)
-        )
         // Normalize payload in case backend returns { success, data }
         const payload: any =
           progressData &&
           (typeof (progressData as any).status !== "undefined" ||
             typeof (progressData as any).progress !== "undefined")
             ? progressData
-            : (progressData as any)?.data ?? progressData
+            : ((progressData as any)?.data ?? progressData)
 
         console.log("Normalized status:", payload?.status)
         console.log("Normalized progress:", payload?.progress)
@@ -114,7 +109,7 @@ export const useWorkoutPolling = (
             "Status completed but final_plan missing. Fetching via getFinalPlan..."
           )
           try {
-            const finalPlan = await apiService.getFinalPlan(sessionId)
+            const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
               setWorkoutPlan(finalPlan)
               setIsLoading(false)
@@ -145,7 +140,7 @@ export const useWorkoutPolling = (
             "Progress is 100 but status not marked completed. Attempting to fetch final plan..."
           )
           try {
-            const finalPlan = await apiService.getFinalPlan(sessionId)
+            const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
               setWorkoutPlan(finalPlan)
               setIsLoading(false)

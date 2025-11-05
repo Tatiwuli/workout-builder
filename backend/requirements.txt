@@ -1,0 +1,19 @@
+
+
+
+# Google / YouTube
+google-api-python-client
+youtube_transcript_api
+google-generativeai==0.3.2
+google-genai>=0.2.0
+openai>=1.0.0
+
+# Backend
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.8.2
+python-multipart==0.0.9
+pymongo
+
+# Utils
+python-dotenv

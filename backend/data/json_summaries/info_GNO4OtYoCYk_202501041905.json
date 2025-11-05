@@ -1,0 +1,330 @@
+{
+    "playlist_id": null,
+    "category": "tier_list",
+    "video_id": "GNO4OtYoCYk",
+    "title": "The Best And Worst Biceps Exercises",
+    "published_date": "2024-10-19T14:29:04Z",
+    "video_url": "https://www.youtube.com/watch?v=GNO4OtYoCYk",
+    "thumbnail_img": "https://i.ytimg.com/vi/GNO4OtYoCYk/hqdefault.jpg",
+    "exercises_summary": [
+        {
+            "exercise_rankings": {
+                "S-Tier": [
+                    {
+                        "exercise_name": "Preacher Curl",
+                        "setup_notes": "Use a preacher bench to angle your upper arm.",
+                        "execution_notes": "Ensure full range of motion by going all the way down and maintaining high tension in the stretched position.",
+                        "tier_reasons": "High tension in stretched position, locks elbows to prevent cheating, significant distal biceps growth.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "Distal biceps, due to high tension in stretched position.",
+                        "limitations": "None",
+                        "alternative_options": "Compared to incline curls, preacher curls provide more distal biceps growth.",
+                        "scientific_insights": "Study shows preacher curls cause more distal biceps growth compared to incline curls.",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Machine Preacher Curl",
+                        "setup_notes": "Use a preacher curl machine.",
+                        "execution_notes": "Focus on the bottom half of the range to emphasize the stretch.",
+                        "tier_reasons": "Locked in position, high tension in stretched position.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "Performed weekly."
+                    },
+                    {
+                        "exercise_name": "Face Away Cable Curl",
+                        "setup_notes": "Set up the cable at hand height, face away, and take one or two steps forward.",
+                        "execution_notes": "Curl with both arms simultaneously.",
+                        "tier_reasons": "Maximum stretch and tension on biceps, even tension throughout range.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "Long head, due to high stretch and tension.",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "Recommended for biceps peak development."
+                    },
+                    {
+                        "exercise_name": "Hammer Grip Preacher Curl",
+                        "setup_notes": "Use a preacher bench with a hammer grip.",
+                        "execution_notes": "Focus on maintaining tension throughout the range.",
+                        "tier_reasons": "Improved resistance profile, targets brachialis effectively.",
+                        "targeted_muscles": [
+                            "Brachialis",
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "Brachialis, due to hammer grip.",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    }
+                ],
+                "A-Tier": [
+                    {
+                        "exercise_name": "Easy Bar Curl",
+                        "setup_notes": "Use the outer part of the Easy Bar for a shoulder-width grip.",
+                        "execution_notes": "Drive through pinkies to maintain biceps activation.",
+                        "tier_reasons": "Convenience, simplicity, good for overload.",
+                        "targeted_muscles": [
+                            "Biceps",
+                            "Brachialis",
+                            "Brachioradialis"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Takes biceps out of full supination.",
+                        "alternative_options": "Compared to barbell curls, easier on wrists.",
+                        "scientific_insights": "None",
+                        "additional_notes": "Preferred heavy free weight movement."
+                    },
+                    {
+                        "exercise_name": "Standing Dumbbell Curl",
+                        "setup_notes": "None",
+                        "execution_notes": "Perform curls with both arms simultaneously.",
+                        "tier_reasons": "Convenient, helps fix bicep asymmetries.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Zero tension in full stretch.",
+                        "alternative_options": "Alternating curls less optimal due to rest between reps.",
+                        "scientific_insights": "Goto study suggests long pauses without tension may hinder growth.",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Incline Curl",
+                        "setup_notes": "Use an incline bench.",
+                        "execution_notes": "Focus on full range of motion.",
+                        "tier_reasons": "Solid lengthened biased movement, easy setup.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Less distal biceps growth compared to preacher curls.",
+                        "alternative_options": "Compared to preacher curls, less effective for distal growth.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Lying Dumbbell Curl",
+                        "setup_notes": "Lie down on a bench.",
+                        "execution_notes": "Focus on the stretch near the top of the bicep.",
+                        "tier_reasons": "High stretch, good tension in stretched position.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "May not be suitable for those with shoulder issues.",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Inverse Zottman Curl",
+                        "setup_notes": "None",
+                        "execution_notes": "Perform a hammer curl on the positive and a supinated curl on the negative.",
+                        "tier_reasons": "Combines benefits of hammer and supinated curls, overloads biceps on negative.",
+                        "targeted_muscles": [
+                            "Biceps",
+                            "Brachialis"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Strict Curl",
+                        "setup_notes": "Brace against a wall with glutes, upper back, and head.",
+                        "execution_notes": "Maintain strict form throughout.",
+                        "tier_reasons": "Directs all tension to biceps, good for progression.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "Compared to cheat curls, more tension directed to biceps.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Hammer Curl",
+                        "setup_notes": "None",
+                        "execution_notes": "Use a neutral grip with thumbs up.",
+                        "tier_reasons": "Targets brachialis, enhances bicep peak appearance.",
+                        "targeted_muscles": [
+                            "Brachialis",
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "Brachialis, due to neutral grip.",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    }
+                ],
+                "B-Tier": [
+                    {
+                        "exercise_name": "Barbell Curl",
+                        "setup_notes": "Use a straight barbell.",
+                        "execution_notes": "Focus on maintaining tension throughout the range.",
+                        "tier_reasons": "Good for overload, accessible.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Strain on wrists, tension not optimal in stretched position.",
+                        "alternative_options": "Compared to easy bar curls, more wrist strain.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Chin-ups",
+                        "setup_notes": "None",
+                        "execution_notes": "Perform with a supinated grip.",
+                        "tier_reasons": "Accessible, good for beginners.",
+                        "targeted_muscles": [
+                            "Biceps",
+                            "Back"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Biceps not the limiting factor due to back involvement.",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Flat Bench Curl",
+                        "setup_notes": "Use a flat bench.",
+                        "execution_notes": "Focus on high rep burnout with stretch emphasis.",
+                        "tier_reasons": "High tension in stretched position, good for high rep burnout.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "Limited to light weights and high reps.",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    }
+                ],
+                "C-Tier": [
+                    {
+                        "exercise_name": "Scott Curl",
+                        "setup_notes": "Use a preacher bench with a vertical arm.",
+                        "execution_notes": "Focus on maintaining tension throughout the range.",
+                        "tier_reasons": "Removes tension in stretched position.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "Compared to preacher curls, less effective due to vertical arm position.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Drag Curl",
+                        "setup_notes": "None",
+                        "execution_notes": "Move arms back as you curl.",
+                        "tier_reasons": "Potential for greater stretch, but total muscle length doesn't change much.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "Spider Curl",
+                        "setup_notes": "Use a bench to support arms.",
+                        "execution_notes": "Focus on maintaining tension throughout the range.",
+                        "tier_reasons": "Shortened position, dumbbells may hit bench.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "None",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    },
+                    {
+                        "exercise_name": "21s (Traditional)",
+                        "setup_notes": "None",
+                        "execution_notes": "Perform 7 reps in bottom half, 7 in top half, 7 full ROM.",
+                        "tier_reasons": "Fun, but suboptimal order.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "Modified 21s with different order.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    }
+                ],
+                "F-Tier": [
+                    {
+                        "exercise_name": "Waiter Curl",
+                        "setup_notes": "None",
+                        "execution_notes": "Hold a plate with both hands.",
+                        "tier_reasons": "Awkward, limited overload, wrist strain.",
+                        "targeted_muscles": [
+                            "Biceps"
+                        ],
+                        "targeted_muscle_parts": "None",
+                        "limitations": "None",
+                        "alternative_options": "Use dumbbells instead.",
+                        "scientific_insights": "None",
+                        "additional_notes": "None"
+                    }
+                ]
+            }
+        }
+    ],
+    "main_knowledge_summary": {
+        "muscle_group": [
+            "Biceps",
+            "Brachialis",
+            "Brachioradialis"
+        ],
+        "criterias": [
+            {
+                "high_tension_in_stretched_position": "Exercises should provide significant tension when the muscle is stretched, which is crucial for muscle growth."
+            },
+            {
+                "comfort_and_smooth_resistance": "Exercises should not cause pain, particularly in the elbows, and should have a smooth resistance profile."
+            },
+            {
+                "simple_progression": "Exercises should allow for easy progression in terms of adding weight or reps over time."
+            }
+        ],
+        "muscle_part_anatomy_function": [
+            {
+                "biceps_short_head": "Located on the inside of the arm, responsible for elbow flexion and supination."
+            },
+            {
+                "biceps_long_head": "Located on the back of the arm, contributes to the biceps peak, involved in elbow flexion and supination."
+            },
+            {
+                "brachialis": "Sits underneath the biceps, contributes to elbow flexion, and can enhance the biceps peak by pushing the biceps up."
+            }
+        ],
+        "form_details": "Different grips and angles affect muscle activation. For example, a fully supinated grip targets the biceps more, while a neutral grip shifts tension to the brachialis. Preacher curls lock the elbows, preventing cheating, and enhance tension in the stretched position.",
+        "training_keys": "Focus on exercises that provide high tension in the stretched position, like preacher curls and face-away cable curls. Use a variety of grips to target different parts of the biceps and brachialis. Ensure progression by gradually increasing weight or reps.",
+        "research_insights": "Recent studies suggest that high tension in a stretched position is more important than the total stretch for muscle growth. Preacher curls have been shown to cause more distal biceps growth due to high tension in a stretched position. Incline curls, while providing a big stretch, offer less tension and are less effective.",
+        "optimization_notes": "To optimize biceps growth, include exercises like face-away cable curls and preacher curls in your routine. Consider using a mix of strict and cheat curls to maximize load and control during the negative phase. Hammer curls can enhance the biceps peak by targeting the brachialis."
+    }
+}

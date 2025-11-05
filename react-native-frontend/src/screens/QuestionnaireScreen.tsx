@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { View, StyleSheet, ScrollView, Alert, Platform } from "react-native"
-import { apiService } from "../services/api"
+import { generateWorkoutPlan } from "../api/endpoints/workouts"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RootStackParamList } from "../../App"
 import {
@@ -28,7 +28,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
   const [questionIndex, setQuestionIndex] = useState(0)
   const [selectedMuscles, setSelectedMuscles] = useState<string[]>([])
   const [workflowStage, setWorkflowStage] = useState<
-    "muscle_selection" | "questionnaire" // different rendering 
+    "muscle_selection" | "questionnaire" // different rendering
   >("muscle_selection")
   const [isGeneratingPlan, setIsGeneratingPlan] = useState(false)
 
@@ -94,6 +94,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
 
   const handleQuestionAnswer = (answer: string) => {
     const currentQuestion = QUESTIONS[questionIndex]
+
     const newResponses = { ...responses, [currentQuestion]: answer }
 
     if (questionIndex < QUESTIONS.length - 1) {
@@ -134,7 +135,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
 
     try {
       const response: WorkoutGenerationResponse =
-        await apiService.generateWorkoutPlan(apiData)
+        await generateWorkoutPlan(apiData)
       console.log("Backend triggered:", response)
 
       // Check if we got a session_id for polling

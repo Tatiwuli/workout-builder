@@ -167,7 +167,7 @@ const WorkoutGenerationScreen: React.FC<Props> = ({ navigation, route }) => {
           </Text>
         </View>
 
-        {/* Back button for impatient users */}
+        {/* Back to home button  */}
         <TouchableOpacity
           style={styles.backButton}
           onPress={handleGoHome}
