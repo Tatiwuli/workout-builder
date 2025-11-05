@@ -4,7 +4,7 @@ import logging
 import os
 from typing import Any, Dict
 
-from backend.llms.gemini_connector import GeminiWorkflow
+from ..llms.gemini_connector import GeminiWorkflow
 
 
 logger = logging.getLogger(__name__)

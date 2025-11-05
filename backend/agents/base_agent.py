@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
-from ..llms.llm import OpenAILLM
-from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from backend.llms.llm import OpenAILLM
+from backend.database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
-import streamlit as st
 from dotenv import load_dotenv
 import json
 
@@ -13,14 +12,14 @@ class BaseAgent(ABC):
 
         load_dotenv()
 
-        self.api_key = os.getenv(
-            "OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+        self.api_key = os.getenv("OPENAI_API_KEY")
+    
         if not self.api_key:
             raise ValueError(
                 "OPENAI_API_KEY not found in environment or passed explicitly.")
 
-        self.mongo_uri = os.getenv(
-            "MONGODB_URI") or st.secrets.get("MONGODB_URI")
+        self.mongo_uri = os.getenv("MONGODB_URI")
+       
         if not self.mongo_uri:
             raise ValueError(
                 "MONGODB_URI not found in environment or passed explicitly.")

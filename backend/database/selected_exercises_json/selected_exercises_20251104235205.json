@@ -1,0 +1,115 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Assisted Chin-Up (Underhand Grip) or Negative Chin-Up",
+            "setup": "Find a pull-up bar or assisted pull-up machine. For assisted chin-ups, set the assistance (machine or resistance band) so you can complete the required reps with controlled form. For negatives (if assistance not available), step or jump to the top chin-up position with chin above the bar.",
+            "execution": "Grip the bar with an underhand (supinated) grip, hands roughly shoulder-width. From a dead hang, retract the scapula and pull the chest toward the bar until the chin clears the bar. Control the descent for 3\u20135 seconds (for negatives). For assisted variants, use the assistance so you can perform concentric and eccentric phases with control. Breathe out on the pull, inhale on the descent.",
+            "media_url": "https://www.youtube.com/watch?v=brhRXlOhsAM",
+            "alternative_equipment": "Resistance band (looped under the knees or feet to provide assistance)",
+            "tier_reasons": "Tier 1 for beginners: compound vertical pulling pattern that recruits biceps strongly while also training scapular and elbow control. Easier to scale (assistance or negatives) to match beginner strength and develop movement patterning.",
+            "targeted_muscles": [
+                "biceps brachii",
+                "brachialis",
+                "brachioradialis",
+                "latissimus dorsi",
+                "teres major"
+            ],
+            "targeted_muscle_parts": "Emphasizes the biceps brachii (both long and short heads) with strong involvement of the brachialis and brachioradialis; also loads the lats and scapular retractors.",
+            "limitations": "Requires a bar or an assisted pull-up station OR a sturdy anchor point for bands. Pure concentric chin-ups may be too difficult for true beginners without assistance. Shoulder mobility or upper-back weakness can limit clean technique.",
+            "scientific_insights": "Underhand/ supinated grip on vertical pulling movements increases biceps brachii involvement compared with pronated grips because supination places the biceps in a more mechanically advantageous position for elbow flexion. Eccentric (negative) emphasis increases time under tension and can develop strength when concentric capability is limited.",
+            "additional_notes": "For beginners, start with assistance or slow negatives (3\u20135s down). Keep scapula retracted and avoid kipping/ swinging. Progress by reducing assistance or increasing negative length and eventually performing full unassisted chin-ups.",
+            "alternative_exercise": "Inverted Row (Underhand Grip)",
+            "alternative_exercise_media_url": "https://www.youtube.com/watch?v=FpP2a3qGa6k",
+            "selection_reason": "Selected because it is a compound, beginner-friendly way to train the biceps within a mid-length (50 min) session. As a vertical pulling movement with a supinated grip, it places the biceps in a primary role while also training large posterior chain muscles\u2014maximizing training efficiency per the beginner guidelines. It is highly scalable: assisted machine, resistance-band assistance, or negative-only reps allow safe progression for a beginner. Including a compound vertical pull early in the session builds foundational pulling strength, improves scapular control, and gives substantial stimulus to both heads of the biceps as well as supporting musculature, which is important for balanced development and injury prevention."
+        },
+        {
+            "exercise_name": "Inverted Row (Underhand/Close Grip)",
+            "setup": "Set a bar in a squat rack or use a Smith machine/TRX/TRX-like low bar about waist height. Lie underneath the bar with feet on the floor, grip the bar with a supinated (underhand) or close neutral grip, body straight from head to heels.",
+            "execution": "Start with arms extended and the body in a straight plank. Retract the scapula, then pull the chest toward the bar by flexing the elbows until the sternum touches or approaches the bar. Lower with control to full arm extension. Keep the core tight and the body rigid throughout. To progress, raise the feet on a box or perform with a lower bar angle.",
+            "media_url": "https://www.youtube.com/watch?v=FpP2a3qGa6k",
+            "alternative_equipment": "TRX or suspension trainer",
+            "tier_reasons": "Tier 1\u20132 for beginners: a horizontal pulling compound that is less technical and easier to scale than bent-over rows; strong biceps involvement when using an underhand/close grip. Good for building pulling capacity and elbow flexion strength with low risk.",
+            "targeted_muscles": [
+                "biceps brachii",
+                "brachialis",
+                "posterior deltoid",
+                "rhomboids",
+                "middle trapezius"
+            ],
+            "targeted_muscle_parts": "Targets overall biceps brachii (both long and short heads) with meaningful recruitment of the brachialis; primary emphasis on elbow flexion and scapular retraction.",
+            "limitations": "Requires a low bar, rack, TRX, or similar setup. Bodyweight fixed loading may be limiting for stronger trainees; easier to regress/progress by changing feet elevation but less precise load increments than weights.",
+            "scientific_insights": "Horizontal pulling at a supinated or close grip increases elbow flexor recruitment compared with pronated grips. For beginners, bodyweight horizontal pulls improve motor control and muscular endurance, laying groundwork for weighted pulling later.",
+            "additional_notes": "Adjust torso angle to manage intensity: more horizontal = harder. Maintain full-body tension to keep the load on the targeted pulling muscles rather than the hips/legs.",
+            "alternative_exercise": "Dumbbell Biceps Curl (Standing)",
+            "alternative_exercise_media_url": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+            "selection_reason": "Chosen as the second compound-style exercise that targets biceps while training scapular and posterior chain control. For a beginner, inverted rows provide a safer, lower-skill alternative to bent-over barbell rows while still loading elbow flexion substantially when using an underhand/close grip. It complements the vertical pulling (chin-up) by varying the pulling plane and reinforces scapular retraction and core rigidity\u2014important for balanced pulling development and shoulder health."
+        },
+        {
+            "exercise_name": "Standing Dumbbell Biceps Curl (Supinated)",
+            "setup": "Stand tall with a dumbbell in each hand, arms fully extended, palms facing forward (supinated). Feet about hip-width apart, core braced. Use a weight that allows controlled technique.",
+            "execution": "Keep the elbows close to the torso and stable; curl the dumbbells by flexing at the elbow until the dumbbells are at shoulder level. Squeeze the biceps at the top for 0.5\u20131s, then lower with a controlled eccentric (~2\u20133s) back to full extension. Avoid excessive shoulder movement or swinging. Breathe out on the ascent, inhale on the descent.",
+            "media_url": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+            "alternative_equipment": "EZ-bar or straight barbell (for both-arm curl alternative)",
+            "tier_reasons": "Tier 2 isolation: classic, low-skill isolation that directly targets elbow flexion; excellent for beginners to learn elbow flexor mechanics with easy load progression and low technical demand. Allows focused hypertrophy work after compound movements.",
+            "targeted_muscles": [
+                "biceps brachii",
+                "brachialis",
+                "brachioradialis"
+            ],
+            "targeted_muscle_parts": "Primarily targets the biceps brachii (both heads), with secondary emphasis on brachialis and brachioradialis; supinated grip emphasizes the long head slightly more than pronated variants.",
+            "limitations": "Isolation movement \u2014 less systemic work than compounds. Risk of cheating (body swing) if load is too heavy. May stress the wrist/elbow if used with poor form or excessive weight.",
+            "scientific_insights": "Curling with a supinated grip places the biceps in a more mechanically advantageous position for elbow flexion and supination, increasing biceps activation. Controlled eccentrics are important for hypertrophy and tendon health; moderate loads (60\u201375% 1RM) with good tempo are effective for beginners.",
+            "additional_notes": "Perform after the compound pulling movements to prioritize neural and strength demands. Focus on slow eccentrics and strict elbows-in form. If wrist discomfort occurs, switch to a neutral grip hammer curl.",
+            "alternative_exercise": "Assisted Chin-Up (Underhand Grip) or Negative Chin-Up",
+            "alternative_exercise_media_url": "https://www.youtube.com/watch?v=brhRXlOhsAM",
+            "selection_reason": "Included as the dedicated isolation movement to give direct biceps stimulus after compound pulls. For a beginner, standing dumbbell curls are easy to learn, allow precise load adjustments, and let the trainee emphasize tempo and mind-muscle connection\u2014important early for hypertrophy and technique. Using curls after compound pulls follows the beginner medium-time guidance to combine compound lifts with targeted isolation exercise."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 5.5,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles (Forward and Backward)",
+                "setup": "Stand tall with feet hip-width apart, arms extended to the sides at shoulder height.",
+                "execution": "Perform controlled small-to-medium circles with both arms forward for 30 seconds then backward for 30 seconds. Progressively increase circle size if comfortable.",
+                "sets_reps": "1 set",
+                "duration": "60s"
+            },
+            {
+                "exercise_name": "Dynamic Arm Swings (Cross-Body and Overhead)",
+                "setup": "Stand tall, feet hip-width apart.",
+                "execution": "Swing one arm across the chest while the other swings out and overhead in alternating fashion. Move in a controlled, rhythmic manner to mobilize shoulders and chest.",
+                "sets_reps": "1 set",
+                "duration": "60s"
+            },
+            {
+                "exercise_name": "Wall Slides",
+                "setup": "Stand facing a wall or with back against a wall; press forearms and palms to the wall if space allows.",
+                "execution": "Keeping contact of forearms and wrists (or as much as possible) with the wall, slide arms up overhead and back down while maintaining scapular contact. Perform smoothly to warm up scapular upward rotation and thoracic mobility.",
+                "sets_reps": "1 set",
+                "duration": "60s"
+            },
+            {
+                "exercise_name": "Prone Y-T-W-L Scapular Activations",
+                "setup": "Lie face down on the floor or an exercise mat with arms extended.",
+                "execution": "Lift the arms slightly and make sequential Y (arms overhead in a Y), T (arms out to sides), W (elbows bent), and L (elbow bent 90\u00b0 and rotate) positions, holding each for ~1\u20132 seconds focusing on scapular retraction and depression. Move slowly and with control.",
+                "sets_reps": "1 sequence",
+                "duration": "90s"
+            },
+            {
+                "exercise_name": "Wrist and Elbow Mobility Circles",
+                "setup": "Stand or sit comfortably.",
+                "execution": "Perform slow circular motions with the wrists in both directions for 15s each, and then perform gentle elbow flexion/extension repetitions to warm the elbow joint.",
+                "sets_reps": "1 set",
+                "duration": "30s"
+            },
+            {
+                "exercise_name": "Light Bodyweight Horizontal Pull/Scapular Retraction (Scapular Pulls on Low Surface)",
+                "setup": "If a low sturdy table or edge is available, place hands on it; otherwise perform scapular squeezes standing.",
+                "execution": "With arms extended, retract the scapula (pull shoulders down and together) without bending the elbows; hold briefly then relax. Repeat to prime the scapular retractors and elbow flexors.",
+                "sets_reps": "10 slow reps",
+                "duration": "40s"
+            }
+        ]
+    }
+}
