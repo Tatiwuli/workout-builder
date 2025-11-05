@@ -3,7 +3,7 @@ import threading
 from typing import Dict, Any, Callable
 
 
-from app.agents.build_workout_plan import WorkoutBuilderWorkflow
+from ..agents.build_workout_plan import WorkoutBuilderWorkflow
 from .user_response_processor import process_user_responses
 
 

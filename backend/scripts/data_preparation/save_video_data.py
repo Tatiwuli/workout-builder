@@ -1,4 +1,4 @@
-from app.database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from ...app.database.mongodb_handler import WorkoutBuilderDatabaseHandler
 
 import os 
 import json
