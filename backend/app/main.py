@@ -2,8 +2,9 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.core.config import get_allowed_origins, get_port
-from backend.app.api import routes_health, routes_workouts
+
+from .core.config import get_allowed_origins, get_port
+from .api import routes_health, routes_workouts
 
 
 def create_app() -> FastAPI:
