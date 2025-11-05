@@ -5,7 +5,7 @@ from youtube_transcript_api import (
     NoTranscriptFound,
 )
 
-from ..llms.llm import OpenAILLM
+from app.llms.llm import OpenAILLM
 from dotenv import load_dotenv
 import os
 from .prompts import system_prompt, user_prompts_dict

@@ -1,4 +1,4 @@
-from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from app.database.mongodb_handler import WorkoutBuilderDatabaseHandler
 
 import os 
 import json
@@ -18,7 +18,7 @@ def save_video_data(video_item):
 def save_to_json(video_id, video_item):
    
     # define the path for json files
-    db_file_path = os.path.join( "database", "json_summaries") #running from common root directory workout-builder
+    db_file_path = os.path.join( "data", "json_summaries") #running from common root directory workout-builder
     os.makedirs(db_file_path, exist_ok=True)
 
     json_filename = f"info_{video_id}_{

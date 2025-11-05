@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from backend.llms.llm import OpenAILLM
-from backend.database.mongodb_handler import WorkoutBuilderDatabaseHandler
+from ..llms.llm import OpenAILLM
+from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
 from datetime import datetime
 import os
 from dotenv import load_dotenv
@@ -55,7 +55,7 @@ class BaseAgent(ABC):
         backend_dir = os.path.dirname(
             os.path.dirname(os.path.abspath(__file__)))
         folder_path = os.path.join(
-            backend_dir, "database", f"{file_prefix}_json")
+            backend_dir, "data", f"{file_prefix}_json")
         os.makedirs(folder_path, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         file_path = os.path.join(

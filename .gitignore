@@ -11,3 +11,4 @@ fetch_exercises_image.py
 /frontend/exercises_gif
   backend/scripts/
   backend/llms/gemini_connector.py
+  backend/scripts/run_workflow_gemini.py

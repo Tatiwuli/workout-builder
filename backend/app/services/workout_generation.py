@@ -1,15 +1,9 @@
 from datetime import datetime
 import threading
 from typing import Dict, Any, Callable
-import sys
-import os
 
-# Ensure backend parent is in path for cross-package imports
-_backend_parent = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-if _backend_parent not in sys.path:
-    sys.path.insert(0, _backend_parent)
 
-from backend.agents.build_workout_plan import WorkoutBuilderWorkflow
+from app.agents.build_workout_plan import WorkoutBuilderWorkflow
 from .user_response_processor import process_user_responses
 
 

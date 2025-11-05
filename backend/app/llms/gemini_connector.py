@@ -8,7 +8,7 @@ from google import genai
 from google.genai import types
 
 from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
-from ..app.services.user_response_processor import process_user_responses
+from ..services.user_response_processor import process_user_responses
 
 from ..agents.agents_prompts.exercise_selector_prompts import (
     system_prompt as ex_sys,
@@ -37,7 +37,7 @@ def _save_json(output_data, file_prefix):
     Save JSON under backend/database/<prefix>_json with timestamped filename.
     """
     backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    folder_path = os.path.join(backend_dir, "database", f"{file_prefix}_json")
+    folder_path = os.path.join(backend_dir, "data", f"{file_prefix}_json")
     os.makedirs(folder_path, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     file_path = os.path.join(folder_path, f"{file_prefix}_{timestamp}.json")
