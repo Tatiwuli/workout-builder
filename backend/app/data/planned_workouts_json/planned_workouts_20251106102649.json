@@ -1,0 +1,449 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "This set initiates the workout with a compound movement, targeting the overall pectorals. For a beginner with 3-12 months of experience, 10 repetitions per set with moderate weight (60-75% of 1RM) provides an effective stimulus for hypertrophy, aligning with the 6-12 rep range recommended for compound lifts. This volume contributes to the overall weekly target by providing a strong initial stimulus, emphasizing proper form and progressive overload.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Select a weight that allows you to complete 10 repetitions with good form, reaching near muscular failure (RPE 7-8 or 2-3 RIR). This typically corresponds to 60-75% of your 1RM.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 repetitions with good form, reaching near muscular failure (RPE 7-8 or 2-3 RIR). This typically corresponds to 60-75% of your 1RM."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "Continuing with the Machine Chest Press for the second set reinforces motor patterns and further contributes to the total volume for overall chest development. Maintaining the 10-rep range ensures consistent hypertrophy stimulus and allows for continued focus on form and progressive overload, which is crucial for beginners.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if the previous set felt easy, ensuring good form and RPE 7-8.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if the previous set felt easy, ensuring good form and RPE 7-8."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "This third set of Machine Chest Press further builds the volume for the session, ensuring adequate stimulus for hypertrophy. For beginners, performing multiple sets of a stable compound exercise helps solidify technique and maximize muscle activation before moving to less stable movements.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if possible, focusing on controlled movement and full range of motion.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if possible, focusing on controlled movement and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "The fourth set of Machine Chest Press ensures a robust volume for this primary compound movement. This higher set count (4 sets) for a compound exercise is appropriate for a beginner with 3-12 months of experience aiming for hypertrophy, providing sufficient mechanical tension and metabolic stress to drive muscle growth, while still allowing for proper recovery within the weekly training schedule.",
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Aim to maintain the weight from previous sets, or slightly reduce if form begins to break down, prioritizing technique.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, or slightly reduce if form begins to break down, prioritizing technique."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "Transitioning to Incline Dumbbell Press, this first set targets the upper pectorals, complementing the overall chest development from the Machine Chest Press. The 10-rep range is consistent with compound lifts for hypertrophy. Starting with this exercise when energy is still relatively high allows for proper execution and a deep stretch, which is crucial for muscle growth.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Select a weight that allows you to complete 10 repetitions with good form, ensuring a deep stretch at the bottom and controlled movement. Aim for RPE 7-8.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 10 repetitions with good form, ensuring a deep stretch at the bottom and controlled movement. Aim for RPE 7-8."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "The second set of Incline Dumbbell Press continues to build volume for the upper chest, which is often a lagging area for many. Maintaining the rep range and intensity ensures consistent stimulus for hypertrophy and allows the beginner to practice the movement pattern, improving stability and mind-muscle connection.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if the previous set felt manageable, focusing on controlled eccentric (lowering) phase.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if the previous set felt manageable, focusing on controlled eccentric (lowering) phase."
+                }
+            ]
+        },
+        {
+            "set_number": 7,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "This third set of Incline Dumbbell Press further contributes to the overall volume for the upper pectorals, ensuring sufficient stimulus for growth. For beginners, consistent exposure to compound movements with appropriate volume is key for developing strength and hypertrophy.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Aim to maintain the weight from previous sets, ensuring proper form and a deep stretch at the bottom of the movement.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, ensuring proper form and a deep stretch at the bottom of the movement."
+                }
+            ]
+        },
+        {
+            "set_number": 8,
+            "set_time": 1.58,
+            "set_strategy": "None",
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "set_reasoning": "The fourth set of Incline Dumbbell Press completes the compound movement portion of the workout. This ensures that both overall and upper chest regions receive ample volume (4 sets each) for hypertrophy, aligning with the user's experience level and the goal of maximizing muscle growth within the 60-minute timeframe. This volume is a progression from absolute beginner guidelines, suitable for someone with 3-12 months of consistent training.",
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "reps": "10 reps",
+                    "weight": "Slightly reduce weight if necessary to maintain strict form, or push for the same weight if feeling strong.",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Slightly reduce weight if necessary to maintain strict form, or push for the same weight if feeling strong."
+                }
+            ]
+        },
+        {
+            "set_number": 9,
+            "set_time": 1.45,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This first set of Seated Cable Pec Fly serves as an isolation exercise to fully fatigue the pectorals after the compound movements. The higher rep range (12 reps) is appropriate for isolation movements and aligns with hypertrophy principles. The stability of the seated position and smooth cable tension allows for a strong mind-muscle connection and a deep stretch, optimizing the hypertrophy stimulus.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "12-15 reps",
+                    "weight": "Select a weight that allows you to complete 12-15 repetitions with strict form, focusing on squeezing the pecs and achieving a deep stretch. Aim for RPE 8-9.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Select a weight that allows you to complete 12-15 repetitions with strict form, focusing on squeezing the pecs and achieving a deep stretch. Aim for RPE 8-9."
+                }
+            ]
+        },
+        {
+            "set_number": 10,
+            "set_time": 1.45,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "The second set of Seated Cable Pec Fly continues to isolate the pectorals, ensuring a thorough fatigue of the muscle fibers. The shorter rest time (45 seconds) for isolation movements helps to increase metabolic stress, which is beneficial for hypertrophy, especially for beginners who are building their work capacity.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "12-15 reps",
+                    "weight": "Maintain the same weight or slightly reduce if form is compromised, prioritizing the mind-muscle connection and full range of motion.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly reduce if form is compromised, prioritizing the mind-muscle connection and full range of motion."
+                }
+            ]
+        },
+        {
+            "set_number": 11,
+            "set_time": 1.45,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "This third set of Seated Cable Pec Fly further contributes to the isolation volume, ensuring the pectorals are fully stimulated. This volume is appropriate for a beginner with 3-12 months of experience, providing enough stimulus for growth without leading to excessive fatigue or overtraining.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "12-15 reps",
+                    "weight": "Aim to maintain the weight from previous sets, focusing on a strong contraction and controlled release.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, focusing on a strong contraction and controlled release."
+                }
+            ]
+        },
+        {
+            "set_number": 12,
+            "set_time": 1.45,
+            "set_strategy": "None",
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "set_reasoning": "The fourth and final set of Seated Cable Pec Fly maximizes the isolation stimulus for the pectorals, ensuring complete fatigue and a strong pump. This total volume of 12 working sets for the chest (4 sets per exercise) is well-suited for a beginner with 3-12 months of experience, providing an effective hypertrophy stimulus while respecting the 60-minute workout duration and allowing for adequate recovery.",
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "reps": "12-15 reps",
+                    "weight": "Push for the target reps with good form, or slightly reduce weight if needed to maintain technique and mind-muscle connection.",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Push for the target reps with good form, or slightly reduce weight if needed to maintain technique and mind-muscle connection."
+                }
+            ]
+        }
+    ],
+    "workout_explanation": "This workout session is structured to provide an efficient hypertrophy stimulus for the chest, specifically tailored for a beginner with 3-12 months of consistent training, within a 60-minute timeframe. The exercise ordering prioritizes compound movements first, when energy levels are highest, to maximize strength and overall muscle development, followed by an isolation exercise to fully fatigue the target muscle.\n\n**Exercise Order Rationale:**\n1.  **Machine Chest Press:** Placed first as a highly stable compound exercise. For beginners, starting with a machine allows for easier learning of proper form, reduced injury risk, and the ability to push closer to failure safely. It targets the overall pectorals effectively, providing a deep stretch and consistent tension, which aligns with the user's criteria and hypertrophy principles.\n2.  **Incline Dumbbell Press:** Positioned second to specifically target the upper pectorals, complementing the overall chest work. While requiring more stabilization than a machine, it's still a compound movement performed when the user has sufficient energy for good form. Dumbbells allow for a deeper stretch, further enhancing the hypertrophy stimulus.\n3.  **Seated Cable Pec Fly:** Placed last as an isolation exercise. After the compound movements have fatigued the chest, this exercise allows for direct targeting of the pectorals with minimal involvement from supporting muscles. The seated position and cable tension provide stability and a smooth resistance profile, optimizing the mind-muscle connection and ensuring a thorough final pump.\n\n**Volume and Rep Scheme Rationale:**\n*   **Total Volume:** The workout consists of 12 working sets for the chest (4 sets per exercise). This volume is a strategic progression from the '3-6 sets total for the muscle group' guideline for absolute beginners, which would be insufficient for a 60-minute hypertrophy session for someone with 3-12 months of experience. This increased volume provides adequate mechanical tension and metabolic stress, crucial for driving hypertrophy in individuals at this fitness level.\n*   **Reps:** Compound exercises (Machine Chest Press, Incline Dumbbell Press) use a 10-rep range, falling within the 6-12 reps recommended for strength and hypertrophy. The isolation exercise (Seated Cable Pec Fly) uses a 12-15 rep range, aligning with the 'up to 15 reps for isolation movements' guideline, which is effective for metabolic stress and muscle pump.\n*   **Weight:** 'Moderate weights (60-75% of 1RM)' are recommended, translated into practical advice of selecting a weight that allows for target reps with good form, leaving 1-3 reps in reserve (RPE 7-9).\n*   **Rest Times:** 60 seconds for compound lifts and 45 seconds for isolation movements are used, adhering to the wiki guidelines (60 seconds for compound; 30-60 seconds for isolation). This balances recovery for performance with metabolic stress for hypertrophy.\n\n**Time Constraint Adherence:**\n*   The total sum of 'set_time' (including execution and rest for each set) is approximately 18.44 minutes. This is well within the 60-minute workout duration. The remaining time allows for transitions between exercises, setting up equipment, and brief water breaks, ensuring the entire session comfortably fits within the user's time constraint without rushing or compromising form. No specific set strategies like supersets were required as the workout duration was easily met with appropriate volume and rest times, prioritizing proper form and recovery for a beginner."
+}

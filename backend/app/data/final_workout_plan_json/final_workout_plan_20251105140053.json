@@ -1,0 +1,190 @@
+{
+    "workout_title": "Efficient Chest Builder: Machine Press Focus",
+    "total_workout_duration": 8.5,
+    "num_exercises": 1,
+    "warmup": {
+        "warmup_duration": 5.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup": "Stand tall with your feet shoulder-width apart and arms extended straight out to your sides at shoulder height.",
+                "execution": "Perform small circles forward for 30 seconds, gradually increasing the size of the circles. Then, reverse direction and perform circles backward for 30 seconds, again gradually increasing size."
+            },
+            {
+                "exercise_name": "Torso Twists",
+                "setup": "Stand with your feet shoulder-width apart, knees slightly bent, and arms bent at your sides.",
+                "execution": "Gently twist your torso from side to side, allowing your arms to swing naturally. Keep your hips relatively stable, focusing the movement in your upper body."
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup": "Start on your hands and knees in a tabletop position, with wrists under shoulders and knees under hips.",
+                "execution": "Inhale as you drop your belly towards the mat, lifting your chest and tailbone (Cow pose). Exhale as you round your spine towards the ceiling, tucking your chin to your chest (Cat pose). Flow smoothly between these two positions."
+            },
+            {
+                "exercise_name": "Arm Swings (Across Body)",
+                "setup": "Stand with your feet shoulder-width apart, arms relaxed at your sides.",
+                "execution": "Swing one arm across your body, then the other, alternating in a controlled motion. Focus on opening up the chest and shoulders with each swing."
+            },
+            {
+                "exercise_name": "Scapular Push-Ups",
+                "setup": "Start in a high plank position with hands directly under shoulders and body in a straight line from head to heels. Alternatively, perform on your knees for an easier version.",
+                "execution": "Keeping your arms straight, allow your shoulder blades to retract (squeeze together) as your chest moves slightly towards the floor, then protract (spread apart) as you push the floor away, rounding your upper back slightly. Only the shoulder blades should move."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 1.5,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Pectorals"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Pectoralis Major",
+                            "Upper Pectorals",
+                            "Mid Pectorals",
+                            "Lower Pectorals"
+                        ]
+                    },
+                    "setup": "Adjust the seat height so the handles are aligned with the middle of your chest when you sit down. Choose a weight that allows you to perform your target repetitions with good form.",
+                    "execution": [
+                        "1. Sit on the machine with your back firmly against the pad, ensuring your feet are flat on the floor for stability.",
+                        "2. Grip the handles with an overhand grip, slightly wider than shoulder-width. Your elbows should be slightly bent, not locked out.",
+                        "3. Take a deep breath, brace your core, and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles.",
+                        "4. Control the movement as you slowly return the handles to the starting position, allowing for a deep stretch in your chest. Maintain tension in your pectorals (chest muscles) throughout the entire range of motion.",
+                        "5. Exhale as you press, and inhale as you return to the start.",
+                        "6. Repeat for the desired number of repetitions."
+                    ],
+                    "media_url": "",
+                    "reps": "10 repetitions",
+                    "weight": "Select a weight where the last 2-3 repetitions feel challenging but still allow you to maintain proper form. This means you should feel like you could do 2-3 more reps if you pushed yourself (2-3 Reps In Reserve, RIR).",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie flat on a bench with your eyes directly under the barbell. Place your feet flat on the floor, shoulder-width apart, and maintain a slight arch in your lower back. Grip the barbell slightly wider than shoulder-width with an overhand grip, ensuring your wrists are straight and not bent back. Unrack the bar with straight arms.",
+                    "alternative_exercise_execution": [
+                        "1. Lie on the bench with your eyes directly under the barbell. Your feet should be flat on the floor, and you should have a slight arch in your lower back.",
+                        "2. Grip the barbell with an overhand grip, slightly wider than shoulder-width. Ensure your wrists are straight and your forearms are perpendicular to the floor at the bottom of the movement.",
+                        "3. Unrack the barbell, extending your arms fully. This is your starting position.",
+                        "4. Take a deep breath, brace your core, and slowly lower the barbell towards your mid-chest, keeping your elbows tucked slightly (about 45 degrees from your body).",
+                        "5. Lower the bar until it lightly touches your chest, ensuring a full range of motion.",
+                        "6. Drive the barbell back up to the starting position by pushing through your chest, shoulders, and triceps. Exhale as you press.",
+                        "7. Repeat for the desired number of repetitions."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 repetitions",
+                    "alternative_exercise_weight": "Select a weight that allows for 10 controlled repetitions, maintaining strict form and a full range of motion, leaving 2-3 reps in reserve (RIR).",
+                    "additional_tips": "Focus on the mind-muscle connection by actively squeezing your chest at the top of the movement and feeling the stretch at the bottom. Avoid shrugging your shoulders; keep them down and back. If the machine has a foot pedal, use it to help get into position safely."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 1.0,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Pectorals"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Pectoralis Major",
+                            "Upper Pectorals",
+                            "Mid Pectorals",
+                            "Lower Pectorals"
+                        ]
+                    },
+                    "setup": "Maintain the same setup as the previous set.",
+                    "execution": [
+                        "1. Sit on the machine with your back firmly against the pad, ensuring your feet are flat on the floor for stability.",
+                        "2. Grip the handles with an overhand grip, slightly wider than shoulder-width. Your elbows should be slightly bent, not locked out.",
+                        "3. Take a deep breath, brace your core, and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles.",
+                        "4. Control the movement as you slowly return the handles to the starting position, allowing for a deep stretch in your chest. Maintain tension in your pectorals (chest muscles) throughout the entire range of motion.",
+                        "5. Exhale as you press, and inhale as you return to the start.",
+                        "6. Repeat for the desired number of repetitions."
+                    ],
+                    "media_url": "",
+                    "reps": "10 repetitions",
+                    "weight": "Aim to use the same weight as the previous set, or slightly increase if the previous set felt too easy, while still maintaining 2-3 reps in reserve (RIR). The goal is to challenge yourself without sacrificing form.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "30 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie flat on a bench with your eyes directly under the barbell. Place your feet flat on the floor, shoulder-width apart, and maintain a slight arch in your lower back. Grip the barbell slightly wider than shoulder-width with an overhand grip, ensuring your wrists are straight and not bent back. Unrack the bar with straight arms.",
+                    "alternative_exercise_execution": [
+                        "1. Lie on the bench with your eyes directly under the barbell. Your feet should be flat on the floor, and you should have a slight arch in your lower back.",
+                        "2. Grip the barbell with an overhand grip, slightly wider than shoulder-width. Ensure your wrists are straight and your forearms are perpendicular to the floor at the bottom of the movement.",
+                        "3. Unrack the barbell, extending your arms fully. This is your starting position.",
+                        "4. Take a deep breath, brace your core, and slowly lower the barbell towards your mid-chest, keeping your elbows tucked slightly (about 45 degrees from your body).",
+                        "5. Lower the bar until it lightly touches your chest, ensuring a full range of motion.",
+                        "6. Drive the barbell back up to the starting position by pushing through your chest, shoulders, and triceps. Exhale as you press.",
+                        "7. Repeat for the desired number of repetitions."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 repetitions",
+                    "alternative_exercise_weight": "Select a weight that allows for 10 controlled repetitions, maintaining strict form and a full range of motion, leaving 2-3 reps in reserve (RIR).",
+                    "additional_tips": "Focus on the mind-muscle connection by actively squeezing your chest at the top of the movement and feeling the stretch at the bottom. Avoid shrugging your shoulders; keep them down and back. If the machine has a foot pedal, use it to help get into position safely."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 0.5,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Pectorals"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": {
+                        "Pectorals": [
+                            "Pectoralis Major",
+                            "Upper Pectorals",
+                            "Mid Pectorals",
+                            "Lower Pectorals"
+                        ]
+                    },
+                    "setup": "Maintain the same setup as the previous sets.",
+                    "execution": [
+                        "1. Sit on the machine with your back firmly against the pad, ensuring your feet are flat on the floor for stability.",
+                        "2. Grip the handles with an overhand grip, slightly wider than shoulder-width. Your elbows should be slightly bent, not locked out.",
+                        "3. Take a deep breath, brace your core, and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles.",
+                        "4. Control the movement as you slowly return the handles to the starting position, allowing for a deep stretch in your chest. Maintain tension in your pectorals (chest muscles) throughout the entire range of motion.",
+                        "5. Exhale as you press, and inhale as you return to the start.",
+                        "6. Repeat for the desired number of repetitions."
+                    ],
+                    "media_url": "",
+                    "reps": "10 repetitions",
+                    "weight": "Use a weight that allows you to perform 10 repetitions, pushing closer to failure (1-2 reps in reserve, RIR) while maintaining good form. If you can do more than 10 reps with good form, increase the weight next time you do this workout.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "No specific rest time after this final set, as it concludes your main workout.",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie flat on a bench with your eyes directly under the barbell. Place your feet flat on the floor, shoulder-width apart, and maintain a slight arch in your lower back. Grip the barbell slightly wider than shoulder-width with an overhand grip, ensuring your wrists are straight and not bent back. Unrack the bar with straight arms.",
+                    "alternative_exercise_execution": [
+                        "1. Lie on the bench with your eyes directly under the barbell. Your feet should be flat on the floor, and you should have a slight arch in your lower back.",
+                        "2. Grip the barbell with an overhand grip, slightly wider than shoulder-width. Ensure your wrists are straight and your forearms are perpendicular to the floor at the bottom of the movement.",
+                        "3. Unrack the barbell, extending your arms fully. This is your starting position.",
+                        "4. Take a deep breath, brace your core, and slowly lower the barbell towards your mid-chest, keeping your elbows tucked slightly (about 45 degrees from your body).",
+                        "5. Lower the bar until it lightly touches your chest, ensuring a full range of motion.",
+                        "6. Drive the barbell back up to the starting position by pushing through your chest, shoulders, and triceps. Exhale as you press.",
+                        "7. Repeat for the desired number of repetitions."
+                    ],
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 repetitions",
+                    "alternative_exercise_weight": "Select a weight that allows for 10 controlled repetitions, maintaining strict form and a full range of motion, leaving 1-2 reps in reserve (RIR).",
+                    "additional_tips": "Focus on the mind-muscle connection by actively squeezing your chest at the top of the movement and feeling the stretch at the bottom. Avoid shrugging your shoulders; keep them down and back. If the machine has a foot pedal, use it to help get into position safely."
+                }
+            ]
+        }
+    ]
+}

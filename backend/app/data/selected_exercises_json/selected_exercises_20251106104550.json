@@ -1,0 +1,98 @@
+{
+    "exercises": [
+        {
+            "exercise_name": "Machine Chest Press",
+            "setup": "none",
+            "execution": "Ensure a deep stretch on the pecs with high tension throughout the range of motion. Maintain a stable position to enhance mind-muscle connection.",
+            "media_url": "",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Provides a deep stretch with high tension, smooth resistance profile, easy to overload, safer to push to failure.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "Find a machine that feels good at your gym for optimal results.",
+            "alternative_exercise": "Flat Dumbbell Press",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/09/dumbbell-chest-press.gif",
+            "selection_reason": "This exercise is an S-Tier choice that perfectly aligns with the user's needs as a beginner with a medium time constraint. It provides a deep stretch with high tension, which is a key user criterion for muscle development. The smooth resistance profile and inherent stability of a machine make it ideal for beginners to learn proper form and establish a strong mind-muscle connection without the need for complex stabilization. It's also easy to progressively overload, ensuring continuous progress. As a compound movement, it efficiently targets the pectorals, contributing to overall chest development, which is crucial for a beginner's foundational strength."
+        },
+        {
+            "exercise_name": "Bench Press",
+            "setup": "none",
+            "execution": "Bring the bar all the way down to your chest for high tension on the pecs.",
+            "media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+            "alternative_equipment": "Smith Machine",
+            "tier_reasons": "High tension, easy to overload, potential shoulder discomfort for some.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "Barbell limits deep stretch compared to dumbbells.",
+            "scientific_insights": "none",
+            "additional_notes": "none",
+            "alternative_exercise": "Incline Bench Press",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+            "selection_reason": "The Bench Press is an A-Tier compound exercise selected to complement the Machine Chest Press. While it requires more technique, the user's 3-12 months of experience suggests they are ready for foundational free-weight movements. It offers high tension and is easy to overload, directly meeting the user's criteria for simple progression. Although the barbell limits the deep stretch compared to dumbbells, bringing the bar all the way down to the chest still provides significant tension. As a primary compound lift, it is excellent for overall pectoral development and aligns with the beginner guideline to prioritize compound movements for efficiency and skill development."
+        },
+        {
+            "exercise_name": "Seated Cable Pec Fly",
+            "setup": "Sit down to increase stability and ensure all tension is applied directly to the pecs.",
+            "execution": "Perform fly movement with cables, ensuring a big stretch on the pecs with high tension.",
+            "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+            "alternative_equipment": "Dumbbells",
+            "tier_reasons": "Provides a big stretch with high tension, stable, smooth tension throughout the range of motion.",
+            "targeted_muscles": [
+                "Pectorals"
+            ],
+            "targeted_muscle_parts": "none",
+            "limitations": "none",
+            "scientific_insights": "none",
+            "additional_notes": "This is currently the favorite chest isolation movement.",
+            "alternative_exercise": "Pec Deck Machine",
+            "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/07/pec-deck.gif",
+            "selection_reason": "This S-Tier exercise is chosen as the isolation movement, fulfilling the beginner guideline of including one isolation exercise. It excels in providing a big stretch with high tension and smooth resistance throughout the range of motion, which are critical user preferences. The seated position enhances stability, allowing a beginner to focus entirely on the mind-muscle connection and the targeted pectoral contraction without worrying about balance. This makes it an excellent choice for isolating the pecs, ensuring comprehensive development and a 'good pump' as desired by the user."
+        }
+    ],
+    "warmup": {
+        "total_warmup_duration": 6.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles (Forward & Backward)",
+                "setup": "Stand tall with your feet shoulder-width apart, arms extended straight out to your sides at shoulder height.",
+                "execution": "Begin by making small circles forward, gradually increasing the size of the circles. After 30 seconds, reverse the direction and make circles backward, again gradually increasing size.",
+                "sets_reps": "Continuous movement",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Dynamic Chest Stretch (Arm Swings)",
+                "setup": "Stand tall with your feet shoulder-width apart, arms extended out to your sides.",
+                "execution": "Swing your arms forward across your chest as if you are 'hugging a tree', allowing them to cross. Then, swing them back out to the sides, opening up your chest. Maintain a rhythmic, controlled motion.",
+                "sets_reps": "Continuous movement",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Thoracic Rotations",
+                "setup": "Sit comfortably on the floor or stand tall with your feet shoulder-width apart. Place your hands behind your head or cross them over your chest.",
+                "execution": "Gently rotate your torso from side to side, focusing on moving your upper back and shoulders. Keep your hips relatively stable. Perform slowly and controlled.",
+                "sets_reps": "Continuous movement",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Scapular Push-Ups",
+                "setup": "Start in a push-up position, either on your hands and knees (easier) or on your hands and feet (harder). Ensure your hands are directly under your shoulders and your body forms a straight line.",
+                "execution": "Keeping your arms straight, allow your chest to sink towards the floor by depressing and retracting your shoulder blades. Then, push through your hands to protract your shoulder blades, rounding your upper back slightly. The movement should only come from your shoulder blades, not your elbows.",
+                "sets_reps": "10-12 reps",
+                "duration": "1 minute"
+            },
+            {
+                "exercise_name": "Knee Push-Ups",
+                "setup": "Kneel on the floor with your hands slightly wider than shoulder-width apart, fingers pointing forward. Your body should form a straight line from your head to your knees.",
+                "execution": "Lower your chest towards the floor by bending your elbows, keeping your core tight and back straight. Push back up to the starting position, fully extending your arms. Focus on controlled movement.",
+                "sets_reps": "2 sets of 10-15 reps",
+                "duration": "2 minutes"
+            }
+        ]
+    }
+}

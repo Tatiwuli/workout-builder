@@ -1,0 +1,625 @@
+{
+    "workout_title": "Beginner Chest Builder",
+    "total_workout_duration": 23.44,
+    "num_exercises": 3,
+    "warmup": {
+        "warmup_duration": 5.0,
+        "warmup_exercises": [
+            {
+                "exercise_name": "Arm Circles",
+                "setup": "Stand tall with feet shoulder-width apart, arms extended straight out to the sides at shoulder height.",
+                "execution": "Perform small circles forward for 30 seconds, then reverse and perform small circles backward for 30 seconds. Gradually increase the size of the circles."
+            },
+            {
+                "exercise_name": "Thoracic Rotations (Seated or Standing)",
+                "setup": "Sit or stand with a straight back. Place hands behind your head or cross them over your chest.",
+                "execution": "Gently rotate your upper body to one side, feeling a stretch in your mid-back and chest. Hold briefly, then rotate to the other side. Focus on moving from your thoracic spine, not just your neck or lower back."
+            },
+            {
+                "exercise_name": "Cat-Cow Stretch",
+                "setup": "Start on all fours with hands directly under shoulders and knees under hips. Keep your back flat.",
+                "execution": "Inhale as you drop your belly towards the floor, lift your chest and tailbone (Cow pose). Exhale as you round your spine towards the ceiling, tucking your chin to your chest (Cat pose). Move fluidly between the two positions."
+            },
+            {
+                "exercise_name": "Dynamic Chest Stretch (Arm Swings)",
+                "setup": "Stand with feet shoulder-width apart, arms extended straight out to the sides.",
+                "execution": "Swing your arms forward and across your body, alternating which arm crosses on top. Then, swing them back out to the sides, opening up your chest. Maintain a controlled, rhythmic motion."
+            },
+            {
+                "exercise_name": "Light Knee Push-ups",
+                "setup": "Start in a push-up position, but with your knees on the ground. Hands slightly wider than shoulder-width apart, fingers pointing forward. Keep your body in a straight line from head to knees.",
+                "execution": "Lower your chest towards the floor by bending your elbows, keeping them tucked slightly. Push back up to the starting position, engaging your chest muscles. Focus on controlled movement and feeling the chest activation."
+            }
+        ]
+    },
+    "sets": [
+        {
+            "set_number": 1,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are aligned with the middle of your chest when you sit down. Ensure your feet are flat on the floor or on the footrests for stability. Select your desired weight by inserting the pin into the weight stack.",
+                    "execution": [
+                        "1. Position Yourself: Sit firmly against the back pad with your chest up and shoulders pulled back and down. Grip the handles with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight and aligned with your forearms.",
+                        "2. Initiate the Press: Exhale and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles as you push.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight throughout the movement. Feel a deep stretch in your chest as the weight plates almost touch, but avoid letting them fully stack to maintain tension.",
+                        "4. Maintain Form: Keep your back pressed against the pad and your core engaged throughout the entire exercise to prevent your lower back from arching and to maximize chest activation."
+                    ],
+                    "media_url": "none available",
+                    "reps": "10 reps",
+                    "weight": "Select a weight where the last 2-3 repetitions feel challenging, but you can still maintain perfect form and control. This should feel like a moderate effort (RPE 7-8).",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a flat bench with your eyes directly under the barbell. Position your feet flat on the floor, slightly wider than shoulder-width apart, to create a stable base. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards the middle of your chest, keeping your elbows tucked slightly (about 45 degrees from your body). Control the descent, aiming to lightly touch your chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 repetitions with good form, where the last 2-3 reps are challenging. If unsure, start lighter and gradually increase.",
+                    "additional_tips": "Focus on the mind-muscle connection by actively thinking about squeezing your chest muscles during the press and feeling the stretch during the return. Experiment with different machine brands if available to find one that provides the best feel for your chest."
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are aligned with the middle of your chest when you sit down. Ensure your feet are flat on the floor or on the footrests for stability. Select your desired weight by inserting the pin into the weight stack.",
+                    "execution": [
+                        "1. Position Yourself: Sit firmly against the back pad with your chest up and shoulders pulled back and down. Grip the handles with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight and aligned with your forearms.",
+                        "2. Initiate the Press: Exhale and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles as you push.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight throughout the movement. Feel a deep stretch in your chest as the weight plates almost touch, but avoid letting them fully stack to maintain tension.",
+                        "4. Maintain Form: Keep your back pressed against the pad and your core engaged throughout the entire exercise to prevent your lower back from arching and to maximize chest activation."
+                    ],
+                    "media_url": "none available",
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if the previous set felt easy, ensuring good form and RPE 7-8.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a flat bench with your eyes directly under the barbell. Position your feet flat on the floor, slightly wider than shoulder-width apart, to create a stable base. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards the middle of your chest, keeping your elbows tucked slightly (about 45 degrees from your body). Control the descent, aiming to lightly touch your chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if the previous set felt easy, ensuring good form and RPE 7-8.",
+                    "additional_tips": "Focus on the mind-muscle connection by actively thinking about squeezing your chest muscles during the press and feeling the stretch during the return. Experiment with different machine brands if available to find one that provides the best feel for your chest."
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are aligned with the middle of your chest when you sit down. Ensure your feet are flat on the floor or on the footrests for stability. Select your desired weight by inserting the pin into the weight stack.",
+                    "execution": [
+                        "1. Position Yourself: Sit firmly against the back pad with your chest up and shoulders pulled back and down. Grip the handles with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight and aligned with your forearms.",
+                        "2. Initiate the Press: Exhale and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles as you push.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight throughout the movement. Feel a deep stretch in your chest as the weight plates almost touch, but avoid letting them fully stack to maintain tension.",
+                        "4. Maintain Form: Keep your back pressed against the pad and your core engaged throughout the entire exercise to prevent your lower back from arching and to maximize chest activation."
+                    ],
+                    "media_url": "none available",
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if possible, focusing on controlled movement and full range of motion.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a flat bench with your eyes directly under the barbell. Position your feet flat on the floor, slightly wider than shoulder-width apart, to create a stable base. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards the middle of your chest, keeping your elbows tucked slightly (about 45 degrees from your body). Control the descent, aiming to lightly touch your chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if possible, focusing on controlled movement and full range of motion.",
+                    "additional_tips": "Focus on the mind-muscle connection by actively thinking about squeezing your chest muscles during the press and feeling the stretch during the return. Experiment with different machine brands if available to find one that provides the best feel for your chest."
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Machine Chest Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are aligned with the middle of your chest when you sit down. Ensure your feet are flat on the floor or on the footrests for stability. Select your desired weight by inserting the pin into the weight stack.",
+                    "execution": [
+                        "1. Position Yourself: Sit firmly against the back pad with your chest up and shoulders pulled back and down. Grip the handles with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight and aligned with your forearms.",
+                        "2. Initiate the Press: Exhale and press the handles forward, extending your arms but without locking your elbows. Focus on squeezing your chest muscles as you push.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight throughout the movement. Feel a deep stretch in your chest as the weight plates almost touch, but avoid letting them fully stack to maintain tension.",
+                        "4. Maintain Form: Keep your back pressed against the pad and your core engaged throughout the entire exercise to prevent your lower back from arching and to maximize chest activation."
+                    ],
+                    "media_url": "none available",
+                    "reps": "10 reps",
+                    "weight": "Aim to maintain the weight from previous sets, or slightly reduce if form begins to break down, prioritizing technique.",
+                    "alternative_equipments": "Barbell",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Bench Press",
+                    "alternative_exercise_setup": "Lie on a flat bench with your eyes directly under the barbell. Position your feet flat on the floor, slightly wider than shoulder-width apart, to create a stable base. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards the middle of your chest, keeping your elbows tucked slightly (about 45 degrees from your body). Control the descent, aiming to lightly touch your chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/04/barbell-bench-press.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, or slightly reduce if form begins to break down, prioritizing technique.",
+                    "additional_tips": "Focus on the mind-muscle connection by actively thinking about squeezing your chest muscles during the press and feeling the stretch during the return. Experiment with different machine brands if available to find one that provides the best feel for your chest."
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Set an adjustable bench to an incline of 30-45 degrees. Sit on the bench and carefully bring the dumbbells to your chest. Lie back, positioning the dumbbells at shoulder height, palms facing each other or slightly rotated forward.",
+                    "execution": [
+                        "1. Starting Position: With dumbbells at shoulder height, rotate your wrists so your palms face forward (pronated grip). Ensure your feet are firmly planted on the floor for stability. Retract your shoulder blades and press them into the bench.",
+                        "2. Lower the Dumbbells: Inhale and slowly lower the dumbbells down and slightly out to the sides, allowing for a deep stretch in your upper chest. Your elbows should go slightly below the bench level, maintaining control.",
+                        "3. Press Up: Exhale and powerfully press the dumbbells upwards and slightly inwards, squeezing your upper chest at the top. Avoid letting the dumbbells touch at the top to maintain continuous tension on the muscles.",
+                        "4. Controlled Movement: Maintain control throughout the entire movement, especially during the lowering phase. Avoid swinging the dumbbells or using momentum."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "10 reps",
+                    "weight": "Select a weight that allows you to complete 10 repetitions with good form, ensuring a deep stretch at the bottom and controlled movement. Aim for RPE 7-8.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_setup": "Set an adjustable bench to an incline of 30-45 degrees. Lie on the bench with your eyes directly under the barbell. Position your feet flat on the floor for stability. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your upper chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your upper chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards your upper chest, keeping your elbows tucked slightly. Control the descent, aiming to lightly touch your upper chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your upper chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 10 repetitions with good form, where the last 2-3 reps are challenging. If unsure, start lighter and gradually increase.",
+                    "additional_tips": "Focus on driving the dumbbells up and slightly together, imagining you're trying to touch your biceps to your upper chest. Control the eccentric phase (lowering the weight) to maximize time under tension and muscle growth."
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Set an adjustable bench to an incline of 30-45 degrees. Sit on the bench and carefully bring the dumbbells to your chest. Lie back, positioning the dumbbells at shoulder height, palms facing each other or slightly rotated forward.",
+                    "execution": [
+                        "1. Starting Position: With dumbbells at shoulder height, rotate your wrists so your palms face forward (pronated grip). Ensure your feet are firmly planted on the floor for stability. Retract your shoulder blades and press them into the bench.",
+                        "2. Lower the Dumbbells: Inhale and slowly lower the dumbbells down and slightly out to the sides, allowing for a deep stretch in your upper chest. Your elbows should go slightly below the bench level, maintaining control.",
+                        "3. Press Up: Exhale and powerfully press the dumbbells upwards and slightly inwards, squeezing your upper chest at the top. Avoid letting the dumbbells touch at the top to maintain continuous tension on the muscles.",
+                        "4. Controlled Movement: Maintain control throughout the entire movement, especially during the lowering phase. Avoid swinging the dumbbells or using momentum."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "10 reps",
+                    "weight": "Maintain the same weight or slightly increase if the previous set felt manageable, focusing on controlled eccentric (lowering) phase.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_setup": "Set an adjustable bench to an incline of 30-45 degrees. Lie on the bench with your eyes directly under the barbell. Position your feet flat on the floor for stability. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your upper chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your upper chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards your upper chest, keeping your elbows tucked slightly. Control the descent, aiming to lightly touch your upper chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your upper chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly increase if the previous set felt manageable, focusing on controlled eccentric (lowering) phase.",
+                    "additional_tips": "Focus on driving the dumbbells up and slightly together, imagining you're trying to touch your biceps to your upper chest. Control the eccentric phase (lowering the weight) to maximize time under tension and muscle growth."
+                }
+            ]
+        },
+        {
+            "set_number": 7,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Set an adjustable bench to an incline of 30-45 degrees. Sit on the bench and carefully bring the dumbbells to your chest. Lie back, positioning the dumbbells at shoulder height, palms facing each other or slightly rotated forward.",
+                    "execution": [
+                        "1. Starting Position: With dumbbells at shoulder height, rotate your wrists so your palms face forward (pronated grip). Ensure your feet are firmly planted on the floor for stability. Retract your shoulder blades and press them into the bench.",
+                        "2. Lower the Dumbbells: Inhale and slowly lower the dumbbells down and slightly out to the sides, allowing for a deep stretch in your upper chest. Your elbows should go slightly below the bench level, maintaining control.",
+                        "3. Press Up: Exhale and powerfully press the dumbbells upwards and slightly inwards, squeezing your upper chest at the top. Avoid letting the dumbbells touch at the top to maintain continuous tension on the muscles.",
+                        "4. Controlled Movement: Maintain control throughout the entire movement, especially during the lowering phase. Avoid swinging the dumbbells or using momentum."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "10 reps",
+                    "weight": "Aim to maintain the weight from previous sets, ensuring proper form and a deep stretch at the bottom of the movement.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_setup": "Set an adjustable bench to an incline of 30-45 degrees. Lie on the bench with your eyes directly under the barbell. Position your feet flat on the floor for stability. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your upper chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your upper chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards your upper chest, keeping your elbows tucked slightly. Control the descent, aiming to lightly touch your upper chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your upper chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, ensuring proper form and a deep stretch at the bottom of the movement.",
+                    "additional_tips": "Focus on driving the dumbbells up and slightly together, imagining you're trying to touch your biceps to your upper chest. Control the eccentric phase (lowering the weight) to maximize time under tension and muscle growth."
+                }
+            ]
+        },
+        {
+            "set_number": 8,
+            "set_strategy": "None",
+            "set_duration": 1.58,
+            "set_repetitions": 10,
+            "target_muscle_group": [
+                "Chest",
+                "Shoulders",
+                "Triceps"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Incline Dumbbell Press",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Upper Pectorals"
+                            ]
+                        },
+                        {
+                            "Shoulders": [
+                                "Front Deltoids"
+                            ]
+                        },
+                        {
+                            "Triceps": [
+                                "Triceps Brachii"
+                            ]
+                        }
+                    ],
+                    "setup": "Set an adjustable bench to an incline of 30-45 degrees. Sit on the bench and carefully bring the dumbbells to your chest. Lie back, positioning the dumbbells at shoulder height, palms facing each other or slightly rotated forward.",
+                    "execution": [
+                        "1. Starting Position: With dumbbells at shoulder height, rotate your wrists so your palms face forward (pronated grip). Ensure your feet are firmly planted on the floor for stability. Retract your shoulder blades and press them into the bench.",
+                        "2. Lower the Dumbbells: Inhale and slowly lower the dumbbells down and slightly out to the sides, allowing for a deep stretch in your upper chest. Your elbows should go slightly below the bench level, maintaining control.",
+                        "3. Press Up: Exhale and powerfully press the dumbbells upwards and slightly inwards, squeezing your upper chest at the top. Avoid letting the dumbbells touch at the top to maintain continuous tension on the muscles.",
+                        "4. Controlled Movement: Maintain control throughout the entire movement, especially during the lowering phase. Avoid swinging the dumbbells or using momentum."
+                    ],
+                    "media_url": "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif",
+                    "reps": "10 reps",
+                    "weight": "Slightly reduce weight if necessary to maintain strict form, or push for the same weight if feeling strong.",
+                    "alternative_equipments": "Smith Machine",
+                    "rest_time": "60 seconds",
+                    "alternative_exercise": "Incline Bench Press",
+                    "alternative_exercise_setup": "Set an adjustable bench to an incline of 30-45 degrees. Lie on the bench with your eyes directly under the barbell. Position your feet flat on the floor for stability. Grip the barbell with an overhand grip, slightly wider than shoulder-width, ensuring your wrists are straight. Your hands should be positioned so your forearms are vertical when the bar is at your upper chest.",
+                    "alternative_exercise_execution": "1. Unrack the Bar: Take a deep breath, brace your core, and unrack the bar, holding it directly over your upper chest with arms fully extended.\n2. Lower the Bar: Inhale and slowly lower the barbell towards your upper chest, keeping your elbows tucked slightly. Control the descent, aiming to lightly touch your upper chest.\n3. Press Up: Exhale and powerfully press the barbell back up to the starting position, extending your arms fully but without locking your elbows. Focus on driving the weight up using your upper chest muscles.\n4. Maintain Stability: Keep your shoulders retracted and pressed into the bench throughout the movement. Maintain a slight arch in your lower back, but ensure your glutes remain on the bench.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/01/dumbbell-incline-reverse-grip-bench.gif",
+                    "alternative_exercise_reps": "10 reps",
+                    "alternative_exercise_weight": "Slightly reduce weight if necessary to maintain strict form, or push for the same weight if feeling strong.",
+                    "additional_tips": "Focus on driving the dumbbells up and slightly together, imagining you're trying to touch your biceps to your upper chest. Control the eccentric phase (lowering the weight) to maximize time under tension and muscle growth."
+                }
+            ]
+        },
+        {
+            "set_number": 9,
+            "set_strategy": "None",
+            "set_duration": 1.45,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are at chest level when you are seated. Select your desired weight. Sit firmly against the back pad, ensuring your feet are flat on the floor. Grab the handles with an overhand or neutral grip, depending on the machine, and bring them slightly forward to initiate the movement.",
+                    "execution": [
+                        "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Hold the handles with a slight bend in your elbows, feeling a stretch across your chest.",
+                        "2. Perform the Fly: Exhale and bring the handles together in front of your chest in a wide arc, squeezing your pecs forcefully. Imagine hugging a barrel or trying to touch your biceps together.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.",
+                        "4. Maintain Tension: Keep a slight bend in your elbows throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "12-15 reps",
+                    "weight": "Select a weight that allows you to complete 12-15 repetitions with strict form, focusing on squeezing the pecs and achieving a deep stretch. The last few reps should be very challenging (RPE 8-9).",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_setup": "Adjust the seat height so that your elbows are aligned with the pivot point of the machine's arms when you sit down. Your feet should be flat on the floor. Select your desired weight. Place your forearms against the pads, with your elbows bent at approximately 90 degrees.",
+                    "alternative_exercise_execution": "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Your forearms should be against the pads, feeling a stretch across your chest.\n2. Perform the Fly: Exhale and bring the pads together in front of your chest, squeezing your pecs forcefully. Imagine trying to touch your elbows together.\n3. Control the Return: Inhale and slowly allow the pads to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.\n4. Maintain Tension: Keep your elbows bent at approximately 90 degrees throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/07/pec-deck.gif",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Choose a weight that allows you to complete 12-15 repetitions with strict form, focusing on a strong squeeze in your chest and a deep stretch. The last few reps should be very challenging (RPE 8-9).",
+                    "additional_tips": "To maximize the stretch, allow your hands to go slightly behind your body at the deepest part of the movement. Focus on a strong peak contraction, holding the squeeze for a brief moment before slowly returning."
+                }
+            ]
+        },
+        {
+            "set_number": 10,
+            "set_strategy": "None",
+            "set_duration": 1.45,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are at chest level when you are seated. Select your desired weight. Sit firmly against the back pad, ensuring your feet are flat on the floor. Grab the handles with an overhand or neutral grip, depending on the machine, and bring them slightly forward to initiate the movement.",
+                    "execution": [
+                        "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Hold the handles with a slight bend in your elbows, feeling a stretch across your chest.",
+                        "2. Perform the Fly: Exhale and bring the handles together in front of your chest in a wide arc, squeezing your pecs forcefully. Imagine hugging a barrel or trying to touch your biceps together.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.",
+                        "4. Maintain Tension: Keep a slight bend in your elbows throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "12-15 reps",
+                    "weight": "Maintain the same weight or slightly reduce if form is compromised, prioritizing the mind-muscle connection and full range of motion.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_setup": "Adjust the seat height so that your elbows are aligned with the pivot point of the machine's arms when you sit down. Your feet should be flat on the floor. Select your desired weight. Place your forearms against the pads, with your elbows bent at approximately 90 degrees.",
+                    "alternative_exercise_execution": "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Your forearms should be against the pads, feeling a stretch across your chest.\n2. Perform the Fly: Exhale and bring the pads together in front of your chest, squeezing your pecs forcefully. Imagine trying to touch your elbows together.\n3. Control the Return: Inhale and slowly allow the pads to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.\n4. Maintain Tension: Keep your elbows bent at approximately 90 degrees throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/07/pec-deck.gif",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Maintain the same weight or slightly reduce if form is compromised, prioritizing the mind-muscle connection and full range of motion.",
+                    "additional_tips": "To maximize the stretch, allow your hands to go slightly behind your body at the deepest part of the movement. Focus on a strong peak contraction, holding the squeeze for a brief moment before slowly returning."
+                }
+            ]
+        },
+        {
+            "set_number": 11,
+            "set_strategy": "None",
+            "set_duration": 1.45,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are at chest level when you are seated. Select your desired weight. Sit firmly against the back pad, ensuring your feet are flat on the floor. Grab the handles with an overhand or neutral grip, depending on the machine, and bring them slightly forward to initiate the movement.",
+                    "execution": [
+                        "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Hold the handles with a slight bend in your elbows, feeling a stretch across your chest.",
+                        "2. Perform the Fly: Exhale and bring the handles together in front of your chest in a wide arc, squeezing your pecs forcefully. Imagine hugging a barrel or trying to touch your biceps together.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.",
+                        "4. Maintain Tension: Keep a slight bend in your elbows throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "12-15 reps",
+                    "weight": "Aim to maintain the weight from previous sets, focusing on a strong contraction and controlled release.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_setup": "Adjust the seat height so that your elbows are aligned with the pivot point of the machine's arms when you sit down. Your feet should be flat on the floor. Select your desired weight. Place your forearms against the pads, with your elbows bent at approximately 90 degrees.",
+                    "alternative_exercise_execution": "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Your forearms should be against the pads, feeling a stretch across your chest.\n2. Perform the Fly: Exhale and bring the pads together in front of your chest, squeezing your pecs forcefully. Imagine trying to touch your elbows together.\n3. Control the Return: Inhale and slowly allow the pads to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.\n4. Maintain Tension: Keep your elbows bent at approximately 90 degrees throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/07/pec-deck.gif",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Aim to maintain the weight from previous sets, focusing on a strong contraction and controlled release.",
+                    "additional_tips": "To maximize the stretch, allow your hands to go slightly behind your body at the deepest part of the movement. Focus on a strong peak contraction, holding the squeeze for a brief moment before slowly returning."
+                }
+            ]
+        },
+        {
+            "set_number": 12,
+            "set_strategy": "None",
+            "set_duration": 1.45,
+            "set_repetitions": 12,
+            "target_muscle_group": [
+                "Chest"
+            ],
+            "exercises": [
+                {
+                    "exercise_name": "Seated Cable Pec Fly",
+                    "target_muscle_part": [
+                        {
+                            "Pectorals": [
+                                "Pectoralis Major",
+                                "Mid Pectorals"
+                            ]
+                        }
+                    ],
+                    "setup": "Adjust the seat height so that the handles are at chest level when you are seated. Select your desired weight. Sit firmly against the back pad, ensuring your feet are flat on the floor. Grab the handles with an overhand or neutral grip, depending on the machine, and bring them slightly forward to initiate the movement.",
+                    "execution": [
+                        "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Hold the handles with a slight bend in your elbows, feeling a stretch across your chest.",
+                        "2. Perform the Fly: Exhale and bring the handles together in front of your chest in a wide arc, squeezing your pecs forcefully. Imagine hugging a barrel or trying to touch your biceps together.",
+                        "3. Control the Return: Inhale and slowly allow the handles to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.",
+                        "4. Maintain Tension: Keep a slight bend in your elbows throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles."
+                    ],
+                    "media_url": "https://www.youtube.com/embed/fGm-ef-4PVk?start=649&end=661",
+                    "reps": "12-15 reps",
+                    "weight": "Push for the target reps with good form, or slightly reduce weight if needed to maintain technique and mind-muscle connection.",
+                    "alternative_equipments": "Dumbbells",
+                    "rest_time": "45 seconds",
+                    "alternative_exercise": "Pec Deck Machine",
+                    "alternative_exercise_setup": "Adjust the seat height so that your elbows are aligned with the pivot point of the machine's arms when you sit down. Your feet should be flat on the floor. Select your desired weight. Place your forearms against the pads, with your elbows bent at approximately 90 degrees.",
+                    "alternative_exercise_execution": "1. Starting Position: Sit with your back firmly against the pad, chest up, and shoulders pulled back and down. Your forearms should be against the pads, feeling a stretch across your chest.\n2. Perform the Fly: Exhale and bring the pads together in front of your chest, squeezing your pecs forcefully. Imagine trying to touch your elbows together.\n3. Control the Return: Inhale and slowly allow the pads to return to the starting position, controlling the weight and feeling a deep stretch in your chest. Do not let the weight stack touch completely to maintain constant tension.\n4. Maintain Tension: Keep your elbows bent at approximately 90 degrees throughout the entire movement. Avoid shrugging your shoulders or using momentum; focus solely on the contraction and stretch of your chest muscles.",
+                    "alternative_exercise_media_url": "https://www.inspireusafoundation.org/wp-content/uploads/2022/07/pec-deck.gif",
+                    "alternative_exercise_reps": "12-15 reps",
+                    "alternative_exercise_weight": "Push for the target reps with good form, or slightly reduce weight if needed to maintain technique and mind-muscle connection.",
+                    "additional_tips": "To maximize the stretch, allow your hands to go slightly behind your body at the deepest part of the movement. Focus on a strong peak contraction, holding the squeeze for a brief moment before slowly returning."
+                }
+            ]
+        }
+    ]
+}
