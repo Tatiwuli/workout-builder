@@ -11,14 +11,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 class WorkoutBuilderDatabaseHandler:
-    def __init__(self, database_name, secrets_mongo_uri = None):
-        if not secrets_mongo_uri:
-            secrets_mongo_uri = os.getenv("MONGODB_URI")
+    def __init__(self):
+        self.mongo_uri = os.getenv("MONGODB_URI")
        
-        assert secrets_mongo_uri, "MongoDB URI not provided!"
-        self.client = MongoClient(secrets_mongo_uri, server_api=ServerApi("1"))
+        if not self.mongo_uri:
+            raise ValueError(
+                "MONGODB_URI not found in environment or passed explicitly.")
+
+        self.client = MongoClient(self.mongo_uri, server_api=ServerApi("1"))
         self.test_connection()
-        self.db = self.client[database_name]
+        self.db = self.client["workout_builder"]
         self.batch_size = 100
 
     def test_connection(self):

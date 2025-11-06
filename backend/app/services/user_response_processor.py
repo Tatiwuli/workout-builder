@@ -9,21 +9,23 @@ def process_user_responses(user_responses):
         dict: Processed responses with computed fields
     """
     workout_duration = user_responses.get("workout_duration", 0)
-    if workout_duration < 45:
-        user_responses["time_range"] = "short"
-    elif 45 <= workout_duration <= 60:
-        user_responses["time_range"] = "mid"
-    else:
-        user_responses["time_range"] = "long"
 
-    experience_mapping = {
-        "I'm just starting out and have less than 3 months of experience.": "Early Beginner",
-        "I've been consistently training for 3 months to 1 year.": "Beginner",
-        "I've been training regularly for 1 to 2 years": "Early Intermediate",
-        "I've been training regularly for 2 to 3 years": "Late Intermediate",
+    if workout_duration < 45:
+        time_constraint = "short"
+    elif 45 <= workout_duration <= 60:
+        time_constraint = "medium"
+    else:
+        time_constraint = "long"
+
+  
+    fitness_level_mapping = {
+        "I'm just starting out and have less than 3 months of experience.": "beginners",
+        "I've been consistently training for 3 months to 1 year.": "beginners",
+        "I've been training regularly for 1 to 2 years": "intermediate_early",
+        "I've been training regularly for 2 to 3 years": "intermediate_late",
     }
-    user_responses["experience_level"] = experience_mapping.get(
-        user_responses.get("experience_level_description"), "Unknown"
+    fitness_level = fitness_level_mapping.get(
+        user_responses.get("experience_level_description"), "beginners"
     )
 
     muscle_goals = {
@@ -43,9 +45,9 @@ def process_user_responses(user_responses):
         "goals": muscle_goals,
         "muscle_workout_frequency": muscle_workout_frequency,
         "workout_duration": workout_duration,
-        "time_range": user_responses.get("time_range"),
-        "experience_level": user_responses.get("experience_level"),
-        "experience_level_description": user_responses.get("experience_level_description"),
+        "time_constraint": time_constraint, 
+        "fitness_level": fitness_level, 
+        "experience_level_description": user_responses.get("experience_level_description"),  
     }
 
     return final_user_responses

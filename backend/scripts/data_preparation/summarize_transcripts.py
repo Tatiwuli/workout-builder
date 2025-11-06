@@ -36,12 +36,12 @@ def summarize_transcript(transcript_text, category):
     print(f"Creating summaries for category: {category}...")
 
     # Create summaries
-    exercises_summary = llm.call_api(
+    exercises_summary = llm.call_llm(
         system_prompt=system_prompt, user_prompt=user_prompt_exercises)
 
     print("Exercises summary successfully created!")
 
-    main_knowledge_summary = llm.call_api(
+    main_knowledge_summary = llm.call_llm(
         system_prompt=system_prompt, user_prompt=user_prompt_main_knowledge)
     print("Main knowledge summary successfully created!")
 
