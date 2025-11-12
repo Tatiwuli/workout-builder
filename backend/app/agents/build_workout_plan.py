@@ -44,7 +44,7 @@ class WorkoutBuilderWorkflow:
         exercise_selector = ExerciseSelectorAgent(
             processed_responses,
             workout_knowledge=workout_knowledge,
-            stream_response = True ,
+            stream_response = False ,
         )
         exercise_selector_output = exercise_selector.run()
 
@@ -54,7 +54,7 @@ class WorkoutBuilderWorkflow:
             processed_responses,
             exercise_selector_output,
             workout_knowledge=workout_knowledge,
-            stream_response = True ,
+            stream_response = False ,
         )
         workout_plan = workout_planner.run()
 
@@ -62,7 +62,7 @@ class WorkoutBuilderWorkflow:
             self.progress_callback("Finalizing Workout 🤖", 80)
         personal_trainer = PersonalTrainerAgent(
             workout_knowledge=workout_knowledge,
-            stream_response = True ,
+            stream_response = False ,
         )
         final_plan = personal_trainer.run(
             processed_responses,

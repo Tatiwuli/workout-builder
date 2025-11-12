@@ -307,6 +307,10 @@ class OpenAILLM:
             "error": None,
         }
 
+        full_response = ""
+        tokens = 0
+        final_response = None
+
         try:
             start = time.time()
             with self.client.responses.stream(
