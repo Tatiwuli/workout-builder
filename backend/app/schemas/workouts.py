@@ -63,9 +63,12 @@ class ExerciseSelectorOutput(BaseModel):
 
 
 # Workout Planner Agent Models
+class TargetMusclePart(BaseModel):
+    muscle_group: str
+    muscle_part: List[str]
 class PlannedExercise(BaseModel):
     exercise_name: str
-    target_muscle_part: List[Dict[str, List[str]]]
+    target_muscle_part: List[TargetMusclePart]
     reps: str
     weight: str
     rest_time: float
@@ -105,7 +108,7 @@ class WarmupSectionFinal(BaseModel):
 
 class ExerciseFinal(BaseModel):
     exercise_name: str
-    target_muscle_part: List[Dict[str, List[str]]]
+    target_muscle_part: List[TargetMusclePart]
     setup: str
     execution: Union[str, List[str]]
     media_url: str

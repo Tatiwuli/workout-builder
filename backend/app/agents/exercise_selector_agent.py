@@ -39,17 +39,17 @@ class ExerciseSelectorAgent:
                 selected_exercises = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
+                response_model = ExerciseSelectorOutput
             
             )
             except Exception as e :
                 raise RuntimeError("Exercise Selector Agent Error: ", e)
         else:
             try:
-                json_schema = ExerciseSelectorOutput.model_json_schema()
                 selected_exercises = self.llm.call_llm(
                     system_prompt=formatted_system_prompt,
                     user_prompt=formatted_user_prompt,
-                    json_schema=json_schema
+                    response_model=ExerciseSelectorOutput,
                 )
             except Exception as e :
                 raise RuntimeError("Exercise Selector Agent Error: ", e)

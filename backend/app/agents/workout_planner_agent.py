@@ -78,6 +78,7 @@ class WorkoutPlannerAgent:
                 planned_workout = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
+                response_model = WorkoutPlannerOutput
             
             )
             except Exception as e :
@@ -85,11 +86,10 @@ class WorkoutPlannerAgent:
 
         else:
             try:
-                json_schema = WorkoutPlannerOutput.model_json_schema()
                 planned_workout = self.llm.call_llm(
                     system_prompt=formatted_system_prompt,
                     user_prompt=formatted_user_prompt,
-                    json_schema=json_schema
+                    response_model=WorkoutPlannerOutput,
                 )
             except Exception as e :
                 raise RuntimeError("Workout Planner Agent Error (Non-Stream): ", e)

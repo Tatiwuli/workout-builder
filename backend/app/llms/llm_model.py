@@ -22,7 +22,7 @@ class LLMService:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Any] = None,
     ) -> Dict[str, Any]:
         """
         Attempt Gemini with exponential backoff; fall back to OpenAI if Gemini
@@ -31,20 +31,32 @@ class LLMService:
         delay = self.base_delay
         last_exception: Optional[Exception] = None
 
+        openai_format = response_model
+        gemini_schema = None
+        if response_model is not None:
+            if hasattr(response_model, "model_json_schema"):
+                gemini_schema = response_model.model_json_schema()
+            else:
+                gemini_schema = response_model
+
+
         for attempt in range(self.retries + 1):
             try:
+                print("Calling Gemini")
                 return self.gemini.call_llm(
                     system_prompt=system_prompt,
                     user_prompt=user_prompt,
-                    json_schema=json_schema,
+                    response_model=gemini_schema,
                 )
             except Exception as exc:
-                print("Gemini error: ", exc)
-                print("Trying exponential backoff")
+                print("Gemini failed: ", exc)
+                
 
                 last_exception = exc
                 if attempt == self.retries:
                     break
+
+                print("Trying exponential backoff")
 
                 sleep_for = delay * random.uniform(0.8, 1.2)
                 if sleep_for > 0:
@@ -57,7 +69,7 @@ class LLMService:
             return self.openai.call_llm(
                 system_prompt=system_prompt,
                 user_prompt=user_prompt,
-                json_schema=json_schema,
+                response_model=openai_format,
             )
         except Exception as exc:
             if last_exception is not None:
@@ -68,7 +80,7 @@ class LLMService:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Any] = None,
     ) -> Dict[str, Any]:
         """
         Attempt Gemini streaming call with a single retry; fall back to OpenAI
@@ -79,13 +91,21 @@ class LLMService:
         delay = self.base_delay
         last_exception: Optional[Exception] = None
 
+        gemini_schema = None
+        openai_format = response_model
+        if response_model is not None:
+            if hasattr(response_model, "model_json_schema"):
+                gemini_schema = response_model.model_json_schema()
+            else:
+                gemini_schema = response_model
+
         for attempt in range(self.retries + 1):
             try:
                 print("Trying gemini ")
                 return self.gemini.call_stream_llm(
                     system_prompt=system_prompt,
                     user_prompt=user_prompt,
-                    json_schema=json_schema,
+                    response_model=gemini_schema,
                 )
             except Exception as exc:
                 last_exception = exc
@@ -107,6 +127,7 @@ class LLMService:
             return self.openai.call_stream_llm(
                 system_prompt=system_prompt,
                 user_prompt=user_prompt,
+                response_model=openai_format,
             )
         except Exception as exc:
             if last_exception is not None:

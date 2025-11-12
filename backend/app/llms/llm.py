@@ -30,7 +30,7 @@ class GeminiLLM:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Dict[str, Any]] = None,
         
     ) -> Dict[str, Any]:
         """
@@ -39,7 +39,7 @@ class GeminiLLM:
         Args:
             system_prompt (str): System instruction for the model
             user_prompt (str): User content/query
-            json_schema (Optional[Dict[str, Any]]): JSON schema for structured output
+            response_model (Optional[Dict[str, Any]]): JSON schema for structured output
             stream_responses (bool): Unused placeholder for parity with other interfaces.
 
         Returns:
@@ -55,9 +55,9 @@ class GeminiLLM:
             "thinking_config": types.ThinkingConfig(thinking_budget=-1),  # dynamic
         }
 
-        if json_schema:
+        if response_model:
             config_params["response_mime_type"] = "application/json"
-            config_params["response_json_schema"] = json_schema
+            config_params["response_json_schema"] = response_model
 
         try:
             response = self.client.models.generate_content(
@@ -90,7 +90,7 @@ class GeminiLLM:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
 
         config_params = {
@@ -99,9 +99,9 @@ class GeminiLLM:
             "thinking_config": types.ThinkingConfig(thinking_budget=-1),  # dynamic
         }
 
-        if json_schema:
+        if response_model:
             config_params["response_mime_type"] = "application/json"
-            config_params["response_json_schema"] = json_schema
+            config_params["response_json_schema"] = response_model
 
         metadata = {
             "model": self.model_name,
@@ -209,7 +209,7 @@ class OpenAILLM:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Any] = None,
     ) -> Dict[str, Any]:
         """
         Calls the OpenAI LLM API with system and user prompts using Responses API.
@@ -217,7 +217,7 @@ class OpenAILLM:
         Args:
             system_prompt (str): System instruction for the model
             user_prompt (str): User content/query
-            json_schema (Optional[Dict[str, Any]]): JSON schema for structured output
+            response_model (Optional[Any]): Pydantic model or schema describing structured output.
 
         Returns:
             Dict[str, Any]: Parsed JSON response from the LLM
@@ -227,29 +227,22 @@ class OpenAILLM:
         """
 
         config_text = {}
-        if json_schema:
-            config_text["response_format"] = { 
-                    "type": "json_schema",
-                "json_schema": {
-                    "name": "response",
-                    "strict": True,
-                    "schema": json_schema}
-            }
-        try:
-            response = self.client.responses.create(
-                model = self.model_name, 
-            input = [
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": user_prompt,
-                },
-            ],
-                **config_text,
+        if response_model:
+            config_text["text_format"] = response_model
 
+        try:
+            response = self.client.responses.parse(
+                model=self.model_name,
+                input=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                **config_text,
             )
-        except Exception as e:
-            raise RuntimeError(f"OpenAI API call failed: {e}")
+        except Exception as e: 
+            raise RuntimeError("OpenAI error: ", e)
+
+        #print("Raw OpenAI response object:", response, flush=True)
 
         response_text = response.output_text
         print("\n\n\n#########################")
@@ -274,21 +267,22 @@ class OpenAILLM:
         self,
         system_prompt: str,
         user_prompt: str,
-        json_schema: Optional[Dict[str, Any]] = None,
+        response_model: Optional[Any] = None,
     ) -> Dict[str, Any]:
         
         
 
             
         config_text = {}
-        if json_schema:
-            config_text["response_format"] = { 
-                    "type": "json_schema",
-                "json_schema": {
-                    "name": "response",
-                    "strict": True,
-                    "schema": json_schema}
-            }
+        if response_model:
+            config_text["text_format"] = response_model
+            # config_text["response_format"] = { 
+            #         "type": "json_schema",
+            #     "json_schema": {
+            #         "name": "response",
+            #         "strict": True,
+            #         "schema": json_schema}
+            # }
 
 
           
@@ -338,9 +332,7 @@ class OpenAILLM:
                         raise RuntimeError(f"OpenAI streaming error: {event.error}")
                 final_response = stream.get_final_response()
         except Exception as e:
-            metadata["status"] = "error"
-            metadata["error"] = str(e)
-            raise RuntimeError(f"OpenAI API call failed: {e}")
+            raise RuntimeError(f"OpenAI API call failed: {e}") from e
         finally:
             if not full_response and final_response:
                 try:

@@ -33,17 +33,17 @@ class PersonalTrainerAgent:
                 final_workout_plan = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
+                response_model  = FinalWorkoutPlan,
             
             )
             except Exception as e :
                 raise RuntimeError("Personal Trainer Agent Error (Stream): ", e)
         else:
             try:
-                json_schema = FinalWorkoutPlan.model_json_schema()
                 final_workout_plan = self.llm.call_llm(
                     system_prompt=formatted_system_prompt,
                     user_prompt=formatted_user_prompt,
-                    json_schema=json_schema
+                    response_model=FinalWorkoutPlan,
                 )
             except Exception as e :
                 raise RuntimeError("Personal Trainer Agent Error (Non-Stream): ", e)
