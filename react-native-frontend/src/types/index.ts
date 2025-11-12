@@ -31,24 +31,39 @@ export interface ApiUserResponses {
 export interface Exercise {
   exercise_name: string
   setup: string
-  execution: string
+  execution: string | string[]
   media_url?: string
+  reps: number
+
+  weight?: number // optional for warmup exercises
+  sets?: number // optional for main exercise
+  rest_time?: number // Duration in minutes as float
+  alternative_exercise?: string
+  alternative_exercise_setup?: string
+  alternative_exercise_execution?: string | string[]
+  alternative_exercise_media_url?: string
+  alternative_exercise_reps?: string
+  alternative_exercise_weight?: string
+  additional_tips?: string
 }
 
 export interface WarmupSection {
-  warmup_duration: string
+  warmup_duration: number // Duration in minutes as float
   warmup_exercises: Exercise[]
 }
 
 export interface WorkoutSet {
   set_number: number
+  set_duration: number // Duration in minutes as float
+  num_rounds: number
+  set_strategy?: string
   target_muscle_group: string[]
   exercises: Exercise[]
 }
 
 export interface WorkoutPlan {
   workout_title: string
-  total_workout_duration: string
+  total_workout_duration: number // Duration in minutes as float
   num_exercises: number
   warmup: WarmupSection
   sets: WorkoutSet[]

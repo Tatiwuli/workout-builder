@@ -1,5 +1,19 @@
 import React, { useState } from "react"
 import { View, StyleSheet, ScrollView, Alert, Platform } from "react-native"
+
+const showAlert = (
+  title: string,
+  message: string,
+  buttons?: { text: string; onPress?: () => void }[]
+) => {
+  if (Platform.OS === "web") {
+    const combined = title ? `${title}\n\n${message}` : message
+    window.alert(combined)
+    buttons?.[0]?.onPress?.()
+  } else {
+    Alert.alert(title, message, buttons)
+  }
+}
 import { generateWorkoutPlan } from "../api/endpoints/workouts"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RootStackParamList } from "../../App"
@@ -39,10 +53,10 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
         return prev.filter((m) => m !== muscle)
       } else {
         if (prev.length >= 4) {
-          Alert.alert(
+          showAlert(
             "Selection Limit",
             "You can only select up to 4 muscle groups.",
-            [{ text: "Gotcha!", style: "default" }]
+            [{ text: "Gotcha!" }]
           )
           return prev
         }
@@ -55,10 +69,10 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
     setSelectedMuscles((prev) => {
       const newSelection = [...new Set([...prev, ...muscles])]
       if (newSelection.length > 4) {
-        Alert.alert(
+        showAlert(
           "Selection Limit",
           "You can only select up to 4 muscle groups. Please deselect some muscles first.",
-          [{ text: "Gotcha!", style: "default" }]
+          [{ text: "Gotcha!" }]
         )
         return prev
       }
@@ -73,15 +87,15 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
   const handleConfirmMuscleSelection = () => {
     if (selectedMuscles.length === 0) {
       console.log("Showing alert for 0 muscles selected")
-      Alert.alert("Error", "Please select at least one muscle group.", [
-        { text: "Gotcha!", style: "default" },
+      showAlert("Error", "Please select at least one muscle group.", [
+        { text: "Gotcha!" },
       ])
       return
     }
     if (selectedMuscles.length > 4) {
       console.log("Showing alert for more than 4 muscles selected")
-      Alert.alert("Error", "Please select up to 4 muscle groups.", [
-        { text: "Gotcha!", style: "default" },
+      showAlert("Error", "Please select up to 4 muscle groups.", [
+        { text: "Gotcha!" },
       ])
       return
     }
@@ -160,7 +174,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
       console.error("Failed to trigger workout generation:", error)
       setIsGeneratingPlan(false)
 
-      Alert.alert(
+      showAlert(
         "Error",
         `Failed to start workout generation: ${
           error instanceof Error ? error.message : "Unknown error"
