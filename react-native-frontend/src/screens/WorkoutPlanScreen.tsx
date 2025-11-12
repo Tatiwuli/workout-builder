@@ -10,6 +10,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StackNavigationProp } from "@react-navigation/stack"
 import { RouteProp } from "@react-navigation/native"
+
 import { RootStackParamList } from "../../App"
 import { WorkoutPlan, Exercise } from "../types"
 import ExerciseCard from "../components/ExerciseCard"
@@ -26,152 +27,166 @@ interface Props {
   route: WorkoutPlanScreenRouteProp
 }
 
-// Mock workout plan data - replace with actual API call
-const mockWorkoutPlan: WorkoutPlan = {
-  workout_title: "(MOCK WORKOUT PLAN)Upper Body Strength & Hypertrophy",
-  total_workout_duration: "60 minutes",
-  num_exercises: 8,
-  warmup: {
-    warmup_duration: "10 minutes",
-    warmup_exercises: [
-      {
-        exercise_name: "Arm Circles",
-        setup: "Stand with feet shoulder-width apart, arms extended to sides",
-        execution:
-          "Make small circular motions with arms, gradually increasing size. 10 forward, 10 backward.",
-      },
-      {
-        exercise_name: "Light Push-ups",
-        setup:
-          "Start in plank position with hands slightly wider than shoulders",
-        execution: "Perform 5-10 light push-ups to warm up chest and triceps.",
-      },
-    ],
-  },
-  sets: [
-    {
-      set_number: 1,
-      target_muscle_group: ["Chest", "Triceps"],
-      exercises: [
-        {
-          exercise_name: "Barbell Bench Press",
-          setup:
-            "Lie on bench with feet flat on ground, grip slightly wider than shoulder width",
-          execution:
-            "Lower bar to chest, press up explosively. 3 sets of 8-10 reps.",
-        },
-        {
-          exercise_name: "Incline Dumbbell Press",
-          setup:
-            "Set bench to 30-45 degree incline, hold dumbbells at shoulder level",
-          execution:
-            "Press dumbbells up and together, control descent. 3 sets of 10-12 reps.",
-        },
-      ],
-    },
-    {
-      set_number: 2,
-      target_muscle_group: ["Back", "Biceps"],
-      exercises: [
-        {
-          exercise_name: "Pull-ups",
-          setup: "Grip pull-up bar with hands slightly wider than shoulders",
-          execution:
-            "Pull body up until chin clears bar, control descent. 3 sets of 6-8 reps.",
-        },
-        {
-          exercise_name: "Bent-over Rows",
-          setup:
-            "Stand with feet shoulder-width, bend at hips, hold barbell with overhand grip",
-          execution:
-            "Pull bar to lower chest, squeeze shoulder blades. 3 sets of 10-12 reps.",
-        },
-      ],
-    },
-  ],
-}
+// Convert float minutes, 'MM:SS' string, or 'HH:MM:SS' string to 'MM:SS' format string
+const formatDurationToMMSS = (duration: number | string): string => {
+  // If it's already a string, check for different formats
+  if (typeof duration === "string") {
+    const trimmed = duration.trim()
 
-const formatDuration = (duration: string) => {
-  // const [hours, minutes] = duration.split(" ").map(Number)
-  // if (hours > 0) {
-  //   return `${hours}h ${minutes}m`
-  // }
-  // If it's already a string like "60 minutes" just return it or strip words
-  const numeric = parseFloat(duration)
-  if (!isNaN(numeric)) {
-    return `${Math.round(numeric)} min`
+    // Check for 'HH:MM:SS' format (e.g., "00:15:00" or "01:30:45")
+    const hmsPattern = /^(\d{1,2}):(\d{2}):(\d{2})$/
+    const hmsMatch = trimmed.match(hmsPattern)
+    if (hmsMatch) {
+      const hours = parseInt(hmsMatch[1], 10)
+      const minutes = parseInt(hmsMatch[2], 10)
+      const seconds = parseInt(hmsMatch[3], 10)
+      const totalMinutes = hours * 60 + minutes + seconds / 60
+      // Convert to MM:SS format
+      const totalSeconds = Math.round(totalMinutes * 60)
+      const mins = Math.floor(totalSeconds / 60)
+      const secs = totalSeconds % 60
+      return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`
+    }
+
+    // Check for 'MM:SS' format, return as-is
+    const mmssPattern = /^\d{2}:\d{2}$/
+    if (mmssPattern.test(trimmed)) {
+      return trimmed
+    }
+
+    // Try to parse as float (in case it's a string representation of a number)
+    const parsed = parseFloat(trimmed)
+    if (!isNaN(parsed)) {
+      duration = parsed
+    } else {
+      return "00:00" // Invalid format, return default
+    }
   }
-  return duration
+
+  // If it's a number (float minutes), convert to 'MM:SS'
+  if (typeof duration === "number") {
+    const totalSeconds = Math.round(duration * 60)
+    const mins = Math.floor(totalSeconds / 60)
+    const secs = totalSeconds % 60
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`
+  }
+
+  return "00:00" // Fallback
 }
 
 const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
+  const [expandedSets, setExpandedSets] = useState<Set<number>>(new Set())
   const [expandedExercises, setExpandedExercises] = useState<Set<string>>(
     new Set()
   )
 
-  // Get workout plan from navigation params or use mock data as fallback
-  const workoutPlan: WorkoutPlan = route.params?.workoutPlan || mockWorkoutPlan
+  // Get workout plan from navigation params
+  const workoutPlan: WorkoutPlan = route.params?.workoutPlan
 
-  // Debug log to see what we received
   console.log("WorkoutPlanScreen received data:", route.params)
   console.log("Using workout plan:", workoutPlan)
 
+  const toggleSet = (setNumber: number) => {
+    const newExpanded = new Set(expandedSets)
+    if (newExpanded.has(setNumber)) {
+      newExpanded.delete(setNumber)
+    } else {
+      newExpanded.add(setNumber)
+    }
+    setExpandedSets(newExpanded)
+  }
+
   const toggleExercise = (exerciseName: string) => {
-    // Add the exercise to set of expanded exercises
     const newExpanded = new Set(expandedExercises)
     if (newExpanded.has(exerciseName)) {
-      // untoggle
       newExpanded.delete(exerciseName)
-      //toggle
     } else {
       newExpanded.add(exerciseName)
     }
     setExpandedExercises(newExpanded)
   }
 
-  const renderWarmupSection = () => (
-    <View style={styles.section}>
-      <View style={styles.sectionHeader}>
-        <Text style={styles.sectionTitle}>🔥 Warm-Up</Text>
-        <Text style={styles.sectionDuration}>
-          {formatDuration(workoutPlan.warmup.warmup_duration)}
-        </Text>
-      </View>
+  const renderWarmupSection = () => {
+    const warmupDuration = formatDurationToMMSS(
+      workoutPlan.warmup.warmup_duration
+    )
 
-      {workoutPlan.warmup.warmup_exercises.map((exercise, index) => (
-        <ExerciseCard
-          key={`warmup-${index}`}
-          exercise={exercise}
-          isExpanded={expandedExercises.has(exercise.exercise_name)}
-          onToggle={() => toggleExercise(exercise.exercise_name)}
-        />
-      ))}
-    </View>
-  )
+    return (
+      <View style={styles.section}>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>🔥 Warm-Up</Text>
+          <Text style={styles.sectionDuration}>⏱️ {warmupDuration}</Text>
+        </View>
+
+        {workoutPlan.warmup.warmup_exercises.map((exercise, index) => (
+          <ExerciseCard
+            key={`warmup-${index}`}
+            exercise={exercise}
+            isExpanded={expandedExercises.has(exercise.exercise_name)}
+            onToggle={() => toggleExercise(exercise.exercise_name)}
+          />
+        ))}
+      </View>
+    )
+  }
 
   const renderWorkoutSets = () => (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>💪 Workout Sets</Text>
 
-      {workoutPlan.sets.map((set, setIndex) => (
-        <View key={setIndex} style={styles.setContainer}>
-          <View style={styles.setHeader}>
-            <Text style={styles.setNumber}>Set {set.set_number}</Text>
-            <Text style={styles.targetMuscles}>
-              Target: {set.target_muscle_group.join(", ")}
-            </Text>
-          </View>
+      {workoutPlan.sets.map((set, setIndex) => {
+        const isSetExpanded = expandedSets.has(set.set_number)
+        // const hasSetStrategy =
+        //   set.set_strategy &&
+        //   set.set_strategy.trim() !== "" &&
+        //   set.set_strategy.toLowerCase() !== "none"
 
-          {set.exercises.map((exercise, exerciseIndex) => (
-            <ExerciseCard
-              key={`set-${setIndex}-exercise-${exerciseIndex}`}
-              exercise={exercise}
-              isExpanded={expandedExercises.has(exercise.exercise_name)}
-              onToggle={() => toggleExercise(exercise.exercise_name)}
-            />
-          ))}
-        </View>
-      ))}
+        return (
+          <View key={setIndex} style={styles.setContainer}>
+            <TouchableOpacity
+              style={styles.setHeader}
+              onPress={() => toggleSet(set.set_number)}
+              activeOpacity={0.7}
+            >
+              <View style={styles.setHeaderLeft}>
+                <Text style={styles.setNumber}>Set {set.set_number}</Text>
+                <Text style={styles.setMetadata}>{set.num_rounds} rounds</Text>
+                <Text style={styles.setMetadata}>
+                  ⏱️ {formatDurationToMMSS(set.set_duration)}
+                </Text>
+                <Text style={styles.targetMuscles}>
+                  💪Target Muscles: {set.target_muscle_group.join(", ")}
+                </Text>
+              </View>
+              <View style={styles.setHeaderRight}>
+                <Text style={styles.expandIcon}>
+                  {isSetExpanded ? "▼" : "▶"}
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            {isSetExpanded && (
+              <View style={styles.setContent}>
+                {/* {hasSetStrategy && (
+                  <Text style={styles.setStrategy}>{set.set_strategy}</Text>
+                )} */}
+
+                {set.exercises.map((exercise, exerciseIndex) => {
+                  const exerciseKey = `set-${set.set_number}-exercise-${exerciseIndex}`
+                  return (
+                    <ExerciseCard
+                      key={exerciseKey}
+                      exercise={exercise}
+                      isExpanded={expandedExercises.has(exercise.exercise_name)}
+                      onToggle={() => toggleExercise(exercise.exercise_name)}
+                    />
+                  )
+                })}
+              </View>
+            )}
+          </View>
+        )
+      })}
     </View>
   )
 
@@ -201,7 +216,7 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
               <View style={styles.stat}>
                 <Text style={styles.statLabel}>Duration</Text>
                 <Text style={styles.statValue}>
-                  {formatDuration(workoutPlan.total_workout_duration)}
+                  ⏱️ {formatDurationToMMSS(workoutPlan.total_workout_duration)}
                 </Text>
               </View>
               <View style={styles.stat}>
@@ -320,23 +335,55 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   setContainer: {
-    marginBottom: 24,
+    marginBottom: 16,
+    backgroundColor: "#f8f9fa",
+    borderRadius: 8,
+    overflow: "hidden",
   },
   setHeader: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 12,
-    paddingHorizontal: 8,
+    padding: 16,
+    backgroundColor: "#ffffff",
+  },
+  setHeaderLeft: {
+    flex: 1,
   },
   setNumber: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
-    color: "#007AFF",
+    color: "#333333",
+    marginBottom: 4,
+  },
+  setMetadata: {
+    fontSize: 14,
+    color: "#666666",
+    marginBottom: 2,
+  },
+  setHeaderRight: {
+    flex: 1,
+    alignItems: "flex-end",
+    marginRight: 8,
   },
   targetMuscles: {
     fontSize: 14,
     color: "#666666",
+    textAlign: "left",
+  },
+  expandIcon: {
+    fontSize: 16,
+    color: "#007AFF",
+    fontWeight: "bold",
+  },
+  setContent: {
+    padding: 16,
+    backgroundColor: "#ffffff",
+  },
+  setStrategy: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#333333",
+    marginBottom: 16,
   },
   footer: {
     marginTop: 30,

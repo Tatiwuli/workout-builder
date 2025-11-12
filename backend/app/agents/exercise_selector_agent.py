@@ -1,15 +1,17 @@
 from .agents_prompts.exercise_selector_prompts import system_prompt, user_prompt
-from ..llms.llm import GeminiLLM
+from ..llms.llm_model import LLMService
 from ..utils.agent_utils import save_output_to_json, combine_texts
+from ..schemas.workouts import ExerciseSelectorOutput
 
 
 class ExerciseSelectorAgent:
-    def __init__(self, user_needs: dict, workout_knowledge: dict, llm=None):
+    def __init__(self, user_needs: dict, workout_knowledge: dict,stream_response: bool = False):
         self.user_needs = user_needs
         self.system_prompt = system_prompt
         self.user_prompt = user_prompt
-        self.llm = llm or GeminiLLM()
+        self.llm = LLMService()
         self.workout_knowledge = workout_knowledge
+        self.stream_response = stream_response
 
     def run(self):
         print("Preparing wiki input...")
@@ -30,14 +32,31 @@ class ExerciseSelectorAgent:
         )
 
         print("Calling LLM for exercise selection...")
-        selected_exercises = self.llm.call_llm(
-            system_prompt=formatted_system_prompt,
-            user_prompt=formatted_user_prompt
-        )
+
+       
+        if self.stream_response:
+            try:
+                selected_exercises = self.llm.call_stream_llm(
+                system_prompt=formatted_system_prompt,
+                user_prompt=formatted_user_prompt,
+            
+            )
+            except Exception as e :
+                raise RuntimeError("Exercise Selector Agent Error: ", e)
+        else:
+            try:
+                json_schema = ExerciseSelectorOutput.model_json_schema()
+                selected_exercises = self.llm.call_llm(
+                    system_prompt=formatted_system_prompt,
+                    user_prompt=formatted_user_prompt,
+                    json_schema=json_schema
+                )
+            except Exception as e :
+                raise RuntimeError("Exercise Selector Agent Error: ", e)
 
         print("Saving selected exercises to JSON...")
         json_filepath = save_output_to_json(
-            selected_exercises, "selected_exercises"
+            selected_exercises, "selected_exercises", 
         )
         print(f"Saved to JSON: {json_filepath}")
 

@@ -16,7 +16,7 @@ def combine_texts(texts: list) -> str:
     return "\n\n### Section ###\n\n".join(map(str, texts))
 
 
-def save_output_to_json(output_data, file_prefix):
+def save_output_to_json( output_data: dict, file_prefix: str, model_used: str = None):
     """
     Saves the llm output to a JSON file.
 
@@ -27,9 +27,9 @@ def save_output_to_json(output_data, file_prefix):
     Returns:
         str: Path to the saved JSON file.
     """
-    # Get absolute path to backend directory (parent of agents directory)
+    # Get absolute path to backend directory (backend/app/utils/)
     backend_dir = os.path.dirname(
-        os.path.dirname(os.path.abspath(__file__)))
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     folder_path = os.path.join(
         backend_dir, "data", f"{file_prefix}_json")
     os.makedirs(folder_path, exist_ok=True)

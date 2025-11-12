@@ -1,0 +1,114 @@
+import random
+import time
+from typing import Dict, Any, Optional
+
+from .llm import GeminiLLM, OpenAILLM
+
+
+class LLMService:
+    def __init__(
+        self,
+        *,
+     
+        retries: int = 1,
+        base_delay: float = 0.5,
+    ) -> None:
+        self.gemini = GeminiLLM() 
+        self.openai = OpenAILLM()
+        self.retries = max(0, retries)
+        self.base_delay = max(0.0, base_delay)
+
+    def call_llm(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        json_schema: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        """
+        Attempt Gemini with exponential backoff; fall back to OpenAI if Gemini
+        exhausts its retries.
+        """
+        delay = self.base_delay
+        last_exception: Optional[Exception] = None
+
+        for attempt in range(self.retries + 1):
+            try:
+                return self.gemini.call_llm(
+                    system_prompt=system_prompt,
+                    user_prompt=user_prompt,
+                    json_schema=json_schema,
+                )
+            except Exception as exc:
+                print("Gemini error: ", exc)
+                print("Trying exponential backoff")
+
+                last_exception = exc
+                if attempt == self.retries:
+                    break
+
+                sleep_for = delay * random.uniform(0.8, 1.2)
+                if sleep_for > 0:
+                    time.sleep(sleep_for)
+                delay *= 2
+
+        # Gemini exhausted; fall back to OpenAI.
+        print("Gemini all attemps exhausted. Trying OpenAI")
+        try:
+            return self.openai.call_llm(
+                system_prompt=system_prompt,
+                user_prompt=user_prompt,
+                json_schema=json_schema,
+            )
+        except Exception as exc:
+            if last_exception is not None:
+                exc.__cause__ = last_exception  # type: ignore[attr-defined]
+            raise
+
+    def call_stream_llm(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        json_schema: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        """
+        Attempt Gemini streaming call with a single retry; fall back to OpenAI
+        streaming call if Gemini fails.
+        """
+    
+
+        delay = self.base_delay
+        last_exception: Optional[Exception] = None
+
+        for attempt in range(self.retries + 1):
+            try:
+                print("Trying gemini ")
+                return self.gemini.call_stream_llm(
+                    system_prompt=system_prompt,
+                    user_prompt=user_prompt,
+                    json_schema=json_schema,
+                )
+            except Exception as exc:
+                last_exception = exc
+                if attempt == self.retries:
+                    break
+
+                sleep_for = delay * random.uniform(0.8, 1.2)
+                if sleep_for > 0:
+                    time.sleep(sleep_for)
+                delay *= 2
+
+        if self.openai is None:
+            if last_exception:
+                raise last_exception
+            raise RuntimeError("Streaming LLMs are not configured")
+
+        try:
+            print("Gemini all attemps exhausted. Trying OpenAI", flush = True )
+            return self.openai.call_stream_llm(
+                system_prompt=system_prompt,
+                user_prompt=user_prompt,
+            )
+        except Exception as exc:
+            if last_exception is not None:
+                exc.__cause__ = last_exception  # type: ignore[attr-defined]
+            raise

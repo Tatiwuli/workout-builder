@@ -2,16 +2,16 @@ from .exercise_selector_agent import ExerciseSelectorAgent
 from .workout_planner_agent import WorkoutPlannerAgent
 from .personal_trainer_agent import PersonalTrainerAgent
 from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
-from ..llms.llm import GeminiLLM
+
 from ..services.workout_knowledge_fetch import WorkoutKnowledgeFetch
 
 
 class WorkoutBuilderWorkflow:
     def __init__(self, database_name="workout_builder", progress_callback=None):
     
-        self.llm = GeminiLLM()
         self.knowledge_fetch = WorkoutKnowledgeFetch()
         self.progress_callback = progress_callback
+        
 
     def fetch_workout_knowledge(self, user_needs):
         muscle_groups = user_needs["muscle_groups"]
@@ -44,7 +44,7 @@ class WorkoutBuilderWorkflow:
         exercise_selector = ExerciseSelectorAgent(
             processed_responses,
             workout_knowledge=workout_knowledge,
-            llm=self.llm
+            stream_response = True ,
         )
         exercise_selector_output = exercise_selector.run()
 
@@ -54,7 +54,7 @@ class WorkoutBuilderWorkflow:
             processed_responses,
             exercise_selector_output,
             workout_knowledge=workout_knowledge,
-            llm=self.llm
+            stream_response = True ,
         )
         workout_plan = workout_planner.run()
 
@@ -62,7 +62,7 @@ class WorkoutBuilderWorkflow:
             self.progress_callback("Finalizing Workout 🤖", 80)
         personal_trainer = PersonalTrainerAgent(
             workout_knowledge=workout_knowledge,
-            llm=self.llm
+            stream_response = True ,
         )
         final_plan = personal_trainer.run(
             processed_responses,

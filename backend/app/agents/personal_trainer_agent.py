@@ -1,15 +1,17 @@
 from .agents_prompts.personal_trainer_prompts import system_prompt, user_prompt
-from ..llms.llm import GeminiLLM
+from ..llms.llm_model import LLMService
 from ..utils.agent_utils import save_output_to_json, combine_texts
+from ..schemas.workouts import FinalWorkoutPlan
 
 
 class PersonalTrainerAgent:
-    def __init__(self, workout_knowledge: dict, llm=None):
+    def __init__(self, workout_knowledge: dict, stream_response: bool = False):
         self.system_prompt = system_prompt
         
         self.user_prompt = user_prompt
-        self.llm = llm or GeminiLLM()
+        self.llm = LLMService()
         self.workout_knowledge = workout_knowledge
+        self.stream_response = stream_response
 
     def run(self, user_needs, workout_plan, selected_exercises):
         print("Preparing assistant input...")
@@ -26,10 +28,25 @@ class PersonalTrainerAgent:
         )
 
         print("Calling LLM to finalize the workout plan...")
-        final_workout_plan = self.llm.call_llm(
-            system_prompt=formatted_system_prompt,
-            user_prompt=formatted_user_prompt
-        )
+        if self.stream_response:
+            try:
+                final_workout_plan = self.llm.call_stream_llm(
+                system_prompt=formatted_system_prompt,
+                user_prompt=formatted_user_prompt,
+            
+            )
+            except Exception as e :
+                raise RuntimeError("Personal Trainer Agent Error (Stream): ", e)
+        else:
+            try:
+                json_schema = FinalWorkoutPlan.model_json_schema()
+                final_workout_plan = self.llm.call_llm(
+                    system_prompt=formatted_system_prompt,
+                    user_prompt=formatted_user_prompt,
+                    json_schema=json_schema
+                )
+            except Exception as e :
+                raise RuntimeError("Personal Trainer Agent Error (Non-Stream): ", e)
 
         print("Saving final workout plan to JSON...")
         json_filepath = save_output_to_json(
