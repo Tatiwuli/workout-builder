@@ -25,7 +25,6 @@ def start_generation(user_data: Dict[str, Any]) -> str:
         try:
             raw_responses = {
                 "muscle_groups": user_data["muscle_groups"],
-                "goal": user_data["goal"],
                 "frequency": user_data["frequency"],
                 "workout_duration": user_data["duration"],
                 "experience_level_description": user_data["experience"],

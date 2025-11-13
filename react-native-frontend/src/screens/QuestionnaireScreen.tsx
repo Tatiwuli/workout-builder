@@ -1,5 +1,13 @@
-import React, { useState } from "react"
-import { View, StyleSheet, ScrollView, Alert, Platform } from "react-native"
+import React, { useMemo, useState } from "react"
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  Alert,
+  Platform,
+  TouchableOpacity,
+  Text,
+} from "react-native"
 
 const showAlert = (
   title: string,
@@ -8,11 +16,23 @@ const showAlert = (
 ) => {
   if (Platform.OS === "web") {
     const combined = title ? `${title}\n\n${message}` : message
-    window.alert(combined)
-    buttons?.[0]?.onPress?.()
-  } else {
-    Alert.alert(title, message, buttons)
+    const webAlert =
+      (typeof window !== "undefined" &&
+        typeof window.alert === "function" &&
+        window.alert.bind(window)) ||
+      (typeof globalThis !== "undefined" &&
+        typeof (globalThis as { alert?: (msg: string) => void }).alert ===
+          "function" &&
+        (globalThis as { alert: (msg: string) => void }).alert.bind(globalThis))
+
+    if (webAlert) {
+      webAlert(combined)
+      buttons?.[0]?.onPress?.()
+      return
+    }
   }
+
+  Alert.alert(title, message, buttons)
 }
 import { generateWorkoutPlan } from "../api/endpoints/workouts"
 import { StackNavigationProp } from "@react-navigation/stack"
@@ -24,9 +44,11 @@ import {
   ProcessedResponses,
   ApiUserResponses,
   WorkoutGenerationResponse,
+  MUSCLE_GOAL_OPTIONS,
 } from "../types"
 import MuscleSelection from "../components/MuscleSelection"
 import Questionnaire from "../components/Questionnaire"
+import MuscleGoalSelector from "../components/MuscleGoalSelector"
 
 type QuestionnaireScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -45,10 +67,27 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
     "muscle_selection" | "questionnaire" // different rendering
   >("muscle_selection")
   const [isGeneratingPlan, setIsGeneratingPlan] = useState(false)
+  const [muscleGoals, setMuscleGoals] = useState<Record<string, string[]>>({})
+
+  const musclesRequiringGoals = useMemo(
+    () =>
+      selectedMuscles.filter(
+        (muscle) => (MUSCLE_GOAL_OPTIONS[muscle] || []).length > 0
+      ),
+    [selectedMuscles]
+  )
 
   const handleMuscleToggle = (muscle: string) => {
     setSelectedMuscles((prev) => {
       if (prev.includes(muscle)) {
+        setMuscleGoals((currentGoals) => {
+          if (!currentGoals[muscle]) {
+            return currentGoals
+          }
+          const updated = { ...currentGoals }
+          delete updated[muscle]
+          return updated
+        })
         // unselect if user re-clicks a selected muscle
         return prev.filter((m) => m !== muscle)
       } else {
@@ -82,6 +121,15 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
 
   const handleDeselectAll = (muscles: string[]) => {
     setSelectedMuscles((prev) => prev.filter((m) => !muscles.includes(m)))
+    setMuscleGoals((currentGoals) => {
+      const updated = { ...currentGoals }
+      muscles.forEach((muscle) => {
+        if (updated[muscle]) {
+          delete updated[muscle]
+        }
+      })
+      return updated
+    })
   }
 
   const handleConfirmMuscleSelection = () => {
@@ -104,14 +152,44 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
     setWorkflowStage("questionnaire")
     setQuestionIndex(0)
     setResponses({})
+    setMuscleGoals((currentGoals) => {
+      const pruned: Record<string, string[]> = {}
+      selectedMuscles.forEach((muscle) => {
+        if (currentGoals[muscle]?.length) {
+          pruned[muscle] = currentGoals[muscle]
+        }
+      })
+      return pruned
+    })
+  }
+
+  const handleConfirmMuscleGoals = () => {
+    const missingGoalMuscles = musclesRequiringGoals.filter(
+      (muscle) => !(muscleGoals[muscle] && muscleGoals[muscle].length > 0)
+    )
+
+    if (missingGoalMuscles.length > 0) {
+      showAlert(
+        "Incomplete Goals",
+        `Please choose a goal for: ${missingGoalMuscles.join(", ")}.`,
+        [{ text: "On it!" }]
+      )
+      setQuestionIndex(0)
+      return
+    }
+
+    setQuestionIndex((prev) => (prev <= 0 ? 1 : prev))
   }
 
   const handleQuestionAnswer = (answer: string) => {
-    const currentQuestion = QUESTIONS[questionIndex]
+    if (questionIndex === 0) {
+      return
+    }
+    const currentQuestion = QUESTIONS[questionIndex - 1]
 
     const newResponses = { ...responses, [currentQuestion]: answer }
 
-    if (questionIndex < QUESTIONS.length - 1) {
+    if (questionIndex < QUESTIONS.length) {
       setResponses(newResponses)
       setQuestionIndex((prev) => prev + 1)
     } else {
@@ -121,12 +199,25 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
   }
 
   const handleGenerateWorkoutPlan = async () => {
+    const missingGoalMuscles = musclesRequiringGoals.filter(
+      (muscle) => !(muscleGoals[muscle] && muscleGoals[muscle].length > 0)
+    )
+
+    if (missingGoalMuscles.length > 0) {
+      showAlert(
+        "Incomplete Goals",
+        `Please choose a goal for: ${missingGoalMuscles.join(", ")}.`,
+        [{ text: "On it!" }]
+      )
+      return
+    }
+
     const processedResponses: ProcessedResponses = {
-      goal: responses.Goal || "",
       frequency: responses.Frequency || "",
       duration: responses.Duration || "",
       experience: responses.Experience || "",
       selectedMuscles: selectedMuscles,
+      muscleGoals,
     }
 
     setIsGeneratingPlan(true)
@@ -134,13 +225,21 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
     // Prepare API request data
     const apiData: ApiUserResponses = {
       muscle_groups: processedResponses.selectedMuscles,
-      goal: processedResponses.goal,
       frequency: processedResponses.frequency,
       duration: parseInt(
         processedResponses.duration.replace(" minutes", "") || "60"
       ),
       experience: processedResponses.experience,
-      muscle_goals: {},
+      muscle_goals: musclesRequiringGoals.reduce<Record<string, string[]>>(
+        (acc, muscle) => {
+          const goals = muscleGoals[muscle]
+          if (goals?.length) {
+            acc[muscle] = goals
+          }
+          return acc
+        },
+        {}
+      ),
       muscle_frequencies: {},
     }
 
@@ -206,6 +305,52 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
     </View>
   )
 
+  const renderMuscleGoalsStep = () => (
+    <View style={styles.container}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={true}
+        bounces={false}
+        nestedScrollEnabled={true}
+        scrollEnabled={true}
+        keyboardShouldPersistTaps="handled"
+      >
+        <MuscleGoalSelector
+          selectedMuscles={selectedMuscles}
+          muscleGoals={muscleGoals}
+          onGoalToggle={(muscle: string, goal: string) =>
+            setMuscleGoals((currentGoals) => {
+              const existing = currentGoals[muscle] || []
+              const isSelected = existing.includes(goal)
+              const updatedGoals = isSelected
+                ? existing.filter((item) => item !== goal)
+                : [...existing, goal]
+
+              const next: Record<string, string[]> = {
+                ...currentGoals,
+                [muscle]: updatedGoals,
+              }
+
+              if (next[muscle].length === 0) {
+                delete next[muscle]
+              }
+
+              return next
+            })
+          }
+        />
+        <TouchableOpacity
+          style={styles.primaryButton}
+          onPress={handleConfirmMuscleGoals}
+          activeOpacity={0.8}
+        >
+          <Text style={styles.primaryButtonText}>Continue</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </View>
+  )
+
   const renderQuestionnaire = () => (
     <View style={styles.container}>
       <ScrollView
@@ -218,7 +363,7 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
         keyboardShouldPersistTaps="handled"
       >
         <Questionnaire
-          questionIndex={questionIndex}
+          questionIndex={questionIndex - 1}
           responses={responses}
           onQuestionAnswer={handleQuestionAnswer}
           onGenerateWorkoutPlan={handleGenerateWorkoutPlan}
@@ -230,9 +375,9 @@ const QuestionnaireScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {workflowStage === "muscle_selection"
-        ? renderMuscleSelection()
-        : renderQuestionnaire()}
+      {workflowStage === "muscle_selection" && renderMuscleSelection()}
+      {workflowStage === "questionnaire" &&
+        (questionIndex === 0 ? renderMuscleGoalsStep() : renderQuestionnaire())}
     </View>
   )
 }
@@ -248,6 +393,18 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     paddingBottom: 40,
+  },
+  primaryButton: {
+    backgroundColor: "#007AFF",
+    paddingVertical: 15,
+    borderRadius: 25,
+    alignItems: "center",
+    marginTop: 16,
+  },
+  primaryButtonText: {
+    color: "#ffffff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 })
 
