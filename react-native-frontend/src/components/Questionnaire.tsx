@@ -19,14 +19,17 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({
   isGeneratingPlan,
 }) => {
   const questionOptions = {
-    Goal: ["Build Muscle", "Lose Fat", "Improve Strength", "General Fitness"],
     Frequency: [
       "2-3 times per week",
       "4-5 times per week",
       "6+ times per week",
     ],
     Duration: ["30-45 minutes", "45-60 minutes", "60+ minutes"],
-    Experience: ["Beginner", "Intermediate", "Advanced"],
+    Experience:[
+        "I'm just starting out and have less than 3 months of experience.",
+        "I've been consistently training for 3 months to 1 year.",
+        "I've been training regularly for 1 to 2 years"
+         ]
   }
 
   return (
@@ -48,7 +51,7 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({
       </View>
 
       <QuestionCard
-        question={`What is your primary ${QUESTIONS[questionIndex]}?`}
+        question={`What is your ${QUESTIONS[questionIndex]}?`}
         options={
           questionOptions[
             QUESTIONS[questionIndex] as keyof typeof questionOptions
@@ -83,8 +86,9 @@ const Questionnaire: React.FC<QuestionnaireProps> = ({
           {isGeneratingPlan && (
             <View style={styles.loadingMessageContainer}>
               <Text style={styles.loadingMessage}>
-                Hold tight! We're connecting to our workout database with science-based hypertrophy concepts to create
-                the perfect plan for you 💪
+                Hold tight! We're connecting to our workout database with
+                science-based hypertrophy concepts to create the perfect plan
+                for you 💪
               </Text>
             </View>
           )}

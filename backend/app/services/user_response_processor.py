@@ -1,3 +1,25 @@
+from typing import Optional
+
+
+DIRECT_GOAL_KEYS = {
+    "back",
+    "chest",
+    "shoulders",
+    "triceps",
+    "glutes",
+    "hamstrings",
+    "quadriceps",
+    "calves",
+}
+
+
+def _normalise_muscle_slug(raw_key: str) -> Optional[str]:
+    cleaned_key = (raw_key or "").strip()
+    if not cleaned_key:
+        return None
+    return cleaned_key.lower().replace(" ", "_")
+
+
 def process_user_responses(user_responses):
     """
     Processes raw user responses to pass to agents
@@ -28,11 +50,21 @@ def process_user_responses(user_responses):
         user_responses.get("experience_level_description"), "beginners"
     )
 
-    muscle_goals = {
-        muscle: goal
-        for muscle, goal in user_responses.items()
-        if muscle.endswith("_goal") and goal
-    }
+    muscle_goals = {}
+    for muscle_key, goal in user_responses.items():
+        if not goal:
+            continue
+
+        if muscle_key.endswith("_goal"):
+            slug = _normalise_muscle_slug(muscle_key[:-5])
+            if not slug:
+                continue
+            muscle_goals[f"{slug}_goal"] = goal
+            continue
+
+        slug = _normalise_muscle_slug(muscle_key)
+        if slug in DIRECT_GOAL_KEYS:
+            muscle_goals[f"{slug}_goal"] = goal
 
     muscle_workout_frequency = {
         muscle: frequency

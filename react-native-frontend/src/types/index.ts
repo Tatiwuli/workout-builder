@@ -4,27 +4,25 @@ export interface MuscleGroup {
 }
 
 export interface UserResponse {
-  Goal?: string
   Frequency?: string
   Duration?: string
   Experience?: string
 }
 
 export interface ProcessedResponses {
-  goal: string
   frequency: string
   duration: string
   experience: string
   selectedMuscles: string[]
+  muscleGoals?: Record<string, string[]>
 }
 
 export interface ApiUserResponses {
   muscle_groups: string[]
-  goal: string
   frequency: string
   duration: number
   experience: string
-  muscle_goals?: Record<string, string>
+  muscle_goals?: Record<string, string[]>
   muscle_frequencies?: Record<string, string>
 }
 
@@ -87,4 +85,15 @@ export interface QuestionnaireState {
 export const PULL_OPTIONS = ["Biceps", "Back"]
 export const PUSH_OPTIONS = ["Chest", "Shoulders", "Triceps"]
 export const LEG_OPTIONS = ["Glutes", "Hamstrings", "Quadriceps", "Calves"]
-export const QUESTIONS = ["Goal", "Frequency", "Duration", "Experience"]
+export const QUESTIONS = ["Frequency", "Duration", "Experience"]
+
+export const MUSCLE_GOAL_OPTIONS: Record<string, string[]> = {
+  Back: ["Wider Back", "Thicker Back", "Defined Back"],
+  Chest: ["Upper Chest Focus", "Lower Chest Focus", "Overall Chest Growth"],
+  Shoulders: ["3D Shoulders", "Strong Shoulders", "Defined Shoulders"],
+  Triceps: ["Bigger Triceps", "Defined Triceps", "Pressing Power"],
+  Glutes: ["Lifted Glutes", "Fuller Glutes", "Glute Strength"],
+  Hamstrings: ["Bigger Hamstrings", "Defined Hamstrings", "Explosive Power"],
+  Quadriceps: ["Bigger Quads", "Defined Quads", "Leg Power"],
+  Calves: ["Bigger Calves", "Defined Calves", "Functional Strength"],
+}

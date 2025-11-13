@@ -4,11 +4,10 @@ from pydantic import BaseModel
 
 class UserResponses(BaseModel):
     muscle_groups: List[str]
-    goal: str
     frequency: str
     duration: int
     experience: str
-    muscle_goals: Optional[Dict[str, str]] = {}
+    muscle_goals: Optional[Dict[str, List[str]]] = {}
     muscle_frequencies: Optional[Dict[str, str]] = {}
 
 
