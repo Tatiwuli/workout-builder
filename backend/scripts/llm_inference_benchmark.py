@@ -1,243 +1,311 @@
-
-
-
 """
-Benchmark the streaming workflow multiple times and report latency statistics.
+Benchmark the workout workflow multiple times and report latency statistics.
 """
-
 from __future__ import annotations
 
-import copy
-import json
 import logging
-import math
-import statistics
-import time
-from collections import defaultdict
+import random
+from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, MutableMapping, Optional, Sequence
+from typing import Any, Dict, List, Optional, Tuple
+
+
+import numpy as np
+import json
 
 from backend.app.agents.build_workout_plan import WorkoutBuilderWorkflow  
+from backend.app.utils.agent_utils import save_output_to_json
 
-import random 
 LOGGER = logging.getLogger("llm_benchmark")
 
 
-#Randomly select 4  muscle groups
-def generate_user_input():
-    muscle_goals = {
-        "back": [
-            "Build a broader, V-shaped upper body.",
-            "Add depth and strength for a more powerful look.",
-            "Sculpt visible lines and muscle tone for a leaner back."
-        ],
-        "chest": [
-            "Lift and fill out the upper chest area.",
-            "Add fullness and shape to the lower chest.",
-            "Build size and balance across the chest."
-        ],
-        "shoulders": [
-            "Create a rounded, well-defined shoulder shape.",
-            "Build stable, powerful shoulders for pressing and lifting.",
-            "Emphasize muscle tone and shape for a lean look."
-        ],
-        "triceps": [
-            "Increase muscle size for fuller, stronger arms.",
-            "Sharpen the back of your arms for a toned appearance.",
-            "Improve strength in push and press movements."
-        ],
-        "glutes": [
-            "Shape and lift your glutes for a rounder look.",
-            "Add size and volume for a stronger lower body.",
-            "Build power for better athletic movement and stability."
-        ],
-        "hamstrings": [
-            "Increase muscle size for thicker legs.",
-            "Improve tone and shape in the back of your thighs.",
-            "Boost strength for sprints, lifts, and athletic performance."
-        ],
-        "quadriceps": [
-            "Build muscle mass for fuller, stronger thighs.",
-            "Highlight muscle shape and tone in the front of legs.",
-            "Enhance lower-body strength for squats and jumps."
-        ],
-        "calves": [
-            "Add muscle size for balanced leg proportions.",
-            "Sculpt lean, visible lower-leg muscles.",
-            "Strengthen calves for running, walking, and daily activity."
-        ]
-    }
+# ---------------------------------------------------------------------------
+# Synthetic input generation helpers
+# ---------------------------------------------------------------------------
 
-    muscles = random.sample(["Biceps", "Back","Chest", "Shoulders", "Triceps","Glutes", "Hamstrings", "Quadriceps", "Calves"], 4)
+MUSCLE_GOAL_OPTIONS: Dict[str, List[str]] = {
+    "back": ["Wider Back", "Thicker Back", "Defined Back"],
+    "chest": ["Upper Chest Focus", "Lower Chest Focus", "Overall Chest Growth"],
+    "shoulders": ["3D Shoulders", "Strong Shoulders", "Defined Shoulders"],
+    "triceps": ["Bigger Triceps", "Defined Triceps", "Pressing Power"],
+    "glutes": ["Lifted Glutes", "Fuller Glutes", "Glute Strength"],
+    "hamstrings": ["Bigger Hamstrings", "Defined Hamstrings", "Explosive Power"],
+    "quadriceps": ["Bigger Quads", "Defined Quads", "Leg Power"],
+    "calves": ["Bigger Calves", "Defined Calves", "Functional Strength"],
+}
 
-    #For every muscle group selected, pick a random number from 1 to len(goals) of 
-    # the muscle and then,  randomly the number of goals. 
-    muscle_goals =  {}
-    muscle_workout_frequency = {}
-    for muscle in muscles: 
+FREQUENCY_OPTIONS = [2, 3, 4]
 
-        #goals
-        n_goals = random.randrange(1, len(muscle_goals[muscle]))
-        goals = random.sample(muscle_goals[muscle], n_goals)
-        
-        muscle_goals[muscle]  = goals
-
-        #frequency 
-        frequency  = random.choice(["2-3 times/week", "4-5 times/week", "6+ times / week"])
-        muscle_workout_frequency[muscle] = frequency
-
-    time_constraint = random.choice(["short", "medium", "long"])
-
-    if time_constraint == "short":
-        workout_duration = 30
-    elif time_constraint == "medium":
-        workout_duration = 60
-    else : 
-        workout_duration = 90
-
-    fitness_level = random.choice(["begginers", "intermediate_early", "intermediate_late"])
-
-    if fitness_level == "begginers":
-        experience_level_description = "I'm just starting out and have less than 3 months of experience." ,
-    elif fitness_level == "intermediate_early":
-        experience_level_description = " I've been training regularly for 1 to 2 years"
-    else: 
-        experience_level_description = "I've been training regularly for 2 to 3 years"
+EXPERIENCE_LEVELS: Dict[str, str] = {
+    "beginners": "I'm just starting out and have less than 3 months of experience.",
+    "intermediate_early": "I've been training regularly for 1 to 2 years.",
+    "intermediate_late": "I've been training regularly for 2 to 3 years.",
+}
 
 
-    final_user_responses = {
-            "muscle_groups": muscles,
-            "goals": muscle_goals,
-            "muscle_workout_frequency": muscle_workout_frequency,
-            "workout_duration": workout_duration,
-            "time_constraint": time_constraint, 
-            "fitness_level": fitness_level, 
-            "experience_level_description": experience_level_description,  
-        }
-
-    return final_user_responses
-
-
-def percentile(values: Sequence[float], pct: float) -> float:
-    if not values:
-        raise ValueError("Cannot compute percentile on empty data")
-    if not 0.0 <= pct <= 1.0:
-        raise ValueError("Percentile must be within [0, 1]")
-
-    ordered = sorted(values)
-    if len(ordered) == 1:
-        return ordered[0]
-
-    rank = (len(ordered) - 1) * pct
-    lower = math.floor(rank)
-    upper = math.ceil(rank)
-    if lower == upper:
-        return ordered[int(rank)]
-
-    weight_upper = rank - lower
-    weight_lower = 1.0 - weight_upper
-    return ordered[lower] * weight_lower + ordered[upper] * weight_upper
-
-
-def summarise(values: Sequence[float]) -> Optional[Dict[str, float]]:
-    if not values:
-        return None
-    cleaned = [v for v in values if not math.isnan(v)]
-    if not cleaned:
-        return None
-
-    return {
-        "mean": statistics.fmean(cleaned),
-        "median": statistics.median(cleaned),
-        "p90": percentile(cleaned, 0.9),
-        "p95": percentile(cleaned, 0.95),
-        "count": float(len(cleaned)),
-    }
-
-
-def format_summary(label: str, stats: Optional[Dict[str, float]]) -> str:
-    if not stats:
-        return f"{label}: no successful samples"
-    return (
-        f"{label} (n={int(stats['count'])}): "
-        f"mean={stats['mean']:.2f}s, median={stats['median']:.2f}s, "
-        f"p90={stats['p90']:.2f}s, p95={stats['p95']:.2f}s"
+def generate_user_input() -> Dict[str, Any]:
+    muscles = random.sample(
+        ["Back", "Chest", "Shoulders", "Triceps", "Glutes", "Hamstrings", "Quadriceps", "Calves"],
+        k=4,
     )
 
+    goals: Dict[str, List[str]] = {}
+    muscle_workout_frequency: Dict[str, int] = {}
 
-def run_benchmarks(
-    processed_responses_list: Sequence[Dict[str, Any]],
-    runs: int,
-) -> None:
-    workflow_durations: List[float] = []
-    stage_metrics: MutableMapping[str, MutableMapping[str, List[float]]] = defaultdict(lambda: defaultdict(list))
+    for muscle in muscles:
+        slug = muscle.lower().replace(" ", "_")
+        options = MUSCLE_GOAL_OPTIONS[slug]
+        n_goals = random.randint(1, len(options))
+        goals[f"{slug}_goal"] = random.sample(options, n_goals)
+        muscle_workout_frequency[f"{slug}_frequency"] = random.choice(FREQUENCY_OPTIONS)
 
-    scenario_count = len(processed_responses_list)
-    LOGGER.info("Loaded %s processed response scenario(s).", scenario_count)
+    workout_duration = random.choice([30, 45, 60, 75, 90])
+    if workout_duration < 45:
+        time_constraint = "short"
+    elif workout_duration <= 60:
+        time_constraint = "medium"
+    else:
+        time_constraint = "long"
 
-    for run_index in range(1, runs + 1):
-        LOGGER.info("=== Run %s/%s ===", run_index, runs)
+    fitness_level = random.choice(list(EXPERIENCE_LEVELS.keys()))
+    experience_level_description = EXPERIENCE_LEVELS[fitness_level]
 
-        workflow = WorkoutBuilderWorkflow(stream_response=True)
+    return {
+        "muscle_groups": [m.lower() for m in muscles],
+        "goals": goals,
+        "muscle_workout_frequency": muscle_workout_frequency,
+        "workout_duration": workout_duration,
+        "time_constraint": time_constraint, 
+        "fitness_level": fitness_level, 
+        "experience_level_description": experience_level_description,
+    }
 
-        scenario_index = (run_index - 1) % scenario_count
-        scenario = copy.deepcopy(processed_responses_list[scenario_index])
-        LOGGER.info(
-            "Using scenario %s (muscle_groups=%s, duration=%s min, fitness_level=%s)",
-            scenario_index + 1,
-            scenario.get("muscle_groups"),
-            scenario.get("workout_duration"),
-            scenario.get("fitness_level"),
-        )
 
-        start = time.perf_counter()
-        metadata_records: Iterable[Dict[str, Any]] = []
+# ---------------------------------------------------------------------------
+# Benchmark execution
+# ---------------------------------------------------------------------------
+
+RunResult = Dict[str, Any]
+
+
+def _write_partial_results(partial_path: Path, run_results: List[RunResult]) -> None:
+    payload = {"runs": run_results}
+    try:
+        partial_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
+    except Exception as exc:  # noqa: BLE001
+        LOGGER.warning("Failed to write partial results to %s: %s", partial_path, exc)
+
+
+def run_benchmarks(n_runs: int, partial_path: Optional[Path] = None) -> List[RunResult]:
+    workflow = WorkoutBuilderWorkflow(stream_response=True)
+    results: List[RunResult] = []
+
+    for run_idx in range(1, n_runs + 1):
+        user_input = generate_user_input()
         try:
-            result = workflow.run_workflow(scenario)
-            duration = time.perf_counter() - start
-            workflow_durations.append(duration)
+            final_plan, metadata_records = workflow.run_workflow(processed_responses=user_input)
+            total_time = sum(
+                record.get("total_time", 0.0) for record in metadata_records if isinstance(record, dict)
+            )
+            results.append(
+                {
+                    "run": run_idx,
+                    "status": "success",
+                    "user_input": user_input,
+                    "final_plan": final_plan,
+                    "metadata_records": metadata_records,
+                    "total_workflow_time": total_time,
+                }
+            )
+        except Exception as exc:  
+            results.append(
+                {
+                    "run": run_idx,
+                    "status": "error",
+                    "error": str(exc),
+                    "user_input": user_input,
+                    "final_plan": None,
+                    "metadata_records": [],
+                    "total_workflow_time": None,
+                }
+            )
 
-            if isinstance(result, tuple) and len(result) == 2:
-                _, metadata_records = result
+        if partial_path is not None:
+            _write_partial_results(partial_path, results)
 
-            LOGGER.info("Run %s completed in %.2fs", run_index, duration)
-        except Exception as exc:  # pylint: disable=broad-except
-            duration = time.perf_counter() - start
-            workflow_durations.append(duration)
-            LOGGER.exception("Run %s failed after %.2fs: %s", run_index, duration, exc)
-            metadata_records = []
+    return results
 
-        for record in metadata_records:
-            if record.get("status") != "success":
-                continue
-            stage = str(record.get("stage", "unknown"))
-            metrics = stage_metrics[stage]
-            for key in ("total_time", "time_first_token", "output_gen_time", "tokens_per_second", "avg_token_per_sec"):
-                value = record.get(key)
-                if isinstance(value, (int, float)):
-                    metrics[key].append(float(value))
 
-    LOGGER.info("\nSummary Statistics:")
-    LOGGER.info(format_summary("Workflow total time", summarise(workflow_durations)))
+# ---------------------------------------------------------------------------
+# Reporting helpers
+# ---------------------------------------------------------------------------
 
-    for stage, metrics in stage_metrics.items():
-        LOGGER.info("\nStage: %s", stage)
-        for key in ("total_time", "time_first_token", "output_gen_time"):
-            LOGGER.info("  %s", format_summary(key.replace("_", " "), summarise(metrics.get(key, []))))
+
+def _basic_stats(values: List[float]) -> Dict[str, float]:
+    if not values:
+        return {}
+    return {
+        "mean": float(np.mean(values)),
+        "median": float(np.median(values)),
+        "p90": float(np.percentile(values, 90)),
+        "p95": float(np.percentile(values, 95)),
+        "min": float(np.min(values)),
+        "max": float(np.max(values)),
+    }
+
+
+
+def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
+    successful_runs = [r for r in run_results if r.get("status") == "success"]
+    
+    summary: Dict[str, Any] = {
+        "total_runs": len(run_results),
+        "successful_runs": len(successful_runs),
+        "failed_runs": len(run_results) - len(successful_runs),
+        "total_time_stats": {},
+        "agent_ttft_stats": {
+            "agent_1_selector": {},
+            "agent_2_planner": {},
+            "agent_3_trainer": {},
+        },
+    }
+
+    if not successful_runs:
+        LOGGER.warning("No successful runs to summarise.")
+        return summary
+
+    total_times = [r["total_workflow_time"] for r in successful_runs if r["total_workflow_time"] is not None]
+    #compute the metrics for total time
+    summary["total_time_stats"] = _basic_stats(total_times)
+
+    #compute time first token for every agent
+    a1_ttft = [
+        (r["metadata_records"][0].get("time_first_token", 0.0) if r["metadata_records"] else 0.0)
+        for r in successful_runs
+    ]
+    a2_ttft = [
+        (r["metadata_records"][1].get("time_first_token", 0.0) if len(r["metadata_records"]) > 1 else 0.0)
+        for r in successful_runs
+    ]
+    a3_ttft = [
+        (r["metadata_records"][2].get("time_first_token", 0.0) if len(r["metadata_records"]) > 2 else 0.0)
+        for r in successful_runs
+    ]
+
+    summary["agent_ttft_stats"]["agent_1_selector"] = _basic_stats(a1_ttft)
+    summary["agent_ttft_stats"]["agent_2_planner"] = _basic_stats(a2_ttft)
+    summary["agent_ttft_stats"]["agent_3_trainer"] = _basic_stats(a3_ttft)
+
+    # --- Console output ---
+    print("\n--- Summary Statistics (for successful runs) ---")
+    print(
+        f"Total runs: {summary['total_runs']}, successful: {summary['successful_runs']}, "
+        f"failed: {summary['failed_runs']}"
+    )
+
+    if summary["total_time_stats"]:
+        stats = summary["total_time_stats"]
+        print("\nTotal Workflow Time (s):")
+        print(f"  Mean:   {stats['mean']:.2f}")
+        print(f"  Median: {stats['median']:.2f} (p50)")
+        print(f"  p90:    {stats['p90']:.2f}")
+        print(f"  p95:    {stats['p95']:.2f}")
+        print(f"  Min:    {stats['min']:.2f}")
+        print(f"  Max:    {stats['max']:.2f}")
+    
+    for label, stats in (
+        ("Agent 3 (Trainer)", summary["agent_ttft_stats"]["agent_3_trainer"]),
+        ("Agent 2 (Planner)", summary["agent_ttft_stats"]["agent_2_planner"]),
+        ("Agent 1 (Selector)", summary["agent_ttft_stats"]["agent_1_selector"]),
+    ):
+        print(f"\n{label} TTFT stats:")
+        if not stats:
+            print("  no data")
+        else:
+            for key, value in stats.items():
+                print(f"  {key}: {value:.2f}")
+
+    return summary
+
+
+def render_per_run_details(run_results: List[RunResult]) -> None:
+    print("\n--- Detailed Run Results ---")
+    run_details: List[Dict[str, Any]] = []
+    for entry in run_results:
+        run_id = entry["run"]
+        status = entry["status"]
+        detail: Dict[str, Any] = {
+            "run": run_id,
+            "status": status,
+            "user_input": entry["user_input"],
+            "final_plan": entry["final_plan"],
+            "metadata": entry["metadata_records"],
+            "total_workflow_time": entry.get("total_workflow_time"),
+            "error": entry.get("error"),
+        }
+        run_details.append(detail)
+
+        print(f"\nRun #{run_id} — status: {status}")
+        print("=" * 60)
+        if status != "success":
+            print(f"Error: {entry.get('error')}")
+            continue
+
+        print("User input:")
+        print(json.dumps(entry["user_input"], indent=2, sort_keys=True))
+
+        print("\nFinal plan:")
+        print(json.dumps(entry["final_plan"], indent=2, sort_keys=True))
+
+        print("\nMetadata:")
+        for record in entry["metadata_records"]:
+            print(json.dumps(record, indent=2, sort_keys=True))
+
+        print("-" * 60)
+
+    return run_details
+
+
+
+def save_results(
+    run_details: List[Dict[str, Any]],
+    summary_stats: Dict[str, Any],
+    target_path: Optional[Path] = None,
+) -> Path:
+    data = {
+        "run_details": run_details,
+        "summary_stats": summary_stats,
+    }
+
+    if target_path is not None:
+        target_path.write_text(json.dumps(data, indent=2, sort_keys=True), encoding="utf-8")
+        print(f"\nSaved benchmark results to {target_path}")
+        return target_path
+
+    saved_path = Path(
+        save_output_to_json(data, "benchmark_results")
+    )
+    print(f"\nSaved benchmark results to {saved_path}")
+    return saved_path
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     runs = 10
-    input_path = Path("backend/data/processed_responses.json")
+    output_dir = Path("backend/data")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_path = output_dir / f"llm_benchmark_{timestamp}.json"
 
-    if not input_path.exists():
-        raise FileNotFoundError(f"Processed responses not found: {input_path}")
-
-    processed_responses = load_processed_responses(input_path)
-    processed_responses_list = normalise_processed_responses(processed_responses)
-    run_benchmarks(processed_responses_list, runs)
+    results = run_benchmarks(runs, partial_path=output_path)
+    summary = summarise_runs(results)
+    run_details = render_per_run_details(results)
+    save_results(run_details, summary, target_path=output_path)
 
 
 if __name__ == "__main__":

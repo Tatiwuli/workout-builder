@@ -5,7 +5,7 @@ import json
 import time
 import re
 import os
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Tuple
 
 from openai import OpenAI
 
@@ -91,7 +91,7 @@ class GeminiLLM:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Dict[str, Any]] = None,
-    ) -> Dict[str, Any]:
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
 
         config_params = {
             "system_instruction": system_prompt,
@@ -181,7 +181,8 @@ class GeminiLLM:
 
             match = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", full_response)
             payload = match.group(1) if match else full_response
-            return json.loads(payload)
+            parsed = json.loads(payload)
+            return parsed, metadata
         except Exception as e:
             metadata["status"] = "error"
             metadata["error"] = str(e)
@@ -268,7 +269,7 @@ class OpenAILLM:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
-    ) -> Dict[str, Any]:
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         
         
 
@@ -374,4 +375,5 @@ class OpenAILLM:
 
         match = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", full_response)
         payload = match.group(1) if match else full_response
-        return json.loads(payload)
+        parsed = json.loads(payload)
+        return parsed, metadata

@@ -2,6 +2,7 @@ from .agents_prompts.personal_trainer_prompts import system_prompt, user_prompt
 from ..llms.llm_model import LLMService
 from ..utils.agent_utils import save_output_to_json, combine_texts
 from ..schemas.workouts import FinalWorkoutPlan
+from typing import Dict, Any, Tuple, Union
 
 
 class PersonalTrainerAgent:
@@ -13,7 +14,7 @@ class PersonalTrainerAgent:
         self.workout_knowledge = workout_knowledge
         self.stream_response = stream_response
 
-    def run(self, user_needs, workout_plan, selected_exercises):
+    def run(self, user_needs, workout_plan, selected_exercises) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
         print("Preparing assistant input...")
         main_knowledge_summaries = self.workout_knowledge["main_knowledge_summaries"]
         wiki_input = combine_texts([selected_exercises, *main_knowledge_summaries])
@@ -30,7 +31,7 @@ class PersonalTrainerAgent:
         print("Calling LLM to finalize the workout plan...")
         if self.stream_response:
             try:
-                final_workout_plan = self.llm.call_stream_llm(
+                final_workout_plan, metadata = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
                 response_model  = FinalWorkoutPlan,
@@ -53,4 +54,8 @@ class PersonalTrainerAgent:
             final_workout_plan, "final_workout_plan")
         print(f"Saved to JSON: {json_filepath}")
 
+        if self.stream_response:
+            metadata = metadata or {}
+            metadata.setdefault("stage", "personal_trainer")
+            return final_workout_plan, metadata
         return final_workout_plan

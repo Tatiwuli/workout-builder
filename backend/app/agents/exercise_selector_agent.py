@@ -2,6 +2,7 @@ from .agents_prompts.exercise_selector_prompts import system_prompt, user_prompt
 from ..llms.llm_model import LLMService
 from ..utils.agent_utils import save_output_to_json, combine_texts
 from ..schemas.workouts import ExerciseSelectorOutput
+from typing import Dict, Any, Tuple, Union
 
 
 class ExerciseSelectorAgent:
@@ -13,7 +14,7 @@ class ExerciseSelectorAgent:
         self.workout_knowledge = workout_knowledge
         self.stream_response = stream_response
 
-    def run(self):
+    def run(self) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
         print("Preparing wiki input...")
         wiki_input = self.workout_knowledge["fitness_level_wiki"]
 
@@ -36,7 +37,7 @@ class ExerciseSelectorAgent:
        
         if self.stream_response:
             try:
-                selected_exercises = self.llm.call_stream_llm(
+                selected_exercises, metadata = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
                 response_model = ExerciseSelectorOutput
@@ -61,4 +62,8 @@ class ExerciseSelectorAgent:
         print(f"Saved to JSON: {json_filepath}")
 
         print("Exercise selection completed successfully!")
+        if self.stream_response:
+            metadata = metadata or {}
+            metadata.setdefault("stage", "exercise_selector")
+            return selected_exercises, metadata
         return selected_exercises

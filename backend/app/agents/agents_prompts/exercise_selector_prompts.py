@@ -1,6 +1,7 @@
 from string import Template
 
-system_prompt = Template("""Your task is to select exercises based on science-based hypertrophy principles that align with the given user's needs. 
+system_prompt = Template("""
+Your task is to select exercises based on science-based hypertrophy principles that align with the given user's needs. 
 These exercises will be sent to another personal trainer to structure a detailed workout session. 
 
 ## Thinking process:

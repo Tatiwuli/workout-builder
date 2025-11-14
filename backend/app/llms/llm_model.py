@@ -1,6 +1,6 @@
 import random
 import time
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Tuple
 
 from .llm import GeminiLLM, OpenAILLM
 
@@ -81,7 +81,7 @@ class LLMService:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
-    ) -> Dict[str, Any]:
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """
         Attempt Gemini streaming call with a single retry; fall back to OpenAI
         streaming call if Gemini fails.

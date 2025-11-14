@@ -2,6 +2,7 @@ from .agents_prompts.workout_planner_prompts import system_prompt, user_prompt
 from ..llms.llm_model import LLMService
 from ..utils.agent_utils import save_output_to_json, combine_texts
 from ..schemas.workouts import WorkoutPlannerOutput
+from typing import Dict, Any, Tuple, Union
 
 
 class WorkoutPlannerAgent:
@@ -40,7 +41,7 @@ class WorkoutPlannerAgent:
         self.user_needs["workout_duration"] = max(0.0, adjusted_duration)
         return self.user_needs
 
-    def run(self):
+    def run(self) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
         """
         Runs the WorkoutPlannerAgent with the given inputs.
 
@@ -75,7 +76,7 @@ class WorkoutPlannerAgent:
         print("Calling LLM for workout planning...")
         if self.stream_response:
             try:
-                planned_workout = self.llm.call_stream_llm(
+                planned_workout, metadata = self.llm.call_stream_llm(
                 system_prompt=formatted_system_prompt,
                 user_prompt=formatted_user_prompt,
                 response_model = WorkoutPlannerOutput
@@ -100,4 +101,8 @@ class WorkoutPlannerAgent:
             planned_workout, "planned_workouts")
         print(f"Saved to JSON: {json_filepath}")
 
+        if self.stream_response:
+            metadata = metadata or {}
+            metadata.setdefault("stage", "workout_planner")
+            return planned_workout, metadata
         return planned_workout

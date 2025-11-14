@@ -5,12 +5,15 @@ from ..database.mongodb_handler import WorkoutBuilderDatabaseHandler
 
 from ..services.workout_knowledge_fetch import WorkoutKnowledgeFetch
 
+from typing import Dict, Any, Union, Tuple, List
+
 
 class WorkoutBuilderWorkflow:
-    def __init__(self, database_name="workout_builder", progress_callback=None):
+    def __init__(self, database_name="workout_builder", progress_callback=None, stream_response: bool = False):
     
         self.knowledge_fetch = WorkoutKnowledgeFetch()
         self.progress_callback = progress_callback
+        self.stream_response = stream_response
         
 
     def fetch_workout_knowledge(self, user_needs):
@@ -31,22 +34,30 @@ class WorkoutBuilderWorkflow:
             "muscle_group_wiki": muscle_group_wiki
         }
 
-    def run_workflow(self, processed_responses):
+    def run_workflow(self, processed_responses: Dict[str, Any]) -> Union[Dict[str, Any], Tuple[Dict[str, Any], List[Dict[str, Any]]]]:
         if self.progress_callback:
             self.progress_callback("Starting Workflow 🚀", 0)
 
         if self.progress_callback:
             self.progress_callback("Fetching common data...", 10)
+
         workout_knowledge = self.fetch_workout_knowledge(processed_responses)
+
+        metadata_records: List[Dict[str, Any]] = []
 
         if self.progress_callback:
             self.progress_callback("Selecting Exercises 🏋️", 20)
+
         exercise_selector = ExerciseSelectorAgent(
-            processed_responses,
-            workout_knowledge=workout_knowledge,
-            stream_response = False ,
-        )
-        exercise_selector_output = exercise_selector.run()
+                processed_responses,
+                workout_knowledge=workout_knowledge,
+                stream_response=self.stream_response,
+            )
+        if self.stream_response:
+            exercise_selector_output,metadata_exercise_selector = exercise_selector.run()
+        else: 
+            exercise_selector_output = exercise_selector.run()
+
 
         if self.progress_callback:
             self.progress_callback("Structuring Workout 📋", 50)
@@ -54,23 +65,36 @@ class WorkoutBuilderWorkflow:
             processed_responses,
             exercise_selector_output,
             workout_knowledge=workout_knowledge,
-            stream_response = False ,
+            stream_response=self.stream_response,
         )
-        workout_plan = workout_planner.run()
+        if self.stream_response:
+            workout_planner_output,metadata_workout_planner = workout_planner.run()
+        
+        else: 
+            workout_planner_output  = workout_planner.run()
 
         if self.progress_callback:
             self.progress_callback("Finalizing Workout 🤖", 80)
         personal_trainer = PersonalTrainerAgent(
             workout_knowledge=workout_knowledge,
-            stream_response = False ,
+            stream_response=self.stream_response,
         )
-        final_plan = personal_trainer.run(
-            processed_responses,
-            workout_plan,
-            exercise_selector_output
-        )
+
+        if self.stream_response:
+            personal_trainer_output, metadata_personal_trainer = personal_trainer.run(processed_responses,
+            workout_planner_output,
+            exercise_selector_output)
+        else:
+            personal_trainer_output = personal_trainer.run(
+                processed_responses,
+                workout_planner_output,
+                exercise_selector_output
+            )
 
         if self.progress_callback:
             self.progress_callback("Workflow Complete 🎉", 100)
 
-        return final_plan
+        if self.stream_response:
+            metadata_records =  [metadata_exercise_selector, metadata_workout_planner, metadata_personal_trainer]
+            return personal_trainer_output, metadata_records
+        return personal_trainer_output
