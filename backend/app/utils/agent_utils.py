@@ -33,7 +33,7 @@ def save_output_to_json( output_data: dict, file_prefix: str, model_used: str = 
     folder_path = os.path.join(
         backend_dir, "data", f"{file_prefix}_json")
     os.makedirs(folder_path, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    timestamp = datetime.now().strftime("%m_%d_%H_%M_%S")
     file_path = os.path.join(
         folder_path, f"{file_prefix}_{timestamp}.json")
     with open(file_path, "w", encoding="utf-8") as f:

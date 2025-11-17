@@ -42,7 +42,7 @@ def start_generation(user_data: Dict[str, Any]) -> str:
                     "final_plan": generation_progress[session_id].get("final_plan"),
                 }
 
-            workflow = WorkoutBuilderWorkflow(progress_callback=progress_callback)
+            workflow = WorkoutBuilderWorkflow(progress_callback=progress_callback, stream_response = True)
             final_plan = workflow.run_workflow(processed_responses)
 
             generation_progress[session_id] = {

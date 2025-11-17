@@ -34,17 +34,26 @@ class ExerciseSelectorAgent:
 
         print("Calling LLM for exercise selection...")
 
-       
         if self.stream_response:
             try:
                 selected_exercises, metadata = self.llm.call_stream_llm(
-                system_prompt=formatted_system_prompt,
-                user_prompt=formatted_user_prompt,
-                response_model = ExerciseSelectorOutput
-            
-            )
-            except Exception as e :
-                raise RuntimeError("Exercise Selector Agent Error: ", e)
+                    system_prompt=formatted_system_prompt,
+                    user_prompt=formatted_user_prompt,
+                    response_model=ExerciseSelectorOutput
+                )
+                
+                # Validate response is not empty
+                if not isinstance(selected_exercises, dict):
+                    raise RuntimeError("Exercise Selector agent returned invalid response type")
+                
+                if "exercises" not in selected_exercises:
+                    raise RuntimeError("Exercise Selector agent response missing 'exercises' field")
+                
+                if len(selected_exercises.get("exercises", [])) == 0:
+                    raise RuntimeError("Exercise Selector agent returned an empty exercises list")
+                    
+            except Exception as e:
+                raise RuntimeError(f"Exercise Selector Agent Error: {e}")
         else:
             try:
                 selected_exercises = self.llm.call_llm(
@@ -52,8 +61,19 @@ class ExerciseSelectorAgent:
                     user_prompt=formatted_user_prompt,
                     response_model=ExerciseSelectorOutput,
                 )
-            except Exception as e :
-                raise RuntimeError("Exercise Selector Agent Error: ", e)
+                
+                # Validate response is not empty
+                if not isinstance(selected_exercises, dict):
+                    raise RuntimeError("Exercise Selector agent returned invalid response type")
+                
+                if "exercises" not in selected_exercises:
+                    raise RuntimeError("Exercise Selector agent response missing 'exercises' field")
+                
+                if len(selected_exercises.get("exercises", [])) == 0:
+                    raise RuntimeError("Exercise Selector agent returned an empty exercises list")
+                    
+            except Exception as e:
+                raise RuntimeError(f"Exercise Selector Agent Error: {e}")
 
         print("Saving selected exercises to JSON...")
         json_filepath = save_output_to_json(

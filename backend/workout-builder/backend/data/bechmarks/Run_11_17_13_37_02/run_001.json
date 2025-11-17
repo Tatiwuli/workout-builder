@@ -1,0 +1,46 @@
+{
+  "run": 1,
+  "status": "error",
+  "error": "Exercise Selector Agent Error: Exercise Selector agent returned an empty exercises list",
+  "user_input": {
+    "muscle_groups": [
+      "shoulders",
+      "hamstrings",
+      "glutes",
+      "quadriceps"
+    ],
+    "goals": {
+      "shoulders_goal": [
+        "Strong Shoulders",
+        "Defined Shoulders",
+        "3D Shoulders"
+      ],
+      "hamstrings_goal": [
+        "Explosive Power",
+        "Defined Hamstrings"
+      ],
+      "glutes_goal": [
+        "Fuller Glutes",
+        "Lifted Glutes"
+      ],
+      "quadriceps_goal": [
+        "Bigger Quads",
+        "Leg Power",
+        "Defined Quads"
+      ]
+    },
+    "muscle_workout_frequency": {
+      "shoulders_frequency": 4,
+      "hamstrings_frequency": 3,
+      "glutes_frequency": 3,
+      "quadriceps_frequency": 2
+    },
+    "workout_duration": 90,
+    "time_constraint": "long",
+    "fitness_level": "intermediate_early",
+    "experience_level_description": "I've been training regularly for 1 to 2 years."
+  },
+  "final_plan": null,
+  "metadata_records": [],
+  "total_workflow_time": null
+}

@@ -15,33 +15,8 @@ class WorkoutPlannerAgent:
         self.workout_knowledge = workout_knowledge
         self.stream_response = stream_response
 
-    def adjust_workout_duration(self):
-        """
-        Adjusts the workout duration by subtracting the warmup duration.
 
-        Args:
-            user_needs (dict): The original user needs with workout duration.
-            exercise_selector_output (dict): Output from the ExerciseSelectorAgent.
-
-        Returns:
-            dict: Updated user_needs with adjusted workout duration.
-        """
-        # Extract the original workout duration (in minutes, as integer from user input)
-        original_duration = float(self.user_needs.get("workout_duration", 0))
-
-        # Extract the warmup duration from the exercise selector output (in minutes as float)
-        warmup_duration = float(
-            self.exercise_selector_output.get("warmup", {}).get("total_warmup_duration", 0.0)
-        )
-
-        # Calculate the adjusted workout duration
-        adjusted_duration = original_duration - warmup_duration
-
-        # Ensure duration is not negative and keep as float
-        self.user_needs["workout_duration"] = max(0.0, adjusted_duration)
-        return self.user_needs
-
-    def run(self) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
+    def run(self, warmup_duration) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
         """
         Runs the WorkoutPlannerAgent with the given inputs.
 
@@ -52,7 +27,9 @@ class WorkoutPlannerAgent:
         Returns:
             dict: Generated workout plan.
         """
-        adjusted_user_needs = self.adjust_workout_duration()
+
+
+        self.user_needs["workout_duration"] = self.user_needs["workout_duration"] - warmup_duration
 
         print("Preparing wiki input...")
         fitness_level_wiki = str(self.workout_knowledge["fitness_level_wiki"])
@@ -65,25 +42,35 @@ class WorkoutPlannerAgent:
 
         formatted_system_prompt = self.system_prompt.substitute(
             wiki_input=wiki_input,
-            workout_duration=adjusted_user_needs.get("workout_duration", "")
+            workout_duration=self.user_needs.get("workout_duration", "")
         )
 
         formatted_user_prompt = self.user_prompt.substitute(
             exercises_list=exercises_list,
-            user_needs=adjusted_user_needs
+            user_needs= self.user_needs
         )
 
         print("Calling LLM for workout planning...")
         if self.stream_response:
             try:
                 planned_workout, metadata = self.llm.call_stream_llm(
-                system_prompt=formatted_system_prompt,
-                user_prompt=formatted_user_prompt,
-                response_model = WorkoutPlannerOutput
-            
-            )
-            except Exception as e :
-                raise RuntimeError("Workout Planner Agent Error (Stream): ", e)
+                    system_prompt=formatted_system_prompt,
+                    user_prompt=formatted_user_prompt,
+                    response_model=WorkoutPlannerOutput
+                )
+                
+                # Validate response is not empty
+                if not isinstance(planned_workout, dict):
+                    raise RuntimeError("Workout Planner agent returned invalid response type")
+                
+                if "sets" not in planned_workout:
+                    raise RuntimeError("Workout Planner agent response missing 'sets' field")
+                
+                if len(planned_workout.get("sets", [])) == 0:
+                    raise RuntimeError("Workout Planner agent returned an empty sets list")
+                    
+            except Exception as e:
+                raise RuntimeError(f"Workout Planner Agent Error (Stream): {e}")
 
         else:
             try:
@@ -92,8 +79,19 @@ class WorkoutPlannerAgent:
                     user_prompt=formatted_user_prompt,
                     response_model=WorkoutPlannerOutput,
                 )
-            except Exception as e :
-                raise RuntimeError("Workout Planner Agent Error (Non-Stream): ", e)
+                
+                # Validate response is not empty
+                if not isinstance(planned_workout, dict):
+                    raise RuntimeError("Workout Planner agent returned invalid response type")
+                
+                if "sets" not in planned_workout:
+                    raise RuntimeError("Workout Planner agent response missing 'sets' field")
+                
+                if len(planned_workout.get("sets", [])) == 0:
+                    raise RuntimeError("Workout Planner agent returned an empty sets list")
+                    
+            except Exception as e:
+                raise RuntimeError(f"Workout Planner Agent Error (Non-Stream): {e}")
 
 
         print("Saving workout plan to JSON...")

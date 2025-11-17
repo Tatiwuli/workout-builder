@@ -8,13 +8,13 @@ import random
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 import numpy as np
 import json
 
-from backend.app.agents.build_workout_plan import WorkoutBuilderWorkflow  
-from backend.app.utils.agent_utils import save_output_to_json
+from backend.app.agents.build_workout_plan import WorkoutBuilderWorkflow
 
 LOGGER = logging.getLogger("llm_benchmark")
 
@@ -86,54 +86,89 @@ def generate_user_input() -> Dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 RunResult = Dict[str, Any]
+_file_lock = threading.Lock()
 
 
-def _write_partial_results(partial_path: Path, run_results: List[RunResult]) -> None:
-    payload = {"runs": run_results}
-    try:
-        partial_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
-    except Exception as exc:  # noqa: BLE001
-        LOGGER.warning("Failed to write partial results to %s: %s", partial_path, exc)
-
-
-def run_benchmarks(n_runs: int, partial_path: Optional[Path] = None) -> List[RunResult]:
+def run_single_workflow(
+    run_id: int,
+    output_folder: Path,
+    user_input: Dict[str, Any]
+) -> None:
+    """Run a single workflow and save result immediately to a file."""
     workflow = WorkoutBuilderWorkflow(stream_response=True)
-    results: List[RunResult] = []
-
-    for run_idx in range(1, n_runs + 1):
-        user_input = generate_user_input()
+    file_path = output_folder / f"run_{run_id:03d}.json"
+    
+    try:
+        final_plan, metadata_records = workflow.run_workflow(processed_responses=user_input)
+        total_time = sum(
+            record.get("total_time", 0.0) for record in metadata_records if isinstance(record, dict)
+        )
+        result = {
+            "run": run_id,
+            "status": "success",
+            "user_input": user_input,
+            "final_plan": final_plan,
+            "metadata_records": metadata_records,
+            "total_workflow_time": total_time,
+        }
+    except Exception as exc:
+        result = {
+            "run": run_id,
+            "status": "error",
+            "error": str(exc),
+            "user_input": user_input,
+            "final_plan": None,
+            "metadata_records": [],
+            "total_workflow_time": None,
+        }
+    
+    # Save result to file 
+    with _file_lock:
+       
         try:
-            final_plan, metadata_records = workflow.run_workflow(processed_responses=user_input)
-            total_time = sum(
-                record.get("total_time", 0.0) for record in metadata_records if isinstance(record, dict)
-            )
-            results.append(
-                {
-                    "run": run_idx,
-                    "status": "success",
-                    "user_input": user_input,
-                    "final_plan": final_plan,
-                    "metadata_records": metadata_records,
-                    "total_workflow_time": total_time,
-                }
-            )
-        except Exception as exc:  
-            results.append(
-                {
-                    "run": run_idx,
-                    "status": "error",
-                    "error": str(exc),
-                    "user_input": user_input,
-                    "final_plan": None,
-                    "metadata_records": [],
-                    "total_workflow_time": None,
-                }
-            )
+            file_path.write_text(json.dumps(result, indent=2, sort_keys=False), encoding="utf-8")
+            LOGGER.info(f"Saved run {run_id} to {file_path}")
+        except Exception as e:  
+            LOGGER.warning(f"Failed to write result for run {run_id} to {file_path}: {e}")
 
-        if partial_path is not None:
-            _write_partial_results(partial_path, results)
 
-    return results
+def run_benchmarks(n_iterations: int, output_folder: Path) -> Path:
+    """
+    Run benchmarks with 2 parallel workflows per iteration.
+    
+    Args:
+        n_iterations: Number of iterations (each runs 2 workflows in parallel = 2*n_iterations total runs)
+        output_folder: Folder to save individual run results
+        
+    Returns:
+        Path to the output folder
+    """
+    output_folder.mkdir(parents=True, exist_ok=True)
+    
+    run_id = 1
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        futures = []
+        
+        for iteration in range(1, n_iterations + 1):
+            LOGGER.info(f"Starting iteration {iteration}/{n_iterations}")
+            
+            # Submit 2 workflows in parallel for this iteration
+            for _ in range(2):
+                LOGGER.info(f"Run id {run_id}\n\n")
+                user_input = generate_user_input()
+                future = executor.submit(run_single_workflow, run_id, output_folder, user_input)
+                futures.append(future)
+                run_id += 1
+            
+            # Wait for both workflows in this iteration to complete
+            for future in as_completed(futures[-2:]):
+                try:
+                    future.result()
+                except Exception as e:  
+                    LOGGER.error(f"Workflow failed with exception: {e}")
+    
+    LOGGER.info(f"All {run_id - 1} runs completed. Results saved to {output_folder}")
+    return output_folder
 
 
 # ---------------------------------------------------------------------------
@@ -141,7 +176,7 @@ def run_benchmarks(n_runs: int, partial_path: Optional[Path] = None) -> List[Run
 # ---------------------------------------------------------------------------
 
 
-def _basic_stats(values: List[float]) -> Dict[str, float]:
+def basic_stats(values: List[float]) -> Dict[str, float]:
     if not values:
         return {}
     return {
@@ -155,7 +190,26 @@ def _basic_stats(values: List[float]) -> Dict[str, float]:
 
 
 
+def load_results_from_folder(folder_path: Path) -> List[RunResult]:
+    """Load all run results from the output folder."""
+    results: List[RunResult] = []
+    
+    # Get all JSON files in the folder, sorted by run number
+    json_files = sorted(folder_path.glob("run_*.json"))
+    
+    for file_path in json_files:
+        try:
+            content = file_path.read_text(encoding="utf-8")
+            result = json.loads(content)
+            results.append(result)
+        except Exception as e:  
+            LOGGER.warning(f"Failed to load {file_path}: {e}")
+    
+    return results
+
+
 def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
+    """Compute statistics from metadata only."""
     successful_runs = [r for r in run_results if r.get("status") == "success"]
     
     summary: Dict[str, Any] = {
@@ -166,7 +220,7 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
         "agent_ttft_stats": {
             "agent_1_selector": {},
             "agent_2_planner": {},
-            "agent_3_trainer": {},
+            "agent_3_warmup": {},
         },
     }
 
@@ -174,11 +228,11 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
         LOGGER.warning("No successful runs to summarise.")
         return summary
 
+    # Extract total workflow times from metadata
     total_times = [r["total_workflow_time"] for r in successful_runs if r["total_workflow_time"] is not None]
-    #compute the metrics for total time
-    summary["total_time_stats"] = _basic_stats(total_times)
+    summary["total_time_stats"] = basic_stats(total_times)
 
-    #compute time first token for every agent
+    # Extract time to first token for each agent from metadata
     a1_ttft = [
         (r["metadata_records"][0].get("time_first_token", 0.0) if r["metadata_records"] else 0.0)
         for r in successful_runs
@@ -192,9 +246,9 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
         for r in successful_runs
     ]
 
-    summary["agent_ttft_stats"]["agent_1_selector"] = _basic_stats(a1_ttft)
-    summary["agent_ttft_stats"]["agent_2_planner"] = _basic_stats(a2_ttft)
-    summary["agent_ttft_stats"]["agent_3_trainer"] = _basic_stats(a3_ttft)
+    summary["agent_ttft_stats"]["agent_1_selector"] = basic_stats(a1_ttft)
+    summary["agent_ttft_stats"]["agent_2_planner"] = basic_stats(a2_ttft)
+    summary["agent_ttft_stats"]["agent_3_warmup"] = basic_stats(a3_ttft)
 
     # --- Console output ---
     print("\n--- Summary Statistics (for successful runs) ---")
@@ -214,7 +268,7 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
         print(f"  Max:    {stats['max']:.2f}")
     
     for label, stats in (
-        ("Agent 3 (Trainer)", summary["agent_ttft_stats"]["agent_3_trainer"]),
+        ("Agent 3 (Warmup)", summary["agent_ttft_stats"]["agent_3_warmup"]),
         ("Agent 2 (Planner)", summary["agent_ttft_stats"]["agent_2_planner"]),
         ("Agent 1 (Selector)", summary["agent_ttft_stats"]["agent_1_selector"]),
     ):
@@ -228,8 +282,8 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
     return summary
 
 
-def render_per_run_details(run_results: List[RunResult]) -> None:
-    print("\n--- Detailed Run Results ---")
+def render_per_run_details(run_results: List[RunResult]) -> List[Dict[str, Any]]:
+    """Extract metadata from run results for summary."""
     run_details: List[Dict[str, Any]] = []
     for entry in run_results:
         run_id = entry["run"]
@@ -237,56 +291,30 @@ def render_per_run_details(run_results: List[RunResult]) -> None:
         detail: Dict[str, Any] = {
             "run": run_id,
             "status": status,
-            "user_input": entry["user_input"],
-            "final_plan": entry["final_plan"],
-            "metadata": entry["metadata_records"],
+            "metadata": entry.get("metadata_records", []),
             "total_workflow_time": entry.get("total_workflow_time"),
             "error": entry.get("error"),
         }
         run_details.append(detail)
-
-        print(f"\nRun #{run_id} — status: {status}")
-        print("=" * 60)
-        if status != "success":
-            print(f"Error: {entry.get('error')}")
-            continue
-
-        print("User input:")
-        print(json.dumps(entry["user_input"], indent=2, sort_keys=True))
-
-        print("\nFinal plan:")
-        print(json.dumps(entry["final_plan"], indent=2, sort_keys=True))
-
-        print("\nMetadata:")
-        for record in entry["metadata_records"]:
-            print(json.dumps(record, indent=2, sort_keys=True))
-
-        print("-" * 60)
-
     return run_details
 
 
 
-def save_results(
+def save_summary(
     run_details: List[Dict[str, Any]],
     summary_stats: Dict[str, Any],
-    target_path: Optional[Path] = None,
+    target_path: Path,
 ) -> Path:
+    """Save summary statistics to a JSON file."""
     data = {
         "run_details": run_details,
         "summary_stats": summary_stats,
     }
 
-    if target_path is not None:
-        target_path.write_text(json.dumps(data, indent=2, sort_keys=True), encoding="utf-8")
-        print(f"\nSaved benchmark results to {target_path}")
-        return target_path
-
-    saved_path = Path(
-        save_output_to_json(data, "benchmark_results")
-    )
-    print(f"\nSaved benchmark results to {saved_path}")
-    return saved_path
+    summary_file = target_path / "summary.json"
+    summary_file.write_text(json.dumps(data, indent=2, sort_keys=False), encoding="utf-8")
+    print(f"\nSaved summary statistics to {summary_file}")
+    return summary_file
 
 # ---------------------------------------------------------------------------
 # Entry point
@@ -296,16 +324,31 @@ def save_results(
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    runs = 10
-    output_dir = Path("backend/data")
+    n_iterations = 5  # Each iteration runs 2 workflows in parallel = 10 total runs
+    output_dir = Path("workout-builder/backend/data/bechmarks")
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_path = output_dir / f"llm_benchmark_{timestamp}.json"
+    
+    # Create timestamped folder: Run_MM_DD_HH_MM_SS
+    timestamp = datetime.now().strftime("%m_%d_%H_%M_%S")
+    output_folder = output_dir / f"Run_{timestamp}"
 
-    results = run_benchmarks(runs, partial_path=output_path)
+    print(f"Starting benchmark: {n_iterations} iterations (2 parallel workflows each = {n_iterations * 2} total runs)")
+    print(f"Results will be saved to: {output_folder}")
+    
+    # Run benchmarks (saves results incrementally)
+    run_benchmarks(n_iterations, output_folder)
+    
+    # Load all results from folder
+    print("\nLoading results from folder...")
+    results = load_results_from_folder(output_folder)
+    
+    # Compute statistics from metadata
+    print("Computing statistics from metadata...")
     summary = summarise_runs(results)
     run_details = render_per_run_details(results)
-    save_results(run_details, summary, target_path=output_path)
+    
+    # Save summary
+    save_summary(run_details, summary, output_folder)
 
 
 if __name__ == "__main__":
