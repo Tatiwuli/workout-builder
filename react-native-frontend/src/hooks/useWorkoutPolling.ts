@@ -2,6 +2,31 @@ import { useState, useEffect } from "react"
 import { getGenerationProgress, getFinalPlan } from "../api/endpoints/workouts"
 import { WorkoutPlan } from "../types"
 
+/**
+ * Normalizes the final plan - handles both cases:
+ * 1. When stream_response=True: backend returns a tuple [plan, metadata]
+ * 2. When stream_response=False: backend returns just the plan object
+ *
+ * Always extracts the plan object and disregards metadata.
+ */
+const normalizeFinalPlan = (finalPlan: any): WorkoutPlan | null => {
+  if (!finalPlan) return null
+
+  // If it's an array (tuple from backend when stream_response=True),
+  // extract the first element (the actual plan) and ignore metadata
+  if (Array.isArray(finalPlan)) {
+    if (finalPlan.length === 0) {
+      console.warn("Received empty array for final plan")
+      return null
+    }
+    // Extract the first element (the plan) and ignore the rest (metadata)
+    return finalPlan[0] as WorkoutPlan
+  }
+
+  // If it's already a single object (when stream_response=False), return as-is
+  return finalPlan as WorkoutPlan
+}
+
 interface ProgressData {
   progress: number
   message: string
@@ -90,7 +115,7 @@ export const useWorkoutPolling = (
             progress: Number(payload.progress) || 0,
             message: String(payload.message || "Processing..."),
             status: String(payload.status || "running"),
-            final_plan: (payload.final_plan as WorkoutPlan) || null,
+            final_plan: normalizeFinalPlan(payload.final_plan),
           })
         }
 
@@ -98,9 +123,12 @@ export const useWorkoutPolling = (
         if (payload?.status === "completed" && payload?.final_plan) {
           console.log("Workout generation completed successfully!")
           console.log("Final plan:", payload.final_plan)
-          setWorkoutPlan(payload.final_plan)
-          setIsLoading(false)
-          return // Stop polling
+          const normalizedPlan = normalizeFinalPlan(payload.final_plan)
+          if (normalizedPlan) {
+            setWorkoutPlan(normalizedPlan)
+            setIsLoading(false)
+            return // Stop polling
+          }
         }
 
         // If completed but no final_plan attached, try fetching it explicitly
@@ -111,8 +139,11 @@ export const useWorkoutPolling = (
           try {
             const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
-              setWorkoutPlan(finalPlan)
-              setIsLoading(false)
+              const normalizedPlan = normalizeFinalPlan(finalPlan)
+              if (normalizedPlan) {
+                setWorkoutPlan(normalizedPlan)
+                setIsLoading(false)
+              }
             }
             return
           } catch (fetchErr) {
@@ -142,8 +173,11 @@ export const useWorkoutPolling = (
           try {
             const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
-              setWorkoutPlan(finalPlan)
-              setIsLoading(false)
+              const normalizedPlan = normalizeFinalPlan(finalPlan)
+              if (normalizedPlan) {
+                setWorkoutPlan(normalizedPlan)
+                setIsLoading(false)
+              }
             }
             return
           } catch (fetchErr) {
