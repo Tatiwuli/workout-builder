@@ -23,6 +23,7 @@ class LLMService:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
+        prompt_cache_key: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Attempt Gemini with exponential backoff; fall back to OpenAI if Gemini
@@ -67,6 +68,7 @@ class LLMService:
                 system_prompt=system_prompt,
                 user_prompt=user_prompt,
                 response_model=openai_format,
+                prompt_cache_key=prompt_cache_key,
             )
            
         except Exception as exc:
@@ -79,6 +81,7 @@ class LLMService:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
+        prompt_cache_key: Optional[str] = None,
     ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """
         Attempt Gemini streaming call with a single retry; fall back to OpenAI
@@ -128,6 +131,7 @@ class LLMService:
                 system_prompt=system_prompt,
                 user_prompt=user_prompt,
                 response_model=openai_format,
+                prompt_cache_key=prompt_cache_key,
             )
          
             return openai_response, openai_metadata

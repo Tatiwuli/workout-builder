@@ -211,6 +211,7 @@ class OpenAILLM:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
+        prompt_cache_key: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Calls the OpenAI LLM API with system and user prompts using Responses API.
@@ -230,6 +231,8 @@ class OpenAILLM:
         config_text = {}
         if response_model:
             config_text["text_format"] = response_model
+        if prompt_cache_key:
+            config_text["prompt_cache_key"] = prompt_cache_key
 
         try:
             response = self.client.responses.parse(
@@ -269,6 +272,7 @@ class OpenAILLM:
         system_prompt: str,
         user_prompt: str,
         response_model: Optional[Any] = None,
+        prompt_cache_key: Optional[str] = None,
     ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         
         
@@ -277,6 +281,8 @@ class OpenAILLM:
         config_text = {}
         if response_model:
             config_text["text_format"] = response_model
+        if prompt_cache_key:
+            config_text["prompt_cache_key"] = prompt_cache_key
             # config_text["response_format"] = { 
             #         "type": "json_schema",
             #     "json_schema": {

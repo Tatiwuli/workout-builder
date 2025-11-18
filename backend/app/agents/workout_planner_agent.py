@@ -1,54 +1,50 @@
 from .agents_prompts.workout_planner_prompts import system_prompt, user_prompt
 from ..llms.llm_model import LLMService
-from ..utils.agent_utils import save_output_to_json, combine_texts
+from ..utils.agent_utils import save_output_to_json, combine_texts, generate_cache_key
 from ..schemas.workouts import WorkoutPlannerOutput
 from typing import Dict, Any, Tuple, Union
 
 
 class WorkoutPlannerAgent:
-    def __init__(self, user_needs: dict, exercise_selector_output: dict, workout_knowledge: dict, stream_response: bool = False):
+    def __init__(self,  workout_duration: float, exercise_selector_output: dict, shared_prefix: str, stream_response: bool = False):
         self.system_prompt = system_prompt
         self.user_prompt = user_prompt
         self.llm = LLMService()
-        self.user_needs = user_needs
+        self.workout_duration = workout_duration
+      
         self.exercise_selector_output = exercise_selector_output
-        self.workout_knowledge = workout_knowledge
+        self.shared_prefix = shared_prefix
         self.stream_response = stream_response
 
 
-    def run(self, warmup_duration) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
+    def run(self) -> Union[Dict[str, Any], Tuple[Dict[str, Any], Dict[str, Any]]]:
         """
         Runs the WorkoutPlannerAgent with the given inputs.
 
-        Args:
-            user_needs (dict): User-specific requirements.
-            exercise_selector_output (dict): Output from ExerciseSelectorAgent.
 
         Returns:
             dict: Generated workout plan.
         """
 
 
-        self.user_needs["workout_duration"] = self.user_needs["workout_duration"] - warmup_duration
-
-        print("Preparing wiki input...")
-        fitness_level_wiki = str(self.workout_knowledge["fitness_level_wiki"])
-        muscle_group_wiki = str(self.workout_knowledge["muscle_group_wiki"])
-        main_knowledge = str(self.workout_knowledge["main_knowledge_summaries"])
-        wiki_input = combine_texts([fitness_level_wiki, muscle_group_wiki, main_knowledge])
-
+    
         print("Preparing exercises list...")
         exercises_list = self.exercise_selector_output.get("exercises", "")
 
-        formatted_system_prompt = self.system_prompt.substitute(
-            wiki_input=wiki_input,
-            workout_duration=self.user_needs.get("workout_duration", "")
+        # Substitute the template variable first
+        substituted_prompt = self.system_prompt.substitute(
+            workout_duration=self.workout_duration
         )
+        # Prepend shared_prefix at the beginning for OpenAI caching
+        # The shared_prefix must come FIRST for caching to work effectively
+        formatted_system_prompt = self.shared_prefix + substituted_prompt 
 
         formatted_user_prompt = self.user_prompt.substitute(
             exercises_list=exercises_list,
-            user_needs= self.user_needs
         )
+
+        # Generate cache key from shared_prefix for OpenAI caching
+        cache_key = generate_cache_key(self.shared_prefix)
 
         print("Calling LLM for workout planning...")
         if self.stream_response:
@@ -56,7 +52,8 @@ class WorkoutPlannerAgent:
                 planned_workout, metadata = self.llm.call_stream_llm(
                     system_prompt=formatted_system_prompt,
                     user_prompt=formatted_user_prompt,
-                    response_model=WorkoutPlannerOutput
+                    response_model=WorkoutPlannerOutput,
+                    prompt_cache_key=cache_key
                 )
                 
                 # Validate response is not empty
@@ -78,6 +75,7 @@ class WorkoutPlannerAgent:
                     system_prompt=formatted_system_prompt,
                     user_prompt=formatted_user_prompt,
                     response_model=WorkoutPlannerOutput,
+                    prompt_cache_key=cache_key
                 )
                 
                 # Validate response is not empty

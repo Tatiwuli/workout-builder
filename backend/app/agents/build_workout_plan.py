@@ -3,6 +3,7 @@ from .exercise_selector_agent import ExerciseSelectorAgent
 from .workout_planner_agent import WorkoutPlannerAgent
 from .warmup_agent import WarmupAgent
 from ..services.workout_knowledge_fetch import WorkoutKnowledgeFetch
+from ..utils.agent_utils import combine_texts
 
 from typing import Dict, Any, Union, Tuple, List
 
@@ -14,8 +15,10 @@ class WorkoutBuilderWorkflow:
         self.progress_callback = progress_callback
         self.stream_response = stream_response
         
-
+    
     def fetch_workout_knowledge(self, user_needs):
+
+
         muscle_groups = user_needs["muscle_groups"]
         fitness_level = user_needs.get("fitness_level", "beginners")
         time_constraint = user_needs.get("time_constraint", "medium")
@@ -260,9 +263,37 @@ class WorkoutBuilderWorkflow:
         if self.progress_callback:
             self.progress_callback("Selecting Exercises 🏋️", 20)
 
+        wiki_input = combine_texts([
+            workout_knowledge['fitness_level_wiki'], 
+            workout_knowledge['muscle_group_wiki'], 
+            workout_knowledge['main_knowledge_summaries']
+        ])
+      
+
+        # Format processed_responses as JSON for consistent string representation
+        # This ensures the shared_prefix is identical for caching when user data is the same
+        user_needs_json = json.dumps(processed_responses, sort_keys=True, indent=2)
+        
+        shared_prefix = f"""
+## Goal
+You are a personal trainer experienced with designing workout session to meet the client's workout goals and their physical conditions. 
+
+## Hypertrophy Training Wiki Database
+The following wiki contains the exercise information and training principles you need to reference:
+
+'''
+{wiki_input}
+'''
+
+## User needs
+The following object contains the user's workout goals and physical needs. Your decisions must always aim to meet the user's needs. 
+
+{user_needs_json}
+"""
+        
         exercise_selector = ExerciseSelectorAgent(
-                processed_responses,
-                workout_knowledge=workout_knowledge,
+                exercises_data=workout_knowledge['exercises_summary'],
+                shared_prefix = shared_prefix,
                 stream_response=self.stream_response,
             )
         if self.stream_response:
@@ -273,17 +304,21 @@ class WorkoutBuilderWorkflow:
 
         if self.progress_callback:
             self.progress_callback("Structuring Workout 📋", 50)
+        
+        # Calculate workout duration minus warmup time (5 minutes)
+        warmup_duration = 5.0
+        adjusted_workout_duration = processed_responses.get('workout_duration', 0) - warmup_duration
+        
         workout_planner = WorkoutPlannerAgent(
-            processed_responses,
+            adjusted_workout_duration,
             exercise_selector_output,
-            workout_knowledge=workout_knowledge,
+            shared_prefix=shared_prefix,
             stream_response=self.stream_response,
         )
         if self.stream_response:
-            workout_planner_output,metadata_workout_planner = workout_planner.run(warmup_duration = 5.0)
-        
+            workout_planner_output, metadata_workout_planner = workout_planner.run()
         else: 
-            workout_planner_output  = workout_planner.run(warmup_duration = 5.0) # 5 min
+            workout_planner_output = workout_planner.run()
 
         if self.progress_callback:
             self.progress_callback("Compiling Final Workout Plan 📝", 80)

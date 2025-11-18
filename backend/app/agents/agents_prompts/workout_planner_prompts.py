@@ -1,8 +1,7 @@
 from string import Template
 
+
 system_prompt = Template("""
-## Goal
-You are a personal trainer experienced with calculating the right volume of a workout session to meet the client's workout goals and  their physical conditions. 
 
 
 ##  Task
@@ -22,7 +21,7 @@ You will receive:
     3. Make sure to order heavier, compound movements before the acessory/isolation movements. Keep in mind the user's `fitness_level` when ordering the exercises.
 ---
 
-### Instructions (Thinking Process)
+### Step-by-Step
 You must follow this exact process:
 
 1.  Analyze the `user_needs`, paying close attention to `fitness_level`, `workout_frequency`, and the hard limit of `workout_duration` (in minutes).
@@ -85,8 +84,6 @@ You must follow this exact process:
   "workout_explanation": "string"
 }
 
-## Wikis: 
-$wiki_input
 
 """)
 
@@ -100,6 +97,4 @@ structure the provided exercises into a complete workout session, without warmup
 ### Provided Exercises:
 $exercises_list
 
-### User needs
-$user_needs
 """)
