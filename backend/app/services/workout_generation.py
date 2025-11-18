@@ -43,7 +43,14 @@ def start_generation(user_data: Dict[str, Any]) -> str:
                 }
 
             workflow = WorkoutBuilderWorkflow(progress_callback=progress_callback, stream_response = True)
-            final_plan = workflow.run_workflow(processed_responses)
+            workflow_result = workflow.run_workflow(processed_responses)
+            
+            # When stream_response=True, run_workflow returns a tuple (final_workout_plan, metadata_records)
+            # When stream_response=False, it returns just final_workout_plan
+            if isinstance(workflow_result, tuple):
+                final_plan, metadata_records = workflow_result
+            else:
+                final_plan = workflow_result
 
             generation_progress[session_id] = {
                 "progress": 100,
@@ -51,7 +58,7 @@ def start_generation(user_data: Dict[str, Any]) -> str:
                 "status": "completed",
                 "final_plan": final_plan,
             }
-        except Exception as e:  # noqa: BLE001
+        except Exception as e:  
             generation_progress[session_id] = {
                 "progress": 0,
                 "message": f"Error: {str(e)}",
