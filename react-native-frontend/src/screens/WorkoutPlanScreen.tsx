@@ -108,7 +108,7 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
 
   const renderWarmupSection = () => {
     const warmupDuration = formatDurationToMMSS(
-      workoutPlan.warmup.warmup_duration
+      workoutPlan.warmup.total_warmup_duration
     )
 
     return (

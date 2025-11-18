@@ -35,7 +35,7 @@ export interface Exercise {
 
   weight?: number // optional for warmup exercises
   sets?: number // optional for main exercise
-  rest_time?: number // Duration in minutes as float
+  set_rest_time?: number // Duration in minutes as float
   alternative_exercise?: string
   alternative_exercise_setup?: string
   alternative_exercise_execution?: string | string[]
@@ -46,7 +46,7 @@ export interface Exercise {
 }
 
 export interface WarmupSection {
-  warmup_duration: number // Duration in minutes as float
+  total_warmup_duration: number // Duration in minutes as float
   warmup_exercises: Exercise[]
 }
 
