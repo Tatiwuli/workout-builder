@@ -58,7 +58,7 @@ def start_generation(user_data: Dict[str, Any]) -> str:
                 "status": "completed",
                 "final_plan": final_plan,
             }
-        except Exception as e:  
+        except Exception as e:  # noqa: BLE001
             generation_progress[session_id] = {
                 "progress": 0,
                 "message": f"Error: {str(e)}",

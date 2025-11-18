@@ -2,31 +2,6 @@ import { useState, useEffect } from "react"
 import { getGenerationProgress, getFinalPlan } from "../api/endpoints/workouts"
 import { WorkoutPlan } from "../types"
 
-/**
- * Normalizes the final plan - handles both cases:
- * 1. When stream_response=True: backend returns a tuple [plan, metadata]
- * 2. When stream_response=False: backend returns just the plan object
- *
- * Always extracts the plan object and disregards metadata.
- */
-const normalizeFinalPlan = (finalPlan: any): WorkoutPlan | null => {
-  if (!finalPlan) return null
-
-  // If it's an array (tuple from backend when stream_response=True),
-  // extract the first element (the actual plan) and ignore metadata
-  if (Array.isArray(finalPlan)) {
-    if (finalPlan.length === 0) {
-      console.warn("Received empty array for final plan")
-      return null
-    }
-    // Extract the first element (the plan) and ignore the rest (metadata)
-    return finalPlan[0] as WorkoutPlan
-  }
-
-  // If it's already a single object (when stream_response=False), return as-is
-  return finalPlan as WorkoutPlan
-}
-
 interface ProgressData {
   progress: number
   message: string
@@ -40,6 +15,24 @@ interface UseWorkoutPollingResult {
   workoutPlan: WorkoutPlan | null
   progressData: ProgressData | null
   retry: () => void
+}
+
+/**
+ * Normalizes the final plan - handles case where backend returns a tuple [plan, metadata]
+ * instead of just the plan object. This is a workaround for a backend bug.
+ */
+const normalizeFinalPlan = (finalPlan: any): WorkoutPlan | null => {
+  if (!finalPlan) return null
+
+  // If it's an array (tuple from backend), extract the first element (the actual plan)
+  if (Array.isArray(finalPlan) && finalPlan.length > 0) {
+    console.warn(
+      "Received array instead of plan object, extracting first element"
+    )
+    return finalPlan[0] as WorkoutPlan
+  }
+
+  return finalPlan as WorkoutPlan
 }
 
 /**
