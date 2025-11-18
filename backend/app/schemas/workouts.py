@@ -26,51 +26,39 @@ class ProgressPayload(BaseModel):
 
 
 # Exercise Selector Agent Models
-class WarmupExercise(BaseModel):
-    exercise_name: str
-    setup: str
-    execution: str
-    sets_reps: str  # String format for warmup exercises
-    duration: float
 
-
-class WarmupSection(BaseModel):
-    total_warmup_duration: float
-    warmup_exercises: List[WarmupExercise]
-
+class TargetMusclePart(BaseModel):
+    muscle_group: str
+    muscle_part: List[str]
 
 class SelectedExercise(BaseModel):
     exercise_name: str
-    setup: str
-    execution: str
+    setup: List[str]
+    execution: List[str]
+    
     media_url: str
-    alternative_equipment: str
-    tier_reasons: str
-    targeted_muscles: List[str]
-    targeted_muscle_parts: str
-    limitations: str
-    scientific_insights: str
+    target_muscles: List[str]
+    target_muscle_parts: List[TargetMusclePart]
     additional_notes: str
     alternative_exercise: str
-    alternative_exercise_media_url: str
+    alternative_exercise_setup: List[str]
+    alternative_exercise_execution: List[str]
+    alternative_exercise_media_url:str
     selection_reason: str
+    
+
 
 
 class ExerciseSelectorOutput(BaseModel):
     exercises: List[SelectedExercise]
-    warmup: WarmupSection
 
 
 # Workout Planner Agent Models
-class TargetMusclePart(BaseModel):
-    muscle_group: str
-    muscle_part: List[str]
+
 class PlannedExercise(BaseModel):
     exercise_name: str
-    target_muscle_part: List[TargetMusclePart]
     reps: str
     weight: str
-    rest_time: float
     alternative_exercise: str
     alternative_exercise_reps: str
     alternative_exercise_weight: str
@@ -80,6 +68,7 @@ class PlannedSet(BaseModel):
     set_number: int
     set_duration: float
     set_strategy: str
+    set_rest_time: float 
     num_rounds: int
     target_muscle_group: List[str]
     set_reasoning: str
@@ -91,33 +80,18 @@ class WorkoutPlannerOutput(BaseModel):
     workout_explanation: str
 
 
-# Personal Trainer Agent Models
-class WarmupExerciseFinal(BaseModel):
-    exercise_name: str
-    reps: int
-    sets_reps: Optional[str] = None  # String format for sets and reps description (from exercise selector)
-    setup: str
-    execution: str
-
-
-class WarmupSectionFinal(BaseModel):
-    warmup_duration: float
-    warmup_exercises: List[WarmupExerciseFinal]
-
 
 class ExerciseFinal(BaseModel):
     exercise_name: str
     target_muscle_part: List[TargetMusclePart]
-    setup: str
-    execution: Union[str, List[str]]
+    setup: List[str]
+    execution: List[str]
     media_url: str
     reps: str
     weight: str
-    alternative_equipments: str
-    rest_time: float
     alternative_exercise: str
-    alternative_exercise_setup: str
-    alternative_exercise_execution: str
+    alternative_exercise_setup: List[str]
+    alternative_exercise_execution: List[str]
     alternative_exercise_media_url: str
     alternative_exercise_reps: str
     alternative_exercise_weight: str
@@ -128,10 +102,32 @@ class WorkoutSetFinal(BaseModel):
     set_number: int
     set_strategy: str
     set_duration: float
+    set_rest_time: float 
     num_rounds: int
     target_muscle_group: List[str]
     exercises: List[ExerciseFinal]
 
+
+class WorkoutPlanWithoutWarmup(BaseModel):
+    workout_title: str
+    total_workout_duration: float
+    num_exercises: int
+    sets: List[WorkoutSetFinal]
+
+
+#Warmup Agent Models
+
+class WarmupExerciseFinal(BaseModel):
+    exercise_name: str
+    sets_reps: str 
+    setup: List[str]
+    execution: List[str]
+    duration: float
+
+
+class WarmupSectionFinal(BaseModel):
+    total_warmup_duration: float
+    warmup_exercises: List[WarmupExerciseFinal]
 
 class FinalWorkoutPlan(BaseModel):
     workout_title: str
@@ -139,5 +135,6 @@ class FinalWorkoutPlan(BaseModel):
     num_exercises: int
     warmup: WarmupSectionFinal
     sets: List[WorkoutSetFinal]
+
 
 

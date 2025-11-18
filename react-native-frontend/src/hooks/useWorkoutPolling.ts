@@ -18,6 +18,24 @@ interface UseWorkoutPollingResult {
 }
 
 /**
+ * Normalizes the final plan - handles case where backend returns a tuple [plan, metadata]
+ * instead of just the plan object. This is a workaround for a backend bug.
+ */
+const normalizeFinalPlan = (finalPlan: any): WorkoutPlan | null => {
+  if (!finalPlan) return null
+
+  // If it's an array (tuple from backend), extract the first element (the actual plan)
+  if (Array.isArray(finalPlan) && finalPlan.length > 0) {
+    console.warn(
+      "Received array instead of plan object, extracting first element"
+    )
+    return finalPlan[0] as WorkoutPlan
+  }
+
+  return finalPlan as WorkoutPlan
+}
+
+/**
  * Custom hook for polling workout generation progress
  * Polls the backend until generation is complete or fails
  *
@@ -90,7 +108,7 @@ export const useWorkoutPolling = (
             progress: Number(payload.progress) || 0,
             message: String(payload.message || "Processing..."),
             status: String(payload.status || "running"),
-            final_plan: (payload.final_plan as WorkoutPlan) || null,
+            final_plan: normalizeFinalPlan(payload.final_plan),
           })
         }
 
@@ -98,9 +116,12 @@ export const useWorkoutPolling = (
         if (payload?.status === "completed" && payload?.final_plan) {
           console.log("Workout generation completed successfully!")
           console.log("Final plan:", payload.final_plan)
-          setWorkoutPlan(payload.final_plan)
-          setIsLoading(false)
-          return // Stop polling
+          const normalizedPlan = normalizeFinalPlan(payload.final_plan)
+          if (normalizedPlan) {
+            setWorkoutPlan(normalizedPlan)
+            setIsLoading(false)
+            return // Stop polling
+          }
         }
 
         // If completed but no final_plan attached, try fetching it explicitly
@@ -111,8 +132,11 @@ export const useWorkoutPolling = (
           try {
             const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
-              setWorkoutPlan(finalPlan)
-              setIsLoading(false)
+              const normalizedPlan = normalizeFinalPlan(finalPlan)
+              if (normalizedPlan) {
+                setWorkoutPlan(normalizedPlan)
+                setIsLoading(false)
+              }
             }
             return
           } catch (fetchErr) {
@@ -142,8 +166,11 @@ export const useWorkoutPolling = (
           try {
             const finalPlan = await getFinalPlan(sessionId)
             if (!isCancelled) {
-              setWorkoutPlan(finalPlan)
-              setIsLoading(false)
+              const normalizedPlan = normalizeFinalPlan(finalPlan)
+              if (normalizedPlan) {
+                setWorkoutPlan(normalizedPlan)
+                setIsLoading(false)
+              }
             }
             return
           } catch (fetchErr) {

@@ -42,8 +42,15 @@ def start_generation(user_data: Dict[str, Any]) -> str:
                     "final_plan": generation_progress[session_id].get("final_plan"),
                 }
 
-            workflow = WorkoutBuilderWorkflow(progress_callback=progress_callback)
-            final_plan = workflow.run_workflow(processed_responses)
+            workflow = WorkoutBuilderWorkflow(progress_callback=progress_callback, stream_response = True)
+            workflow_result = workflow.run_workflow(processed_responses)
+            
+            # When stream_response=True, run_workflow returns a tuple (final_workout_plan, metadata_records)
+            # When stream_response=False, it returns just final_workout_plan
+            if isinstance(workflow_result, tuple):
+                final_plan, metadata_records = workflow_result
+            else:
+                final_plan = workflow_result
 
             generation_progress[session_id] = {
                 "progress": 100,

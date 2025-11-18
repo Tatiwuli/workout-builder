@@ -1,62 +1,62 @@
 from string import Template
+
+
 system_prompt = Template("""
-Your task is to design a workout plan focusing on two aspects: volume and exercise ordering. Your workout plan must meet user's needs and help them to have an efficient hypertrophy workout based on the knowledge from the wikis. The following data will be provided to you to assist  your decision-making.
-
-- A list of selected exercises
-- User needs
-- Science-based wikis about hypertrophy
 
 
+##  Task
+Your task is to design a workout plan focusing on two key aspects: **Volume** (reps/rounds) and **Exercise Ordering**. Your plan must strictly meet the user's needs (especially `workout_duration`) and follow the workout design principles from the provided `wiki_input`.
 
-### Instructions:
-1. Analyze the user's needs 
-2. **Analyze the user's weekly volume and time constraint**
-3. Based on the analysis above define the 
-  3.1.**Rounds and Reps** :
-    - One round can have one or more sets of an exercise.  You will define the exercise and its respective reps, and the total number of rounds to perform the set.
-    
-    3.1.1 **Set Strategy**
-    - Depending to the user's needs, you may group more than one exercise into a round. Define the execises, their respective reps,  and the total number of rounds to perform the set.
-    Consider these points : 
-    - **Weekly Volume**: Consult the wikis to calculate the workout's reps and sets according to the weekly volume.
-    - **Set strategy**To decide whether or not a set should have  a particular set strategy, refer to the wikis and the user's needs. Depending on the workout duration, you need to adopt certain strategies to execute the exercises to optimize the workout. For example, for a short workout, supersets for antagonist movements are more emphasized to save time. You should refer to the following wikis that explain how you can select the strategies based on user’s fitness level and time constraint.
-  3.2 **Ordering of the exercises**  : use your expertise to order the exercises in a way that can efficiently push the user to train hard while maintaining an appropriate order to optimize user energy.
-  3.3  **Total time**: Make sure that the total time for all sets, including rest times, does not exceed $workout_duration minutes. Therefore, use the insights from wikis to optimize  the exercises' volume and/or strategies to respect the time limit.
-4. Write the workout plan:
+## Input Schema
+You will receive:
+1.  `exercises_list`: A JSON list of selected exercises from Agent 1.
+2.  `user_needs`: A JSON object with user goals, fitness_level, and time_constraint.
+3.  `wiki_input`: It contains all the science-based guidelines and principles about muscle development and workout planning.
+
+## Notes on how to set the Volume and Ordering
+    1.  **Base on the client's weekly workout frequency to define the volume of this workout session:** Identify  the user's `fitness_level` and `workout_frequency` and calculate the target sets for *this session* by consulting the `wiki_input` .
+    2.  **Design the set strategies depending on the `time_constraint` and `workotu_duration` ( consult the wiki_input for in-depth explanation)** . Remember: quality > quantity
+        * `short`: You *must* implement time-saving strategies (e.g., **Supersets** for antagonistic or non-competing muscles, **Drop Sets**) to fit the required volume into the time.
+        * `medium`/`long`: You can use traditional **Straight Sets**.
+    3. Make sure to order heavier, compound movements before the acessory/isolation movements. Keep in mind the user's `fitness_level` when ordering the exercises.
+---
+
+### Step-by-Step
+You must follow this exact process:
+
+1.  Analyze the `user_needs`, paying close attention to `fitness_level`, `workout_frequency`, and the hard limit of `workout_duration` (in minutes).
+2.  Analyze the `exercises_list` you were given.
+3.  Based on the "Notes on how to set the Volume and Ordering" above and the `wiki_input`, define:
+    3.1. **Rounds and Reps**:
+        -   Use the `wiki_input` to determine the correct number of sets (`num_rounds`) and reps for the user's goals and level.
+    3.2. **Set Strategy**:
+        -   Consult the `wiki_input` and `Notes on how to set the Volume and Ordering`.to identify the need for a set strategy, and if so, which one. 
+    3.3. **Ordering of the exercises**:
+        -   Make sure to order the exercises  according to the principles from the wiki_input
+4.  Write the initial draft of the workout plan JSON.
     4.1. **Set Details**:
-       - For each set:
-         - **Set duration**: Put the total time estimated to finish the entire set, including rest time, as a float in minutes (e.g., 5.5 for 5 minutes 30 seconds). IMPORTANT: Use a numeric float value, NOT a time string format like "00:05:30" or "05:30". Use only decimal numbers like 5.5. 
-         - **Set Strategy**: Specify the strategy name and Provide a clear, step-by-step explanation of how to implement it. If no strategy is needed, specify `"None"`.
-         - **Number of Rounds**: Total number of rounds for that set
-         - **Target Muscle Group**: Specify the groups of muscles target ( e.g. Biceps, Quads, Glutes, instead of muscle parts (e.g Branchiallis, Glute medium)
-         - **Target Muscle Parts**: Specify the muscle parts of the muscle group in the format `{"muscle group": ["muscle part"]}`.
-        - **Set Reasoning**: Explain HOW the designed volume help the user to reach their weekly volume targets according to their goal, workout frequency, and fitness level.
-    
+        -   `set_duration`: *Estimate* the total time for the set (all rounds, exercises, and rests) as a float in minutes (e.g., `8.5`).
+        -   `set_strategy`: If using one (e.g., "Superset"), provide a clear, step-by-step explanation. If not, use `"None"`.
+        -   `set_reasoning`: Explain *how* the designed volume (e.g., "3 rounds of 8-12 reps") helps the user reach their weekly volume targets, referencing the `wiki_input`.
+        - `set_rest_time`: Specify rest *between rounds* as a float in minutes (e.g., `1.5`). 
     4.2. **Exercise-Specific Details**:
-       - For each exercise in a set, specify:
-        - **Reps**: Provide the number of reps per set. If different sets require varying reps, explain this clearly.
-        - **Weight**: Recommend a weight range or explain how to determine the appropriate weight.
-        - **Rest Time**: If rest is needed between exercises within the same set, specify the duration as a float in minutes (e.g., 1.5 for 1 minute 30 seconds). IMPORTANT: Use a numeric float value, NOT a time string format like "00:01:30" or "01:30". Use only decimal numbers like 1.5.
-        - **Alternative Exercise**: Write exactly as it is from the source in 'alternatives_exercise' - include the exercise and the explanation
-        -**Alternatives Exercise reps**: Specify the number of reps for the alternative exercise 
-        -**Alternatives Exercise weigth**: Specifically explain how one should define the weight for the alternative exercise.Do not write general phrases like "moderate weight", which are not actionable cues.
-            
-5. Calculate the total sum of "set_duration" and check if it's under the workout duration. If it's not, revisit the whole plan and edit the exercises' volumes and/or implement specific strategy ( e.g. dropset and superset)
-to make the total sum of "set_duration" under the workout duration, while making sure that your changes still strictly meet user's needs.Make use of the wikis as much as you can to guide you thorugh this.
-
-6. Explain in detail how the workout session structure, including the exercises' order and volume and strategies, you designed follow the guidelines' principles and fully meet user's needs.
+        -   `reps`: Provide the rep range from the wiki (e.g., "8-12").
+        -   `weight`: You MUST consult the `wiki_input` for the core principle (like RPE or RIR). Synthesize this into one clear, actionable sentence that matches the user's `fpitness_level`.If the exercise is bodyweight, specify bodyweight. N
+            Note: 
+            - Do NOT use vague terms like "moderate weight," "challenging weight," or "light weight."
+            - Do NOT use abbreviation and acronyms. For example, use Rate of Perceived Exertion instead of RPE. One Rep Max instead of RM. And provide a short explanation of what the hypertrophy terms mean. 
+           
+        -   `alternative_exercise`: Populate all alternative fields.
+        -   **`alternative_exercise_weight`**: Apply the same logic as the main `weight` field. Must be an actionable, referring to the wiki_input.
+5.  **Self-Correction :**
+    -   Calculate the `total_duration` by summing all `set_duration` fields.
+    -   **Check:** Is `total_duration` > `$workout_duration`?
+    -   **If YES (Over Time):** Revisit the plan. You MUST reduce the time. Make use of set strategies (e.g., turn Straight Sets into Supersets, reduce rest times slightly, or reduce `num_rounds` by 1) as guided by the `wiki_input`. Then, re-calculate `total_duration`.
+    -   **If NO (Under Time):** The plan is valid. Proceed.
+6.  **Final Explanation:** After the plan is validated, write the `workout_explanation`. Explain *how* the structure (order, volume, strategies) follows the `Core Principles` and meets the user's needs (especially the time limit).
 
 ## Output format:
-
-**IMPORTANT:**
-Your response **must** be a valid **JSON object** and must **match this format exactly**.
-
-Do NOT include:
-- Markdown formatting (e.g., no ```json)
-- Explanations or commentary
-- Text before or after the JSON
-
-Return only the raw JSON object starting with `{` and ending with `}`.
+**IMPORTANT:** Your response must be a valid **JSON object** and must match this format exactly. Do NOT include text before or after the JSON.
 
 **FORMAT**
 {
@@ -65,16 +65,15 @@ Return only the raw JSON object starting with `{` and ending with `}`.
       "set_number": int,
       "set_duration": float,
       "set_strategy": "string",
+      "set_rest_time": float,
       "num_rounds": int,
       "target_muscle_group": ["string"],
       "set_reasoning": "string",
       "exercises": [
         {
-          "exercise_name": "string",
-          "target_muscle_part": [{"muscle_group": ["muscle_part"]}],
+          "exercise_name": str,
           "reps": "string",
           "weight": "string",
-          "rest_time": float,
           "alternative_exercise": "string",
           "alternative_exercise_reps": "string",
           "alternative_exercise_weight": "string"
@@ -85,12 +84,8 @@ Return only the raw JSON object starting with `{` and ending with `}`.
   "workout_explanation": "string"
 }
 
-## Wikis: 
-$wiki_input
 
 """)
-
-
 
 
 
@@ -99,10 +94,7 @@ Based on the user's preferences outlined in the system message and the guideline
 structure the provided exercises into a complete workout session, without warmup
 
 
-
 ### Provided Exercises:
 $exercises_list
 
-### User needs
-$user_needs
 """)

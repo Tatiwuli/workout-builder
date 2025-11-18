@@ -94,13 +94,15 @@ const ExerciseCard: React.FC<ExerciseCardProps> = ({
             <Text style={styles.sectionTitle}>Execution:</Text>
             {renderExecution(exercise.execution)}
 
-            {exercise.additional_tips && (
-              <View style={styles.tipsContainer}>
-                <Text style={styles.tipsText}>
-                  ☝️{exercise.additional_tips}
-                </Text>
-              </View>
-            )}
+            {exercise.additional_tips &&
+              exercise.additional_tips.trim() !== "" &&
+              exercise.additional_tips.trim().toLowerCase() !== "none" && (
+                <View style={styles.tipsContainer}>
+                  <Text style={styles.tipsText}>
+                    ☝️{exercise.additional_tips}
+                  </Text>
+                </View>
+              )}
           </View>
 
           {hasAlternativeExercise && (

@@ -107,9 +107,14 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
   }
 
   const renderWarmupSection = () => {
-    const warmupDuration = formatDurationToMMSS(
-      workoutPlan.warmup.warmup_duration
+    let warmupDuration = formatDurationToMMSS(
+      workoutPlan.warmup.total_warmup_duration
     )
+
+    // Default to 05:00 if duration is 00:00
+    if (warmupDuration === "00:00") {
+      warmupDuration = "05:00"
+    }
 
     return (
       <View style={styles.section}>
