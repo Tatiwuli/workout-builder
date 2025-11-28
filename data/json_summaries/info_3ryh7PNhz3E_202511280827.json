@@ -1,0 +1,490 @@
+{
+    "playlist_id": "PLp4G6oBUcv8w8ujRtP5BtvJe8PXBwiTdl",
+    "category": "tier_list",
+    "video_id": "3ryh7PNhz3E",
+    "title": "The Best & Worst Glute Exercises (According To Science)",
+    "published_date": "2025-04-06T15:20:09Z",
+    "video_url": "https://www.youtube.com/watch?v=3ryh7PNhz3E",
+    "thumbnail_img": "https://i.ytimg.com/vi/3ryh7PNhz3E/default.jpg",
+    "exercises_summary": [
+        {
+            "exercise_rankings": {
+                "S-Tier": [
+                    {
+                        "exercise_name": "Machine Hip Abductions",
+                        "setup_notes": "none",
+                        "execution_notes": "Lean forward by about 30° to improve the line of pull of the upper glute fibers and feel a deeper stretch at the bottom. Usually performed for 15 to 20 reps, although heavier low rep work is also effective. To get a little extra range of motion, add an extra pad on the inside.",
+                        "tier_reasons": "Fantastic for the upper glutes because they directly challenge the glute medius and minimus through their primary function of hip abduction. The movement can always be progressively overloaded by increasing the pin weight, and a gym pin can be used to add more weight when the stack is maxed out.",
+                        "target_muscles": [
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Upper glutes, as the exercise directly targets the glute medius and minimus which are responsible for the upper glute shelf appearance and are primarily involved in hip abduction.",
+                        "limitations": "May not be the best overall glute builder.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "This is the number one exercise for the upper glutes."
+                    },
+                    {
+                        "exercise_name": "Walking Lunges",
+                        "setup_notes": "none",
+                        "execution_notes": "Take longer strides forward and lean slightly forward by about 30° to accentuate the glute stretch. Focus on moving through space rather than just doing reps on the spot, as this can be more motivating.",
+                        "tier_reasons": "Hits the entire glute, providing a massive glute stretch with big steps. Engages the upper glutes due to glute medius activation from stabilization demands, the mid glutes from hip extension, and the lower glute area from the deep stretch. The presenter personally gets more sore from lunges than anything else.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Entire glute; upper glutes (due to glute medius activation from stabilization demands), mid glutes (from hip extension), and lower glute area (from the deep stretch).",
+                        "limitations": "none",
+                        "alternative_options": "While Bulgarian split squats might offer a slightly better stretch, walking lunges with big steps provide a massive glute stretch.",
+                        "scientific_insights": "none",
+                        "additional_notes": "This exercise is considered the 'best of the best' (S Plus tier) by the presenter. The presenter is a huge fan of walking lunges."
+                    },
+                    {
+                        "exercise_name": "Elevated Front Foot Lunges",
+                        "setup_notes": "Elevate your front foot on a small box.",
+                        "execution_notes": "none",
+                        "tier_reasons": "Provides a bit more range of motion at the bottom compared to standard lunges, which is enough to elevate it to S-tier.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Entire glute; upper glutes (due to glute medius activation from stabilization demands), mid glutes (from hip extension), and lower glute area (from the deep stretch).",
+                        "limitations": "none",
+                        "alternative_options": "This is a variation of the standard lunge.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "45° Back Extension",
+                        "setup_notes": "none",
+                        "execution_notes": "To connect with the glutes much better, round your upper back on these. Overload can be achieved by adding reps or by holding plates to your chest.",
+                        "tier_reasons": "Since you are extending your hips, your entire glutes will be very active in both the lengthened position at the bottom and the shortened position at the top. It's conducive to progressive overload.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus",
+                            "Erector Spinae"
+                        ],
+                        "target_muscle_parts": "Entire glutes, as it involves hip extension and activates the glutes in both stretched and shortened positions.",
+                        "limitations": "none",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "Many people think of this as just a low back exercise, but it's also a strong glute builder."
+                    }
+                ],
+                "A-Tier": [
+                    {
+                        "exercise_name": "Machine Hip Thrust (Nautilus Glute Drive)",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Solves several issues of the barbell hip thrust: the belt is much more comfortable than a barbell, there's no need to set anything up, and the machine's stability allows for better focus on engaging the glutes without needing to balance.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Middle glutes, as it isolates hip extension.",
+                        "limitations": "Lacks a really deep stretch.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "This is the number one option for the middle aspect of the glutes. The presenter personally performs these every single week."
+                    },
+                    {
+                        "exercise_name": "Single-Leg Dumbbell Hip Thrust",
+                        "setup_notes": "none",
+                        "execution_notes": "Stick to 12 to 15 reps and really focus on controlling the movement. Avoid going too heavy.",
+                        "tier_reasons": "Hits the entire glutes and helps prevent left-to-right muscle imbalances by allowing focus on each glute individually. The stability requirement engages the glute medius and minimus.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Entire glutes, with a potential shift of emphasis to the upper glutes due to the stabilization demands on the glute medius and minimus.",
+                        "limitations": "none",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Barbell Squat",
+                        "setup_notes": "none",
+                        "execution_notes": "To make the movement more glute dominant, place the bar a few inches lower on your back, lean further forward, and focus on really driving through your hips. Squat deeper, trying to at least break parallel, as this is important for glute growth.",
+                        "tier_reasons": "An underrated glute builder that activates all regions of the glutes, especially the middle chunk, by extending the hips. It is a fundamental movement for glute development.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus",
+                            "Quadriceps"
+                        ],
+                        "target_muscle_parts": "All regions of the glutes, mainly the middle chunk.",
+                        "limitations": "Does not isolate the glutes well, providing a huge quad stimulus. If the goal is only glute growth without quad growth, this isn't the best option.",
+                        "alternative_options": "none",
+                        "scientific_insights": "Research shows that squatting deeper is important for glute growth.",
+                        "additional_notes": "The presenter attributes most of his own glute development to squats from his powerlifting background."
+                    },
+                    {
+                        "exercise_name": "Smith Machine Squat",
+                        "setup_notes": "none",
+                        "execution_notes": "Place your feet further forward to make it more glute dominant.",
+                        "tier_reasons": "Offers the benefit of not needing to worry about losing balance, allowing for greater focus on glute engagement.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus",
+                            "Quadriceps"
+                        ],
+                        "target_muscle_parts": "All regions of the glutes, mainly the middle chunk.",
+                        "limitations": "none",
+                        "alternative_options": "Similar to a barbell squat but with added stability.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Bulgarian Split Squat",
+                        "setup_notes": "none",
+                        "execution_notes": "To make them even more glute focused, place your front foot further forward and lean forward as you squat. Think about driving through your hips rather than just standing up with your knees to better engage your glutes. Usually performed for two sets per leg.",
+                        "tier_reasons": "Achieves a deeper stretch on the glutes than the standard barbell squat. Being a single-leg exercise, it involves the upper glutes more due to the stabilization requirements on the glute medius and minimus. It is very close to S-tier.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus",
+                            "Quadriceps"
+                        ],
+                        "target_muscle_parts": "Middle glutes, and upper glutes due to the single-leg nature and stability requirements.",
+                        "limitations": "Can be harder to overload, especially when using dumbbells. It also heavily taxes the quads and is a generally exhausting movement.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Kickbacks (Machine)",
+                        "setup_notes": "Brace against the machine, or even more stably, against a bench.",
+                        "execution_notes": "Kick up and out diagonally, as the upper glute fibers perform both hip extension (up part) and hip abduction (out and diagonally part). The resistance profile should feel nice and smooth.",
+                        "tier_reasons": "Great option for targeting the upper glutes, especially if you want to isolate the glutes without significantly engaging the quads. It is very stable, allowing for focused glute work.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Upper glutes, due to the diagonal kicking motion that engages both hip extension and abduction.",
+                        "limitations": "Does not provide the biggest stretch for the glutes, but this can be compensated for with other exercises.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "The presenter does not do a lot of kickbacks personally but acknowledges their effectiveness."
+                    },
+                    {
+                        "exercise_name": "Step Ups",
+                        "setup_notes": "Set the box a little higher, at or just above knee level. If available, grab onto a handle for better balance.",
+                        "execution_notes": "Once you learn how to engage your glutes more than your quads, the exercise becomes very effective. Setting the box higher forces your glutes to work harder than your quads. Using a handle allows for better balance and enables overloading the glutes even more.",
+                        "tier_reasons": "Targets the upper glutes because it's a single-leg movement, and the stability requirement engages the glute medius and minimus. It provides a deep stretch on the entire glute.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus",
+                            "Quadriceps"
+                        ],
+                        "target_muscle_parts": "Upper glutes (due to single-leg stability requirements engaging glute medius and minimus) and the entire glute.",
+                        "limitations": "Can be a bit awkward at first.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Smith Machine Lunges",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Offers all the same benefits as walking lunges in terms of glute activation and stretch.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Entire glute; upper glutes (due to glute medius activation from stabilization demands), mid glutes (from hip extension), and lower glute area (from the deep stretch).",
+                        "limitations": "The presenter has a personal preference against doing all reps on the spot when the option to move through space is available.",
+                        "alternative_options": "Similar to walking lunges but performed in a fixed path.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Romanian Deadlift (RDL)",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Considered the better choice for glute hypertrophy, especially for the lower glutes and the glute-hamstring tie-in area. It effectively 'smashes' the gluteus maximus and is a basic compound lift very conducive to progressive overload.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Hamstrings"
+                        ],
+                        "target_muscle_parts": "Lower glutes, particularly the glute-hamstring tie-in area, and the gluteus maximus overall.",
+                        "limitations": "Also heavily targets the hamstrings.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "This is the number one exercise for the lower glutes."
+                    }
+                ],
+                "B-Tier": [
+                    {
+                        "exercise_name": "Barbell Hip Thrust",
+                        "setup_notes": "To alleviate hip pinching, use a big cushy pad or roll up some yoga mats. Strategically place the bar in the cushy crease of your hip, below the anterior superior iliac spine and above the pubic bone.",
+                        "execution_notes": "Focus on progressive overload by adding weight each week while maintaining tight form, typically in the 5 to 15 rep range. Glute strength progression in this movement indicates glute growth.",
+                        "tier_reasons": "Very effective at growing the glutes, activating the entire glute (upper, middle, and lower), but mainly targeting the middle glute. It isolates hip extension and is a great movement for progressive overload.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Entire glute, but mainly the middle glute due to its isolation of hip extension.",
+                        "limitations": "Many people find the barbell pinches their hips, even with padding it can feel awkward. It takes time to set up, especially without a dedicated hip thrust platform or when loading many plates. It doesn't get the glutes into a super deep stretch, only about 90° of hip flexion compared to the 130° possible for most lifters.",
+                        "alternative_options": "none",
+                        "scientific_insights": "A recent 9-week study with untrained subjects found that the hip thrust was just as effective as the squat at growing the glutes, despite the squat providing a deeper glute stretch. However, other research suggests glutes respond well to deeper training. The presenter suspects glutes grow best from a combination of exercises that challenge them in a more stretched position (like the squat) and exercises that challenge them in a more shortened position (like the hip thrust).",
+                        "additional_notes": "Oddly enough, one of the more studied movements in exercise science. You don't need a 500lb hip thrust to grow glutes, but consistent strength gains are key."
+                    },
+                    {
+                        "exercise_name": "Glute Bridge",
+                        "setup_notes": "none",
+                        "execution_notes": "Some people find they can isolate their glutes more by taking some of the quads out.",
+                        "tier_reasons": "Easier to set up than a hip thrust because it doesn't require a bench. Great for beginners as it requires less stabilization.",
+                        "target_muscles": [
+                            "Gluteus Maximus"
+                        ],
+                        "target_muscle_parts": "Middle glutes, similar to a hip thrust.",
+                        "limitations": "Has less range of motion compared to the hip thrust.",
+                        "alternative_options": "Essentially a hip thrust with less range of motion.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Cable Hip Abductions",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Performs the same basic function as machine hip abductions.",
+                        "target_muscles": [
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Upper glutes.",
+                        "limitations": "Harder to overload, not as stable as machine abductions, and a bit more annoying to set up.",
+                        "alternative_options": "Does the same basic thing as machine hip abductions.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Curtsy Lunges",
+                        "setup_notes": "none",
+                        "execution_notes": "Step back diagonally behind your other leg.",
+                        "tier_reasons": "Requires more balance, which activates the glute medius more, making it a good option for the upper glutes.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Upper glutes, due to increased glute medius activation from the balance demands.",
+                        "limitations": "Harder to overload compared to a standard lunge.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "Can be included every now and then as an option."
+                    },
+                    {
+                        "exercise_name": "Conventional Deadlift",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "A good glute builder as it trains hip extension and provides a big stretch on the lower glutes. It is also amazing for progressive overload.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Hamstrings",
+                            "Erector Spinae"
+                        ],
+                        "target_muscle_parts": "Lower glutes (due to the big stretch) and the gluteus maximus overall.",
+                        "limitations": "It is a very fatiguing exercise, both physically and psychologically, leading to a low stimulus-to-fatigue ratio. A lot of fatigue is generated, especially in muscles other than the glutes, such as the spinal erectors.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "While elite as a strength builder, it is not ideal as a glute hypertrophy exercise due to its high fatigue cost."
+                    },
+                    {
+                        "exercise_name": "Sumo Deadlift",
+                        "setup_notes": "none",
+                        "execution_notes": "Utilize a wider stance and foot flare, which results in hip abduction and hip external rotation.",
+                        "tier_reasons": "Similar to the conventional deadlift in glute maximus activation. However, due to the hip abduction and hip external rotation from the wider stance and foot flare, it probably hits the glute medius harder and might shift some emphasis toward the upper glutes.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius",
+                            "Hamstrings",
+                            "Erector Spinae"
+                        ],
+                        "target_muscle_parts": "Gluteus Maximus, with potential shifted emphasis to the upper glutes due to increased glute medius activation.",
+                        "limitations": "none",
+                        "alternative_options": "Very similar to the conventional deadlift.",
+                        "scientific_insights": "An EMG study found no difference in glute Maximus EMG activity between conventional and Sumo stances.",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Cable Pull-Throughs",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Great for beginners who don't have much glute strength.",
+                        "target_muscles": [
+                            "Gluteus Maximus"
+                        ],
+                        "target_muscle_parts": "none",
+                        "limitations": "Eventually, you'll be limited by how much weight you can hold comfortably. The exercise starts to feel awkward once you try to use real weight.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    }
+                ],
+                "C-Tier": [
+                    {
+                        "exercise_name": "Frog Pumps",
+                        "setup_notes": "none",
+                        "execution_notes": "Externally rotate your hips and clamp your feet together.",
+                        "tier_reasons": "Shifts some emphasis to the upper glutes since abducting your hips will engage the glute medius more. Can be a solid high-rep finisher.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Gluteus Medius"
+                        ],
+                        "target_muscle_parts": "Upper glutes, due to hip abduction engaging the glute medius.",
+                        "limitations": "Hard to load, which forces the use of really high reps. They don't stretch the glutes very well.",
+                        "alternative_options": "Kind of like a hip thrust, but with external hip rotation and feet clamped together.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    },
+                    {
+                        "exercise_name": "Lateral Banded Walk",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Fine enough as a warm-up drill or for helping people engage their glute medius better.",
+                        "target_muscles": [
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "Upper glutes.",
+                        "limitations": "The band offers virtually zero tension in the stretched position. It's not going to add much muscle mass to your glutes unless you are a beginner.",
+                        "alternative_options": "Same basic movement pattern as hip abductions.",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    }
+                ],
+                "D-Tier": [
+                    {
+                        "exercise_name": "Donkey Kicks",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Solid as a warm-up activation drill or to help beginners feel their glutes engage.",
+                        "target_muscles": [
+                            "Gluteus Maximus"
+                        ],
+                        "target_muscle_parts": "none",
+                        "limitations": "Probably don't grow glutes very well. They are really hard to overload, even with a band, providing very little tension while the glutes are stretched. It's also difficult to progressively overload using a band.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "Considered one of the 'worst of the worst' for muscle growth because it's hard to reach high glute tension for muscle growth."
+                    },
+                    {
+                        "exercise_name": "Fire Hydrants",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Can work for mobility or in rehab contexts.",
+                        "target_muscles": [
+                            "Gluteus Medius",
+                            "Gluteus Minimus"
+                        ],
+                        "target_muscle_parts": "none",
+                        "limitations": "Do not generate high tension on the glutes.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "Considered one of the 'worst of the worst' for muscle growth because it's hard to reach high glute tension for muscle growth."
+                    },
+                    {
+                        "exercise_name": "Kettlebell Swings",
+                        "setup_notes": "none",
+                        "execution_notes": "none",
+                        "tier_reasons": "Can definitely provide a good cardio workout and have some utility for building explosive power.",
+                        "target_muscles": [
+                            "Gluteus Maximus",
+                            "Hamstrings"
+                        ],
+                        "target_muscle_parts": "none",
+                        "limitations": "Does not provide enough tension for glute hypertrophy.",
+                        "alternative_options": "none",
+                        "scientific_insights": "none",
+                        "additional_notes": "none"
+                    }
+                ]
+            }
+        },
+        {
+            "model": "gemini-2.5-flash",
+            "system_prompt": "\nYou are a seasoned personal trainer with expertise in creating efficient, \nscience-based workout plans. \nYour goal is to summarize science-backed videos, which is critical to guide another \npersonal trainer to create efficient and scientifically sound workout plans tailored to a customer's needs.\nA",
+            "tokens": 6001,
+            "time_first_token": 15.961029291152954,
+            "total_time": 40.533527135849,
+            "output_gen_time": 24.572497844696045,
+            "tokens_per_second": 244.21611664909807,
+            "avg_token_per_sec": 148.05027896752034,
+            "status": "success",
+            "error": null
+        }
+    ],
+    "main_knowledge_summary": [
+        {
+            "muscle_group": [
+                "Gluteus Maximus",
+                "Gluteus Medius",
+                "Gluteus Minimus",
+                "Upper Glutes",
+                "Middle Glutes",
+                "Lower Glutes",
+                "Entire Glutes"
+            ],
+            "criterias": [
+                {
+                    "High Tension": "Exercise provides high tension, especially in the stretched position."
+                },
+                {
+                    "Feels Good": "Exercise does not cause knee, hip, or low back pain."
+                },
+                {
+                    "Progressive Overload": "Exercise allows for progression over time to ensure continued muscle growth."
+                }
+            ],
+            "muscle_part_anatomy_function": [
+                {
+                    "Gluteus Maximus": "The largest and most powerful glute muscle, responsible for hip extension (e.g., deadlifts) and external rotation of the leg (e.g., pointing toes out)."
+                },
+                {
+                    "Gluteus Medius": "About one-third the size of the gluteus maximus, it contributes to the 'upper glute shelf' appearance. Primarily active during hip abduction (sweeping the leg out to the side) and acts as an important stabilizer, especially during single-leg exercises."
+                },
+                {
+                    "Gluteus Minimus": "Approximately half the size of the gluteus medius, it also plays a key stabilization role and can add size to the upper glutes."
+                },
+                {
+                    "Upper Glutes": "Can be specifically targeted by exercises focusing on hip abduction and stabilization, involving the gluteus medius and minimus."
+                },
+                {
+                    "Middle Glutes": "Primarily targeted by hip extension movements like squats and hip thrusts, engaging the gluteus maximus."
+                },
+                {
+                    "Lower Glutes": "Targeted by exercises that provide a deep stretch, such as Romanian deadlifts and deep lunges, often contributing to the glute-hamstring tie-in."
+                }
+            ],
+            "form_details": "For **Barbell Hip Thrusts**, use a big cushy pad or rolled-up yoga mats, or strategically place the bar in the cushy crease of the hip (below the anterior superior iliac spine and above the pubic bone) to avoid pinching. For **Single-Leg Dumbbell Hip Thrusts**, focus on controlling the movement with 12-15 reps rather than going heavy. For **Barbell Squats**, to make them more glute-dominant, place the bar lower on your back, lean further forward, and drive through your hips; squat deeper, at least breaking parallel. For **Smith Machine Squats**, place feet further forward for more glute dominance. For **Bulgarian Split Squats**, place your front foot further forward and lean forward as you squat, driving through your hips, to emphasize glutes. For **Kickbacks**, kick up and out diagonally to target upper glute fibers, bracing against the machine or a bench for stability. For **Step Ups**, set the box at or just above knee level to force glutes to work harder than quads, and use a handle for balance to overload the glutes more. For **Machine Hip Abductions**, lean forward by about 30 degrees to improve the line of pull for the upper glute fibers and feel a deeper stretch at the bottom; an extra pad on the inside can increase range of motion. For **Walking Lunges**, take longer strides forward and lean slightly forward by about 30 degrees to accentuate the glute stretch, focusing on moving through space. For **45° Back Extensions**, round your upper back to connect with your glutes better.",
+            "training_keys": "Effective glute training requires a comprehensive approach, targeting the Gluteus Maximus, Medius, and Minimus, as well as the upper, middle, and lower glute regions. Optimal growth is achieved by combining exercises that challenge the glutes in both a **stretched position** (e.g., squats, lunges, RDLs) and a **shortened position** (e.g., hip thrusts, back extensions). **Progressive overload** is paramount; consistently increasing weight, reps (aiming for 5-15 reps for strength and hypertrophy), or exercise difficulty ensures continuous muscle adaptation and growth. **Mind-muscle connection** is vital, especially in single-leg or isolation exercises, to ensure the glutes are the primary movers. Incorporate **single-leg exercises** (e.g., Bulgarian split squats, step-ups, single-leg hip thrusts, lunges) to engage the glute medius and minimus due to their stabilization demands.",
+            "research_insights": "A 9-week study involving untrained subjects compared the **hip thrust** and the **squat** for glute growth. It found that the hip thrust was just as effective as the squat, despite the squat providing a deeper stretch (130° hip flexion vs. 90° for hip thrust). This suggests that while a deep stretch is beneficial, exercises challenging the glutes in a shortened position are highly effective for hypertrophy. However, other research indicates that glutes respond well to deeper training, reinforcing the idea that a combination of exercises targeting both stretched and shortened positions is likely optimal. An **EMG study** comparing conventional and Sumo deadlifts found no significant difference in gluteus maximus EMG activity between the two stances. However, due to the wider stance, hip abduction, and external rotation, the Sumo deadlift likely engages the gluteus medius more, potentially shifting emphasis toward the upper glutes.",
+            "optimization_notes": "To optimize glute workouts and ensure progression, consistently apply **progressive overload** by increasing the weight, reps, or exercise difficulty. For example, aim for a 5-15 rep range on hip thrusts, and for 45° back extensions, progress by adding reps or holding plates. Incorporate a variety of exercises to target specific glute regions: **Machine Hip Abductions** are excellent for upper glutes, **Hip Thrust Machines** for middle glutes, and **Romanian Deadlifts** for lower glutes and the glute-hamstring tie-in. Utilize **machines** (e.g., Glute Drive, Smith machine) for enhanced stability, allowing for better glute isolation and easier progressive overload. Maximize **range of motion** where beneficial, such as taking longer strides in lunges or using an elevated front foot. Finally, **diet is crucial**; ensure adequate calorie intake and sufficient protein to support muscle growth and recovery."
+        },
+        {
+            "model": "gemini-2.5-flash",
+            "system_prompt": "\nYou are a seasoned personal trainer with expertise in creating efficient, \nscience-based workout plans. \nYour goal is to summarize science-backed videos, which is critical to guide another \npersonal trainer to create efficient and scientifically sound workout plans tailored to a customer's needs.\nA",
+            "tokens": 1416,
+            "time_first_token": 21.29675269126892,
+            "total_time": 27.01355767250061,
+            "output_gen_time": 5.7168049812316895,
+            "tokens_per_second": 247.6908001320209,
+            "avg_token_per_sec": 52.41812341665261,
+            "status": "success",
+            "error": null
+        }
+    ]
+}

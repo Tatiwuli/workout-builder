@@ -5,18 +5,15 @@ from youtube_transcript_api import (
     NoTranscriptFound,
 )
 
-from ...app.llms.llm import OpenAILLM
-from dotenv import load_dotenv
-import os
+import logging
+from .llm_service import LLMService
 from .prompts import system_prompt, user_prompts_dict
 
-
-# init LLM model (OpenAI)
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    raise ValueError("OPENAI_API_KEY not found in environment.")
-llm = OpenAILLM(model_name="gpt-5-mini-2025-08-07", api_key=api_key)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 
 def summarize_transcript(transcript_text, category):
@@ -24,6 +21,11 @@ def summarize_transcript(transcript_text, category):
     Summarizes the transcript dynamically based on the video's category.
     """
 
+    if not transcript_text or transcript_text == "No transcript":
+        raise RuntimeError("Transcript is empty.")
+
+
+    llm = LLMService()
     if category not in user_prompts_dict:
 
         raise ValueError(f"Unsupported category: {category}.")
@@ -33,16 +35,16 @@ def summarize_transcript(transcript_text, category):
     user_prompt_main_knowledge = user_prompts_dict[category]["main_knowledge_prompt"].substitute(
         transcript_text=transcript_text)
 
-    print(f"Creating summaries for category: {category}...")
+    logger.info("Creating summaries for category: %s...", category)
 
     # Create summaries
-    exercises_summary = llm.call_llm(
+    exercises_summary = llm.call_stream_llm(
         system_prompt=system_prompt, user_prompt=user_prompt_exercises)
 
-    print("Exercises summary successfully created!")
-
-    main_knowledge_summary = llm.call_llm(
+    logger.info("Exercises summary successfully created!")
+    logger.info("Creating Main Knowledge summaries")
+    main_knowledge_summary = llm.call_stream_llm(
         system_prompt=system_prompt, user_prompt=user_prompt_main_knowledge)
-    print("Main knowledge summary successfully created!")
+    logger.info("Main knowledge summary successfully created!")
 
     return exercises_summary, main_knowledge_summary

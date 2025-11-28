@@ -1,0 +1,90 @@
+{
+  "run_details": [
+    {
+      "run": 1,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 2,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 3,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 4,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 5,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 6,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 7,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 8,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 9,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    },
+    {
+      "run": 10,
+      "status": "error",
+      "metadata": [],
+      "total_workflow_time": null,
+      "error": "[Errno 28] No space left on device"
+    }
+  ],
+  "summary_stats": {
+    "total_runs": 10,
+    "successful_runs": 0,
+    "failed_runs": 10,
+    "total_time_stats": {},
+    "agent_ttft_stats": {
+      "agent_1_selector": {},
+      "agent_2_planner": {},
+      "agent_3_warmup": {}
+    },
+    "compression_stats": {
+      "agent_1_selector": {},
+      "agent_2_planner": {},
+      "agent_3_warmup": {}
+    }
+  }
+}

@@ -2,11 +2,17 @@ from .save_video_data import save_video_data, save_to_json
 from .summarize_transcripts import summarize_transcript
 from .fetch_videos import fetch_videos_from_playlist, fetch_video_metadata
 from .fetch_trascripts import fetch_transcript
+from ...app.database.mongodb_handler import WorkoutBuilderDatabaseHandler
 
 
 import sys
 import os
 import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s"
+)
 
 logger = logging.getLogger(__name__)
 
@@ -15,6 +21,7 @@ def run_data_preparation(all_sources):
     no_transcripts_videos = set()
     n_saved_videos = 0
     all_videos_metadata = []  # Consolidated list for all video metadata
+    mongodb_handler = WorkoutBuilderDatabaseHandler()
 
     for source in all_sources:
         source_type = source.get("type")
@@ -33,32 +40,53 @@ def run_data_preparation(all_sources):
             video_metadata = fetch_video_metadata(source_id, category)
             all_videos_metadata.append(video_metadata)  # Add to the list
         else:
-            print(f"Unknown source type: {source_type} for ID: {source_id}")
+            logger.warning(f"Unknown source type: {source_type} for ID: {source_id}")
 
     # Fetch transcripts for all videos
     for video_item in all_videos_metadata:
+
         video_id = video_item.get("video_id")
+        if not video_id : 
+            logger.warning(f"Missing video_id in metadata: {video_item}")
 
-        if video_id:
-            transcript_text, transcript_timestamp = fetch_transcript(video_id)
-        else:
-            print(f"Missing video_id in metadata: {video_item}")
+        logger.info("video_id=%s", video_id)
 
-        if transcript_text == "No transcript":
+        # Skip if this video was already summarized 
+        try:
+
+            logger.info("Checking if video_id already exists in DB")
+        
+            existing = mongodb_handler.db["videos_summaries"].find_one({"video_id": video_id}, {"_id": 1})
+            if existing:
+                logger.info(f"Duplicate found for video_id={video_id}; skipping summarization.")
+                
+                continue
+        except Exception as e:
+            logger.error(f"Failed duplicate check for video_id={video_id}: {e}")
+
+        transcript_text = fetch_transcript(video_id)
+        
+
+        if not transcript_text or transcript_text == "No transcript":
             no_transcripts_videos.add(video_id)
-            print(f"Transcript not found for Video {video_id}")
+            logger.warning(f"Transcript not found for Video {video_id}")
             continue
-
+        
+        logger.info("transcript text: %s", transcript_text[100:])
         # summarize video
         exercises_summary, main_knowledge_summary = summarize_transcript(
             transcript_text, video_item.get("category"))
 
+
+        logger.info("Finished summary for video")
         # prepare data to save to db
         video_item['exercises_summary'] = exercises_summary
         video_item['main_knowledge_summary'] = main_knowledge_summary
 
         # Try saving to MongoDB first; on failure, fall back to JSON
         logger.info("Saving to MongoDB")
+
+       
         try:
             save_video_data(video_item)
         except Exception as e:
@@ -72,10 +100,10 @@ def run_data_preparation(all_sources):
                     f"Failed to save to JSON for video {video_id}: {json_err}")
             else:
                 n_saved_videos += 1
-                print(f" {n_saved_videos} videos saved")
+                logger.info(" %s videos saved", n_saved_videos)
         else:
             n_saved_videos += 1
-            print(f" {n_saved_videos} videos saved")
+            logger.info(" %s videos saved", n_saved_videos)
 
     return no_transcripts_videos  # if needed
 

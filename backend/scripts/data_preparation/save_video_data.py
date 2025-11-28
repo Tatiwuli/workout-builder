@@ -2,15 +2,21 @@ from ...app.database.mongodb_handler import WorkoutBuilderDatabaseHandler
 
 import os 
 import json
+import logging
 from datetime import datetime 
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 
 def save_video_data(video_item):
-    mongodb_handler = WorkoutBuilderDatabaseHandler(
-        database_name="workout_builder")
+    mongodb_handler = WorkoutBuilderDatabaseHandler()
 
     mongodb_handler.insert_one_data("videos_summaries", video_item)
-    print("Videos successfuly saved!")
+    logger.info("Videos successfully saved!")
     
 
 
@@ -29,6 +35,6 @@ def save_to_json(video_id, video_item):
     try:
         with open(json_filepath, 'w', encoding='utf-8') as json_file:
             json.dump(video_item, json_file, indent=4, ensure_ascii=False)
-        print(f"Saved video information to JSON: {json_filepath}")
+        logger.info(f"Saved video information to JSON: {json_filepath}")
     except Exception as e:
-        print(f"Failed to save video {video_id} information to JSON: {e}")
+        logger.error(f"Failed to save video {video_id} information to JSON: {e}")

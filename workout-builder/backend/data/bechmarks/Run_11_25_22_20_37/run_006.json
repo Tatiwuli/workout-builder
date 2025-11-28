@@ -1,0 +1,44 @@
+{
+  "run": 6,
+  "status": "error",
+  "error": "[Errno 28] No space left on device",
+  "user_input": {
+    "muscle_groups": [
+      "chest",
+      "back",
+      "shoulders",
+      "hamstrings"
+    ],
+    "goals": {
+      "chest_goal": [
+        "Overall Chest Growth",
+        "Lower Chest Focus",
+        "Upper Chest Focus"
+      ],
+      "back_goal": [
+        "Wider Back"
+      ],
+      "shoulders_goal": [
+        "Defined Shoulders",
+        "Strong Shoulders"
+      ],
+      "hamstrings_goal": [
+        "Defined Hamstrings",
+        "Explosive Power"
+      ]
+    },
+    "muscle_workout_frequency": {
+      "chest_frequency": 4,
+      "back_frequency": 4,
+      "shoulders_frequency": 2,
+      "hamstrings_frequency": 2
+    },
+    "workout_duration": 75,
+    "time_constraint": "long",
+    "fitness_level": "intermediate_early",
+    "experience_level_description": "I've been training regularly for 1 to 2 years."
+  },
+  "final_plan": null,
+  "metadata_records": [],
+  "total_workflow_time": null
+}

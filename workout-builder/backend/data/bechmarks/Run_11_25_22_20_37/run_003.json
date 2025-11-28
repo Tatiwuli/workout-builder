@@ -1,0 +1,43 @@
+{
+  "run": 3,
+  "status": "error",
+  "error": "[Errno 28] No space left on device",
+  "user_input": {
+    "muscle_groups": [
+      "triceps",
+      "calves",
+      "shoulders",
+      "glutes"
+    ],
+    "goals": {
+      "triceps_goal": [
+        "Defined Triceps",
+        "Bigger Triceps"
+      ],
+      "calves_goal": [
+        "Functional Strength"
+      ],
+      "shoulders_goal": [
+        "Defined Shoulders",
+        "3D Shoulders"
+      ],
+      "glutes_goal": [
+        "Fuller Glutes",
+        "Glute Strength"
+      ]
+    },
+    "muscle_workout_frequency": {
+      "triceps_frequency": 4,
+      "calves_frequency": 4,
+      "shoulders_frequency": 2,
+      "glutes_frequency": 3
+    },
+    "workout_duration": 30,
+    "time_constraint": "short",
+    "fitness_level": "intermediate_early",
+    "experience_level_description": "I've been training regularly for 1 to 2 years."
+  },
+  "final_plan": null,
+  "metadata_records": [],
+  "total_workflow_time": null
+}

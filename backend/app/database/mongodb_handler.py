@@ -7,9 +7,14 @@ from pymongo.results import InsertOneResult
 
 import os
 import json
+import logging
+from typing import Dict, List, Optional
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
+logger = logging.getLogger(__name__)
+
 class WorkoutBuilderDatabaseHandler:
     def __init__(self):
         self.mongo_uri = os.getenv("MONGODB_URI")
@@ -22,39 +27,105 @@ class WorkoutBuilderDatabaseHandler:
         self.test_connection()
         self.db = self.client["workout_builder"]
         self.batch_size = 100
+        self.timestamp_utc = datetime.now(timezone.utc)
+        # Per-collection natural unique keys; extend as new collections are added
+        self.unique_keys_by_collection: Dict[str, List[str]] = {
+            "videos_summaries": ["video_id"],
+            "wikis": ["wiki_name"],
+        }
+        self._ensure_unique_indexes()
+
+
+
+    def apply_timestamps(self, doc: dict) -> dict:
+        now = self.timestamp_utc
+        if "created_at" not in doc:
+            doc["created_at"] = now
+        doc["updated_at"] = now
+        return doc
+
+    def _ensure_unique_indexes(self):
+        for coll, fields in self.unique_keys_by_collection.items():
+            collection = self.db[coll]
+            for f in fields:
+                try:
+                    collection.create_index(f, unique=True)
+                except Exception as e:
+                    logger.warning(f"Unique index on {coll}.{f} may already exist: {e}")
+
+    def _build_unique_filter(self, collection_name, data):
+        fields = self.unique_keys_by_collection.get(collection_name)
+        if not fields:
+            return None
+        if not all(field in data for field in fields):
+            return None
+        return {field: data[field] for field in fields}
 
     def test_connection(self):
 
         try:
             self.client.admin.command("ping")
-            print("Successfully connected to the MongoDB server.")
+            logger.info("Successfully connected to the MongoDB server.")
         except Exception as e:
-            print(f"Failed to connect to the MongoDB server: {e}")
+            logger.error(f"Failed to connect to the MongoDB server: {e}")
             raise ConnectionError("Failed to connect to the MongoDB server.")
 
     def insert_one_data(self, collection_name, data) -> InsertOneResult:
         try:
             collection = self.db[collection_name]
-            return collection.insert_one(data)
+            now = self.timestamp_utc
+            filt = self._build_unique_filter(collection_name, data)
+
+            if filt:
+                update = {
+                    "$set": {**data, "updated_at": now},
+                    "$setOnInsert": {"created_at": now},
+                }
+                result = collection.update_one(filt, update, upsert=True)
+                if result.matched_count > 0:
+                    logger.info(f"Deduplicated and updated existing document in '{collection_name}' (filter={filt}).")
+                elif result.upserted_id is not None:
+                    logger.info(f"Inserted new document in '{collection_name}' via upsert (id={result.upserted_id}).")
+                else:
+                    logger.info(f"Upsert completed in '{collection_name}' (filter={filt}).")
+                return result
+            else:
+                # No known unique key → do a normal insert with timestamps
+                self.apply_timestamps(data)
+                return collection.insert_one(data)
         except Exception as e:
-            print(f"Error inserting data into {collection_name}: {e}")
+            logger.error(f"Error inserting data into {collection_name}: {e}")
             return None
 
     def insert_many_data(self, collection_name, data_list):
         try:
             collection = self.db[collection_name]
-            for i in range(0, len(data_list), self.batch_size):
-                batch = data_list[i: i + self.batch_size]
-                collection.insert_many(batch)
+            for data in data_list:
+                now = self.timestamp_utc
+                filt = self._build_unique_filter(collection_name, data)
+
+                if filt:
+                    update = {
+                        "$set": {**data, "updated_at": now},
+                        "$setOnInsert": {"created_at": now},
+                    }
+                    result = collection.update_one(filt, update, upsert=True)
+                    if result.matched_count > 0:
+                        logger.info(f"Deduplicated and updated existing document in '{collection_name}' (filter={filt}).")
+                    elif result.upserted_id is not None:
+                        logger.info(f"Inserted new document in '{collection_name}' via upsert (id={result.upserted_id}).")
+                else:
+                    self.apply_timestamps(data)
+                    collection.insert_one(data)
         except Exception as e:
-            print(f"Error inserting batch data into {collection_name}: {e}")
+            logger.error(f"Error inserting batch data into {collection_name}: {e}")
 
     def fetch_data(self, collection_name, query):
         try:
             collection = self.db[collection_name]
             return list(collection.find(query))
         except Exception as e:
-            print(f"Error fetching data from {collection_name}: {e}")
+            logger.error(f"Error fetching data from {collection_name}: {e}")
             return []
 
     def delete_one_data(self, collection_name, query):
@@ -62,7 +133,7 @@ class WorkoutBuilderDatabaseHandler:
             collection = self.db[collection_name]
             return collection.delete_one(query)
         except Exception as e:
-            print(f"Error deleting data from {collection_name}: {e}")
+            logger.error(f"Error deleting data from {collection_name}: {e}")
             return None
 
 
@@ -70,7 +141,7 @@ class WorkoutBuilderDatabaseHandler:
        
         collection = self.db[collection_name]
         result = collection.delete_many(filter_query)
-        print(f"Deleted {result.deleted_count} documents from '{collection_name}' collection.")
+        logger.info(f"Deleted {result.deleted_count} documents from '{collection_name}' collection.")
         return result.deleted_count
       
         
@@ -83,17 +154,17 @@ class WorkoutBuilderDatabaseHandler:
                 filter_query = {}
 
             update_query = {
-                "$rename": {old_field_name: new_field_name}
+                "$rename": {old_field_name: new_field_name},
+                "$set": {"updated_at": self.timestamp_utc}
             }
 
             result = collection.update_many(filter_query, update_query)
 
-            print(f"Renamed field '{old_field_name}' to '{new_field_name}' in {
-                  result.modified_count} documents in collection '{collection_name}'.")
+            logger.info(f"Renamed field '{old_field_name}' to '{new_field_name}' in {result.modified_count} documents in collection '{collection_name}'.")
             return result.modified_count
 
         except Exception as e:
-            print(f"Error renaming field '{old_field_name}' to '{ new_field_name}' in collection '{collection_name}': {e}")
+            logger.error(f"Error renaming field '{old_field_name}' to '{ new_field_name}' in collection '{collection_name}': {e}")
             return 0
 
     def edit_field(self, collection_name: str, field_name: str, new_value, filter_query=None):
@@ -105,59 +176,13 @@ class WorkoutBuilderDatabaseHandler:
             if filter_query is None:
                 filter_query = {}
 
-            update_query = {"$set": {field_name: new_value}}
+            update_query = {"$set": {field_name: new_value, "updated_at": self.timestamp_utc}}
 
             result = collection.update_many(filter_query, update_query)
 
-            print(f"Modified {result.modified_count} documents in collection '{
-                  collection_name}'.")
+            logger.info(f"Modified {result.modified_count} documents in collection '{collection_name}'.")
             return result.modified_count
 
         except Exception as e:
-            print(f"Error updating field '{
-                  field_name}' in collection '{collection_name}': {e}")
+            logger.error(f"Error updating field '{field_name}' in collection '{collection_name}': {e}")
             return 0
-
-
-# def update_targeted_muscle_groups(targeted_muscle_groups_mapping):
-#     MONGODB_URI = os.getenv("MONGODB_URI")
-#     assert MONGODB_URI, "MongoDB URI not provided!"
-
-#     client = MongoClient(MONGODB_URI)
-#     db = client["workout_builder"]
-#     collection = db["videos_summaries"]
-
-#     # Prepare bulk update operations using UpdateOne
-#     bulk_updates = []
-#     for doc_id, muscle_groups in targeted_muscle_groups_mapping.items():
-#         bulk_updates.append(
-#             UpdateOne(
-#                 {"_id": ObjectId(doc_id)},  # Filter
-#                 {"$set": {"video_targeted_muscle_groups": muscle_groups}}  # Update
-#             )
-#         )
-
-#     # Execute bulk update
-#     if bulk_updates:
-#         result = collection.bulk_write(bulk_updates)
-#         print(f"Matched {result.matched_count} documents, modified {
-#               result.modified_count} documents.")
-#     else:
-#         print("No updates to process.")
-
-
-# # Example Input
-# targeted_muscle_groups_mapping = {
-#     "6778a621d4a87792e974043d": ["Quadriceps"],
-#     "6778a640d4a87792e974043e": ["Triceps"],
-#     "6778a666d4a87792e974043f": ["Chest"],
-#     "6778a690d4a87792e9740440": ["Back"],
-#     "67790dc33ea12f4ce5fb3cb7": ["Quadriceps", "Calves", "Glutes", "Hamstrings", "Low Back"],
-#     "67790dd63ea12f4ce5fb3cb9": ["Glutes"],
-#     "67791086c4e846798caf6052": ["Quadriceps", "Glutes", "Hamstrings"],
-#     "6779136603148c5632f48fa0": ["Shoulder"],
-#     "677915f2ecbe19f5027fc9c2": ["Biceps"]
-# }
-
-# # Update the collection
-# update_targeted_muscle_groups(targeted_muscle_groups_mapping)

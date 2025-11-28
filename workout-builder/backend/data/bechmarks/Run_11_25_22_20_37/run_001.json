@@ -1,0 +1,44 @@
+{
+  "run": 1,
+  "status": "error",
+  "error": "[Errno 28] No space left on device",
+  "user_input": {
+    "muscle_groups": [
+      "triceps",
+      "calves",
+      "back",
+      "chest"
+    ],
+    "goals": {
+      "triceps_goal": [
+        "Pressing Power",
+        "Bigger Triceps"
+      ],
+      "calves_goal": [
+        "Bigger Calves",
+        "Defined Calves"
+      ],
+      "back_goal": [
+        "Wider Back",
+        "Thicker Back"
+      ],
+      "chest_goal": [
+        "Upper Chest Focus",
+        "Overall Chest Growth"
+      ]
+    },
+    "muscle_workout_frequency": {
+      "triceps_frequency": 2,
+      "calves_frequency": 4,
+      "back_frequency": 2,
+      "chest_frequency": 3
+    },
+    "workout_duration": 30,
+    "time_constraint": "short",
+    "fitness_level": "intermediate_early",
+    "experience_level_description": "I've been training regularly for 1 to 2 years."
+  },
+  "final_plan": null,
+  "metadata_records": [],
+  "total_workflow_time": null
+}
