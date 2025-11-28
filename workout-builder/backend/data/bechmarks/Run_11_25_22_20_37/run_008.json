@@ -1,0 +1,44 @@
+{
+  "run": 8,
+  "status": "error",
+  "error": "[Errno 28] No space left on device",
+  "user_input": {
+    "muscle_groups": [
+      "calves",
+      "shoulders",
+      "back",
+      "quadriceps"
+    ],
+    "goals": {
+      "calves_goal": [
+        "Bigger Calves",
+        "Defined Calves"
+      ],
+      "shoulders_goal": [
+        "Strong Shoulders",
+        "3D Shoulders",
+        "Defined Shoulders"
+      ],
+      "back_goal": [
+        "Thicker Back",
+        "Wider Back"
+      ],
+      "quadriceps_goal": [
+        "Defined Quads"
+      ]
+    },
+    "muscle_workout_frequency": {
+      "calves_frequency": 3,
+      "shoulders_frequency": 2,
+      "back_frequency": 2,
+      "quadriceps_frequency": 3
+    },
+    "workout_duration": 45,
+    "time_constraint": "medium",
+    "fitness_level": "intermediate_late",
+    "experience_level_description": "I've been training regularly for 2 to 3 years."
+  },
+  "final_plan": null,
+  "metadata_records": [],
+  "total_workflow_time": null
+}

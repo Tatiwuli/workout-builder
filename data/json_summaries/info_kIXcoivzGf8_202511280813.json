@@ -1,0 +1,351 @@
+{
+    "playlist_id": "PLp4G6oBUcv8w8ujRtP5BtvJe8PXBwiTdl",
+    "category": "tier_list",
+    "video_id": "kIXcoivzGf8",
+    "title": "The Best & Worst QUAD Exercises (Ranked Using Science)",
+    "published_date": "2024-07-15T12:18:52Z",
+    "video_url": "https://www.youtube.com/watch?v=kIXcoivzGf8",
+    "thumbnail_img": "https://i.ytimg.com/vi/kIXcoivzGf8/default.jpg",
+    "exercises_summary": {
+        "exercise_rankings": {
+            "S-Tier": [
+                {
+                    "exercise_name": "Barbell Back Squat",
+                    "setup_notes": "none",
+                    "execution_notes": "Lock in your bar path. Squat deep into the hole.",
+                    "tier_reasons": "Offers high tension on the quads deep in the hole when they are most stretched. Feels good, especially once the bar path is locked in. One of the best exercises for progressive overload, allowing for consistent addition of weight or reps week to week.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Spinal Erectors"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps. The rectus femoris still shows solid growth despite shortening at the knee while lengthening at the hip.",
+                    "limitations": "Spinal Erectors will have to do some stabilization work, but this is not a deal breaker as quads are still the prime movers. The rectus femoris head is not maximally activated due to its dual function (shortening at the knee while lengthening at the hip), but studies still show solid growth.",
+                    "alternative_options": "none",
+                    "scientific_insights": "Anatomy papers suggest the rectus femoris head is not maximally activated by the squat because, unlike the other three heads, it's shortening at the knee while lengthening at the hip. However, studies still show pretty solid rectus femoris growth with squats.",
+                    "additional_notes": "If you need proof that squats can build monster quads, observe powerlifters. Including one other exercise (like leg extensions) in your program can completely address the concern about rectus femoris activation. This is the alternate go-to as the number one quad builder if a hack squat machine is unavailable."
+                },
+                {
+                    "exercise_name": "Hack Squat",
+                    "setup_notes": "none",
+                    "execution_notes": "You can play with your foot position to find a comfortable spot without worrying about balance. If your machine doesn't allow full depth without coming up solid, try adding yoga blocks on top of your shoulders to achieve full depth.",
+                    "tier_reasons": "Offers high tension on the quads, feels good, and has simple progression. Generally allows for faster sets due to less setup. Provides a more locked-in position, meaning less stabilization work and potentially more direct quad tension. Allows for comfortable foot positioning without balance concerns.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "On some machines, it may be difficult to get to full depth without coming up solid.",
+                    "alternative_options": "Similar to barbell squats but with added benefits. The pendulum squat is similar but with an arc-like resistance path.",
+                    "scientific_insights": "The latest science shows that on average, free weights and machines can both build muscle roughly equally as long as you're pushing your sets hard.",
+                    "additional_notes": "This is a truly brilliant quad builder. It is crowned as the best of the best for quad growth, especially considering the limited availability of pendulum squats."
+                },
+                {
+                    "exercise_name": "Pendulum Squat",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Similar to the hack squat, offering high tension, feeling good, and simple progression. The resistance path feels more natural than the linear hack squat.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "Most gyms do not have a pendulum squat machine, limiting accessibility.",
+                    "alternative_options": "Similar to the hack squat, but with an arc-like resistance path.",
+                    "scientific_insights": "none",
+                    "additional_notes": "The presenter personally finds the resistance path of the pendulum squat feels more natural than the linear hack squat."
+                },
+                {
+                    "exercise_name": "Smith Machine Squat",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Allows you to push your quads close to or to failure without the fear of falling over or needing to dump the bar. It is the same basic movement pattern as the free-weight barbell squat, making it effective for hypertrophy.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "Potentially reduced stabilizer involvement compared to free-weight squats.",
+                    "alternative_options": "Same basic movement pattern as free-weight barbell squats.",
+                    "scientific_insights": "none",
+                    "additional_notes": "The Smith machine squat has become more accepted in recent years, with more top bodybuilders gravitating towards it."
+                },
+                {
+                    "exercise_name": "Bulgarian Split Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Provides a huge stretch on the quads. Performing the exercise unilaterally (each leg) is very helpful for preventing left-to-right muscle imbalances.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Glutes"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps, with a significant stretch.",
+                    "limitations": "Very fatiguing and psychologically challenging. Typically programmed for only two sets per workout due to their intensity.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "These are brutal but effective. Your quads will get more sore doing these than almost any other exercise, which is a good indication of hitting the right muscle, even though soreness isn't a one-to-one predictor of hypertrophy."
+                }
+            ],
+            "A-Tier": [
+                {
+                    "exercise_name": "Barbell Front Squat",
+                    "setup_notes": "The barbell's center of mass is shifted forward in front of your neck.",
+                    "execution_notes": "You are forced to keep a more upright posture to avoid falling over. For bodybuilding, you can use a two-finger grip, crossed arm grip, or strap grip, choosing whatever feels best. Focus on keeping your elbows up, squatting down between your legs, and standing back up with a tall chest.",
+                    "tier_reasons": "Shifts even more tension to the quads compared to the barbell back squat because the forward bar position increases the moment arm to the knee joint. This places more tension on the quads.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Upper Back"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "The forward bar position forces your upper back to work harder, which some coaches argue can make the upper back a limiting factor. May lose points in the 'feels good' department for some individuals.",
+                    "alternative_options": "Has all the same upsides as the barbell back squat but shifts more tension to the quads.",
+                    "scientific_insights": "none",
+                    "additional_notes": "If you can do them comfortably, they can be bumped up to S-tier. The presenter disagrees that the upper back is always a limiting factor unless going super heavy, as you should be able to keep elbows up and get quads close to failure without the back giving out first."
+                },
+                {
+                    "exercise_name": "Low Bar Back Squat",
+                    "setup_notes": "Shift the barbell down 2 or 3 inches so it sits on your rear delts instead of your upper traps.",
+                    "execution_notes": "Squat to a reasonable depth.",
+                    "tier_reasons": "While it allows you to load more total weight, research shows it shifts some tension away from your quads and onto your glutes. However, it still results in extremely high quad activity as long as you squat to a reasonable depth.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Glutes"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps, though with less emphasis than high bar squats.",
+                    "limitations": "Shifts some tension away from the quads and onto the glutes compared to a high bar squat.",
+                    "alternative_options": "Compared to high bar back squat, it allows more weight but shifts tension to glutes.",
+                    "scientific_insights": "Research shows that this technique will allow you to load more total weight but actually shifts some of the tension away from your quads and onto your glutes.",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "45° Leg Press",
+                    "setup_notes": "none",
+                    "execution_notes": "Aim to get as deep as possible; the deeper you can get, the better for hypertrophy. If you cannot get your calves to your glutes, you might not be getting as much out of it as a deep squat.",
+                    "tier_reasons": "Quads receive high tension due to knee flexion and extension. Generally feels good and is effective for progressive overload.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "Many leg presses do not allow for as deep a range of motion as a squat, which can limit hypertrophy potential.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "The deeper the range of motion, the better for hypertrophy."
+                },
+                {
+                    "exercise_name": "Leg Extension",
+                    "setup_notes": "Set the seat back.",
+                    "execution_notes": "Lean back. Ensure the machine allows for a good stretch on your quads.",
+                    "tier_reasons": "Hips are fixed, which means that unlike squat-based exercises, the rectus femoris will actually stretch and contract, making it the first exercise where all four heads of the quads are highly engaged. This is especially true with the seat back position.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps, with particular emphasis on the rectus femoris due to the fixed hip position and stretch.",
+                    "limitations": "Does not have quite the same overload potential as squats. While some short-term studies show similar leg growth between leg extensions and squats, the presenter is doubtful they would yield the same long-term quad gains as squats.",
+                    "alternative_options": "none",
+                    "scientific_insights": "A brand new study found significantly more overall quad growth and especially more rectus femoris growth with the seat back leg extension position. This is most likely because it places the rectus femoris under more stretch or at least trains it at a longer muscle length.",
+                    "additional_notes": "The controversy regarding leg extensions being bad for knees has been thoroughly debunked; there's no convincing evidence they cause knee issues more than any other quad exercise. Still a staple in the presenter's leg days and definitely worth including."
+                },
+                {
+                    "exercise_name": "Reverse Nordic",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Same basic movement pattern as a leg extension but is more accessible as it doesn't require a machine. Allows for a much deeper stretch on the quads, with the stretch being S-tier.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps, with an emphasis on deep stretch.",
+                    "limitations": "Very tough, meaning beginners might struggle with them. Can be hard to overload with weight, limiting options for progressive overload (primarily adding reps or getting deeper).",
+                    "alternative_options": "Same basic movement pattern as a leg extension.",
+                    "scientific_insights": "none",
+                    "additional_notes": "If you find them really awkward, the presenter would be okay with dropping them back a tier or two."
+                }
+            ],
+            "B-Tier": [
+                {
+                    "exercise_name": "Lunge",
+                    "setup_notes": "none",
+                    "execution_notes": "To get the quads more involved, take more shallow steps.",
+                    "tier_reasons": "While it will grow both quads and glutes, it is a better glute builder than a quad builder in the presenter's experience. You get some stretch and tension on the quads, but not as much as on the glutes.",
+                    "target_muscles": [
+                        "Glutes",
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps (some involvement).",
+                    "limitations": "none",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "If considered for glute growth, it would probably be A or S tier."
+                },
+                {
+                    "exercise_name": "Goblet Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "Hold a dumbbell in your hands.",
+                    "tier_reasons": "Biomechanically very similar to a barbell front squat, so they highly activate your quads. However, they are much harder to overload once your quads get decently strong, as you'll be able to squat more weight than you can comfortably hold. This quickly limits them to high-rep sets only.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "Overload is limited by the weight you can comfortably hold, making them quickly limited to high-rep sets.",
+                    "alternative_options": "Biomechanically very similar to a barbell front squat.",
+                    "scientific_insights": "none",
+                    "additional_notes": "Generally used for teaching the squat to beginners or as a high-rep finisher exercise."
+                },
+                {
+                    "exercise_name": "Sissy Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "Involves going up onto your toes and getting your knees all the way forward.",
+                    "tier_reasons": "Gets a huge stretch on your quads. Despite some limitations, they are probably the best squat option for getting into a super deep stretch on the quads.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps, with a focus on deep stretch.",
+                    "limitations": "A bit harder to load, mainly limited to adding reps when it comes to progressive overload. They have more of a learning curve than other squat options. People can also find it awkward going up onto their toes and getting their knees all the way forward.",
+                    "alternative_options": "Similar to reverse Nordics in getting a huge stretch on the quads.",
+                    "scientific_insights": "none",
+                    "additional_notes": "Don't let the name deceive you; these are very challenging."
+                }
+            ],
+            "C-Tier": [
+                {
+                    "exercise_name": "Horizontal Leg Press",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Worse than the 45° leg press because they almost always have even more limited range of motion, making it harder to get high tension in the deep stretch. Once your legs get decently strong, you'll probably max out the machine, limiting overload for intermediate to advanced lifters.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps (limited tension in deep stretch).",
+                    "limitations": "Limited range of motion, harder to get high tension in the deep stretch. Limited overload potential for intermediate to advanced lifters due to machine maxing out.",
+                    "alternative_options": "Worse than the 45° leg press.",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Deadlifts",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Activate the quads but not nearly as much as squats. From a quad perspective, a deadlift is basically a quarter squat.",
+                    "target_muscles": [
+                        "Glutes",
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps (limited involvement, like a quarter squat).",
+                    "limitations": "none",
+                    "alternative_options": "Deadlifting with a Sumo stance will get a bit more quad involvement, but still doesn't compare to squats for quad growth.",
+                    "scientific_insights": "none",
+                    "additional_notes": "They are a much better glute builder and an excellent overall strength builder, but not ideal for quadriceps muscle growth."
+                },
+                {
+                    "exercise_name": "Step-ups",
+                    "setup_notes": "none",
+                    "execution_notes": "To maximize glute stimulus, avoid lifting off your back foot.",
+                    "tier_reasons": "Equally not fun as Bulgarian split squats but less effective for quads because you get less quad stretch and they are less stable.",
+                    "target_muscles": [
+                        "Glutes",
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps (less stretch).",
+                    "limitations": "Less quad stretch and less stable compared to Bulgarian split squats.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "They do offer a pretty solid glute stimulus and can have their place."
+                },
+                {
+                    "exercise_name": "Pistol Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Lack of stability and overload limitations significantly reduce their effectiveness as a quad builder for hypertrophy.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "All four heads of the quadriceps.",
+                    "limitations": "Lack of stability and overload limitations.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "An impressive movement if you can do them. Great for at-home workouts or bodyweight training, but there are many better options if you have gym access."
+                }
+            ],
+            "F-Tier": [
+                {
+                    "exercise_name": "Squat Combination Exercises (Squat + Press, Lunge + Curl)",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Your quads are significantly stronger than your shoulders or arms, meaning your upper body will always fatigue well before your quads receive adequate stimulus for growth.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Shoulders",
+                        "Arms"
+                    ],
+                    "target_muscle_parts": "none",
+                    "limitations": "Upper body fatigues before quads, limiting quad stimulus.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "none"
+                },
+                {
+                    "exercise_name": "Bosu Ball Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "Extremely unstable, causing your ankle to do a lot of the stabilization work. This severely limits the amount of tension that your quads receive, making them ineffective for building muscle.",
+                    "target_muscles": [
+                        "Quadriceps",
+                        "Ankle Stabilizers"
+                    ],
+                    "target_muscle_parts": "none",
+                    "limitations": "Ankle stabilization severely limits quad tension.",
+                    "alternative_options": "Removing the Bosu ball immediately makes the squat more stable, safer, and more effective.",
+                    "scientific_insights": "none",
+                    "additional_notes": "Might have some utility in some athletic contexts, but not for building muscle. Crowned as the worst of the worst quad exercise."
+                },
+                {
+                    "exercise_name": "Jump Squats",
+                    "setup_notes": "none",
+                    "execution_notes": "none",
+                    "tier_reasons": "As a muscle builder, there are simply too many other better options that will provide more tension and more overload for hypertrophy.",
+                    "target_muscles": [
+                        "Quadriceps"
+                    ],
+                    "target_muscle_parts": "none",
+                    "limitations": "Provides less tension and overload compared to other exercises for hypertrophy.",
+                    "alternative_options": "none",
+                    "scientific_insights": "none",
+                    "additional_notes": "They will burn some calories and are not terrible for building explosive power, but are not recommended for hypertrophy."
+                }
+            ]
+        }
+    },
+    "main_knowledge_summary": {
+        "muscle_group": [
+            "Quadriceps",
+            "Vastus Medialis",
+            "Vastus Intermedius",
+            "Vastus Lateralis",
+            "Rectus Femoris"
+        ],
+        "criterias": [
+            {
+                "High quad tension especially in the stretched position": "The exercise effectively loads the quadriceps, particularly when the muscle is in its lengthened state."
+            },
+            {
+                "Feels good": "The exercise should not cause knee pain and should have a smooth resistance profile throughout the movement."
+            },
+            {
+                "Simple progression": "The exercise allows for easy application of progressive overload, such as adding weight or reps week to week."
+            }
+        ],
+        "muscle_part_anatomy_function": [
+            {
+                "Vastus Medialis": "Also known as the teardrop muscle, located on the inside of the thigh. Contracts to perform knee extension (straightening the knee)."
+            },
+            {
+                "Vastus Intermedius": "Runs down the middle of the thigh. Contracts to perform knee extension (straightening the knee)."
+            },
+            {
+                "Vastus Lateralis": "Located on the outside of the thigh. Contracts to perform knee extension (straightening the knee)."
+            },
+            {
+                "Rectus Femoris": "A long, flat head that runs down the middle of the thigh, on top of the other vastus muscles. It performs knee extension (straightening the knee) and hip flexion (raising the leg up to the front)."
+            }
+        ],
+        "form_details": "For **Barbell Front Squats**, various grips can be used for comfort (two-finger, crossed arm, strap grip); focus on keeping elbows up, squatting down between the legs, and standing up with a tall chest. For **Hack Squats**, foot position can be adjusted to find a comfortable spot. For **Leg Presses**, aim to get as deep as possible, ideally bringing calves to glutes, for optimal hypertrophy. For **Leg Extensions**, setting the seat back further places the rectus femoris under more stretch. For **Lunges**, taking more shallow steps can increase quad involvement. For **Sissy Squats**, the technique involves going up onto your toes and getting your knees all the way forward to achieve a deep quad stretch.",
+        "training_keys": "All four heads of the quadriceps contract to perform knee extension. The rectus femoris also performs hip flexion. For optimal quad growth, exercises should provide high tension, especially in the stretched position. While squats effectively build quads, the rectus femoris is not maximally activated in squat-based movements because it shortens at the knee while lengthening at the hip. To fully engage all four quad heads, including the rectus femoris, incorporate exercises where the hips are fixed, allowing the rectus femoris to stretch and contract, such as leg extensions or reverse Nordics. Free weight and machine exercises can build muscle equally if sets are pushed hard. For squats, a high bar back squat or front squat shifts more tension to the quads compared to a low bar squat, which emphasizes the glutes more. Machine-based squats (Hack, Pendulum, Smith Machine) offer benefits like less setup, more stability, and direct quad tension, allowing users to push closer to failure without fear. Unilateral exercises like Bulgarian split squats are excellent for a huge quad stretch and addressing muscle imbalances, though they are very fatiguing. Bosu ball squats are ineffective for muscle growth due to instability limiting quad tension. Squat combination exercises are inefficient as the upper body fatigues before the quads. Deadlifts activate quads but are primarily glute builders. Leg extensions are not inherently bad for knees and are crucial for rectus femoris development, especially with a seat-back position.",
+        "research_insights": "One recent anatomy paper suggested the possibility of a fifth quadriceps head, though its training implications are considered minimal. Studies indicate that squats still lead to solid rectus femoris growth, despite its unique biomechanics during the movement. Research shows that low bar squats, while allowing for heavier loads, shift some tension away from the quads and onto the glutes compared to high bar squats. The latest science suggests that free weights and machines can build muscle roughly equally, provided sets are pushed hard. The notion that leg extensions are inherently bad for knees has been thoroughly debunked; there's no convincing evidence they cause knee issues more than other quad exercises. A new study found significantly more overall quad growth, particularly in the rectus femoris, when performing leg extensions with the seat set back, likely due to placing the rectus femoris under a greater stretch or training it at a longer muscle length.",
+        "optimization_notes": "To optimize quad workouts, consistently apply progressive overload by adding weight or reps. For hack squats, if full depth is an issue, placing yoga blocks on the shoulders can help achieve a deeper range of motion. For leg presses, prioritize getting a deep stretch (calves to glutes) for better hypertrophy. Be aware that horizontal leg presses often have a more limited range of motion and may be maxed out by intermediate to advanced lifters, limiting overload potential. For reverse Nordics, progress by adding reps or trying to achieve a deeper stretch. Goblet squats are excellent for teaching beginners or as high-rep finishers but become difficult to overload with heavy weight as quads strengthen. Bulgarian split squats are highly fatiguing, so programming around two sets per workout is often sufficient. Sissy squats are challenging to load heavily, making rep progression the primary method of overload."
+    }
+}

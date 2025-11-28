@@ -137,5 +137,5 @@ class LLMService:
             return openai_response, openai_metadata
         except Exception as exc:
             if last_exception is not None:
-                exc.__cause__ = last_exception  # type: ignore[attr-defined]
+                exc.__cause__ = last_exception 
             raise

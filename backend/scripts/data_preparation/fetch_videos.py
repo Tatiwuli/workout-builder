@@ -1,5 +1,6 @@
 from googleapiclient.discovery import build
 import os
+import logging
 from dotenv import load_dotenv
 
 
@@ -11,6 +12,12 @@ assert YOUTUBE_API_KEY, "YOUTUBE API KEY not provided"
 API_SERVICE_NAME = "youtube"
 API_VERSION = "v3"
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s"
+)
+logger = logging.getLogger(__name__)
+
 
 def get_authenticated_service():
     """
@@ -20,10 +27,10 @@ def get_authenticated_service():
        
         service = build(API_SERVICE_NAME, API_VERSION,
                         developerKey=YOUTUBE_API_KEY)
-        print("YouTube API service built successfully")
+        logger.info("YouTube API service built successfully")
         return service
     except Exception as e:
-        print(f"Error creating YouTube API service: {e}")
+        logger.error("Error creating YouTube API service: %s", e)
         raise
 
 youtube_service = get_authenticated_service()
@@ -38,14 +45,13 @@ def fetch_video_metadata(video_id,category):
             id=video_id
         ).execute()
     except Exception as e:
-        print(f"Error fetching video details for {video_id}: {e}")
-        print(video_response)
+        logger.error("Error fetching video details for %s: %s", video_id, e)
         return None
         
     # Extract video details from the response
     video_items = video_response.get("items", [])
     if not video_items:
-        print(f"No details found for video_id: {video_id}")
+        logger.warning("No details found for video_id: %s", video_id)
         return None
 
     video_data = video_items[0].get("snippet", {})
@@ -72,7 +78,7 @@ def fetch_videos_from_playlist(playlist_id, category):
     seen_videos = set()
     
     
-    print(f"Processing playlist: {playlist_id}")
+    logger.info("Processing playlist: %s", playlist_id)
     next_page_token = None
 
     while True:  # iterate over the pages
@@ -114,7 +120,8 @@ def fetch_videos_from_playlist(playlist_id, category):
             break
 
         n_videos = len(seen_videos)
-        print("Number of videos extracted: ", n_videos)
+        logger.info("Number of videos extracted: %s", n_videos)
 
     return videos_metadata_lst
 
+        
