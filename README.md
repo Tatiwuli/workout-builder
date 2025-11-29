@@ -6,7 +6,7 @@
    - [Backend Overview](#1-backend-overview)
       - [Data Preparation](#1-data-preparation-backendscriptsdata_preparation)
       - [Workout Plan Workflow](#2-workout-plan-workflow)
-         - [Optimize the Workout Plan Generation Duration](#speeding-up-the-workout-plan-generation-from-5-to-2-minutes)
+         - [Optimize the Workout Plan Generation Duration](https://github.com/Tatiwuli/workout-builder/blob/main/README.md#-speeding-up-the-workout-plan-generation-from-5-to-2-minutes)
    - [Tech Stack](#tech-stack)
 4. [Next Steps](#next-steps)
 5. [Important Notes](#important-notes)
