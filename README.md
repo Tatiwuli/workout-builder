@@ -4,13 +4,12 @@
 2. [App Overview](#app-overview)
 3. [Codebase Overview](#codebase-overview)
    - [Backend Overview](#1-backend-overview)
-   - [Data Preparation](#1-data-preparation-backendscriptsdata_preparation)
-   - [Workout Plan Workflow](#2-workout-plan-workflow)
-   - [Speed up the Workout Plan Generation Duration](#speeding-up-the-workout-plan-generation-from-5-to-2-minutes)
+      - [Data Preparation](#1-data-preparation-backendscriptsdata_preparation)
+      - [Workout Plan Workflow](#2-workout-plan-workflow)
+         - [Optimize the Workout Plan Generation Duration](#speeding-up-the-workout-plan-generation-from-5-to-2-minutes)
    - [Tech Stack](#tech-stack)
 4. [Next Steps](#next-steps)
 5. [Important Notes](#important-notes)
-
 ---
 
 # 🗺️Project Overview
