@@ -36,11 +36,11 @@ Today, fitness is a daily habit that boosts my energy and confidence. As a stude
 
 ### Home
 
-Welcome page with a short description about the web app and a button to Generate Workout Plan
+Welcome page with a short description about the web app and a button to generate a Workout Plan
 
 ### Questionnaire
 
-Interactive questionnaire that collects your workout needs and preferences. This information guides the agents to create a personalized workout plan.
+An interactive questionnaire that collects your workout needs and preferences. This information guides the agents to create a personalized workout plan.
 
 <img src="https://github.com/Tatiwuli/workout-builder/blob/main/demo-home-questionnaire.gif" width="500">
 
@@ -122,15 +122,17 @@ The actual LLM clients live in `backend/app/llms/llm.py`: `GeminiLLM` uses Googl
 
 ### ⏩ Speeding up the workout plan generation from 5 to <2 minutes:
 
-<img src="https://github.com/Tatiwuli/workout-builder/blob/main/GenerationTimeInfograph.png" width="500">
+<div align="center">
+  <img src="https://github.com/Tatiwuli/workout-builder/blob/main/GenerationTimeInfograph.png" width="800">
+</div>
 
-The agents workflow was iterated extensively to optimize performance. Here's a breakdown of the key optimizations:
+The agents' workflow was iterated extensively to optimize performance. Here's a breakdown of the key optimizations:
 
 #### Optimization 1: Consolidate database calls (5 min → 2 min)
 
-**Before:** Each agent independently fetched the data it needed from MongoDB, resulting in 3 separate database calls for 3 agents.
+**Before:** Each agent fetched the data it needed from MongoDB independently, resulting in 3 separate database calls for 3 agents.
 
-**After:** Created a single `fetch_workout_plan` function that retrieves all necessary data from MongoDB once and stores it in a local dictionary, sharing th data across all agents.
+**After:** Created a single `fetch_workout_plan` function that retrieves all necessary data from MongoDB once and stores it in a local dictionary, sharing the data across all agents.
 
 #### Optimization 2: Minimize data passed between agents
 
@@ -163,7 +165,7 @@ To solve this, I integrated Pydantic models and used structured response schemas
 
 ### Frontend
 
-- React Native (Type Script)
+- React Native (TypeScript)
 
 React Native was chosen to maintain the flexibility for evolving the app into a mobile app.
 
@@ -188,9 +190,9 @@ All responses follow a consistent structure: `{ success: boolean, data: {...}, e
 
 # 🏃‍♀️Next Steps
 
-While the workout plans follow principles from credible hypertrophy experts, the fitness knowledge base is constrained by the structure of the source videos.I'm exploring ways to make the LLM system reason more independently through science-based exercise principles, including: Fine-tuning domain-specific models; Implementing more advanced agentic systems
+While the workout plans follow principles from credible hypertrophy experts, the fitness knowledge base is constrained by the structure of the source videos. I'm exploring ways to make the LLM system reason more independently through science-based exercise principles, including: Fine-tuning domain-specific models; Implementing more advanced agentic systems
 
-Based on user feedback, the app will expand to include more calisthenics and minimal-equipment workouts while maintaining effective strength training and muscle development principles.
+Based on user feedback, the app will expand to include more calisthenics and minimal-equipment workouts while maintaining effective principles of strength training and muscle development.
 
 # Important Notes
 
