@@ -1,19 +1,15 @@
-# 📌Table of Contents
+# 📌 Table of Contents
 
 1. [Project Overview](#project-overview)
-   - [Purpose](#purpose)
-2. [Pages](#pages)
-   - [Home](#home)
-   - [Questionnaire](#questionnaire)
-   - [Workout Plan](#workout-plan)
-3. [Tech Stack](#tech-stack)
-   - [Backend](#backend)
-   - [Frontend](#frontend)
-   - [APIs](#apis)
+2. [App Overview](#app-overview)
+3. [Codebase Overview](#codebase-overview)
+   - [Backend Overview](#1-backend-overview)
+   - [Data Preparation](#1-data-preparation-backendscriptsdata_preparation)
+   - [Workout Plan Workflow](#2-workout-plan-workflow)
+   - [Speed up the Workout Plan Generation Duration](#speeding-up-the-workout-plan-generation-from-5-to-2-minutes)
+   - [Tech Stack](#tech-stack)
 4. [Next Steps](#next-steps)
-   [the knowledge base is dependent on the structure of the video. I want to improve it and also change the direction of the app as users are mentionig their itnerest to minimal equipment plans.]
-5. [How to Run the Project](#how-to-run-the-project)
-6. [Important Notes](#important-notes)
+5. [Important Notes](#important-notes)
 
 ---
 
@@ -31,11 +27,7 @@ Things started to change when I discovered YouTubers like Jeff Nippard and Dr. M
 
 Today, fitness is a daily habit that boosts my energy and confidence. As a student, hiring a personal trainer isn’t affordable, so I learned how to create my own workout plans by watching these YouTube channels. Over time, I saw significant improvements in my strength and physique. However, the process wasn’t the most efficient. On average, I spent 1–2 hours each week watching videos, taking notes, and connecting the insights to learn how to build my workout plans.
 
-**To streamline this process, I decided to create a web app that references credible, science-based videos to build effective workout plans. This app learns about users’ needs and preferences to generate plans tailored to their goals, making the process of structuring a workout session less stressful and more efficient.**
-
-### Jump to [APP OVERVIEW](#app-overview)
-
-### Jump to [CODEBASE OVERVIEW](#-codebase-overview)
+**To streamline this process, I decided to create a web app that references credible, science-based videos to build effective workout plans. This app learns about users' needs and preferences to generate plans tailored to their goals, making the process of structuring a workout session less stressful and more efficient.**
 
 ---
 
@@ -47,13 +39,11 @@ Today, fitness is a daily habit that boosts my energy and confidence. As a stude
 
 Welcome page with a short description about the web app and a button to Generate Workout Plan
 
-<img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_home.gif" width="500">
-
 ### Questionnaire
 
 Interactive questionnaire that collects your workout needs and preferences. This information guides the agents to create a personalized workout plan.
 
-<img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_questionnaire.gif" width="500">
+<img src="https://github.com/Tatiwuli/workout-builder/blob/main/demo-home-questionnaire.gif" width="500">
 
 ### Workout Plan
 
@@ -62,11 +52,11 @@ The customized workout plan has two main sections:
 - **Warmup**: Dynamic movements with execution notes, sets/reps, and duration
 - **Main Workout**: Exercise sets organized by muscle groups (may include supersets or drop sets based on your goals). Each exercise includes step-by-step instructions with GIFs, recommended weights/sets/reps, and an alternative exercise.
 
-<img src="https://github.com/Tatiwuli/workout-builder/blob/main/workoutBuilder_demo_workoutPlan.gif" width="500">
+<img src="https://github.com/Tatiwuli/workout-builder/blob/main/demo-workoutPlan.gif" width="500">
 
 ---
 
-# 👩‍💻 CODEBASE OVERVIEW
+# 👩‍💻 Codebase Overview
 
 ## 1. Backend Overview
 
@@ -90,7 +80,7 @@ The workflow lives in `run_data_preparation.py`.
 
 To design the schemas from scratch, I asked myself: if I'm an LLM trainer who is smart but with zero domain knowledge, what would I need to build a workout plan based on the instructions I'd receive? I also take into consideration on how to make the data retrieval process on runtime as intuitive as possible.
 
-For example, the exercise selector agent needs access to a list of exercises, an understanding of each exercise’s role, and execution details. Hence,  it can select exercises that meet the user’s goals. At the same time, other agents need overall training principles for each muscle group to plan the other parts of the workout. Therefore, I split the videos into two data: exercises_summary(compact exercise-level records used by the selector) and main_knowledge_summaries (defining the `muscle_groups` as the dictionaire's key, and the additional informations of each muscle group as the corresponding values).
+For example, the exercise selector agent needs access to a list of exercises, an understanding of each exercise’s role, and execution details. Hence, it can select exercises that meet the user’s goals. At the same time, other agents need overall training principles for each muscle group to plan the other parts of the workout. Therefore, I split the videos into two data: exercises_summary(compact exercise-level records used by the selector) and main_knowledge_summaries (defining the `muscle_groups` as the dictionaire's key, and the additional informations of each muscle group as the corresponding values).
 
 By designing the schema around what the agents actually consume, we make sure the LLMs focus on the most relevant content in the videos. Otherwise, every time we generate a workout plan, they would need to re-read transcripts and extract the same information for each user. Our approach allows the codebase to programmatically fetch the specific, relevant parts of the videos and feed only those to the LLMs. The data retrieval logic is in `build_workout_plan.py`.
 
@@ -131,7 +121,9 @@ The actual LLM clients live in `backend/app/llms/llm.py`: `GeminiLLM` uses Googl
 
 ---
 
-### Speeding ubp the workout plan generation from 5 to <2 minutes:
+### ⏩ Speeding up the workout plan generation from 5 to <2 minutes:
+
+<img src="https://github.com/Tatiwuli/workout-builder/blob/main/GenerationTimeInfograph.png" width="500">
 
 The agents workflow was iterated extensively to optimize performance. Here's a breakdown of the key optimizations:
 
@@ -155,7 +147,7 @@ The agents workflow was iterated extensively to optimize performance. Here's a b
 
 #### Optimization 4: Implement prompt caching (2 min → <2 min)
 
-**Challenge:** Gemini offered faster inference but occasionally returned service errors, requiring fallback to OpenAI. However, OpenAI has a slower performance than Gemini. 
+**Challenge:** Gemini offered faster inference but occasionally returned service errors, requiring fallback to OpenAI. However, OpenAI has a slower performance than Gemini.
 
 **Solution:** I used the prefix technique to trigger OpenAI's built-in prompt caching mechanism, which significantly sped up inference on fallback requests.
 
