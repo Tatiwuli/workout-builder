@@ -34,8 +34,6 @@ You will receive one input: final_workout_plan. This is a JSON object containing
 **CRITICAL:** Your response must be a valid **JSON object** and nothing else. Do NOT include text before or after the JSON, and do not use Markdown (e.g., no ```json).
 
 
-#Warmup Agent Models
-
 {
   "total_warmup_duration": float [$warmup_duration],
   "warmup_exercises": [

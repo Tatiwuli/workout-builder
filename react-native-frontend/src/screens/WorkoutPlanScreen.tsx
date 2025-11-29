@@ -221,7 +221,11 @@ const WorkoutPlanScreen: React.FC<Props> = ({ navigation, route }) => {
               <View style={styles.stat}>
                 <Text style={styles.statLabel}>Duration</Text>
                 <Text style={styles.statValue}>
-                  ⏱️ {formatDurationToMMSS(workoutPlan.total_workout_duration)}
+                  ⏱️{" "}
+                  {formatDurationToMMSS(
+                    workoutPlan.total_workout_duration +
+                      workoutPlan.warmup.total_warmup_duration
+                  )}
                 </Text>
               </View>
               <View style={styles.stat}>

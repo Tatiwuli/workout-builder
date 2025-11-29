@@ -1,4 +1,5 @@
 import json
+import logging
 from .exercise_selector_agent import ExerciseSelectorAgent
 from .workout_planner_agent import WorkoutPlannerAgent
 from .warmup_agent import WarmupAgent
@@ -28,7 +29,9 @@ class WorkoutBuilderWorkflow:
         fitness_level_wiki = self.knowledge_fetch.fetch_fitness_level_wiki(fitness_level, time_constraint)
         
         muscle_group_wiki = self.knowledge_fetch.fetch_muscle_group_wiki(muscle_groups)
-
+        print("exercise summary:", exercises_summary)
+        print()
+        print("main knowledge summary:", main_knowledge_summaries)
         return {
             "exercises_summary": exercises_summary,
             "main_knowledge_summaries": main_knowledge_summaries,
@@ -268,6 +271,8 @@ class WorkoutBuilderWorkflow:
             workout_knowledge['muscle_group_wiki'], 
             workout_knowledge['main_knowledge_summaries']
         ])
+
+
       
 
         # Format processed_responses as JSON for consistent string representation
@@ -275,22 +280,24 @@ class WorkoutBuilderWorkflow:
         user_needs_json = json.dumps(processed_responses, sort_keys=True, indent=2)
         
         shared_prefix = f"""
-## Goal
-You are a personal trainer experienced with designing workout session to meet the client's workout goals and their physical conditions. 
+            ## Goal
+            You are a personal trainer experienced with designing workout session to meet the client's workout goals and their physical conditions. 
 
-## Hypertrophy Training Wiki Database
-The following wiki contains the exercise information and training principles you need to reference:
+            ## Hypertrophy Training Wiki Database
+            The following wiki contains the exercise information and training principles you need to reference:
 
-'''
-{wiki_input}
-'''
+            '''
+            {wiki_input}
+            '''
 
-## User needs
-The following object contains the user's workout goals and physical needs. Your decisions must always aim to meet the user's needs. 
+            ## User needs
+            The following object contains the user's workout goals and physical needs. Your decisions must always aim to meet the user's needs. 
 
-{user_needs_json}
-"""
-        
+            {user_needs_json}
+            """
+
+        logging.debug(f"Shared prefix: {shared_prefix}")
+                    
         exercise_selector = ExerciseSelectorAgent(
                 exercises_data=workout_knowledge['exercises_summary'],
                 shared_prefix = shared_prefix,

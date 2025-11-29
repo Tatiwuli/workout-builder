@@ -18,15 +18,20 @@ In addition to the wiki_input, you will receive:
 1.  **Iterate by Muscle Group:** Process each `muscle_group` from the user's list one by one.
 
 2.  Learn about the muscle development and exercise selection criteria for the user's `fitness_level` in the wiki. 
-3. **Filter the exercises by the following criterias. Important note: Keep in mind to choose a well-balanced set of exercises, avoiding an excessive cumulative load on a single joint or area:
+3. **Filter the exercises by the following criterias.**
+**Important note**:
+- Keep in mind to choose a well-balanced set of exercises, avoiding an excessive cumulative load on a single joint or area
+- Ensure that every muscle group the user selected MUST have at least one exercise that primarily targets it and aligns with the user's goal for that specific muscle.
   3.1.  **Filter by Level:** Read through all the exercises and filter those that align with the user's `fitness_level`.
   3.2  **Filter by Goal:** Out of these filtered exercises, analyze which exercises can help the user reach the `goals` for each selected muscle, according to the wiki.
+    - Make sure to not miss any muscle from the user input. If there is a muscle that differs from all the other muscles, do not ignore it.
 
   3.3  **Select by Time:** After you have your list of relevant exercises (that match both level and goals), select the final list that meets the `time_constraint`.
     - `short` (e.g., < 30 mins): Select 3-4 total exercises. Prioritize compound movements.
     - `medium` (e.g., 30-60 mins): Select 4-6 total exercises.
     - `long` (e.g., > 60 mins): Select 6-8 total exercises.
-    - **Goal Coverage:** If `time_constraint` is "short", it is acceptable to not cover every single goal. Prioritize the most effective exercises.
+    - **Goal Coverage Rule:** 
+      -  `short` : You do not need to address every  muscle part of a muscle.  HOWEVER, every muscle group the user selected MUST have at least one exercise that primarily targets it and aligns with the user's goal for that specific muscle.
 
 4. Now that you have all the necessary contend, list all the selected exercises and fill in these informations for each one: 
 
@@ -58,7 +63,7 @@ In addition to the wiki_input, you will receive:
             "5. Lower: Slowly lower yourself back down to the starting 'hang' position with control. Repeat."
           ]
           ```
-      **targeted_muscle_groups**: List all the muscles that the exercise targets ( e.g. Back, Glutes),
+      **target_muscles**: List all the muscles that the exercise targets (e.g., Back, Glutes),
       **target_muscle_parts**: For each muscle group, list all the corresponding muscle parts that the exercise targets. Format as a list of objects with "muscle_group" and "muscle_part" keys. Example: [{"muscle_group": "Back", "muscle_part": ["Lats", "Upper Traps"]}, {"muscle_group": "Shoulders", "muscle_part": ["Rear Delts"]}],
 
       **additional_notes**: This section aims to include all the information to aid another personal trainer in designing the reps and sets for this exercise. The notes should be sourced from the wiki_input
@@ -72,7 +77,7 @@ In addition to the wiki_input, you will receive:
       **selection_reason**": Explain the rationale behind choosing the exercise, including how and why it aligns to the client's needs.
 
       **media_url**: Simply copy and paste the corresponding exercise's media_url to this field.
-      **alternative_media_url**:Simply copy and paste the corresponding alternative exercise's media_url to this field.
+      **alternative_exercise_media_url**: Simply copy and paste the corresponding alternative exercise's media_url to this field.
     }
   ]
 }
@@ -88,7 +93,7 @@ In addition to the wiki_input, you will receive:
       "setup": ["1. step 1.", "2. step 2",...],
       "execution": ["1. step 1. Include additional tips / cues if applicable", "2. step 2", ...],
       "media_url": string or empty string
-      "target_muscle_groups": ["muscle 1", "muscle 2", ...],
+      "target_muscles": ["muscle 1", "muscle 2", ...],
       "target_muscle_parts": [{"muscle_group": "muscle 1", "muscle_part": ["corresponding muscle_part 1", ...]}, {"muscle_group": "muscle 2", "muscle_part": ["corresponding muscle_part 2", ...]}],
       "additional_notes": string or empty string,
       "alternative_exercise": string or empty string,

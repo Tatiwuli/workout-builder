@@ -23,6 +23,8 @@ class ExerciseSelectorAgent:
         # Get the system prompt template as string and prepend shared_prefix for caching
         formatted_system_prompt = self.shared_prefix + self.system_prompt.template
 
+        print("formatted system_prompt: ", formatted_system_prompt[100:], formatted_system_prompt[:100])
+
         formatted_user_prompt = self.user_prompt.substitute(
             exercises_data= self.exercises_data
         )

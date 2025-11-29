@@ -16,7 +16,7 @@ import json
 
 from backend.app.agents.build_workout_plan import WorkoutBuilderWorkflow
 
-LOGGER = logging.getLogger("llm_benchmark")
+logger = logging.getLogger("llm_benchmark")
 
 
 # ---------------------------------------------------------------------------
@@ -97,8 +97,9 @@ def run_single_workflow(
     """Run a single workflow and save result immediately to a file."""
     workflow = WorkoutBuilderWorkflow(stream_response=True)
     file_path = output_folder / f"run_{run_id:03d}.json"
-    
+    logger.info(f"User input {user_input}")
     try:
+        
         final_plan, metadata_records = workflow.run_workflow(processed_responses=user_input)
         total_time = sum(
             record.get("total_time", 0.0) for record in metadata_records if isinstance(record, dict)
@@ -127,9 +128,9 @@ def run_single_workflow(
        
         try:
             file_path.write_text(json.dumps(result, indent=2, sort_keys=False), encoding="utf-8")
-            LOGGER.info(f"Saved run {run_id} to {file_path}")
+            logger.info(f"Saved run {run_id} to {file_path}")
         except Exception as e:  
-            LOGGER.warning(f"Failed to write result for run {run_id} to {file_path}: {e}")
+            logger.warning(f"Failed to write result for run {run_id} to {file_path}: {e}")
 
 
 def run_benchmarks(n_iterations: int, output_folder: Path) -> Path:
@@ -150,11 +151,11 @@ def run_benchmarks(n_iterations: int, output_folder: Path) -> Path:
         futures = []
         
         for iteration in range(1, n_iterations + 1):
-            LOGGER.info(f"Starting iteration {iteration}/{n_iterations}")
+            logger.info(f"Starting iteration {iteration}/{n_iterations}")
             
             # Submit 2 workflows in parallel for this iteration
             for _ in range(2):
-                LOGGER.info(f"Run id {run_id}\n\n")
+                logger.info(f"Run id {run_id}\n\n")
                 user_input = generate_user_input()
                 future = executor.submit(run_single_workflow, run_id, output_folder, user_input)
                 futures.append(future)
@@ -165,9 +166,9 @@ def run_benchmarks(n_iterations: int, output_folder: Path) -> Path:
                 try:
                     future.result()
                 except Exception as e:  
-                    LOGGER.error(f"Workflow failed with exception: {e}")
+                    logger.error(f"Workflow failed with exception: {e}")
     
-    LOGGER.info(f"All {run_id - 1} runs completed. Results saved to {output_folder}")
+    logger.info(f"All {run_id - 1} runs completed. Results saved to {output_folder}")
     return output_folder
 
 
@@ -203,7 +204,7 @@ def load_results_from_folder(folder_path: Path) -> List[RunResult]:
             result = json.loads(content)
             results.append(result)
         except Exception as e:  
-            LOGGER.warning(f"Failed to load {file_path}: {e}")
+            logger.warning(f"Failed to load {file_path}: {e}")
     
     return results
 
@@ -225,7 +226,7 @@ def summarise_runs(run_results: List[RunResult]) -> Dict[str, Any]:
     }
 
     if not successful_runs:
-        LOGGER.warning("No successful runs to summarise.")
+        logger.warning("No successful runs to summarise.")
         return summary
 
     # Extract total workflow times from metadata
@@ -325,7 +326,9 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     n_iterations = 5  # Each iteration runs 2 workflows in parallel = 10 total runs
-    output_dir = Path("workout-builder/backend/data/bechmarks")
+    
+    script_dir = Path(__file__).resolve().parent
+    output_dir = script_dir.parent / "data" / "bechmarks"
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Create timestamped folder: Run_MM_DD_HH_MM_SS

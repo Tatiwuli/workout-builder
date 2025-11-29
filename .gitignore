@@ -15,3 +15,4 @@ fetch_exercises_image.py
   backend/scripts/run_workflow_gemini.py
 
 backend/data/*
+README

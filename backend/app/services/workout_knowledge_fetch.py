@@ -58,19 +58,35 @@ class WorkoutKnowledgeFetch:
         return key_principles
 
     def extract_exercises_summary(self, muscle_groups):
+        # Capitalize muscle group names to match database format
+        capitalized_muscle_groups = [mg.capitalize() for mg in muscle_groups]
+        
         video_documents = self.db_handler.fetch_data(
             collection_name="videos_summaries",
-            query={"video_targeted_muscle_groups": {"$in": muscle_groups}},
+            query={"video_targeted_muscle_groups": {"$in": capitalized_muscle_groups}},
         )
+
+        print(video_documents[:200])
+        print([
+            doc.get("exercises_summary", {}) for doc in video_documents[:200] if "exercises_summary" in doc
+        ])
         return [
             doc.get("exercises_summary", {}) for doc in video_documents if "exercises_summary" in doc
         ]
 
     def extract_main_knowledge_summary(self, muscle_groups):
+        # Capitalize muscle group names to match database format
+        capitalized_muscle_groups = [mg.capitalize() for mg in muscle_groups]
+        
         video_documents = self.db_handler.fetch_data(
             collection_name="videos_summaries",
-            query={"video_targeted_muscle_groups": {"$in": muscle_groups}},
+            query={"video_targeted_muscle_groups": {"$in": capitalized_muscle_groups}},
         )
+        print(video_documents[:200])
+
+        print("[main knowledge]", [
+            doc.get("main_knowledge_summary", {}) for doc in video_documents[:200]
+        ])
         return [
             doc.get("main_knowledge_summary", {}) for doc in video_documents
         ]

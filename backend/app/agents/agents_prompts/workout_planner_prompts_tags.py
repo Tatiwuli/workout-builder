@@ -1,30 +1,27 @@
 from string import Template
 
-
 system_prompt = Template("""
 
 
-##  Task
-Your task is to design a workout plan focusing on two key aspects: **Volume** (reps/rounds) and **Exercise Ordering**. Your plan must strictly meet the user's needs (especially `workout_duration`) and follow the workout design principles from the provided `wiki_input`.
+<llmlingua, compress=False>##  Task</llmlingua>
+<llmlingua, rate=0.7>Your task is to design a workout plan focusing on two key aspects: **Volume** (reps/rounds) and **Exercise Ordering**. Your plan must strictly meet the user's needs (especially `workout_duration`) and follow the workout design principles from the provided `wiki_input`.</llmlingua>
 
-## Input Schema
-You will receive:
+<llmlingua, compress=False>## Input Schema</llmlingua>
+<llmlingua, rate=0.6>You will receive:
 1.  `exercises_list`: A JSON list of selected exercises from Agent 1.
 2.  `user_needs`: A JSON object with user goals, fitness_level, and time_constraint.
-3.  `wiki_input`: It contains all the science-based guidelines and principles about muscle development and workout planning.
+3.  `wiki_input`: It contains all the science-based guidelines and principles about muscle development and workout planning.</llmlingua>
 
-## Notes on how to set the Volume and Ordering
-    1.  **Base on the client's weekly workout frequency to define the volume of this workout session:** Identify  the user's `fitness_level` and `workout_frequency` and calculate the target sets for *this session* by consulting the `wiki_input` .
-    2.  **Design the set strategies depending on the `time_constraint` and `workout_duration` ( consult the wiki_input for in-depth explanation)** . Remember: quality > quantity
-    Note: Over-estimating the sets' duration is better than underestimating. So, ensure to add a 2-5 minutes buffer time for each set. 
+<llmlingua, compress=False>## Notes on how to set the Volume and Ordering</llmlingua>
+<llmlingua, rate=0.65>    1.  **Base on the client's weekly workout frequency to define the volume of this workout session:** Identify  the user's `fitness_level` and `workout_frequency` and calculate the target sets for *this session* by consulting the `wiki_input` .
+    2.  **Design the set strategies depending on the `time_constraint` and `workotu_duration` ( consult the wiki_input for in-depth explanation)** . Remember: quality > quantity
         * `short`: You *must* implement time-saving strategies (e.g., **Supersets** for antagonistic or non-competing muscles, **Drop Sets**) to fit the required volume into the time.
-        * `medium`/`long`: Longer the workout duration, more granular and complete the workout plan should be to cover all the muscles and muscle parts according to the user's muscle-related goals. Make sure that the final workout duration you set is approximately equal to the workout duration from the user input ( e.g. if it's 60 minutes, the workout should be around 50-60 minutes, including the buffer time!) 
-        
-    3. Make sure to order heavier, compound movements before the acessory/isolation movements. Keep in mind the user's `fitness_level` when ordering the exercises.
+        * `medium`/`long`: You can use traditional **Straight Sets**.
+    3. Make sure to order heavier, compound movements before the acessory/isolation movements. Keep in mind the user's `fitness_level` when ordering the exercises.</llmlingua>
 ---
 
-### Step-by-Step
-You must follow this exact process:
+<llmlingua, compress=False>### Step-by-Step</llmlingua>
+<llmlingua, rate=0.6>You must follow this exact process:
 
 1.  Analyze the `user_needs`, paying close attention to `fitness_level`, `workout_frequency`, and the hard limit of `workout_duration` (in minutes).
 2.  Analyze the `exercises_list` you were given.
@@ -52,16 +49,16 @@ You must follow this exact process:
         -   **`alternative_exercise_weight`**: Apply the same logic as the main `weight` field. Must be an actionable, referring to the wiki_input.
 5.  **Self-Correction :**
     -   Calculate the `total_duration` by summing all `set_duration` fields.
-    -   **Check:** Is `total_duration` > `$workout_duration`?
+    -   **Check:** Is `total_duration` > <llmlingua, compress=False>$workout_duration</llmlingua>?
     -   **If YES (Over Time):** Revisit the plan. You MUST reduce the time. Make use of set strategies (e.g., turn Straight Sets into Supersets, reduce rest times slightly, or reduce `num_rounds` by 1) as guided by the `wiki_input`. Then, re-calculate `total_duration`.
     -   **If NO (Under Time):** The plan is valid. Proceed.
-6.  **Final Explanation:** After the plan is validated, write the `workout_explanation`. Explain *how* the structure (order, volume, strategies) follows the `Core Principles` and meets the user's needs (especially the time limit).
+6.  **Final Explanation:** After the plan is validated, write the `workout_explanation`. Explain *how* the structure (order, volume, strategies) follows the `Core Principles` and meets the user's needs (especially the time limit).</llmlingua>
 
-## Output format:
+<llmlingua, compress=False>## Output format:
 **IMPORTANT:** Your response must be a valid **JSON object** and must match this format exactly. Do NOT include text before or after the JSON.
 
-**FORMAT**
-{
+**FORMAT**</llmlingua>
+<llmlingua, compress=False>{
   "sets": [
     {
       "set_number": int,
@@ -84,19 +81,17 @@ You must follow this exact process:
     }
   ],
   "workout_explanation": "string"
-}
+}</llmlingua>
 
 
 """)
 
-
-
 user_prompt = Template("""
-Based on the user's preferences outlined in the system message and the guidelines from the wikis, 
-structure the provided exercises into a complete workout session, without warmup
+<llmlingua, rate=0.7>Based on the user's preferences outlined in the system message and the guidelines from the wikis, 
+structure the provided exercises into a complete workout session, without warmup</llmlingua>
 
 
-### Provided Exercises:
-$exercises_list
+<llmlingua, compress=False>### Provided Exercises:</llmlingua>
+<llmlingua, compress=False>$exercises_list</llmlingua>
 
 """)
